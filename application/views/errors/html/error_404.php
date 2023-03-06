@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8"> 
 <title>404 Page Not Found</title>
 <style type="text/css">
 
@@ -57,8 +57,8 @@ p {
 </head>
 <body>
 	<div id="container">
-		<h1><?php echo $heading; ?></h1>
-		<?php echo $message; ?>
+		<h1> Maaf, halaman ini tidak ditemukan </h1>
+		<p>Halaman yang anda cari tidak ditemukan di sini</p> 
 	</div>
 </body>
 </html>
