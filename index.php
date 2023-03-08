@@ -1,8 +1,8 @@
 <?php
 require_once 'vendor/autoload.php';
 
-$dotenv = new Dotenv\Dotenv(__DIR__);
-$dotenv->load();
+// $dotenv = new Dotenv\Dotenv(__DIR__);
+// $dotenv->load();
 /**
  * CodeIgniter
  *
@@ -270,4 +270,4 @@ define('VIEWPATH', $view_folder);
  *
  * And away we go...
  */
-require_once BASEPATH . 'core/CodeIgniter.php';
+require_once BASEPATH . 'core/CodeIgniter.php'; 

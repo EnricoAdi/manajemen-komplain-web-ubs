@@ -1,64 +1,136 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8"> 
-<title>404 Page Not Found</title>
-<style type="text/css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Halaman Tidak Ditemukan</title>
 
-::selection { background-color: #E13300; color: white; }
-::-moz-selection { background-color: #E13300; color: white; }
+	<link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
 
-body {
-	background-color: #fff;
-	margin: 40px;
-	font: 13px/20px normal Helvetica, Arial, sans-serif;
-	color: #4F5155;
-}
+	<style>
+		* {
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
 
-a {
-	color: #003399;
-	background-color: transparent;
-	font-weight: normal;
-}
+		body {
+			padding: 0;
+			margin: 0;
+		}
 
-h1 {
-	color: #444;
-	background-color: transparent;
-	border-bottom: 1px solid #D0D0D0;
-	font-size: 19px;
-	font-weight: normal;
-	margin: 0 0 14px 0;
-	padding: 14px 15px 10px 15px;
-}
+		#notfound {
+			position: relative;
+			height: 100vh;
+		}
 
-code {
-	font-family: Consolas, Monaco, Courier New, Courier, monospace;
-	font-size: 12px;
-	background-color: #f9f9f9;
-	border: 1px solid #D0D0D0;
-	color: #002166;
-	display: block;
-	margin: 14px 0 14px 0;
-	padding: 12px 10px 12px 10px;
-}
+		#notfound .notfound {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
 
-#container {
-	margin: 10px;
-	border: 1px solid #D0D0D0;
-	box-shadow: 0 0 8px #D0D0D0;
-}
+		.notfound {
+			max-width: 520px;
+			width: 100%;
+			line-height: 1.4;
+			text-align: center;
+		}
 
-p {
-	margin: 12px 15px 12px 15px;
-}
-</style>
+		.notfound .notfound-404 {
+			position: relative;
+			height: 240px;
+		}
+
+		.notfound .notfound-404 h1 {
+			font-family: 'Montserrat', sans-serif;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			font-size: 252px;
+			font-weight: 900;
+			margin: 0px;
+			color: #262626;
+			text-transform: uppercase;
+			letter-spacing: -40px;
+			margin-left: -20px;
+		}
+
+		.notfound .notfound-404 h1>span {
+			text-shadow: -8px 0px 0px #fff;
+		}
+
+		.notfound .notfound-404 h3 {
+			font-family: 'Cabin', sans-serif;
+			position: relative;
+			font-size: 16px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: #262626;
+			margin: 0px;
+			letter-spacing: 3px;
+			padding-left: 6px;
+		}
+
+		.notfound h2 {
+			font-family: 'Cabin', sans-serif;
+			font-size: 20px;
+			font-weight: 400;
+			text-transform: uppercase;
+			color: #000;
+			margin-top: 0px;
+			margin-bottom: 25px;
+		}
+
+		@media only screen and (max-width: 767px) {
+			.notfound .notfound-404 {
+				height: 200px;
+			}
+
+			.notfound .notfound-404 h1 {
+				font-size: 200px;
+			}
+		}
+
+		@media only screen and (max-width: 480px) {
+			.notfound .notfound-404 {
+				height: 162px;
+			}
+
+			.notfound .notfound-404 h1 {
+				font-size: 162px;
+				height: 150px;
+				line-height: 162px;
+			}
+
+			.notfound h2 {
+				font-size: 16px;
+			}
+		}
+	</style>
+
+
 </head>
+
 <body>
-	<div id="container">
-		<h1> Maaf, halaman ini tidak ditemukan </h1>
-		<p>Halaman yang anda cari tidak ditemukan di sini</p> 
+
+	<div id="notfound">
+		<div class="notfound">
+			<div class="notfound-404">
+				<h3>Halaman tidak ditemukan!</h3>
+				<h1><span>4</span><span>0</span><span>4</span></h1>
+			</div>
+		</div>
 	</div>
+
 </body>
+
 </html>

@@ -143,4 +143,7 @@ INSERT into users
 values('12345680', '$2y$10$RGptyEa7CBK370RNA60NzeliRWjl6PlzyJJGQZyRAsAlhcBoUErBy', 'Ester', '1', 'ester@ubslinux.com', '01', '');
 INSERT into users
 values('12345681', '$2y$10$RGptyEa7CBK370RNA60NzeliRWjl6PlzyJJGQZyRAsAlhcBoUErBy', 'Ester', '2', 'estermanager@ubslinux.com', '01', '');
+INSERT into users
+values('admin', '$2y$10$P7qa.IhncGTaPfIiEG/MseX.MXjogMckU5WCWmLq8elUMNrfdCseS', 'Admin', '4', 
+'admin1@ubslinux.com', '01', '');
 COMMIT;

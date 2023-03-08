@@ -13,6 +13,7 @@ class UsersModel extends CI_Model
     public function __construct()
     {
         parent::__construct(); 
+        $this->load->library('session'); 
     }
     public function fetch(){
        return $this->db->get('USERS')->result();
@@ -29,10 +30,13 @@ class UsersModel extends CI_Model
         return null;
     } 
     public function login($user){
-        $this->session->set_userdata('user_login', $user);
+        $this->session->set_userdata('user_login', $user); 
     }
     public function logout(){
         $this->session->unset_userdata('user_login');
+    }
+    public function getLogin(){ 
+        return $this->session->userdata('user_login');
     }
     public function divisi(){
         $this->load->model('DivisiModel');
