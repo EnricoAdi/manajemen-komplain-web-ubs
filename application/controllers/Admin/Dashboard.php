@@ -3,12 +3,9 @@
     class Dashboard extends CI_Controller {
         public function __construct(){
             parent::__construct();
-            $this->data['page_title'] = "Admin Page";
-
-
-            $this->load->model('UsersModel');
-            $this->load->library("form_validation");  
-            $this->load->library('session');
+            $this->data['page_title'] = "Admin Page"; 
+ 
+            $this->load->library("form_validation");   
 
 
             //middleware

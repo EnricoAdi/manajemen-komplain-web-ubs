@@ -146,4 +146,12 @@ values('12345681', '$2y$10$RGptyEa7CBK370RNA60NzeliRWjl6PlzyJJGQZyRAsAlhcBoUErBy
 INSERT into users
 values('admin', '$2y$10$P7qa.IhncGTaPfIiEG/MseX.MXjogMckU5WCWmLq8elUMNrfdCseS', 'Admin', '4', 
 'admin1@ubslinux.com', '01', '');
+
+INSERT INTO TOPIK values('ENVIRONMENT', 'E2301', 'Lingkungan', 'T', '01', 'Lingkungan');
+INSERT INTO TOPIK values('MORALE', 'M2301', 'Moral', 'T', '01', 'Moral');
+INSERT INTO TOPIK values('QUALITY', 'Q2301', 'Kualitas', 'T', '01', 'Kualitas');
+INSERT INTO TOPIK values('SAFETY', 'S2301', 'Keamanan', 'T', '01', 'Keamanan');
+INSERT INTO TOPIK values('PRODUCT', 'P2301', 'Produk', 'T', '01', 'Produk');
+INSERT INTO TOPIK values('COST', 'C2301', 'Biaya', 'T', '01', 'Biaya');
+
 COMMIT;

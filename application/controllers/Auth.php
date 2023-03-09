@@ -7,10 +7,8 @@ class Auth extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->data['page_title'] = "Authentication Page";
-        $this->load->model('UsersModel');
-        $this->load->library("form_validation");
-        $this->load->library('session');
+        $this->data['page_title'] = "Authentication Page"; 
+        $this->load->library("form_validation"); 
     }
     public function index()
     {

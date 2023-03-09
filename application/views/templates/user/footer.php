@@ -96,11 +96,19 @@
         <script type="text/javascript"> 
             $('#popUpModal').modal('show');
          </script>
+         <?php
+            //unset
+            $this->session->unset_userdata('message');
+         ?>
     <?php endif; ?>
     <?php if ($this->session->flashdata('confirmation') && $this->session->flashdata('confirmation')!='')   : ?>
         <script type="text/javascript"> 
             $('#confirmModal').modal('show');
          </script>
+         <?php
+            //unset
+            $this->session->unset_userdata('confirmation');
+         ?>
     <?php endif; ?>
 </body>
 

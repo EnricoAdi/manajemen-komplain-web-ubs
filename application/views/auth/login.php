@@ -126,6 +126,10 @@
         <script type="text/javascript"> 
             $('#popUpModal').modal('show');
          </script>
+         <?php
+            //unset
+            $this->session->unset_userdata('message');
+         ?>
     <?php endif; ?>
 </body>
 

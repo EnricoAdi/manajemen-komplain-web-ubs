@@ -7,8 +7,7 @@ class Welcome extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->data['page_title'] = "Home";
-        $this->load->model('UsersModel');
+        $this->data['page_title'] = "Home"; 
         $this->load->library("form_validation");
     } 
 	public function index()

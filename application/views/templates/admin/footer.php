@@ -75,32 +75,43 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Bootstrap core JavaScript-->
+    </div> 
     <script src="<?= asset_url(); ?>vendor/jquery/jquery.min.js"></script>
-    <script src="<?= asset_url(); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
+    <script src="<?= asset_url(); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
     <script src="<?= asset_url(); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
     
     <script src="<?= asset_url(); ?>js/template/sb-admin-2.min.js"></script>
+ 
+    <!-- Chart JS -->
     <script src="<?= asset_url(); ?>vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
     <script src="<?= asset_url(); ?>js/template/demo/chart-area-demo.js"></script>
     <script src="<?= asset_url(); ?>js/template/demo/chart-pie-demo.js"></script>
+
+    
+    <!-- Datatable -->
+    <script src="<?= asset_url(); ?>vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?= asset_url(); ?>vendor/datatables/dataTables.bootstrap4.min.js"></script> 
+    <script src="<?= asset_url(); ?>js/demo/datatables-demo.js"></script>
     
     <?php if ($this->session->flashdata('message') && $this->session->flashdata('message')!='')   : ?>
         <script type="text/javascript"> 
             $('#popUpModal').modal('show');
-         </script>
+         </script> 
+         <?php
+            //unset
+            $this->session->unset_userdata('message');
+         ?>
     <?php endif; ?>
     <?php if ($this->session->flashdata('confirmation') && $this->session->flashdata('confirmation')!='')   : ?>
         <script type="text/javascript"> 
             $('#confirmModal').modal('show');
-         </script>
+         </script> 
+         <?php
+            //unset
+            $this->session->unset_userdata('confirmation');
+         ?>
     <?php endif; ?>
 </body>
 
