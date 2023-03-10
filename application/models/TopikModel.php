@@ -8,6 +8,7 @@ class TopikModel extends CI_Model
     public $AU;
     public $DIV_TUJUAN;
     public $NAMA;
+    // public $NAMA_DIVISI;
     
 
     public function __construct()
@@ -15,7 +16,8 @@ class TopikModel extends CI_Model
         parent::__construct(); 
     }
     public function fetch(){ 
-       return $this->db->query('SELECT T.*, D.NAMA_DIVISI FROM TOPIK T JOIN DIVISI D ON D.KODE_DIVISI=T.DIV_TUJUAN')->result();
+       return $this->db->query('SELECT T.*, D.NAMA_DIVISI FROM TOPIK T JOIN DIVISI D ON 
+       D.KODE_DIVISI=T.DIV_TUJUAN')->result();
     }
     public function get($kode_topik){
         $this->db->select('*');
@@ -25,6 +27,18 @@ class TopikModel extends CI_Model
             ->result_array();
         if(sizeof($query)>0){
             return $query[0];
+        //     $result = $query[0];
+        //    $newtopik =  new TopikModel();
+           
+        //    $newtopik->KODE_TOPIK = $result['KODE_TOPIK'];
+        //    $newtopik->TOPIK = $result['TOPIK'];
+        //    $newtopik->DESKRIPSI = $result['DESKRIPSI'];
+        //    $newtopik->AU = $result['AU'];
+        //    $newtopik->DIV_TUJUAN = $result['DIV_TUJUAN'];
+        //    $newtopik->NAMA= $result['NAMA'];
+        //    $newtopik->NAMA_DIVISI = $result['NAMA_DIVISI'];
+        //    return $newtopik;
+           
         }
         return null;
     } 
@@ -50,7 +64,11 @@ class TopikModel extends CI_Model
     }
     public function delete(){
         $this->db->where('KODE_TOPIK', $this->KODE_TOPIK);
-        $this->db->delete('TOPIK'); 
-        // $this->db->query('DELETE FROM TOPIK WHERE KODE_TOPIK = '.$this->KODE_TOPIK.';');
+        $this->db->delete('TOPIK');  
     } 
+    public function fetchSubtopik1(){ 
+       return $this->db->query('SELECT S.* FROM SUB_TOPIK1 S  where S.KODE_TOPIK = ?',
+       array($this->KODE_TOPIK)
+       )->result();
+    }
 }

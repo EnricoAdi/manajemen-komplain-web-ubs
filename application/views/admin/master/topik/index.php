@@ -1,10 +1,19 @@
  
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Master Topik</h1>
+<a href="<?= base_url()?>Admin/Master/Topik/Menu">
+
+    <button type="button" class="btn btn-warning" style="color:black; 
+        padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px; 
+        background-color:<?= error_color(); ?>">
+        <i class="fas fa-fw fa-step-backward"></i>
+        Kembali
+    </button>
+</a>
 <a href="<?= base_url()?>Admin/Master/Topik/Add">
 
     <button type="button" class="btn btn-warning" style="color:black; 
         padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;">
-        <i class="fas fa-fw fa-plus padding-right:10px;"></i>
+        <i class="fas fa-fw fa-plus"></i>
         Input
     </button>
 </a>
@@ -35,7 +44,11 @@
                         echo "<td>" . $topic->AU . "</td>";
                         echo "<td>
                                 <a href='$url'>
-                                 <button class='btn btn-warning' style='color:black'>Detail</button></td>
+                                  
+                                 <button class='btn btn-warning' style='color:black'>
+                                 <i class='fas fa-fw fa-info-circle'></i> 
+                                 Detail
+                                 </button></td>
                                 </a>
                                ";
                         echo "</tr>";

@@ -3,6 +3,8 @@
 
     <button type="button" class="btn btn-warning" style="color:black; 
         padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;">
+        
+        <i class="fas fa-fw fa-step-backward"></i>
         Kembali
     </button>
 
@@ -30,7 +32,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <label for="inputPassword5" class="form-label mt-5">Deskripsi</label>
+            <label for="deskripsi" class="form-label mt-5">Deskripsi</label>
             <textarea class="form-control" placeholder="" name="deskripsi" required></textarea>
         </div> 
     </div>

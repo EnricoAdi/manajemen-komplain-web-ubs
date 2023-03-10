@@ -9,7 +9,7 @@
             Master Topik
         </button>
     </a>
-    <a href="">
+    <a href="<?= base_url(); ?>Admin/Master/Subtopik1">
 
         <button type="button" class="btn btn-warning" style="color:black;
     width:250px; font-weight: bold; font-size: larger; margin-right:10%; margin-top:20px;  height:200px;">Master Subtopik 1</button>

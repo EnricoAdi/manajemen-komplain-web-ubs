@@ -3,6 +3,8 @@
 
     <button type="button" class="btn btn-warning" style="color:black; 
         padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;">
+        
+        <i class="fas fa-fw fa-step-backward"></i>
         Kembali
     </button>
 

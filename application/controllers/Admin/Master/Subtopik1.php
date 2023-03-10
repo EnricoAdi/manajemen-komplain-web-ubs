@@ -1,11 +1,11 @@
 <?php
-//Master Topik Admin 
-class Topik extends CI_Controller
+//Master Subtopik 1 Admin 
+class Subtopik1 extends CI_Controller
 {
     public function __construct()
     {
         parent::__construct();
-        $this->data['page_title'] = "Halaman Master Topik Admin";
+        $this->data['page_title'] = "Halaman Master Subtopik1 Admin";
 
         $this->load->library("form_validation");
 
@@ -32,7 +32,7 @@ class Topik extends CI_Controller
 
     public function index()
     {
-        //halaman ini digunakan untuk menampilkan daftar topik yang ada
+        //halaman ini digunakan untuk menampilkan daftar subtopik1 yang ada
         $data = $this->data;
         $data['page_title'] = "Master";
         $data['login'] = $this->UsersModel->getLogin();
@@ -41,57 +41,42 @@ class Topik extends CI_Controller
         $data['topics'] = $topics;
 
         $this->load->view("templates/admin/header", $data);
-        $this->load->view("admin/master/topik/index", $data);
+        $this->load->view("admin/master/subtopik1/index", $data);
         $this->load->view("templates/admin/footer", $data);
-    }
-    public function Menu()
+    } 
+    public function Add()
     {
-        //controller ini digunakan untuk menampilkan menu master topik, nantinya 
-        //dari menu ini akan diarahkan ke halaman lain sesuai dengan menu yang dipilih
         $data = $this->data;
         $data['page_title'] = "Master";
+        $data['list_topik'] = $this->TopikModel->fetch();
         $data['login'] = $this->UsersModel->getLogin();
 
         $this->load->view("templates/admin/header", $data);
-        $this->load->view("admin/master/topik/menu", $data);
-        $this->load->view("templates/admin/footer", $data);
-    }
-    public function Add()
-    {
-        //controller ini digunakan untuk menampilkan halaman input topik
-        $data = $this->data;
-        $data['page_title'] = "Master";
-        $data['list_divisi'] = $this->DivisiModel->fetch();
-        $data['login'] = $this->UsersModel->getLogin();
-        $this->load->view("templates/admin/header", $data);
-        $this->load->view("admin/master/topik/add", $data);
+        $this->load->view("admin/master/subtopik1/add", $data);
         $this->load->view("templates/admin/footer", $data);
     }
     public function AddProcess()
     {
-        //controller ini digunakan untuk memproses form tambahan topik
-        $topik = strtoupper($this->input->post("topik"));
-        $divisi = $this->input->post("divisi");
-        $nama = $this->input->post("nama");
+
+        $topik = strtoupper($this->input->post("topik")); 
         $deskripsi = $this->input->post("deskripsi");
 
-        $kode = $this->TopikModel->getNewKode($topik);
-        $newTopik = new TopikModel();
-        $newTopik->KODE_TOPIK = $kode;
-        $newTopik->AU = 'T';
-        $newTopik->NAMA = $nama;
-        $newTopik->DIV_TUJUAN = $divisi;
-        $newTopik->DESKRIPSI = $deskripsi;
-        $newTopik->TOPIK = $topik;
+        // $kode = $this->TopikModel->getNewKode($topik);
+        // $newTopik = new TopikModel();
+        // $newTopik->KODE_TOPIK = $kode;
+        // $newTopik->AU = 'T';
+        // $newTopik->NAMA = $nama;
+        // $newTopik->DIV_TUJUAN = $divisi;
+        // $newTopik->DESKRIPSI = $deskripsi;
+        // $newTopik->TOPIK = $topik;
 
-        $newTopik->insert();
-        $this->session->set_flashdata('header', 'Pesan');
-        $this->session->set_flashdata('message', 'Berhasil Menambahkan Topik ');
-        redirect('Admin/Master/Topik');
+        // $newTopik->insert();
+        // $this->session->set_flashdata('header', 'Pesan');
+        // $this->session->set_flashdata('message', 'Berhasil Menambahkan Topik ');
+        // redirect('Admin/Master/Topik');
     }
     public function Detail($kode)
     {
-        //controller ini digunakan untuk menampilkan halaman detail topik
         $data = $this->data;
         $data['page_title'] = "Master";
         $data['list_divisi'] = $this->DivisiModel->fetch();
@@ -107,7 +92,6 @@ class Topik extends CI_Controller
 
     public function EditProcess($kode)
     {
-        //controller ini digunakan untuk memproses edit topik
         $topik =  $this->input->post("topik");
         $divisi = $this->input->post("divisi");
         $nama = $this->input->post("nama");
@@ -129,7 +113,7 @@ class Topik extends CI_Controller
 
     public function DeleteProcess($kode)
     {
-        //controller ini digunakan untuk menghapus topik
+
         $topikDelete = new TopikModel();
         $topikDelete->KODE_TOPIK = $kode;
 
