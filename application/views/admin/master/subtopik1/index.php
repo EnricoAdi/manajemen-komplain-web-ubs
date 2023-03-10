@@ -15,3 +15,46 @@
         Input
     </button>
 </a>
+
+
+<div class="card shadow mb-4 mt-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Daftar Subtopik 1</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Topik</th>
+                        <th>Subtopik 1  </th>
+                        <th>Deskripsi</th> 
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    foreach ($subtopics as $subtopic) {
+
+                        $url = base_url()."Admin/Master/Subtopik1/Detail/$subtopic->SUB_TOPIK1";
+                        echo "<tr>";
+                        echo "<td>" . $subtopic->TOPIK . "</td>";
+                        echo "<td>" . $subtopic->SUB_TOPIK1 . "</td>";
+                        echo "<td>" . $subtopic->DESKRIPSI . "</td>"; 
+                        echo "<td>
+                                <a href='$url'>
+                                  
+                                 <button class='btn btn-warning' style='color:black'>
+                                 <i class='fas fa-fw fa-info-circle'></i> 
+                                 Detail
+                                 </button></td>
+                                </a>
+                               ";
+                        echo "</tr>";
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

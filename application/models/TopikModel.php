@@ -26,19 +26,7 @@ class TopikModel extends CI_Model
         $query = $this->db->get() 
             ->result_array();
         if(sizeof($query)>0){
-            return $query[0];
-        //     $result = $query[0];
-        //    $newtopik =  new TopikModel();
-           
-        //    $newtopik->KODE_TOPIK = $result['KODE_TOPIK'];
-        //    $newtopik->TOPIK = $result['TOPIK'];
-        //    $newtopik->DESKRIPSI = $result['DESKRIPSI'];
-        //    $newtopik->AU = $result['AU'];
-        //    $newtopik->DIV_TUJUAN = $result['DIV_TUJUAN'];
-        //    $newtopik->NAMA= $result['NAMA'];
-        //    $newtopik->NAMA_DIVISI = $result['NAMA_DIVISI'];
-        //    return $newtopik;
-           
+            return $query[0]; 
         }
         return null;
     } 

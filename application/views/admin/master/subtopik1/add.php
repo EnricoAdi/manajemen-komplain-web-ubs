@@ -18,7 +18,8 @@
 
                 <?php
                 foreach ($list_topik as $topik) {
-                    echo "<option value='$topik->KODE_TOPIK'>$topik->KODE_TOPIK - $topik->TOPIK</option>";
+                    $kodesubstr = substr($topik->KODE_TOPIK, 0, 3);
+                    echo "<option value='$topik->KODE_TOPIK'>$kodesubstr - $topik->TOPIK</option>";
                 }
                 ?>
             </select>
