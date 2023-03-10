@@ -91,7 +91,7 @@ $routes = [
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item <?php 
-                if($page_title=="Dashboard Admin"){
+                if($navigation=="Dashboard"){
                     echo "active";
                 }
             ?>">
@@ -101,7 +101,7 @@ $routes = [
             </li>
 
             <li class="nav-item  <?php 
-                if($page_title=="Master"){
+                if($navigation=="Master"){
                     echo "active";
                 }
             ?>">
@@ -121,7 +121,7 @@ $routes = [
                 </div>
             </li> 
             <li class="nav-item  <?php 
-                if($page_title=="Laporan"){
+                if($navigation=="Laporan"){
                     echo "active";
                 }
             ?>">

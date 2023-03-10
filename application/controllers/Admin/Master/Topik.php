@@ -6,6 +6,7 @@ class Topik extends CI_Controller
     {
         parent::__construct();
         $this->data['page_title'] = "Halaman Master Topik Admin";
+        $this->data['navigation'] = "Master"; 
 
         $this->load->library("form_validation");
 
@@ -34,7 +35,7 @@ class Topik extends CI_Controller
     {
         //halaman ini digunakan untuk menampilkan daftar topik yang ada
         $data = $this->data;
-        $data['page_title'] = "Master";
+        $data['page_title'] = "Master Topik";
         $data['login'] = $this->UsersModel->getLogin();
 
         $topics = $this->TopikModel->fetch();
@@ -49,7 +50,7 @@ class Topik extends CI_Controller
         //controller ini digunakan untuk menampilkan menu master topik, nantinya 
         //dari menu ini akan diarahkan ke halaman lain sesuai dengan menu yang dipilih
         $data = $this->data;
-        $data['page_title'] = "Master";
+        $data['page_title'] = "Menu Master Topik";
         $data['login'] = $this->UsersModel->getLogin();
 
         $this->load->view("templates/admin/header", $data);
@@ -60,7 +61,7 @@ class Topik extends CI_Controller
     {
         //controller ini digunakan untuk menampilkan halaman input topik
         $data = $this->data;
-        $data['page_title'] = "Master";
+        $data['page_title'] = "Input Topik";
         $data['list_divisi'] = $this->DivisiModel->fetch();
         $data['login'] = $this->UsersModel->getLogin();
         $this->load->view("templates/admin/header", $data);
@@ -93,7 +94,7 @@ class Topik extends CI_Controller
     {
         //controller ini digunakan untuk menampilkan halaman detail topik
         $data = $this->data;
-        $data['page_title'] = "Master";
+        $data['page_title'] = "Detail Topik";
         $data['list_divisi'] = $this->DivisiModel->fetch();
         $data['login'] = $this->UsersModel->getLogin();
 

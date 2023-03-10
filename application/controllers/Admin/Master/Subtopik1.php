@@ -6,6 +6,7 @@ class Subtopik1 extends CI_Controller
     {
         parent::__construct();
         $this->data['page_title'] = "Halaman Master Subtopik1 Admin";
+        $this->data['navigation'] = "Master"; 
 
         $this->load->library("form_validation");
 
@@ -34,7 +35,7 @@ class Subtopik1 extends CI_Controller
     {
         //halaman ini digunakan untuk menampilkan daftar subtopik1 yang ada
         $data = $this->data;
-        $data['page_title'] = "Master";
+        $data['page_title'] = "Master Subtopik 1";
         $data['login'] = $this->UsersModel->getLogin();
 
         $subtopics = $this->SubTopik1Model->fetch();
@@ -46,7 +47,7 @@ class Subtopik1 extends CI_Controller
     public function Add()
     {
         $data = $this->data;
-        $data['page_title'] = "Master";
+        $data['page_title'] = "Insert Subtopik 1";
         $data['list_topik'] = $this->TopikModel->fetch();
         $data['login'] = $this->UsersModel->getLogin();
  
@@ -72,7 +73,7 @@ class Subtopik1 extends CI_Controller
     public function Detail($kode)
     {
         $data = $this->data;
-        $data['page_title'] = "Master";
+        $data['page_title'] = "Detail Subtopik 1 Master";
         $data['list_topik'] = $this->TopikModel->fetch();
         $data['login'] = $this->UsersModel->getLogin();
 
