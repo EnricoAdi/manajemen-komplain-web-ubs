@@ -10,8 +10,7 @@ class SubTopik1Model extends CI_Model
     {
         parent::__construct(); 
     }
-    public function fetch(){
-    //    return $this->db->get('SUB_TOPIK1')->result();
+    public function fetch(){ 
        return $this->db->query('SELECT S.*, T.TOPIK FROM SUB_TOPIK1 S 
        JOIN TOPIK T ON S.KODE_TOPIK = T.KODE_TOPIK')->result();
     }

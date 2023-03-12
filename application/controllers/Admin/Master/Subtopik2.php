@@ -5,7 +5,8 @@ class Subtopik2 extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->data['page_title'] = "Halaman Master Subtopik1 Admin";
+        $this->data['page_title'] = "Halaman Master Subtopik2 Admin";
+        $this->data['navigation'] = "Master"; 
 
         $this->load->library("form_validation");
 
@@ -34,89 +35,95 @@ class Subtopik2 extends CI_Controller
     {
         //halaman ini digunakan untuk menampilkan daftar subtopik1 yang ada
         $data = $this->data;
-        $data['page_title'] = "Master";
+        $data['page_title'] = "Master Subtopik 2";
         $data['login'] = $this->UsersModel->getLogin();
 
-        $subtopics = $this->SubTopik1Model->fetch();
+        $subtopics = $this->SubTopik2Model->fetch();
         $data['subtopics'] = $subtopics;  
         $this->load->view("templates/admin/header", $data);
-        $this->load->view("admin/master/subtopik1/index", $data);
+        $this->load->view("admin/master/subtopik2/index", $data);
         $this->load->view("templates/admin/footer", $data);
     } 
     public function Add()
     {
         $data = $this->data;
-        $data['page_title'] = "Master";
-        $data['list_topik'] = $this->TopikModel->fetch();
+        $data['page_title'] = "Tambah Subtopik 2";
+        // $data['list_topik'] = $this->TopikModel->fetch();
+        $data['list_subtopik1'] = $this->SubTopik1Model->fetch();
         $data['login'] = $this->UsersModel->getLogin();
- 
+         
         $this->load->view("templates/admin/header", $data);
-        $this->load->view("admin/master/subtopik1/add", $data);
+        $this->load->view("admin/master/subtopik2/add", $data);
         $this->load->view("templates/admin/footer", $data);
     }
     public function AddProcess()
     { 
-        $newkode = $this->SubTopik1Model->getNewKode(); 
-        $topik = strtoupper($this->input->post("topik")); 
+        $newkode = $this->SubTopik2Model->getNewKode(); 
+        $kode_topik = strtoupper($this->input->post("inputKodeTopik")); 
+        $subtopik1 = strtoupper($this->input->post("inputKodeSubtopik1"));  
         $deskripsi = $this->input->post("deskripsi");
          
-        $newSubTopik1 = new SubTopik1Model();
-        $newSubTopik1->KODE_TOPIK = $topik;
-        $newSubTopik1->SUB_TOPIK1 = $newkode;
-        $newSubTopik1->DESKRIPSI = $deskripsi; 
-        $newSubTopik1->insert();
+        $newSubTopik2 = new SubTopik2Model();
+        $newSubTopik2->KODE_TOPIK = $kode_topik;
+        $newSubTopik2->SUB_TOPIK1 = $subtopik1;
+        $newSubTopik2->SUB_TOPIK2 = $newkode;
+        $newSubTopik2->DESKRIPSI = $deskripsi; 
+        $newSubTopik2->insert();
         $this->session->set_flashdata('header', 'Pesan');
-        $this->session->set_flashdata('message', 'Berhasil Menambahkan Subtopik 1 ');
-        redirect('Admin/Master/Subtopik1');
+        $this->session->set_flashdata('message', 'Berhasil Menambahkan Subtopik 2 ');
+        redirect('Admin/Master/Subtopik2');
     }
     public function Detail($kode)
     {
         $data = $this->data;
-        $data['page_title'] = "Master";
-        $data['list_topik'] = $this->TopikModel->fetch();
+        $data['page_title'] = "Detail Subtopik 2 Master";
+        $data['list_subtopik1'] = $this->SubTopik1Model->fetch();
         $data['login'] = $this->UsersModel->getLogin();
 
-        $subtopic = $this->SubTopik1Model->get($kode);
-        $data['subtopic'] = $subtopic; 
+        $subtopic = $this->SubTopik2Model->get($kode); 
+        $data['subtopic'] = $subtopic;
         $this->load->view("templates/admin/header", $data);
-        $this->load->view("admin/master/Subtopik1/edit", $data);
+        $this->load->view("admin/master/Subtopik2/edit", $data);
         $this->load->view("templates/admin/footer", $data);
     }
 
     public function EditProcess($kode)
-    {
-        $topik = strtoupper($this->input->post("topik")); 
+    { 
+        $kode_topik = strtoupper($this->input->post("inputKodeTopik")); 
+        $subtopik1 = strtoupper($this->input->post("inputKodeSubtopik1"));  
         $deskripsi = $this->input->post("deskripsi");
+         
 
-        $updateSubtopik = new SubTopik1Model();
-        $updateSubtopik->SUB_TOPIK1 = $kode;
-        $updateSubtopik->KODE_TOPIK = $topik; 
-        $updateSubtopik->DESKRIPSI = $deskripsi;
-        $updateSubtopik->update();
+        $updateSubtopik2 = new SubTopik2Model();
+        $updateSubtopik2->KODE_TOPIK = $kode_topik;
+        $updateSubtopik2->SUB_TOPIK1 = $subtopik1;
+        $updateSubtopik2->SUB_TOPIK2 = $kode;
+        $updateSubtopik2->DESKRIPSI = $deskripsi;  
+        $updateSubtopik2->update();
 
         $this->session->set_flashdata('header', 'Pesan');
-        $this->session->set_flashdata('message', 'Berhasil Mengubah Subtopik 1 ');
-        redirect('Admin/Master/Subtopik1');
+        $this->session->set_flashdata('message', 'Berhasil Mengubah Subtopik 2 ');
+        redirect('Admin/Master/Subtopik2');
     }
 
     public function DeleteProcess($kode)
     {
 
-        $subtopik1Delete = new SubTopik1Model();
-        $subtopik1Delete->SUB_TOPIK1 = $kode; 
+        $subtopik2Delete = new SubTopik2Model();
+        $subtopik2Delete->SUB_TOPIK2 = $kode; 
 
-        $jumlahSubtopik2 = sizeof($subtopik1Delete->fetchSubtopik2());
-        if ($jumlahSubtopik2 > 0) {
+        $jumlahKomplain = sizeof($subtopik2Delete->fetchKomplain());
+        if ($jumlahKomplain > 0) {
             $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Gagal Menghapus Subtopik1, Karena Subtopik Ini Memiliki Subtopik 2 aktif');
-            redirect('Admin/Master/Subtopik1/Detail/' . $kode);
+            $this->session->set_flashdata('message', 'Gagal Menghapus Subtopik2, Karena Subtopik ini memiliki komplain aktif');
+            redirect('Admin/Master/Subtopik2/Detail/' . $kode);
         } else {
 
-            $subtopik1Delete->delete();
+            $subtopik2Delete->delete();
 
             $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Berhasil Menghapus Subtopik 1 ');
-            redirect('Admin/Master/Subtopik1');
+            $this->session->set_flashdata('message', 'Berhasil Menghapus Subtopik 2 ');
+            redirect('Admin/Master/Subtopik2');
         }
     }
 }

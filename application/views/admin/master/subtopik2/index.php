@@ -1,4 +1,4 @@
-<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Master Subtopik 1</h1>
+<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Master Subtopik 2</h1>
 <a href="<?= base_url()?>Admin/Master/Topik/Menu">
 
     <button type="button" class="btn btn-warning" style="color:black; 
@@ -8,7 +8,7 @@
         Kembali
     </button>
 </a>
-<a href="<?= base_url()?>Admin/Master/Subtopik1/Add"> 
+<a href="<?= base_url()?>Admin/Master/Subtopik2/Add"> 
     <button type="button" class="btn btn-warning" style="color:black; 
         padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;">
         <i class="fas fa-fw fa-plus"></i>
@@ -19,7 +19,7 @@
 
 <div class="card shadow mb-4 mt-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Daftar Subtopik 1</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Daftar Subtopik 2</h6>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -28,6 +28,7 @@
                     <tr>
                         <th>Topik</th>
                         <th>Subtopik 1  </th>
+                        <th>Subtopik 2  </th>
                         <th>Deskripsi</th> 
                         <th>Aksi</th>
                     </tr>
@@ -36,10 +37,11 @@
                     <?php
                     foreach ($subtopics as $subtopic) {
 
-                        $url = base_url()."Admin/Master/Subtopik1/Detail/$subtopic->SUB_TOPIK1";
+                        $url = base_url()."Admin/Master/Subtopik2/Detail/$subtopic->SUB_TOPIK2";
                         echo "<tr>";
                         echo "<td>" . $subtopic->TOPIK . "</td>";
-                        echo "<td>" . $subtopic->SUB_TOPIK1 . "</td>";
+                        echo "<td>" . $subtopic->DESKRIPSI_SUBTOPIK1 . "</td>";
+                        echo "<td>" . $subtopic->SUB_TOPIK2 . "</td>";
                         echo "<td>" . $subtopic->DESKRIPSI . "</td>"; 
                         echo "<td>
                                 <a href='$url'>

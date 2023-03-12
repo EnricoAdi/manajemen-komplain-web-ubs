@@ -14,7 +14,7 @@
     <button type="button" class="btn btn-warning" style="color:black; 
         padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;">
         <i class="fas fa-fw fa-plus"></i>
-        Input
+        Tambah
     </button>
 </a>
 <div class="card shadow mb-4 mt-4">

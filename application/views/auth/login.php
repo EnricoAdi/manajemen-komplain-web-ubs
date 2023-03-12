@@ -52,14 +52,14 @@
  
                                 </div>
 
-                                <div class="form-group d-md-flex">
+                               <!-- <div class="form-group d-md-flex" style="display:none;">
                                     <div class="w-50 text-left">
                                         <label class="checkbox-wrap checkbox-primary mb-0">Ingat saya
                                             <input type="checkbox" name="remember">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
-                                </div>
+                                </div> -->
                             </form>
                         </div>
                     </div>

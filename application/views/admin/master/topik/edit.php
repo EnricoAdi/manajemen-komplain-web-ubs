@@ -2,7 +2,8 @@
 <a href="<?= base_url() ?>Admin/Master/Topik">
 
     <button type="button" class="btn btn-warning" style="color:black; 
-        padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;">
+        padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;
+        background-color:<?= error_color(); ?>">
         
         <i class="fas fa-fw fa-step-backward"></i>
         Kembali
@@ -42,8 +43,9 @@
     </div>
     <div class="row mt-4">
         <div class="col">  
-            <button class="btn btn-danger" id="btnDelete" style="color:black;width:100px;">Hapus</button> 
-            <button type="submit" class="btn btn-warning" style="color:black;width:100px;">Edit</button>
+            <button class="btn btn-danger" id="btnDelete" style="color:black;width:100px;">
+            <i class="fas fa-fw fa-trash"></i>Hapus</button> 
+            <button type="submit" class="btn btn-warning" style="color:black;width:100px;">Ubah</button>
         </div> 
     </div>
 </form>
@@ -69,12 +71,5 @@
         </div>
     </div> 
 
-<script type="text/javascript">
-    function deleteTopik(event) {
-        event.preventDefault(); 
-        $('#confirmDeleteModal').modal('show');
-    }
-    let btnDelete = document.getElementById("btnDelete");
-    btnDelete.addEventListener("click", deleteTopik);
 
-</script>
+    <script src="<?= asset_url(); ?>js/template/confirmDeleteModalMasterTopik.js"></script>

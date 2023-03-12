@@ -1,8 +1,9 @@
-<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Input Subtopik1</h1>
+<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Tambah Subtopik1</h1>
 <a href="<?= base_url() ?>Admin/Master/Subtopik1">
 
     <button type="button" class="btn btn-warning" style="color:black; 
-        padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;">
+        padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;
+        background-color:<?= error_color(); ?>">
 
         <i class="fas fa-fw fa-step-backward"></i>
         Kembali

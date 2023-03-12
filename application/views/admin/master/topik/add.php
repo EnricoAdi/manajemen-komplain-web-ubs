@@ -2,7 +2,8 @@
 <a href="<?= base_url() ?>Admin/Master/Topik">
 
     <button type="button" class="btn btn-warning" style="color:black; 
-        padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;">
+        padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;
+        background-color:<?= error_color(); ?>">
         
         <i class="fas fa-fw fa-step-backward"></i>
         Kembali

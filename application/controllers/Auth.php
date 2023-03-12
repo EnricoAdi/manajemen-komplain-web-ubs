@@ -40,7 +40,7 @@ class Auth extends CI_Controller
 
                 $nomor_induk = $this->input->post("nomor_induk");
                 $password = $this->input->post("password");
-                $remember = $this->input->post("remember") != null;
+                //$remember = $this->input->post("remember") != null;
 
                 $userFound = $this->UsersModel->get($nomor_induk);
                 if ($userFound == null) {
