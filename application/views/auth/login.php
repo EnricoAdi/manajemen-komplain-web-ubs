@@ -13,7 +13,7 @@
     <link href="<?= asset_url(); ?>bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
-<body class="bg-warning" style="color:#004481; margin-bottom:3%;"> 
+<body style="background-color: <?= primary_color()?>; margin-bottom:3%;"> 
     <section class="" style="margin-top: 3%;">
         <div class="container">
 
@@ -48,7 +48,9 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <button type="submit" class="form-control btn btn-primary rounded submit px-3">Login</button>
+                                    <button type="submit" class="form-control btn rounded submit px-3"
+                                    style="background-color: <?= primary_color()?>; color:white;">
+                                        Login</button>
  
                                 </div>
 

@@ -9,7 +9,7 @@
     </button>
 </a>
 <a href="<?= base_url()?>Admin/Master/Subtopik1/Add"> 
-    <button type="button" class="btn btn-warning" style="color:black; 
+    <button type="button" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>;
         padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;">
         <i class="fas fa-fw fa-plus"></i>
         Tambah

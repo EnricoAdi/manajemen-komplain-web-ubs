@@ -1,4 +1,4 @@
-<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Input Topik</h1>
+<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Tambah Topik</h1>
 <a href="<?= base_url() ?>Admin/Master/Topik">
 
     <button type="button" class="btn btn-warning" style="color:black; 
@@ -39,7 +39,7 @@
     </div>
     <div class="row mt-4">
         <div class="col"> 
-            <button type="submit" class="btn btn-warning" style="color:black;">Tambah</button>
+            <button type="submit" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>;">Tambah</button>
         </div> 
     </div>
 </form>

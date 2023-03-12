@@ -5,3 +5,6 @@ function asset_url(){
 function error_color(){
    return "#ff5447";
 }
+function primary_color(){
+   return "#004882";
+}

@@ -16,7 +16,16 @@ class UsersModel extends CI_Model
         $this->load->library('session'); 
     }
     public function fetch(){
-       return $this->db->get('USERS')->result();
+        return $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA_DIVISI FROM USERS u left join USERS a 
+        on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODE_DIVISI = u.KODE_DIVISI")->result(); 
+    }
+    public function fetchWithoutEmail(){
+        return $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA_DIVISI FROM USERS u left join USERS a 
+        on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODE_DIVISI = u.KODE_DIVISI where u.EMAIL is null")->result();  
+    }
+    public function fetchAtasan(){
+        return $this->db->query("SELECT U.*,D.NAMA_DIVISI FROM USERS U join DIVISI D on D.KODE_DIVISI = U.KODE_DIVISI
+        WHERE KODE_HAK_AKSES='2'")->result();
     }
     public function get($nomor_induk){
         $this->db->select('*');
@@ -45,5 +54,13 @@ class UsersModel extends CI_Model
     public function hak_akses(){
         $this->load->model('HakAksesModel');
         return $this->HakAksesModel->get($this->KODE_HAK_AKSES);
+    } 
+    public function update(){
+        $this->db->where('NOMOR_INDUK', $this->NOMOR_INDUK);
+        $this->db->update('USERS', $this); 
+    } 
+    public function addEmail(){ 
+        $this->db->query("UPDATE USERS SET EMAIL= ?, KODE_ATASAN = ? WHERE NOMOR_INDUK = ?",
+        array($this->EMAIL,$this->KODE_ATASAN,$this->NOMOR_INDUK));
     }
 }

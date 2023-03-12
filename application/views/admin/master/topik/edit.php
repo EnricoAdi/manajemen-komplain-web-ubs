@@ -45,7 +45,7 @@
         <div class="col">  
             <button class="btn btn-danger" id="btnDelete" style="color:black;width:100px;">
             <i class="fas fa-fw fa-trash"></i>Hapus</button> 
-            <button type="submit" class="btn btn-warning" style="color:black;width:100px;">Ubah</button>
+            <button type="submit" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>;width:100px;">Ubah</button>
         </div> 
     </div>
 </form>

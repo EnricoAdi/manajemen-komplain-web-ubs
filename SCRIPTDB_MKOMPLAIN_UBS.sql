@@ -138,7 +138,7 @@ VALUES('4', 'Admin');
 INSERT into users
 values('12345678', '$2y$10$iAaeo2TCryN5.2rSPMAPB.bW0DrmhDbxQBR4zPoRYnGiFL30R96Rm', 'Enrico', '1', 'enrico@ubslinux.com', '01', '');
 INSERT into users
-values('12345679', '$2y$10$iAaeo2TCryN5.2rSPMAPB.bW0DrmhDbxQBR4zPoRYnGiFL30R96Rm', 'Enrico', '2', 'enricomanager@ubslinux.com', '01', '');
+values('12345679', '$2y$10$iAaeo2TCryN5.2rSPMAPB.bW0DrmhDbxQBR4zPoRYnGiFL30R96Rm', 'Enrico', '2', 'enricomanager@ubslinux.com', '01', '12345678');
 INSERT into users
 values('12345680', '$2y$10$RGptyEa7CBK370RNA60NzeliRWjl6PlzyJJGQZyRAsAlhcBoUErBy', 'Ester', '1', 'ester@ubslinux.com', '01', '');
 INSERT into users
@@ -146,6 +146,9 @@ values('12345681', '$2y$10$RGptyEa7CBK370RNA60NzeliRWjl6PlzyJJGQZyRAsAlhcBoUErBy
 INSERT into users
 values('admin', '$2y$10$P7qa.IhncGTaPfIiEG/MseX.MXjogMckU5WCWmLq8elUMNrfdCseS', 'Admin', '4', 
 'admin1@ubslinux.com', '01', '');
+INSERT into users
+values('12311179', '$2y$10$iAaeo2TCryN5.2rSPMAPB.bW0DrmhDbxQBR4zPoRYnGiFL30R96Rm', 'Enrico', '2', 'enrico2@ubslinux.com', '01', '12345678');
+INSERT into users values('11311180', '$2y$10$iAaeo2TCryN5.2rSPMAPB.bW0DrmhDbxQBR4zPoRYnGiFL30R96Rm', 'Enrico', '1', '', '01', '12345678');
 
 INSERT INTO TOPIK values('ENVIRONMENT', 'E2301', 'Lingkungan', 'T', '01', 'Lingkungan');
 INSERT INTO TOPIK values('MORALE', 'M2301', 'Moral', 'T', '01', 'Moral');

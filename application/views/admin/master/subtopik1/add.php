@@ -35,7 +35,7 @@
     </div>
     <div class="row mt-4">
         <div class="col">
-            <button type="submit" class="btn btn-warning" style="color:black;">Tambah</button>
+            <button type="submit" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>;">Tambah</button>
         </div>
     </div>
 </form>
