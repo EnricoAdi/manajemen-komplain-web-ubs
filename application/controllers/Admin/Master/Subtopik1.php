@@ -101,8 +101,7 @@ class Subtopik1 extends CI_Controller
     }
 
     public function DeleteProcess($kode)
-    {
-
+    { 
         $subtopik1Delete = new SubTopik1Model();
         $subtopik1Delete->SUB_TOPIK1 = $kode; 
 
