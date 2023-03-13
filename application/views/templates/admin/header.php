@@ -1,54 +1,4 @@
-<?php
-//define sidebar admin
-$routes = [
-    [
-        "name" => "Dashboard",
-        "icon" => "fas fa-fw fa-tachometer-alt",
-        "url" => "index.html",
-        "type" => "single" //ada single, section, dropdown
-    ],
-    [
-        "name" => "Komplain Diajukan",
-        "icon" => "",
-        "url" => "",
-        "type" => "section",
-        "child" => [
-            [
-                "name" => "Ajukan Komplain",
-                "icon" => "fas fa-fw fa-paper-plane",
-                "url" => "index.html",
-                "type" => "single"
-            ],
-            [
-                "name" => "Penyelesaian Komplain Diterima",
-                "icon" => "fas fa-fw fa-envelope-open",
-                "url" => "index.html",
-                "type" => "single"
-            ],
-        ]
-    ],
-    [
-        "name" => "Komplain Diterima",
-        "icon" => "",
-        "url" => "",
-        "type" => "section",
-        "child" => [
-            [
-                "name" => "Komplain Ditugaskan",
-                "icon" => "fas fa-fw fa-list",
-                "url" => "index.html",
-                "type" => "single"
-            ],
-            [
-                "name" => "Penyelesaian Komplain Diajukan",
-                "icon" => "fas fa-fw fa-wrench",
-                "url" => "index.html",
-                "type" => "single"
-            ],
-        ]
-    ]
-];
-
+<?php  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -172,13 +122,13 @@ $routes = [
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?= $login['NAMA'] ?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?= $login->NAMA ?></span>
                                 <img class="img-profile rounded-circle" src="<?= asset_url(); ?>images/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
-                                    <?= $login['NAMA']; ?>
+                                    <?= $login->NAMA; ?>
                                 </a>
                                 <!--   <a class="dropdown-item" href="#">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>

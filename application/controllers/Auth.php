@@ -18,7 +18,7 @@ class Auth extends CI_Controller
             $this->session->set_flashdata('message', 'Anda sudah login');
 
             //dibedakan berdasarkan hak akses 
-            $hak_akses = $this->UsersModel->getLogin()['KODE_HAK_AKSES'];
+            $hak_akses = $this->UsersModel->getLogin()->KODE_HAK_AKSES;
             if ($hak_akses == '1') {  
                 redirect('User/Dashboard'); //end user
             }
@@ -42,18 +42,18 @@ class Auth extends CI_Controller
                 $password = $this->input->post("password");
                 //$remember = $this->input->post("remember") != null;
 
-                $userFound = $this->UsersModel->get($nomor_induk);
+                $userFound = $this->UsersModel->get($nomor_induk); 
                 if ($userFound == null) {
                     $this->session->set_flashdata('header', 'Pesan');
                     $this->session->set_flashdata('message', 'Nomor Induk tidak ditemukan');
 
                     $this->load->view("auth/login", $data);
-                } else {
-                    if (password_verify($password, $userFound['PASSWORD'])) {
+                } else {  
+                    if (password_verify($password, $userFound->PASSWORD)) {
                         $this->session->set_flashdata('success', 'Berhasil Login');
                         $this->UsersModel->login($userFound);
                         //TODO LOGIN   
-                        $hak_akses = $this->UsersModel->getLogin()['KODE_HAK_AKSES'];
+                        $hak_akses = $userFound->KODE_HAK_AKSES;
 
                         if ($hak_akses == '1') { 
                             

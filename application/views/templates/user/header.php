@@ -47,8 +47,7 @@ $routes = [
             ],
         ]
     ]
-];
-
+];  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -112,7 +111,7 @@ $routes = [
             <li class="nav-item">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-envelope-open"></i>
-                    <span>Penyelesaian Komplain Diterima</span></a>
+                    <span>Penyelesaian Komplain <span style="margin-left:25px;">Diterima</span></span></a>
             </li> 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -155,7 +154,7 @@ $routes = [
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Penyelesaian Komplain Diajukan</span></a>
+                    <span>Penyelesaian Komplain <span style="margin-left:25px;">Diajukan</span></span></a>
             </li>
 
             <!-- Divider -->
@@ -195,24 +194,12 @@ $routes = [
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?= $login['NAMA'] ?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?= $login->NAMA; ?></span>
                                 <img class="img-profile rounded-circle" src="<?= asset_url(); ?>images/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <!-- <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a> -->
-                                <!-- <div class="dropdown-divider"></div> -->
+                              
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout

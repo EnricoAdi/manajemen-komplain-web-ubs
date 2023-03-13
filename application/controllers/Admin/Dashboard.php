@@ -17,7 +17,7 @@
             }
 
             //jika tidak ada akses, maka redirect ke halaman dashboard berdasarkan hak aksesnya
-            $hak_akses = $this->UsersModel->getLogin()['KODE_HAK_AKSES'];
+            $hak_akses = $this->UsersModel->getLogin()->KODE_HAK_AKSES;
             if($hak_akses!=4){
                 if ($hak_akses == '1') {  
                     redirect('User/Dashboard'); //end user
@@ -35,8 +35,8 @@
         public function index(){
             $data = $this->data;
             $data['page_title'] = "Dashboard Admin";
-            $data['login'] = $this->UsersModel->getLogin();
-            
+            $data['login'] = $this->UsersModel->getLogin(); 
+ 
             $this->load->view("templates/admin/header", $data);
             $this->load->view("admin/dashboard", $data);
             $this->load->view("templates/admin/footer", $data);

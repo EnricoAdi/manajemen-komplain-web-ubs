@@ -17,7 +17,7 @@
             }
 
             //jika tidak ada akses, maka redirect ke halaman dashboard berdasarkan hak aksesnya
-            $hak_akses = $this->UsersModel->getLogin()['KODE_HAK_AKSES'];
+            $hak_akses = $this->UsersModel->getLogin()->KODE_HAK_AKSES;
             if($hak_akses!=4){
                 if ($hak_akses == '1') {  
                     redirect('User/Dashboard'); //end user
