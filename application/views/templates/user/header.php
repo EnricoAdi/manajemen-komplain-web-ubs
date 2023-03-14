@@ -101,17 +101,28 @@ $routes = [
             <!-- Heading -->
             <div class="sidebar-heading">
                 Komplain Diajukan
-            </div>
+            </div> 
+            <li class="nav-item  <?php 
+                //todo if navigation
+            ?>">
+                <a class="nav-link" href="<?= base_url(); ?>Admin/Dashboard" data-toggle="collapse" data-target="#collapsePagesLaporan" aria-expanded="true" aria-controls="collapsePagesLaporan">
 
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-paper-plane"></i>
-                    <span>Ajukan Komplain</span></a>
-            </li> 
+                    <span>Ajukan Komplain</span>
+                </a>
+                <div id="collapsePagesLaporan" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Pengajuan Komplain</h6>
+                        <a class="collapse-item" href="<?= base_url(); ?>User/">Daftar Komplain</a> 
+                        <a class="collapse-item" href="<?= base_url(); ?>User/">Tambah Komplain</a>  
+                    </div>
+                </div>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-envelope-open"></i>
-                    <span>Penyelesaian Komplain <span style="margin-left:25px;">Diterima</span></span></a>
+                    <span>Penyelesaian Komplain <span style="margin-left:15%;">Diterima</span></span></a>
             </li> 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -120,29 +131,7 @@ $routes = [
             <div class="sidebar-heading">
                 Komplain Diterima
             </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <!-- <li class="nav-item active">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-                   
-                    <i class="fas fa-fw fa-paper-plane"></i>
-                    <span>Ajukan Komplain</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    dikasih collapse show kalo mau nampilin 
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item active" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
-            </li> -->
-
+ 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
@@ -154,7 +143,7 @@ $routes = [
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Penyelesaian Komplain <span style="margin-left:25px;">Diajukan</span></span></a>
+                    <span>Penyelesaian Komplain <span style="margin-left:15%;">Diajukan</span></span></a>
             </li>
 
             <!-- Divider -->

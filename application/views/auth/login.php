@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $page_title ?> </title>
     <link rel="stylesheet" href=" <?= asset_url(); ?>css/login/style.css"> 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link href=" <?= asset_url(); ?>css/fontLato.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="<?= asset_url(); ?>images/logo.png"> 
     <!-- <link href="<?= asset_url(); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?= asset_url(); ?>css/fontawesome.min.css">
     <link href="<?= asset_url(); ?>bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 

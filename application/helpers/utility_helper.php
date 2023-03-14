@@ -8,3 +8,8 @@ function error_color(){
 function primary_color(){
    return "#004882";
 }
+function configToken(){
+   $cnf['exp'] = 3600; //milisecond
+   $cnf['secretkey'] = 'manajemenkomplain15032023';
+   return $cnf;        
+}
