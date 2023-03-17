@@ -8,39 +8,42 @@ require APPPATH . '/libraries/JWK.php';
 
 use \Firebase\JWT\JWT;
 use \Firebase\JWT\ExpiredException;
+
 class Auth extends REST_Controller
 {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('UsersModel');
+        header("Access-Control-Allow-Origin: *");
+        header("Access-Control-Allow-Methods: *");
+        header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
     }
- 
+
 
     public function index_get()
     {
         $this->response([
             'status' => true,
             'message' => 'Unauthorized',
-            'data' =>  'hello'
+            'data' =>  'helloa'
         ], REST_Controller::HTTP_OK);
     }
     public function index_post()
     {
         $nomor_induk = $this->post('nomor_induk');
         $password = $this->post('password');
-                  
+
         $exp = time() + 3600;
-        $userFound = $this->UsersModel->get($nomor_induk); 
+        $userFound = $this->UsersModel->get($nomor_induk);
         if ($userFound == null) {
 
             $this->response([
                 'status' => false,
-                'message' => 'Nomor Induk tidak ditemukan' 
+                'message' => 'Nomor Induk tidak ditemukan'
             ], REST_Controller::HTTP_NOT_FOUND);
         } else {
             if (password_verify($password, $userFound->PASSWORD)) {
-                $this->UsersModel->login($userFound); 
+                $this->UsersModel->login($userFound);
 
                 $token = array(
                     "iss" => 'apprestservice',
@@ -52,22 +55,24 @@ class Auth extends REST_Controller
                         "nomor_induk" => $this->input->post('nomor_induk'),
                         "password" => $this->input->post('password')
                     )
-                );       
-            
-            $jwt = JWT::encode($token,
-             configToken()['secretkey'], 'HS256');
+                );
+
+                $jwt = JWT::encode(
+                    $token,
+                    configToken()['secretkey'],
+                    'HS256'
+                );
 
                 $this->response([
                     'status' => true,
-                    'message' => 'Login Berhasil', 
+                    'message' => 'Login Berhasil',
                     'token' => $jwt,
                     'exp' => $exp
-                ], REST_Controller::HTTP_OK);
-
+                ], 200);
             } else {
                 $this->response([
                     'status' => false,
-                    'message' => 'Login Gagal' 
+                    'message' => 'Login Gagal'
                 ], REST_Controller::HTTP_UNAUTHORIZED);
             }
         }

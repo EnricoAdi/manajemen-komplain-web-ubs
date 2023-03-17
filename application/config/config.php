@@ -19,6 +19,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 // $config['base_url'] =  getenv('BASE_URL'); 
 $config['base_url'] = 'http://localhost/manajemen-komplain-web-ubs/'; 
+// $config['base_url'] = 'https://8337-139-255-65-92.ap.ngrok.io/manajemen-komplain-web-ubs/'; 
+// $config['base_url'] = 'http://10.0.2.2/manajemen-komplain-web-ubs/'; 
 
 /*
 |--------------------------------------------------------------------------

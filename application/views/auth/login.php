@@ -87,7 +87,7 @@
                 </div>
                 <div class="modal-body"><?= $this->session->flashdata('message') ?></div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" type="button" data-dismiss="modal">OK</button> 
+                    <button class="btn" type="button" data-dismiss="modal" style="background-color: <?= primary_color()?>; color:white;">OK</button> 
                 </div>
             </div>
         </div>

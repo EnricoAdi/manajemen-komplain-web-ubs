@@ -63,7 +63,7 @@ $routes = [
     <title><?= $page_title ?> </title>
     <link rel="icon" type="image/x-icon" href="<?= asset_url(); ?>images/logo.png">
     <!-- Custom fonts for this template-->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="<?= asset_url(); ?>css/fontNunito.css" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="<?= asset_url(); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -89,7 +89,11 @@ $routes = [
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
+            <li class="nav-item  <?php 
+                if($navigation=="Dashboard"){
+                    echo "active";
+                }
+            ?>">
                 <a class="nav-link" href="<?= base_url(); ?>User/Dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -131,21 +135,34 @@ $routes = [
             <div class="sidebar-heading">
                 Komplain Diterima
             </div>
- 
-            <!-- Nav Item - Charts -->
+  
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="">
                     <i class="fas fa-fw fa-list"></i>
                     <span>Daftar Komplain</span></a>
-            </li>
+            </li> 
+            <li class="nav-item  <?php 
+                //todo if navigation
+            ?>">
+                <a class="nav-link" href="<?= base_url(); ?>Admin/Dashboard" data-toggle="collapse" data-target="#collapsePagesPenyelesaianKomplain" aria-expanded="true" aria-controls="collapsePagesPenyelesaianKomplain">
 
-            <!-- Nav Item - Tables -->
+                <i class="fas fa-fw fa-inbox"></i>
+                     <span>Penyelesaian Komplain <span style="margin-left:15%;">Diajukan</span></span>
+                </a>
+                <div id="collapsePagesPenyelesaianKomplain" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Penyelesaian Komplain</h6>
+                        <a class="collapse-item" href="<?= base_url(); ?>User/">Penugasan</a> 
+                        <a class="collapse-item" href="<?= base_url(); ?>User/">Done</a>  
+                    </div>
+                </div>
+            </li>
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Penyelesaian Komplain <span style="margin-left:15%;">Diajukan</span></span></a>
+                    <span>Komplain Ditugaskan</span></a>
             </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -172,13 +189,7 @@ $routes = [
                     </button>
 
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        
-
-
-
+                    <ul class="navbar-nav ml-auto"> 
                         <div class="topbar-divider d-none d-sm-block"></div> 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
