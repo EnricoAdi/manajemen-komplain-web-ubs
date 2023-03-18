@@ -136,9 +136,9 @@ INSERT INTO HAK_AKSES
 VALUES('4', 'Admin');
 
 INSERT into users
-values('12345678', '$2y$10$iAaeo2TCryN5.2rSPMAPB.bW0DrmhDbxQBR4zPoRYnGiFL30R96Rm', 'Enrico', '1', 'enrico@ubslinux.com', '01', '');
+values('12345678', '$2y$10$iAaeo2TCryN5.2rSPMAPB.bW0DrmhDbxQBR4zPoRYnGiFL30R96Rm', 'Enrico', '1', 'enrico@ubslinux.com', '03', '12345679');
 INSERT into users
-values('12345679', '$2y$10$iAaeo2TCryN5.2rSPMAPB.bW0DrmhDbxQBR4zPoRYnGiFL30R96Rm', 'Enrico', '2', 'enricomanager@ubslinux.com', '01', '12345678');
+values('12345679', '$2y$10$iAaeo2TCryN5.2rSPMAPB.bW0DrmhDbxQBR4zPoRYnGiFL30R96Rm', 'Enrico', '2', 'enricomanager@ubslinux.com', '03', '');
 INSERT into users
 values('12345680', '$2y$10$RGptyEa7CBK370RNA60NzeliRWjl6PlzyJJGQZyRAsAlhcBoUErBy', 'Ester', '1', 'ester@ubslinux.com', '01', '');
 INSERT into users
@@ -149,12 +149,39 @@ values('admin', '$2y$10$P7qa.IhncGTaPfIiEG/MseX.MXjogMckU5WCWmLq8elUMNrfdCseS', 
 INSERT into users
 values('12311179', '$2y$10$iAaeo2TCryN5.2rSPMAPB.bW0DrmhDbxQBR4zPoRYnGiFL30R96Rm', 'Enrico', '2', 'enrico2@ubslinux.com', '01', '12345678');
 INSERT into users values('11311180', '$2y$10$iAaeo2TCryN5.2rSPMAPB.bW0DrmhDbxQBR4zPoRYnGiFL30R96Rm', 'Enrico', '1', '', '01', '12345678');
+ 
+INSERT INTO TOPIK VALUES ('ENVIRONMENT_PRODUKSI','E2301','LINGKUNGAN PRODUKSI','T','02','Lingkungan');
+INSERT INTO TOPIK VALUES ('MORALE_IT','M2301','Moral Divisi IT','T','01','MORALE_IT');
+INSERT INTO TOPIK VALUES ('QUALITY_IT','Q2301','Kualitas','T','01','Kualitas');
+INSERT INTO TOPIK VALUES ('SAFETY_IT','S2301','Keamanan IT','T','01','Keamanan IT');
+INSERT INTO TOPIK VALUES ('PRODUCT_PRODUKSI','P2301','Produk','T','02','Produk');
+INSERT INTO TOPIK VALUES ('COST_MARKETING','C2301','Biaya','T','05','Biaya');
+INSERT INTO TOPIK VALUES ('PRODUCT_VARIASI','P2302','Hasil Produk Divisi Variasi','T','03','PRODUCT_VARIASI');
+INSERT INTO TOPIK VALUES ('COST_PRODUKSI','C2302','BIAYA UNTUK PROSES PRODUKSI','T','02','COST_PRODUKSI');
+INSERT INTO TOPIK VALUES ('SAFETY_PRODUKSI','S2302','KEAMANAN LINGKUNGAN PRODUKSI','T','02','SAFETY_PRODUKSI');
+INSERT INTO TOPIK VALUES ('COST_IT','C2303','Biaya departemen IT','T','01','COST_IT');
+INSERT INTO TOPIK VALUES ('ENVIRONMENT_IT','E2302','Lingkungan kerja divisi IT','T','01','ENVIRONMENT_IT');
+INSERT INTO TOPIK VALUES ('QUALITY_PRODUKSI','Q2302','Kualitas Divisi Produksi','T','02','QUALITY_PRODUKSI');
+INSERT INTO TOPIK VALUES ('MORALE_COR','M2302','Moral Divisi COR','T','04','MORALE_COR');
+INSERT INTO TOPIK VALUES ('MORALE_MARKETING','M2303','Moral Divisi Marketing','T','05','MORALE_MARKETING');
 
-INSERT INTO TOPIK values('ENVIRONMENT', 'E2301', 'Lingkungan', 'T', '01', 'Lingkungan');
-INSERT INTO TOPIK values('MORALE', 'M2301', 'Moral', 'T', '01', 'Moral');
-INSERT INTO TOPIK values('QUALITY', 'Q2301', 'Kualitas', 'T', '01', 'Kualitas');
-INSERT INTO TOPIK values('SAFETY', 'S2301', 'Keamanan', 'T', '01', 'Keamanan');
-INSERT INTO TOPIK values('PRODUCT', 'P2301', 'Produk', 'T', '01', 'Produk');
-INSERT INTO TOPIK values('COST', 'C2301', 'Biaya', 'T', '01', 'Biaya');
+INSERT INTO SUB_TOPIK1 VALUES ('E2301','0008','Kebersihan Lingkungan Produksi');
+INSERT INTO SUB_TOPIK1 VALUES ('M2301','0011','Sikap Kerja Divisi IT');
+INSERT INTO SUB_TOPIK1 VALUES ('M2301','0004','Sikap salam Divisi IT');
+INSERT INTO SUB_TOPIK1 VALUES ('Q2301','0007','Kualitas Software Divisi IT');
+INSERT INTO SUB_TOPIK1 VALUES ('Q2301','0005','Kualitas Produk');
+INSERT INTO SUB_TOPIK1 VALUES ('S2301','0010','Keamanan Perangkat Keras Divisi IT');
+INSERT INTO SUB_TOPIK1 VALUES ('S2301','0006','Keamanan Lingkungan Kerja');
+INSERT INTO SUB_TOPIK1 VALUES ('P2301','0012','Hasil Produk Divisi Produksi');
+INSERT INTO SUB_TOPIK1 VALUES ('C2301','0003','Harga Kegiatan Marketing Divisi Marketing');
+INSERT INTO SUB_TOPIK1 VALUES ('E2302','0013','Kondisi Ruang Divisi IT');
+INSERT INTO SUB_TOPIK1 VALUES ('E2302','0002','Tata Lingkungan Divisi IT');
+INSERT INTO SUB_TOPIK1 VALUES ('Q2302','0009','Kualitas Bahan Produksi');
+
+INSERT INTO SUB_TOPIK2 VALUES ('E2301','0008','0004','LINGKUNGAN KURANG BERSIH','1');
+INSERT INTO SUB_TOPIK2 VALUES ('E2301','0008','0005','LINGKUNGAN PRODUKSI SEDIKIT TIDAK BERSIH','1');
+INSERT INTO SUB_TOPIK2 VALUES ('Q2301','0007','0003','BUG PADA APLIKASI PENGAJUAN LAPORAN','1');
+INSERT INTO SUB_TOPIK2 VALUES ('S2301','0006','0002','Kondisi lingkungan kantor ada masalah keamanan','1');
+INSERT INTO SUB_TOPIK2 VALUES ('C2301','0002','0001','RUANGAN TERLALU GELAP','1');
 
 COMMIT;

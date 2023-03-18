@@ -30,7 +30,7 @@
                 <div class="modal-body">Apakah anda yakin untuk melakukan logout?</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
-                    <a class="btn btn-primary" href="<?= base_url() ?>Auth/logout">Ya</a>
+                    <a class="btn btn-primary" style="background-color: <?= primary_color()?>; color:white;" href="<?= base_url() ?>Auth/logout">Ya</a>
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="modal-body"><?= $this->session->flashdata('message') ?></div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" type="button" data-dismiss="modal">OK</button> 
+                    <button class="btn btn-primary" type="button" style="background-color: <?= primary_color()?>; color:white;"data-dismiss="modal">OK</button> 
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
                 <div class="modal-body"><?= $this->session->flashdata('confirmation') ?></div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
-                    <a class="btn btn-primary" href="<?= base_url() ?><?= $this->session->flashdata('url') ?>">Ya</a>
+                    <a class="btn" style="background-color: <?= primary_color()?>; color:white;" href="<?= base_url() ?><?= $this->session->flashdata('url') ?>">Ya</a>
                 </div>
             </div>
         </div>

@@ -74,4 +74,17 @@ class SubTopik2Model extends CI_Model
         array($this->SUB_TOPIK2)
         )->result();
      }
+    public function fetchSubtopikAll($divisi, $in){ 
+        if($in){ 
+        return $this->db->query('SELECT S2.SUB_TOPIK2, S2.DESKRIPSI AS S2DESKRIPSI, 
+            S2.SUB_TOPIK1, S1.DESKRIPSI AS S1DESKRIPSI, S2.KODE_TOPIK, T.TOPIK AS TDESKRIPSI 
+            FROM SUB_TOPIK2 S2 JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1=S2.SUB_TOPIK1 
+            JOIN TOPIK T ON S2.KODE_TOPIK=T.KODE_TOPIK WHERE T.DIV_TUJUAN='.$divisi)->result();
+        }else{ 
+            return $this->db->query('SELECT S2.SUB_TOPIK2, S2.DESKRIPSI AS S2DESKRIPSI, 
+            S2.SUB_TOPIK1, S1.DESKRIPSI AS S1DESKRIPSI, S2.KODE_TOPIK, T.TOPIK AS TDESKRIPSI 
+            FROM SUB_TOPIK2 S2 JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1=S2.SUB_TOPIK1 
+            JOIN TOPIK T ON S2.KODE_TOPIK=T.KODE_TOPIK WHERE T.DIV_TUJUAN<>'.$divisi)->result();
+        }
+     }
 }

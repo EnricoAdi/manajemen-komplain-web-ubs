@@ -68,6 +68,7 @@ class Subtopik2 extends CI_Controller
         $newSubTopik2->SUB_TOPIK1 = $subtopik1;
         $newSubTopik2->SUB_TOPIK2 = $newkode;
         $newSubTopik2->DESKRIPSI = $deskripsi; 
+        $newSubTopik2->AKTIF = '1'; 
         $newSubTopik2->insert();
         $this->session->set_flashdata('header', 'Pesan');
         $this->session->set_flashdata('message', 'Berhasil Menambahkan Subtopik 2 ');

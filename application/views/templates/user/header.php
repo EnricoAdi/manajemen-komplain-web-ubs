@@ -47,7 +47,7 @@ $routes = [
             ],
         ]
     ]
-];  
+];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -89,11 +89,11 @@ $routes = [
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item  <?php 
-                if($navigation=="Dashboard"){
-                    echo "active";
-                }
-            ?>">
+            <li class="nav-item  <?php
+                                    if ($navigation == "Dashboard") {
+                                        echo "active";
+                                    }
+                                    ?>">
                 <a class="nav-link" href="<?= base_url(); ?>User/Dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -105,11 +105,13 @@ $routes = [
             <!-- Heading -->
             <div class="sidebar-heading">
                 Komplain Diajukan
-            </div> 
-            <li class="nav-item  <?php 
-                //todo if navigation
-            ?>">
-                <a class="nav-link" href="<?= base_url(); ?>Admin/Dashboard" data-toggle="collapse" data-target="#collapsePagesLaporan" aria-expanded="true" aria-controls="collapsePagesLaporan">
+            </div>
+            <li class="nav-item  <?php
+                                    if ($navigation == "Complain") {
+                                        echo "active";
+                                    }
+                                    ?>">
+                <a class="nav-link" href="<?= base_url(); ?>User/Complain/List" data-toggle="collapse" data-target="#collapsePagesLaporan" aria-expanded="true" aria-controls="collapsePagesLaporan">
 
                     <i class="fas fa-fw fa-paper-plane"></i>
                     <span>Ajukan Komplain</span>
@@ -118,8 +120,8 @@ $routes = [
 
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pengajuan Komplain</h6>
-                        <a class="collapse-item" href="<?= base_url(); ?>User/">Daftar Komplain</a> 
-                        <a class="collapse-item" href="<?= base_url(); ?>User/">Tambah Komplain</a>  
+                        <a class="collapse-item" href="<?= base_url(); ?>User/Complain/ListComplain">Daftar Komplain</a>
+                        <a class="collapse-item" href="<?= base_url()?>User/Complain/Add/page/1">Tambah Komplain</a>
                     </div>
                 </div>
             </li>
@@ -127,7 +129,7 @@ $routes = [
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-envelope-open"></i>
                     <span>Penyelesaian Komplain <span style="margin-left:15%;">Diterima</span></span></a>
-            </li> 
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -135,26 +137,26 @@ $routes = [
             <div class="sidebar-heading">
                 Komplain Diterima
             </div>
-  
+
             <li class="nav-item">
                 <a class="nav-link" href="">
                     <i class="fas fa-fw fa-list"></i>
                     <span>Daftar Komplain</span></a>
-            </li> 
-            <li class="nav-item  <?php 
-                //todo if navigation
-            ?>">
+            </li>
+            <li class="nav-item  <?php
+                                    //todo if navigation
+                                    ?>">
                 <a class="nav-link" href="<?= base_url(); ?>Admin/Dashboard" data-toggle="collapse" data-target="#collapsePagesPenyelesaianKomplain" aria-expanded="true" aria-controls="collapsePagesPenyelesaianKomplain">
 
-                <i class="fas fa-fw fa-inbox"></i>
-                     <span>Penyelesaian Komplain <span style="margin-left:15%;">Diajukan</span></span>
+                    <i class="fas fa-fw fa-inbox"></i>
+                    <span>Penyelesaian Komplain <span style="margin-left:15%;">Diajukan</span></span>
                 </a>
                 <div id="collapsePagesPenyelesaianKomplain" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
 
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Penyelesaian Komplain</h6>
-                        <a class="collapse-item" href="<?= base_url(); ?>User/">Penugasan</a> 
-                        <a class="collapse-item" href="<?= base_url(); ?>User/">Done</a>  
+                        <a class="collapse-item" href="<?= base_url(); ?>User/">Penugasan</a>
+                        <a class="collapse-item" href="<?= base_url(); ?>User/">Done</a>
                     </div>
                 </div>
             </li>
@@ -189,8 +191,8 @@ $routes = [
                     </button>
 
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto"> 
-                        <div class="topbar-divider d-none d-sm-block"></div> 
+                    <ul class="navbar-nav ml-auto">
+                        <div class="topbar-divider d-none d-sm-block"></div>
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -199,7 +201,9 @@ $routes = [
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                              
+                                <a class="dropdown-item" href="#">
+                                    <?= "DIVISI ".$login->NAMA_DIVISI; ?>
+                                </a>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout

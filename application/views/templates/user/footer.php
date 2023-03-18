@@ -29,8 +29,8 @@
                 </div>
                 <div class="modal-body">Apakah anda yakin untuk melakukan logout?</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
-                    <a class="btn btn-primary" href="<?= base_url() ?>Auth/logout">Ya</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal" >Tidak</button>
+                    <a class="btn" style="background-color: <?= primary_color()?>; color:white;" href="<?= base_url() ?>Auth/logout">Ya</a>
                 </div>
             </div>
         </div>

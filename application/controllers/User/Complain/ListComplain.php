@@ -1,10 +1,10 @@
 <?php
-    //dashboard user 
-    class Dashboard extends CI_Controller {
+    //list komplain diajukan user 
+    class ListComplain extends CI_Controller {
         public function __construct(){
             parent::__construct();
             $this->data['page_title'] = "User Page";
-            $this->data['navigation'] = "Dashboard";  
+            $this->data['navigation'] = "Complain";  
 
             $this->load->model('UsersModel');
             $this->load->library("form_validation");  
@@ -35,11 +35,14 @@
         
         public function index(){
             $data = $this->data;
-            $data['page_title'] = "Dashboard End User";
+            $data['page_title'] = "Daftar Komplain Diajukan";
             $data['login'] = $this->UsersModel->getLogin();
 
+            //todo fetch complain user tersebut
+            
+            
             $this->load->view("templates/user/header", $data);
-            $this->load->view("user/dashboard", $data);
+            $this->load->view("user/complain/index", $data);
             $this->load->view("templates/user/footer", $data);
  
         }
