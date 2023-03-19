@@ -41,9 +41,10 @@
                                 <i class='fas fa-fw fa-info-circle'></i> 
                                 Detail
                                 </button>   
-                                <button class='btn btn-danger' style='color:black'>
+
+                                <button class='btn btn-danger btnDelete' id='$complain->NO_KOMPLAIN' style='color:black'>
                                 <i class='fas fa-fw fa-trash'></i> 
-                                Hapus
+                                    Hapus
                                 </button>   
                             </td>";
                            echo "</tr>";
@@ -54,3 +55,45 @@
         </div>
     </div>
 </div>
+
+<?php
+    foreach($complains as $complain){
+        $urlDelete = base_url()."User/Complain/ListComplain/DeleteComplain/$complain->NO_KOMPLAIN";
+        echo "
+        <div class='modal fade' id='confirmDeleteModal$complain->NO_KOMPLAIN' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel'
+        aria-hidden='false'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <h5 class='modal-title' id='exampleModalLabel'>Konfirmasi</h5>
+                    <button class='close' type='button' data-dismiss='modal' aria-label='Close'>
+                        <span aria-hidden='true'>×</span>
+                    </button>
+                </div>
+                <div class='modal-body'>Apakah anda yakin ingin menghapus komplain $complain->NO_KOMPLAIN?</div>
+                <div class='modal-footer'>
+                    <button class='btn btn-secondary' type='button' data-dismiss='modal'>Tidak</button>
+                    <a class='btn btn-primary' href='$urlDelete'>Ya</a>
+                    </div>
+                </div>
+            </div>
+        </div> ";
+} 
+?>
+ 
+
+
+<script type="text/javascript">
+ 
+window.onload = function(){ 
+    let btnDeletes = document.getElementsByClassName("btnDelete"); 
+    for (let i = 0; i < btnDeletes.length; i++) {
+    let element = btnDeletes[i];
+    let id = element.id;
+    
+    element.onclick = function(){ 
+        $('#confirmDeleteModal'+id).modal('show');
+    }
+}}
+
+</script>

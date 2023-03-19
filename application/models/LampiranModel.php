@@ -38,4 +38,8 @@ class LampiranModel extends CI_Model
         $this->db->where('KODE_LAMPIRAN', $this->NO_KOMPLAIN);
         $this->db->delete('LAMPIRAN'); 
     }
+    public function deleteByKomplain($no_komplain){
+        $this->db->where('NO_KOMPLAIN', $no_komplain);
+        $this->db->delete('LAMPIRAN'); 
+    }
 }

@@ -1,5 +1,6 @@
 <?php   
     //input komplain baru diajukan user 
+     
     class Add extends CI_Controller {
         public function __construct(){
             parent::__construct();
@@ -166,7 +167,7 @@
                     mkdir('./uploads/', 0777, true);
                 } 
                 for($i=0;$i < count($lampirans['name']);$i++){
-                    $getNewFileName = 'K_'. $this->generateUID(25);
+                    $getNewFileName = 'K_'. generateUID(25);
                     
                     if($i < count($lampirans)){ 
                         $_FILES['lampiran']['name'] = $lampirans['name'][$i];
@@ -209,10 +210,15 @@
                 $this->session->set_flashdata('message', 'Terdapat error dalam upload lampiran');
                 redirect('User/Complain/Add/page/2');
             }else{
-                $resultmail = $this->sendEmailSuccessAdd($this->UsersModel->getLogin()->EMAIL,
-                 'Notifikasi Penambahan Komplain Baru', 
-                 $this->UsersModel->getLogin()->NAMA, $this->SubTopik2Model->get($subtopik2)->DESKRIPSI, 
-                 $deskripsi);
+                $template = $this->templateEmailSuccessAdd($this->UsersModel->getLogin()->NAMA,
+                $this->SubTopik2Model->get($subtopik2)->DESKRIPSI,  $deskripsi);
+       
+                $resultmail = send_mail($this->UsersModel->getLogin()->EMAIL, 
+                'Notifikasi Penambahan Komplain Baru', $template); 
+                // $resultmail = $this->sendEmailSuccessAdd($this->UsersModel->getLogin()->EMAIL,
+                //  'Notifikasi Penambahan Komplain Baru', 
+                //  $this->UsersModel->getLogin()->NAMA, , 
+                //  $deskripsi);
 
                 $this->session->unset_userdata('tanggalPreSended');
                 $this->session->unset_userdata('topikPreSended');
@@ -228,30 +234,7 @@
                 }
                 
             }
-        }
-        private function generateUID($length)
-        {
-            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-            $charactersLength = strlen($characters);
-            $UID = '';
-            for ($i = 0; $i < $length; $i++) {
-                $UID .= $characters[rand(0, $charactersLength - 1)];
-            }
-            return $UID;
-        }
-        public function sendEmailSuccessAdd($recipientEmail, $subject, $nama, $subtopik2, $deskripsi){
-            $this->email->from('trialmkomplainubs@gmail.com', 'UBS');
-            $this->email->to($recipientEmail);
-            $this->email->subject($subject);
-            $this->email->message($this->templateEmailSuccessAdd($nama, $subtopik2, $deskripsi));
-
-            if (!$this->email->send()) {
-                // return $this->email->print_debugger();
-                return false;
-            } else {
-                return true;
-            }
-        }
+        }  
 
         public function templateEmailSuccessAdd($nama, $subtopik2, $deskripsi){
              return "<!DOCTYPE html>
@@ -322,6 +305,9 @@
                </body>
              </html>";
             // $this->load->view("email/success-add-complain");
+        }
+        public function tes(){ 
+            // send_mail('enricoadi49@gmail.com','hello','asd');
         }
     }
 ?>

@@ -47,6 +47,24 @@
             $this->load->view("templates/user/footer", $data);
  
         }
+        public function DeleteComplain($no_komplain){
+            
+            $lampiran = new LampiranModel();
+            $lampiran->NO_KOMPLAIN = $no_komplain;
+            $lampiran->delete();
+            
+            $complainB = new KomplainBModel();
+            $complainB->NO_KOMPLAIN = $no_komplain;
+            $complainB->delete();
+
+            $complainA = new KomplainAModel();
+            $complainA->NO_KOMPLAIN = $no_komplain;
+            $complainA->delete();
+            
+            $this->session->set_flashdata('header', 'Pesan');
+            $this->session->set_flashdata('message', 'Komplain berhasil dihapus');
+            redirect('User/Complain/ListComplain');
+        }
     }
 ?>
 
