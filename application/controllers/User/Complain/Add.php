@@ -209,13 +209,24 @@
                 $this->session->set_flashdata('message', 'Terdapat error dalam upload lampiran');
                 redirect('User/Complain/Add/page/2');
             }else{
+                $resultmail = $this->sendEmailSuccessAdd($this->UsersModel->getLogin()->EMAIL,
+                 'Notifikasi Penambahan Komplain Baru', 
+                 $this->UsersModel->getLogin()->NAMA, $this->SubTopik2Model->get($subtopik2)->DESKRIPSI, 
+                 $deskripsi);
+
                 $this->session->unset_userdata('tanggalPreSended');
                 $this->session->unset_userdata('topikPreSended');
                 $this->session->unset_userdata('subtopik1PreSended');
                 $this->session->unset_userdata('subtopik2PreSended');
-   
-                $this->session->set_flashdata('message', 'Berhasil menambahkan komplain');
-                redirect('User/Complain/ListComplain');
+
+                if($resultmail){ 
+                    $this->session->set_flashdata('message', 'Berhasil menambahkan komplain baru, silahkan cek email anda');
+                    redirect('User/Complain/ListComplain');
+                }else{ 
+                    $this->session->set_flashdata('message', 'Berhasil menambahkan komplain baru, namun gagal mengirim email');
+                    redirect('User/Complain/ListComplain');
+                }
+                
             }
         }
         private function generateUID($length)
@@ -235,7 +246,8 @@
             $this->email->message($this->templateEmailSuccessAdd($nama, $subtopik2, $deskripsi));
 
             if (!$this->email->send()) {
-                return $this->email->print_debugger();
+                // return $this->email->print_debugger();
+                return false;
             } else {
                 return true;
             }

@@ -136,7 +136,7 @@ INSERT INTO HAK_AKSES
 VALUES('4', 'Admin');
 
 INSERT into users
-values('12345678', '$2y$10$iAaeo2TCryN5.2rSPMAPB.bW0DrmhDbxQBR4zPoRYnGiFL30R96Rm', 'Enrico', '1', 'enrico@ubslinux.com', '03', '12345679');
+values('12345678', '$2y$10$iAaeo2TCryN5.2rSPMAPB.bW0DrmhDbxQBR4zPoRYnGiFL30R96Rm', 'Enrico', '1', 'enricoadi49@gmail.com', '03', '12345679');
 INSERT into users
 values('12345679', '$2y$10$iAaeo2TCryN5.2rSPMAPB.bW0DrmhDbxQBR4zPoRYnGiFL30R96Rm', 'Enrico', '2', 'enricomanager@ubslinux.com', '03', '');
 INSERT into users
