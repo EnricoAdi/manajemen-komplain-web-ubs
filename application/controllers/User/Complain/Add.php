@@ -5,12 +5,11 @@
             parent::__construct();
             $this->data['page_title'] = "User Page";
             $this->data['navigation'] = "Complain";  
-
-            // $this->load->model('UsersModel');
-            // $this->load->model('LampiranModel');
+ 
             $this->load->library("form_validation");  
             $this->load->library('session'); 
             $this->load->library('upload');
+            $this->load->library('email');
 
             //middleware
             if($this->UsersModel->getLogin() == null){ 
@@ -167,7 +166,7 @@
                     mkdir('./uploads/', 0777, true);
                 } 
                 for($i=0;$i < count($lampirans['name']);$i++){
-                    $getNewFileName = 'K_'. $this->randomChar(25);
+                    $getNewFileName = 'K_'. $this->generateUID(25);
                     
                     if($i < count($lampirans)){ 
                         $_FILES['lampiran']['name'] = $lampirans['name'][$i];
@@ -219,19 +218,98 @@
                 redirect('User/Complain/ListComplain');
             }
         }
-        private function randomChar($length)
+        private function generateUID($length)
         {
             $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
             $charactersLength = strlen($characters);
-            $randomString = '';
+            $UID = '';
             for ($i = 0; $i < $length; $i++) {
-                $randomString .= $characters[rand(0, $charactersLength - 1)];
+                $UID .= $characters[rand(0, $charactersLength - 1)];
             }
-            return $randomString;
+            return $UID;
         }
-        public function tes(){
-            $a = '002001';
-            echo (int)$a;
+        public function sendEmailSuccessAdd($recipientEmail, $subject, $nama, $subtopik2, $deskripsi){
+            $this->email->from('trialmkomplainubs@gmail.com', 'UBS');
+            $this->email->to($recipientEmail);
+            $this->email->subject($subject);
+            $this->email->message($this->templateEmailSuccessAdd($nama, $subtopik2, $deskripsi));
+
+            if (!$this->email->send()) {
+                return $this->email->print_debugger();
+            } else {
+                return true;
+            }
+        }
+
+        public function templateEmailSuccessAdd($nama, $subtopik2, $deskripsi){
+             return "<!DOCTYPE html>
+             <html>
+               <head>
+                 <meta charset='utf-8'>
+                 <title>Your Email Title Here</title>
+                 <style> 
+                   * {
+                     margin: 0;
+                     padding: 0;
+                     box-sizing: border-box;
+                   }
+                    
+                   body {
+                     font-family: Arial, sans-serif;
+                     color: #333;
+                   } 
+                   header {
+                     background-color: #f5f5f5;
+                     padding: 20px;
+                     text-align: center;
+                   }
+                   
+                   header h1 {
+                     font-size: 32px;
+                     margin-bottom: 20px;
+                   }
+                    
+                   .content {
+                     padding: 20px;
+                   }
+                    
+                   .cta-button {
+                     display: inline-block;
+                     background-color: #337ab7;
+                     color: #fff;
+                     border-radius: 4px;
+                     padding: 10px 20px;
+                     text-decoration: none;
+                     margin-top: 20px;
+                   }
+                   
+                   .cta-button:hover {
+                     background-color: #23527c;
+                   }
+                    
+                   footer {
+                     background-color: #f5f5f5;
+                     padding: 20px;
+                     text-align: center;
+                     font-size: 14px;
+                   }
+                 </style>
+               </head>
+               <body>
+                 <header>
+                   <h1>Notifikasi Berhasil Tambah Komplain Baru</h1>
+                 </header>
+                 <div class='content'>
+                   <p>Halo, $nama!</p>
+                   <br>
+                   <p>Sistem mencatat anda telah mengirimkan sebuah komplain baru terkait $subtopik2. Komplain anda akan diteruskan ke divisi bersangkutan, dengan keterangan $deskripsi</p> 
+                 </div>
+                 <footer>
+                   <p>&copy; PT UBS - SIB ISTTS</p>
+                 </footer>
+               </body>
+             </html>";
+            // $this->load->view("email/success-add-complain");
         }
     }
 ?>
