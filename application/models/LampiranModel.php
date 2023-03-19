@@ -20,7 +20,7 @@ class LampiranModel extends CI_Model
         $this->db->from('LAMPIRAN');
         $this->db->where('KODE_LAMPIRAN',$kode_lampiran);  
         $query = $this->db->get() 
-            ->result_array();
+            ->result();
         if(sizeof($query)>0){
             return $query[0];
         }
@@ -38,8 +38,7 @@ class LampiranModel extends CI_Model
         $this->db->where('KODE_LAMPIRAN', $this->NO_KOMPLAIN);
         $this->db->delete('LAMPIRAN'); 
     }
-    public function deleteByKomplain($no_komplain){
-        $this->db->where('NO_KOMPLAIN', $no_komplain);
-        $this->db->delete('LAMPIRAN'); 
+    public function deleteByKomplain(){ 
+        $this->db->query('DELETE FROM LAMPIRAN WHERE NO_KOMPLAIN = '.$this->NO_KOMPLAIN);
     }
 }

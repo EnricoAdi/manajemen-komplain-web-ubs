@@ -17,7 +17,7 @@ class DivisiModel extends CI_Model
         $this->db->from('DIVISI');
         $this->db->where('KODE_DIVISI',$kode_divisi);  
         $query = $this->db->get() 
-            ->result_array();
+            ->result();
         if(sizeof($query)>0){
             return $query[0];
         }

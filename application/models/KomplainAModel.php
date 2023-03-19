@@ -42,7 +42,7 @@ class KomplainAModel extends CI_Model
         $this->db->from('KOMPLAINA');
         $this->db->where('NO_KOMPLAIN', $no_komplain);
         $query = $this->db->get()
-            ->result_array();
+            ->result();
         if (sizeof($query) > 0) {
             return $query[0];
         }

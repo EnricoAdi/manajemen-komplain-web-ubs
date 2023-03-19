@@ -241,7 +241,7 @@
              <html>
                <head>
                  <meta charset='utf-8'>
-                 <title>Your Email Title Here</title>
+                 <title>Sukses Menambah Komplain</title>
                  <style> 
                    * {
                      margin: 0;

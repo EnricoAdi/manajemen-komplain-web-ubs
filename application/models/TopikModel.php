@@ -24,7 +24,7 @@ class TopikModel extends CI_Model
         $this->db->from('TOPIK');
         $this->db->where('KODE_TOPIK',$kode_topik);  
         $query = $this->db->get() 
-            ->result_array();
+            ->result();
         if(sizeof($query)>0){
             return $query[0]; 
         }

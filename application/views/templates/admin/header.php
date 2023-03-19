@@ -25,6 +25,8 @@
 
 <body id="page-top">
 
+    <!-- Chart JS -->
+    <script src="<?= asset_url(); ?>vendor/chart.js/Chart.min.js"></script>
     <!-- Page Wrapper -->
     <div id="wrapper">
 
