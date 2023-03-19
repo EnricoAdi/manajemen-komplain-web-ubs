@@ -69,6 +69,8 @@ $routes = [
     <link href="<?= asset_url(); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <link href="<?= asset_url(); ?>css/template/sb-admin-2.min.css" rel="stylesheet">
+    <!-- Data table -->
+    <link href="<?= asset_url(); ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 

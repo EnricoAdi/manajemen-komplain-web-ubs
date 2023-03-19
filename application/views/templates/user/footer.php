@@ -91,6 +91,13 @@
     <!-- Page level custom scripts -->
     <script src="<?= asset_url(); ?>js/template/demo/chart-area-demo.js"></script>
     <script src="<?= asset_url(); ?>js/template/demo/chart-pie-demo.js"></script>
+
+    
+    <!-- Datatable -->
+    <script src="<?= asset_url(); ?>vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?= asset_url(); ?>vendor/datatables/dataTables.bootstrap4.min.js"></script> 
+    <script src="<?= asset_url(); ?>js/demo/datatables-demo.js"></script>
+    
     
     <?php if ($this->session->flashdata('message') && $this->session->flashdata('message')!='')   : ?>
         <script type="text/javascript"> 

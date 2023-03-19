@@ -29,20 +29,8 @@ class SubTopik1Model extends CI_Model
         $query = $this->db->get()->result(); 
         $oldkode = $query[0]->OLDKODE;
         $newkode = "0";
-        $urutan = 1;
-        if(substr($oldkode,0,1) == '0'){
-            if(substr($oldkode,1,1) == '0'){ 
-                if(substr($oldkode,2,1) == '0'){ 
-                    $urutan =(int)substr($oldkode,3,1)+1;
-                }else{  
-                    $urutan =(int)substr($oldkode,2,2)+1;
-                }
-            }else{  
-                $urutan =(int)substr($oldkode,1,3)+1;
-            } 
-        }else{  
-            $urutan =(int)substr($oldkode,0,4)+1;
-        }
+        $urutan = (int)$oldkode;
+        $urutan = $urutan + 1; 
         
         $newkode  = str_pad($urutan, 4, "0", STR_PAD_LEFT);
         return $newkode;

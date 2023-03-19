@@ -39,7 +39,8 @@
             $data['login'] = $this->UsersModel->getLogin();
 
             //todo fetch complain user tersebut
-            
+            $complains = $this->KomplainAModel->fetchFromUser($data['login']->NOMOR_INDUK,'OPEN'); 
+            $data['complains'] = $complains;
             
             $this->load->view("templates/user/header", $data);
             $this->load->view("user/complain/index", $data);

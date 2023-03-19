@@ -29,6 +29,25 @@
                 </thead>
                 <tbody>
                     <?php 
+                        foreach ($complains as $complain) {
+                           echo "<tr>";
+                            echo "<td>".$complain->NO_KOMPLAIN."</td>";
+                            echo "<td>".$complain->TGL_KEJADIAN."</td>";
+                            echo "<td>$complain->NAMA_DIVISI</td>";
+                            echo "<td>".$complain->SUB_TOPIK2."</td>";
+                            echo "<td>".$complain->STATUS."</td>";
+                            echo "<td>  
+                                <button class='btn btn-warning' style='color:black'>
+                                <i class='fas fa-fw fa-info-circle'></i> 
+                                Detail
+                                </button>   
+                                <button class='btn btn-danger' style='color:black'>
+                                <i class='fas fa-fw fa-trash'></i> 
+                                Hapus
+                                </button>   
+                            </td>";
+                           echo "</tr>";
+                        }
                     ?>
                 </tbody>
             </table>

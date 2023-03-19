@@ -27,7 +27,8 @@ class LampiranModel extends CI_Model
         return null;
     } 
     public function insert(){
-        $this->db->insert('LAMPIRAN', $this); 
+        // $this->db->insert('LAMPIRAN', $this); 
+        $this->db->query("INSERT INTO LAMPIRAN VALUES('$this->KODE_LAMPIRAN','$this->NO_KOMPLAIN',TO_DATE('$this->TANGGAL','yyyy-mm-dd'),'$this->TIPE')");
     }
     public function update(){
         $this->db->where('KODE_LAMPIRAN', $this->NO_KOMPLAIN);

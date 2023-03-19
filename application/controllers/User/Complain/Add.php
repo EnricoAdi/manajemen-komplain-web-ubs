@@ -1,4 +1,4 @@
-<?php 
+<?php   
     //input komplain baru diajukan user 
     class Add extends CI_Controller {
         public function __construct(){
@@ -6,7 +6,8 @@
             $this->data['page_title'] = "User Page";
             $this->data['navigation'] = "Complain";  
 
-            $this->load->model('UsersModel');
+            // $this->load->model('UsersModel');
+            // $this->load->model('LampiranModel');
             $this->load->library("form_validation");  
             $this->load->library('session'); 
             $this->load->library('upload');
@@ -110,40 +111,127 @@
             $subtopik2 =  $this->session->userdata('subtopik2PreSended');
             $tanggal = $this->session->userdata('tanggalPreSended');
 
-            $lampiran = $_FILES["lampiran"];
             $deskripsi = $this->input->post("deskripsi");
             $feedback = $this->input->post("feedback"); 
+            $lampirans = $_FILES["lampiran"];
             
-            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-            $charactersLength = strlen($characters);
-            $getNewFileName = 'L';
-            for ($i = 0; $i < 25; $i++) {
-                $getNewFileName .= $characters[rand(0, $charactersLength - 1)];
-            }  
-            if($lampiran['name']!=''){ 
+            $today = date('Y-m-d');
+            $oracle_today = "TO_DATE('$today', 'YYYY-MM-DD')";
+             
+
+            $newkode = $this->KomplainAModel->getNewKode(); 
+            $newkomplain = new KomplainAModel();
+            $newkomplain->NO_KOMPLAIN = $newkode;
+            $newkomplain->TOPIK = $topik;
+            $newkomplain->SUB_TOPIK1 = $subtopik1;
+            $newkomplain->SUB_TOPIK2 = $subtopik2;
+
+            // $tglKejadianOracle = "TO_DATE('$tanggal', 'YYYY-MM-DD')"; 
+            $newkomplain->TGL_KEJADIAN = $tanggal;
+            
+
+            $newkomplain->TGL_TERBIT = null;
+            $newkomplain->TGL_VERIFIKASI = null;
+            $newkomplain->USER_VERIFIKASI = null;
+            $newkomplain->TGL_CANCEL = null;
+            $newkomplain->USER_CANCEL = null;
+            $newkomplain->TGL_BANDING = null;
+            $newkomplain->USER_BANDING = null;
+            $newkomplain->TGL_VALIDASI = null;
+            $newkomplain->USER_VALIDASI = null;
+            $newkomplain->PENUGASAN = null;
+            $newkomplain->STATUS = 'OPEN';
+            $newkomplain->TGL_PENANGANAN = null;
+            $newkomplain->USER_PENANGANAN = null;
+            $newkomplain->USER_PENANGANAN = null;
+            $newkomplain->TGL_DEADLINE = null;
+            $newkomplain->TGL_DONE = null;
+            $newkomplain->USER_DONE = null;
+            $newkomplain->USER_PENERBIT = $this->UsersModel->getLogin()->NOMOR_INDUK;
+            
+            $newkomplain->insert(); 
+
+            //insert komplainb
+            $newkomplainb = new KomplainBModel();
+            $newkomplainb->NO_KOMPLAIN = $newkode;
+            $newkomplainb->DESKRIPSI_MASALAH = $deskripsi;
+            $newkomplainb->AKAR_MASALAH = '';
+            $newkomplainb->T_KOREKTIF = '';
+            $newkomplainb->T_PREVENTIF = '';
+            $newkomplainb->KEBERATAN = ''; 
+            $newkomplainb->insert();
+            
+            $isError = false;
+            if($lampirans['name'][0]!=""){ 
                 if (!file_exists('./uploads/')) {
                     mkdir('./uploads/', 0777, true);
-                }
-                $config['upload_path'] = './uploads/';
-                $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg|txt';
-                $config['max_size'] = 5000; // in Kilobytes
-                $config['file_name'] = $getNewFileName;
+                } 
+                for($i=0;$i < count($lampirans['name']);$i++){
+                    $getNewFileName = 'K_'. $this->randomChar(25);
+                    
+                    if($i < count($lampirans)){ 
+                        $_FILES['lampiran']['name'] = $lampirans['name'][$i];
+                        $_FILES['lampiran']['type'] = $lampirans['type'][$i];
+                        $_FILES['lampiran']['tmp_name'] = $lampirans['tmp_name'][$i];
+                        $_FILES['lampiran']['error'] = $lampirans['error'][$i];
+                        $_FILES['lampiran']['size'] = $lampirans['size'][$i];
 
-                $this->load->library('upload', $config);
-                $this->upload->initialize($config);
+                        $ext = pathinfo($lampirans['name'][$i], PATHINFO_EXTENSION);
 
-                if (!$this->upload->do_upload('lampiran')) {
-                    // Handle upload error
-                    $error = $this->upload->display_errors();
-                    echo $error;
-                    // echo FCPATH.'uploads/';
-                } else {
-                    // Upload success
-                    $upload_data = $this->upload->data();
-                    $file_name = $upload_data['file_name'];
-                    echo "File $file_name has been uploaded successfully!";
-                }
+                        $config['upload_path'] = './uploads/';
+                        $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg|txt';
+                        $config['max_size'] = 5000; // in Kilobytes
+                        $config['file_name'] = $getNewFileName;
+
+                        $this->load->library('upload', $config);
+                        $this->upload->initialize($config);
+
+                        if (!$this->upload->do_upload('lampiran')) {
+                            // Handle upload error
+                            $error = $this->upload->display_errors();
+                            // echo $error;
+                            // echo FCPATH.'uploads/';
+                            $isError = true;
+                        } else {
+                            // Upload success
+                            $upload_data = $this->upload->data();
+                            $file_name = $upload_data['file_name']; 
+                            $newLampiran = new LampiranModel();
+                            $newLampiran->KODE_LAMPIRAN = $getNewFileName.".".$ext;
+                            $newLampiran->NO_KOMPLAIN = $newkode;
+                            $newLampiran->TANGGAL = $today;
+                            $newLampiran->TIPE = 0; //komplain
+                            $newLampiran->insert();
+                        }
+                    }
+                } 
+            } 
+            if($isError){ 
+                $this->session->set_flashdata('message', 'Terdapat error dalam upload lampiran');
+                redirect('User/Complain/Add/page/2');
+            }else{
+                $this->session->unset_userdata('tanggalPreSended');
+                $this->session->unset_userdata('topikPreSended');
+                $this->session->unset_userdata('subtopik1PreSended');
+                $this->session->unset_userdata('subtopik2PreSended');
+   
+                $this->session->set_flashdata('message', 'Berhasil menambahkan komplain');
+                redirect('User/Complain/ListComplain');
             }
+        }
+        private function randomChar($length)
+        {
+            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $charactersLength = strlen($characters);
+            $randomString = '';
+            for ($i = 0; $i < $length; $i++) {
+                $randomString .= $characters[rand(0, $charactersLength - 1)];
+            }
+            return $randomString;
+        }
+        public function tes(){
+            $a = '002001';
+            echo (int)$a;
         }
     }
 ?>

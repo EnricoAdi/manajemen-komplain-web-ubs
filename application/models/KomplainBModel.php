@@ -29,7 +29,7 @@ class KomplainBModel extends CI_Model
         return null;
     } 
     public function insert(){
-        $this->db->insert('HAK_AKSES', $this); 
+        $this->db->insert('KOMPLAINB', $this); 
     }
     public function update(){
         $this->db->where('NO_KOMPLAIN', $this->NO_KOMPLAIN);
