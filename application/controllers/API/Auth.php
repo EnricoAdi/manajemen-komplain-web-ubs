@@ -13,12 +13,8 @@ class Auth extends REST_Controller
 {
     public function __construct()
     {
-        parent::__construct();
-        header("Access-Control-Allow-Origin: *");
-        header("Access-Control-Allow-Methods: *");
-        header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
-    }
-
+        parent::__construct(); 
+    } 
 
     public function index_get()
     {
@@ -33,7 +29,7 @@ class Auth extends REST_Controller
         $nomor_induk = $this->post('nomor_induk');
         $password = $this->post('password');
 
-        $exp = time() + 3600;
+        $exp = time() + 36000;
         $userFound = $this->UsersModel->get($nomor_induk);
         if ($userFound == null) {
 
@@ -47,13 +43,13 @@ class Auth extends REST_Controller
 
                 $token = array(
                     "iss" => 'apprestservice',
-                    "aud" => 'pengguna',
+                    "aud" => 'pengguna', 
                     "iat" => time(),
                     "nbf" => time() + 10,
                     "exp" => $exp,
                     "data" => array(
-                        "nomor_induk" => $this->input->post('nomor_induk'),
-                        "password" => $this->input->post('password')
+                        "nomor_induk" => $nomor_induk,
+                        "password" => $password
                     )
                 );
 

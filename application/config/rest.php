@@ -252,7 +252,7 @@ $config['rest_handle_exceptions'] = TRUE;
 | 127.0.0.1 and 0.0.0.0 are allowed by default
 |
 */
-$config['rest_ip_whitelist'] = '';
+$config['rest_ip_whitelist'] = '192.168.1.8';
 
 /*
 |--------------------------------------------------------------------------
@@ -545,7 +545,7 @@ $config['rest_language'] = 'english';
 | will access it through a browser
 |
 */
-$config['check_cors'] = FALSE;
+$config['check_cors'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------
@@ -555,13 +555,14 @@ $config['check_cors'] = FALSE;
 | If using CORS checks, set the allowable headers here
 |
 */
-$config['allowed_cors_headers'] = [
-  'Origin',
-  'X-Requested-With', 
-  'Content-Type',
-  'Accept',
-  'Access-Control-Request-Method'
-];
+// $config['allowed_cors_headers'] = [
+//   'Origin',
+//   'X-Requested-With', 
+//   'Content-Type',
+//   'Accept',
+//   'Access-Control-Request-Method'
+// ];
+$config['allowed_cors_headers'] = ['*'];
 
 /*
 |--------------------------------------------------------------------------
@@ -602,4 +603,4 @@ $config['allow_any_cors_domain'] = TRUE;
 | e.g. $config['allowed_origins'] = ['http://www.example.com', 'https://spa.example.com']
 |
 */
-$config['allowed_cors_origins'] = ['http://localhost:80'];
+$config['allowed_cors_origins'] = ['http://localhost:80','http://10.0.2.2:80','http://192.168.0.16'];

@@ -38,7 +38,7 @@ class JWT
      *
      * @var int
      */
-    public static $leeway = 0;
+    public static $leeway = 10;
 
     /**
      * Allow the current timestamp to be specified.
