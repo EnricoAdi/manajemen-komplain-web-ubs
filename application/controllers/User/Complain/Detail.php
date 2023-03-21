@@ -41,9 +41,28 @@ class Detail extends CI_Controller
         $data['login'] = $this->UsersModel->getLogin();
 
         $komplain = $this->KomplainAModel->get($nomor_komplain); 
-        $data['komplain'] = $komplain;
+        $data['komplain'] = $komplain; 
         $this->load->view("templates/user/header", $data);
         $this->load->view("user/complain/detail/index", $data);
         $this->load->view("templates/user/footer", $data);
+    }
+    public function edit_page($nomor_komplain, $page){ 
+        $data = $this->data;
+        $data['page_title'] = "Edit Komplain Diajukan";
+        $data['login'] = $this->UsersModel->getLogin();
+
+        $komplain = $this->KomplainAModel->get($nomor_komplain); 
+        $data['komplain'] = $komplain;
+
+        if($page==1){ 
+            $this->load->view("templates/user/header", $data);
+            $this->load->view("user/complain/detail/edit/edit-topic", $data);
+            $this->load->view("templates/user/footer", $data);
+        }else{
+            //page 2
+            $this->load->view("templates/user/header", $data);
+            $this->load->view("user/complain/detail/edit/edit-detail", $data);
+            $this->load->view("templates/user/footer", $data);
+        }
     }
 }

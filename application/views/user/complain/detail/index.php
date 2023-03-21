@@ -11,7 +11,7 @@
 
 </a>
 
-<form action="<?= base_url() ?>User/Complain/Add/pageProcess1" method="post" class="mt-4" style="color:black;">
+<div class="mt-4" style="color:black;">
     <input type="hidden" name="inputSubtopik2" id="inputSubtopik2" value="">
     <input type="hidden" name="inputSubtopik1" id="inputSubtopik1" value="">
     <input type="hidden" name="inputTopik" id="inputTopik" value="">
@@ -40,13 +40,28 @@
             <textarea type="text" class="form-control" disabled><?= $komplain->DESKRIPSI_MASALAH; ?></textarea>
         </div>
     </div>
-    <div class="row mt-4">
-        <div class="col">
-            <button type="submit" id="btnNext" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>; padding-right:40px;padding-left:40px; margin:auto">
-
-                <i class="fas fa-fw fa-pen" style="padding-right:30px;"></i>
-                Edit
-            </button>
+    <div class="row">
+        <div class="col"> 
+            <br/>
+            <?php
+                $counter = 1;
+                foreach($komplain->LAMPIRAN as $lampiran){
+                    
+                    echo '<a href="'.base_url().'uploads/'.$lampiran->KODE_LAMPIRAN.'" target="_blank">Lampiran '.$counter.'</a><br>';
+                    $counter = $counter + 1;
+                }
+            ?>
         </div>
     </div>
-</form>
+    <div class="row mt-4">
+        <div class="col">
+            <a href="<?= base_url() ?>User/Complain/Detail/edit_page/<?=$komplain->NO_KOMPLAIN; ?>/1"> 
+                <button class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>; padding-right:40px;padding-left:30px; margin:auto">
+
+                    <i class="fas fa-fw fa-pen" style="padding-right:30px;"></i>
+                    Edit
+                </button>
+            </a>
+        </div>
+    </div>
+</div>

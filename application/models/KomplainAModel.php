@@ -48,7 +48,15 @@ class KomplainAModel extends CI_Model
         WHERE KB.NO_KOMPLAIN = ?',array($no_komplain))->result();
 
         if (sizeof($query) > 0) {
-            return $query[0];
+            $resultQuery = $query[0]; 
+            $queryLampiran = $this->db->query('SELECT * FROM LAMPIRAN WHERE NO_KOMPLAIN = ?',array($no_komplain))->result();
+            if(sizeof($queryLampiran)>0){ 
+                $resultQuery->LAMPIRAN = $queryLampiran;
+            }else{
+                $resultQuery->LAMPIRAN = array();
+            }
+
+            return $resultQuery;
         }
         return null;
     }
