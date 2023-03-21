@@ -31,11 +31,11 @@ class LampiranModel extends CI_Model
         $this->db->query("INSERT INTO LAMPIRAN VALUES('$this->KODE_LAMPIRAN','$this->NO_KOMPLAIN',TO_DATE('$this->TANGGAL','yyyy-mm-dd'),'$this->TIPE')");
     }
     public function update(){
-        $this->db->where('KODE_LAMPIRAN', $this->NO_KOMPLAIN);
+        $this->db->where('KODE_LAMPIRAN', $this->KODE_LAMPIRAN);
         $this->db->update('LAMPIRAN', $this); 
     }
     public function delete(){
-        $this->db->where('KODE_LAMPIRAN', $this->NO_KOMPLAIN);
+        $this->db->where('KODE_LAMPIRAN', $this->KODE_LAMPIRAN);
         $this->db->delete('LAMPIRAN'); 
     }
     public function deleteByKomplain(){ 

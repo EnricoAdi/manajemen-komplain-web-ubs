@@ -54,10 +54,7 @@
 
                 //ambil data subtopik 2, subtopik 1, dan complain selain divisi tersebut
                 $subtopics = $this->SubTopik2Model->fetchSubtopikAll($data['login']->KODE_DIVISI,false); 
-                $data['subtopics'] = $subtopics;
-                // echo "<pre>";
-                // var_dump($subtopics);
-                // echo "</pre>";
+                $data['subtopics'] = $subtopics; 
                 $this->load->view("templates/user/header", $data);
                 $this->load->view("user/complain/add/input-topic", $data);
                 $this->load->view("templates/user/footer", $data);
@@ -115,8 +112,7 @@
             $feedback = $this->input->post("feedback"); 
             $lampirans = $_FILES["lampiran"];
             
-            $today = date('Y-m-d');
-            $oracle_today = "TO_DATE('$today', 'YYYY-MM-DD')";
+            $today = date('Y-m-d'); 
              
 
             $newkode = $this->KomplainAModel->getNewKode(); 

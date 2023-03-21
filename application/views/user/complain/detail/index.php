@@ -55,11 +55,11 @@
     </div>
     <div class="row mt-4">
         <div class="col">
-            <a href="<?= base_url() ?>User/Complain/Detail/edit_page/<?=$komplain->NO_KOMPLAIN; ?>/1"> 
+            <a href="<?= base_url() ?>User/Complain/Detail/edit_page/<?=$komplain->NO_KOMPLAIN; ?>"> 
                 <button class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>; padding-right:40px;padding-left:30px; margin:auto">
 
                     <i class="fas fa-fw fa-pen" style="padding-right:30px;"></i>
-                    Edit
+                    Ubah
                 </button>
             </a>
         </div>

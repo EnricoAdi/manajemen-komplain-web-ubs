@@ -96,6 +96,7 @@ window.onload = function(){
     let id = element.id;
     
     element.onclick = function(){ 
+        console.log( $('#confirmDeleteModal'+id).modal('show'))
         $('#confirmDeleteModal'+id).modal('show');
     }
 }}

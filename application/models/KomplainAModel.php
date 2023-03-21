@@ -55,8 +55,38 @@ class KomplainAModel extends CI_Model
             }else{
                 $resultQuery->LAMPIRAN = array();
             }
+            $komplainA = new KomplainAModel();
+            $komplainA->NO_KOMPLAIN = $resultQuery->NO_KOMPLAIN;
+            $komplainA->TOPIK = $resultQuery->TOPIK;
+            $komplainA->SUB_TOPIK1 = $resultQuery->SUB_TOPIK1;
+            $komplainA->SUB_TOPIK2 = $resultQuery->SUB_TOPIK2;
+            $komplainA->TGL_KEJADIAN = $resultQuery->TGL_KEJADIAN;
+            $komplainA->TGL_TERBIT = $resultQuery->TGL_TERBIT;
+            $komplainA->TGL_VERIFIKASI = $resultQuery->TGL_VERIFIKASI;
+            $komplainA->USER_VERIFIKASI = $resultQuery->USER_VERIFIKASI;
+            $komplainA->TGL_CANCEL = $resultQuery->TGL_CANCEL;
+            $komplainA->USER_CANCEL = $resultQuery->USER_CANCEL;
+            $komplainA->TGL_BANDING = $resultQuery->TGL_BANDING;
+            $komplainA->USER_BANDING = $resultQuery->USER_BANDING;
+            $komplainA->TGL_VALIDASI = $resultQuery->TGL_VALIDASI;
+            $komplainA->USER_VALIDASI = $resultQuery->USER_VALIDASI;
+            $komplainA->PENUGASAN = $resultQuery->PENUGASAN;
+            $komplainA->STATUS = $resultQuery->STATUS;
+            $komplainA->TGL_PENANGANAN = $resultQuery->TGL_PENANGANAN;
+            $komplainA->USER_PENANGANAN = $resultQuery->USER_PENANGANAN;
+            $komplainA->TGL_DEADLINE = $resultQuery->TGL_DEADLINE;
+            $komplainA->TGL_DONE = $resultQuery->TGL_DONE;
+            $komplainA->USER_DONE = $resultQuery->USER_DONE;
+            $komplainA->USER_PENERBIT = $resultQuery->USER_PENERBIT;
+            $komplainA->LAMPIRAN = $resultQuery->LAMPIRAN; 
+            $komplainA->S1DESKRIPSI = $resultQuery->S1DESKRIPSI;
+            $komplainA->S2DESKRIPSI = $resultQuery->S2DESKRIPSI;
+            $komplainA->TDESKRIPSI = $resultQuery->TDESKRIPSI;
+            $komplainA->KODE_DIVISI = $resultQuery->KODE_DIVISI;
+            $komplainA->NAMA_DIVISI = $resultQuery->NAMA_DIVISI;  
+            $komplainA->DESKRIPSI_MASALAH= $resultQuery->DESKRIPSI_MASALAH; 
 
-            return $resultQuery;
+            return $komplainA;
         }
         return null;
     }
@@ -95,12 +125,43 @@ class KomplainAModel extends CI_Model
         $this->db->query("INSERT INTO KOMPLAINA VALUES ('$this->NO_KOMPLAIN', '$this->TOPIK', '$this->SUB_TOPIK1', '$this->SUB_TOPIK2', TO_DATE('$this->TGL_KEJADIAN', 'YYYY-MM-DD'), NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '$this->STATUS', NULL, NULL, NULL, NULL, NULL, '$this->USER_PENERBIT')");
     }
     public function update()
-    {
-        $this->db->where('NO_KOMPLAIN', $this->NO_KOMPLAIN);
-        $this->db->update('KOMPLAINA', $this);
+    {   
+        $this->db->query("UPDATE KOMPLAINA SET TOPIK = $this->TOPIK,
+        SUB_TOPIK1 = $this->SUB_TOPIK1, 
+        SUB_TOPIK2 = $this->SUB_TOPIK2, 
+        TGL_KEJADIAN = $this->TGL_KEJADIAN, 
+        TGL_TERBIT = $this->TGL_TERBIT, 
+        TGL_VERIFIKASI = $this->TGL_VERIFIKASI, 
+        USER_VERIFIKASI = $this->USER_VERIFIKASI, 
+        TGL_CANCEL = $this->TGL_CANCEL, 
+        USER_CANCEL = $this->USER_CANCEL, 
+        TGL_BANDING = $this->TGL_BANDING, 
+        USER_BANDING = $this->USER_BANDING, 
+        TGL_VALIDASI = $this->TGL_VALIDASI, 
+        USER_VALIDASI = $this->USER_VALIDASI, 
+        PENUGASAN = $this->PENUGASAN, 
+        STATUS = $this->STATUS, 
+        TGL_PENANGANAN = $this->TGL_PENANGANAN, 
+        USER_PENANGANAN = $this->USER_PENANGANAN, 
+        TGL_DEADLINE = $this->TGL_DEADLINE, 
+        TGL_DONE = $this->TGL_DONE, 
+        USER_DONE = $this->USER_DONE, 
+        USER_PENERBIT = $this->USER_PENERBIT, 
+        where NO_KOMPLAIN = $this->NO_KOMPLAIN");
+        // $this->db->where('NO_KOMPLAIN', $this->NO_KOMPLAIN);
+        // $this->db->update('KOMPLAINA', $this); 
+    }
+    public function updateKomplain(){
+        
+        $this->db->query("UPDATE KOMPLAINA SET 
+        TOPIK ='$this->TOPIK',
+        SUB_TOPIK1 = '$this->SUB_TOPIK1', 
+        SUB_TOPIK2 = '$this->SUB_TOPIK2', 
+        TGL_KEJADIAN = TO_DATE('$this->TGL_KEJADIAN', 'YYYY-MM-DD')
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'");
     }
     public function delete()
-    {
+    { 
         $this->db->where('NO_KOMPLAIN', $this->NO_KOMPLAIN);
         $this->db->delete('KOMPLAINA');
     }
