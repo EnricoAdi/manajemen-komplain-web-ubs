@@ -30,17 +30,21 @@
                 <tbody>
                     <?php 
                         foreach ($complains as $complain) {
-                           echo "<tr>";
+                            
+                            $urlDetail = base_url()."User/Complain/Detail/index/$complain->NO_KOMPLAIN";
+                            echo "<tr>";
                             echo "<td>".$complain->NO_KOMPLAIN."</td>";
                             echo "<td>".$complain->TGL_KEJADIAN."</td>";
                             echo "<td>$complain->NAMA_DIVISI</td>";
                             echo "<td>".$complain->SUB_TOPIK2."</td>";
                             echo "<td>".$complain->STATUS."</td>";
                             echo "<td>  
+                               <a href='$urlDetail'>
                                 <button class='btn btn-warning' style='color:black'>
                                 <i class='fas fa-fw fa-info-circle'></i> 
                                 Detail
-                                </button>   
+                                </button>
+                                </a>   
 
                                 <button class='btn btn-danger btnDelete' id='$complain->NO_KOMPLAIN' style='color:black'>
                                 <i class='fas fa-fw fa-trash'></i> 
@@ -58,7 +62,7 @@
 
 <?php
     foreach($complains as $complain){
-        $urlDelete = base_url()."User/Complain/ListComplain/DeleteComplain/$complain->NO_KOMPLAIN";
+        $urlDelete = base_url()."User/Complain/ListComplain/DeleteComplain/$complain->NO_KOMPLAIN"; 
         echo "
         <div class='modal fade' id='confirmDeleteModal$complain->NO_KOMPLAIN' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel'
         aria-hidden='false'>
