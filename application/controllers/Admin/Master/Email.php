@@ -67,11 +67,11 @@ class Email extends CI_Controller{
 
         //cek ubslinux
         $posisidomain = strpos($emailUser, "@ubslinux.com");
-        if($posisidomain == false){
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Domain email harus menggunakan @ubslinux.com ! ');
-            redirect('Admin/Master/Email/Add');
-        }
+        // if($posisidomain == false){
+        //     $this->session->set_flashdata('header', 'Pesan');
+        //     $this->session->set_flashdata('message', 'Domain email harus menggunakan @ubslinux.com ! ');
+        //     redirect('Admin/Master/Email/Add');
+        // }
 
         $cekCollisionEmail = $this->UsersModel->checkEmailExist($emailUser); 
 
@@ -136,12 +136,12 @@ class Email extends CI_Controller{
         $user = $this->UsersModel->get($nomor_induk);
         
         //cek ubslinux
-        $posisidomain = strpos($emailUser, "@ubslinux.com");
-        if($posisidomain == false){
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Domain email harus menggunakan @ubslinux.com ! ');
-            redirect('Admin/Master/Email/Detail/'.$nomor_induk);
-        }
+        // $posisidomain = strpos($emailUser, "@ubslinux.com");
+        // if($posisidomain == false){
+        //     $this->session->set_flashdata('header', 'Pesan');
+        //     $this->session->set_flashdata('message', 'Domain email harus menggunakan @ubslinux.com ! ');
+        //     redirect('Admin/Master/Email/Detail/'.$nomor_induk);
+        // }
 
         
         $cekCollisionEmail = $this->UsersModel->checkEmailExist($emailUser); 

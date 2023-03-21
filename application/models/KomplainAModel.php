@@ -119,6 +119,37 @@ class KomplainAModel extends CI_Model
             JOIN DIVISI D ON D.KODE_DIVISI = T.DIV_TUJUAN WHERE KA.USER_PENERBIT = $nomor_induk AND KA.STATUS = '$status'")->result();
         }
     }
+    public function fetchForDivisi($kode_divisi,$status){ 
+        if ($status == 'all') {
+            return $this->db->query("SELECT KA.*, KB.*,D.*, 
+            DU.NAMA_DIVISI AS DIVISI_PENGIRIM,T.DESKRIPSI AS TDESKRIPSI, 
+            S1.DESKRIPSI AS S1DESKRIPSI,
+            S2.DESKRIPSI AS S2DESKRIPSI
+            FROM KOMPLAINA KA 
+            JOIN KOMPLAINB KB ON KA.NO_KOMPLAIN = KB.NO_KOMPLAIN 
+            JOIN TOPIK T ON T.KODE_TOPIK = KA.TOPIK 
+            JOIN DIVISI D ON D.KODE_DIVISI = T.DIV_TUJUAN 
+            JOIN USERS U ON U.NOMOR_INDUK = KA.USER_PENERBIT
+            JOIN DIVISI DU ON DU.KODE_DIVISI = U.KODE_DIVISI
+            JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1 = KA.SUB_TOPIK1
+            JOIN SUB_TOPIK2 S2 ON S2.SUB_TOPIK2 = KA.SUB_TOPIK2
+            WHERE T.DIV_TUJUAN = $kode_divisi")->result();
+        } else {
+            return $this->db->query("SELECT KA.*, KB.*,D.*, 
+            DU.NAMA_DIVISI AS DIVISI_PENGIRIM, T.DESKRIPSI AS TDESKRIPSI,
+            S1.DESKRIPSI AS S1DESKRIPSI,
+            S2.DESKRIPSI AS S2DESKRIPSI
+            FROM KOMPLAINA KA 
+            JOIN KOMPLAINB KB ON KA.NO_KOMPLAIN = KB.NO_KOMPLAIN 
+            JOIN TOPIK T ON T.KODE_TOPIK = KA.TOPIK 
+            JOIN DIVISI D ON D.KODE_DIVISI = T.DIV_TUJUAN 
+            JOIN USERS U ON U.NOMOR_INDUK = KA.USER_PENERBIT
+            JOIN DIVISI DU ON DU.KODE_DIVISI = U.KODE_DIVISI
+            JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1 = KA.SUB_TOPIK1
+            JOIN SUB_TOPIK2 S2 ON S2.SUB_TOPIK2 = KA.SUB_TOPIK2
+            WHERE T.DIV_TUJUAN = $kode_divisi AND KA.STATUS = '$status'")->result();
+        }
+    }
     public function insert()
     {
         // $this->db->insert('KOMPLAINA', $this); 
@@ -159,6 +190,35 @@ class KomplainAModel extends CI_Model
         SUB_TOPIK2 = '$this->SUB_TOPIK2', 
         TGL_KEJADIAN = TO_DATE('$this->TGL_KEJADIAN', 'YYYY-MM-DD')
         where NO_KOMPLAIN = '$this->NO_KOMPLAIN'");
+    }
+    public function updateVerifikasi(){ 
+        $this->db->query("UPDATE KOMPLAINA SET 
+        STATUS = 'PEND',
+        USER_VERIFIKASI ='$this->USER_VERIFIKASI', 
+        TGL_VERIFIKASI = TO_DATE('$this->TGL_VERIFIKASI', 'YYYY-MM-DD')
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'");
+    }
+    public function updateTransferKomplain(){  
+        $this->db->query("UPDATE KOMPLAINA SET 
+        TOPIK ='$this->TOPIK',
+        SUB_TOPIK1 = '$this->SUB_TOPIK1', 
+        SUB_TOPIK2 = '$this->SUB_TOPIK2'  
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'");
+    }
+    public function updatePenugasanKomplain(){  
+        $this->db->query("UPDATE KOMPLAINA SET 
+        PENUGASAN ='$this->PENUGASAN' 
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'");
+    }
+    public function updateHapusPenugasanKomplain(){  
+        $this->db->query("UPDATE KOMPLAINA SET 
+        PENUGASAN = null 
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'");
+    }
+    public function updateDeadlinePenyelesaianKomplain(){  
+        $this->db->query("UPDATE KOMPLAINA SET 
+        TGL_DEADLINE = TO_DATE('$this->TGL_DEADLINE', 'YYYY-MM-DD')
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
     }
     public function delete()
     { 

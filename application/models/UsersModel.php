@@ -35,13 +35,7 @@ class UsersModel extends CI_Model
         $query = $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA_DIVISI FROM USERS u left join USERS a 
         on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODE_DIVISI = u.KODE_DIVISI where u.NOMOR_INDUK = ?",
         array($nomor_induk))->result();
-
-        // $this->db->select('*');
-        // $this->db->from('USERS');
-        // $this->db->where('NOMOR_INDUK', $nomor_induk);
-
-        // $query = $this->db->get()
-        //     ->result();
+ 
         if (sizeof($query) > 0) {
             return $query[0];
         }

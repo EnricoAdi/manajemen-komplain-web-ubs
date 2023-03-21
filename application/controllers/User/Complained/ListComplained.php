@@ -1,10 +1,10 @@
 <?php
-    //list komplain diajukan user 
-    class ListComplain extends CI_Controller {
+    //list komplain yang ditujukan kepada user 
+    class ListComplained extends CI_Controller {
         public function __construct(){
             parent::__construct();
             $this->data['page_title'] = "User Page";
-            $this->data['navigation'] = "Complain";  
+            $this->data['navigation'] = "ComplainedList";  
 
             $this->load->model('UsersModel');
             $this->load->library("form_validation");  
@@ -32,62 +32,61 @@
             }
 
         }
-        
         public function index(){
+            
             $data = $this->data;
-            $data['page_title'] = "Daftar Komplain Diajukan";
+            $data['page_title'] = "Daftar Komplain Diterima";
             $data['login'] = $this->UsersModel->getLogin();
 
             //todo fetch complain user tersebut
-            $complains = $this->KomplainAModel->fetchFromUser($data['login']->NOMOR_INDUK,'all'); 
+            $complains = $this->KomplainAModel->fetchForDivisi($data['login']->KODE_DIVISI,'OPEN'); 
             $data['complains'] = $complains;
             
+            // echo "<pre>";
+            // var_dump($complains);
+            // echo "</pre>";
             $this->load->view("templates/user/header", $data);
-            $this->load->view("user/complain/index", $data);
+            $this->load->view("user/complained/index", $data);
             $this->load->view("templates/user/footer", $data);
  
         }
-        public function DeleteComplain($no_komplain){
-            
-            $complainA = new KomplainAModel();
-            $complainA->NO_KOMPLAIN = $no_komplain;
-
-            $subtopik2 = $this->KomplainAModel->get($no_komplain)->SUB_TOPIK2; 
-
-            $template = $this->templateEmailSuccessDelete($this->UsersModel->getLogin()->NAMA,
-                $this->SubTopik2Model->get($subtopik2)->DESKRIPSI  );
-       
-            $resultmail = send_mail($this->UsersModel->getLogin()->EMAIL, 
-            'Notifikasi Penghapusan Komplain', $template); 
-
-            if($resultmail){ 
-                $lampiran = new LampiranModel();
-                $lampiran->NO_KOMPLAIN = $no_komplain;
-                $lampiran->deleteByKomplain($no_komplain);
-                
-                $complainB = new KomplainBModel();
-                $complainB->NO_KOMPLAIN = $no_komplain;
-                $complainB->delete();
-
-                $complainA->delete();
-
+        public function VerifikasiComplain($nomor_komplain){ 
+            $komplain = $this->KomplainAModel->get($nomor_komplain);  
+            $user_penerbit = $this->UsersModel->get($komplain->USER_PENERBIT);
+            $divisi = $user_penerbit->NAMA_DIVISI;
+            if($komplain==null){
                 $this->session->set_flashdata('header', 'Pesan');
-                $this->session->set_flashdata('message', 'Komplain berhasil dihapus, silahkan cek email anda');
-                redirect('User/Complain/ListComplain');
+                $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
+                redirect('User/Complained/ListComplained');
+            }
+            $komplain->USER_VERIFIKASI = $this->UsersModel->getLogin()->NOMOR_INDUK;
+            $komplain->TGL_VERIFIKASI = date('Y-m-d');
+            $komplain->updateVerifikasi();
+
+            
+            $template = $this->templateEmailSuccessVerify($this->UsersModel->getLogin()->NAMA,
+            $divisi,  $komplain->DESKRIPSI_MASALAH);
+   
+            $resultmail = send_mail($this->UsersModel->getLogin()->EMAIL, 
+            'Notifikasi Berhasil Verifikasi Komplain', $template); 
+
+            if($resultmail){
+                $this->session->set_flashdata('header', 'Pesan');
+                $this->session->set_flashdata('message', 'Berhasil Verifikasi komplain, silakan cek email anda');
+                redirect('User/Complained/ListComplained');
             }else{ 
                 $this->session->set_flashdata('header', 'Pesan');
-                $this->session->set_flashdata('message', 'Komplain gagal dihapus (email tidak terkirim)');
-                redirect('User/Complain/ListComplain');
+                $this->session->set_flashdata('message', 'Berhasil Verifikasi komplain, namun gagal mengirim email');
+                redirect('User/Complained/ListComplained');
             }
         }
 
-
-        public function templateEmailSuccessDelete($nama, $subtopik2){
+        public function templateEmailSuccessVerify($nama, $divisiPengirim, $deskripsi){
             return "<!DOCTYPE html>
             <html>
               <head>
                 <meta charset='utf-8'>
-                <title>Sukses Menghapus Komplain</title>
+                <title>Sukses Menambah Komplain</title>
                 <style> 
                   * {
                     margin: 0;
@@ -100,7 +99,7 @@
                     color: #333;
                   } 
                   header {
-                    background-color: #FFD7D7;
+                    background-color: #E6F7B7;
                     padding: 20px;
                     text-align: center;
                   }
@@ -138,20 +137,17 @@
               </head>
               <body>
                 <header>
-                  <h1>Notifikasi Berhasil Hapus Komplain</h1>
+                  <h1>Notifikasi Berhasil Verifikasi Komplain </h1>
                 </header>
                 <div class='content'>
-                  <p>Halo, $nama</p>
+                  <p>Halo, $nama!</p>
                   <br>
-                  <p>Sistem mencatat anda telah menghapus sebuah komplain terkait $subtopik2.</p> 
+                  <p>Sistem mencatat anda telah memverifikasi komplain dari divisi $divisiPengirim terkait $deskripsi. Silahkan melengkapi penugasan untuk penyelesaian komplain ini</p> 
                 </div>
                 <footer>
                   <p>&copy; PT UBS - SIB ISTTS</p>
                 </footer>
               </body>
-            </html>";
-           // $this->load->view("email/success-add-complain");
+            </html>"; 
        }
     }
-?>
-

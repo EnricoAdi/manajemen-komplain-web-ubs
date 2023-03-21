@@ -18,6 +18,11 @@
 
     <div class="row">
         <div class="col">
+            <label for="" class="form-label mt-4">Status : <?= $komplain->STATUS; ?></label> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
             <label for="user" class="form-label">Tanggal Kejadian</label>
 
             <input type="text" name="tanggal" id="tanggal" class="form-control" value="<?= $komplain->TGL_KEJADIAN; ?>" disabled>

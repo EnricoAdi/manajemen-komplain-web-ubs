@@ -36,6 +36,9 @@ class KomplainBModel extends CI_Model
         }
         return null;
     } 
+
+     
+
     public function insert(){
         $this->db->insert('KOMPLAINB', $this); 
     }
@@ -45,6 +48,20 @@ class KomplainBModel extends CI_Model
     }
     public function updateKomplain(){
         $this->db->query("UPDATE KOMPLAINB SET DESKRIPSI_MASALAH = '$this->DESKRIPSI_MASALAH' WHERE NO_KOMPLAIN = '$this->NO_KOMPLAIN' ");
+    }
+    
+    public function updatePenyelesaianKomplain(){  
+        $this->db->query("UPDATE KOMPLAINB SET 
+        AKAR_MASALAH = '$this->AKAR_MASALAH',
+        T_KOREKTIF = '$this->T_KOREKTIF',
+        T_PREVENTIF = '$this->T_PREVENTIF',
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
+    }
+    
+    public function updateBandingKomplain(){  
+        $this->db->query("UPDATE KOMPLAINB SET 
+        KEBERATAN = '$this->KEBERATAN' 
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
     }
     public function delete(){
         $this->db->where('NO_KOMPLAIN', $this->NO_KOMPLAIN);

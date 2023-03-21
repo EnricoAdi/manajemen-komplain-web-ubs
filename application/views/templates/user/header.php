@@ -91,11 +91,12 @@ $routes = [
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item  <?php
-                                    if ($navigation == "Dashboard") {
-                                        echo "active";
-                                    }
-                                    ?>">
+            <li class="nav-item  
+            <?php
+                    if ($navigation == "Dashboard") {
+                        echo "active";
+                    }
+            ?>">
                 <a class="nav-link" href="<?= base_url(); ?>User/Dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -108,11 +109,12 @@ $routes = [
             <div class="sidebar-heading">
                 Komplain Diajukan
             </div>
-            <li class="nav-item  <?php
-                                    if ($navigation == "Complain") {
-                                        echo "active";
-                                    }
-                                    ?>">
+            <li class="nav-item  
+            <?php
+                if ($navigation == "Complain") {
+                    echo "active";
+                }
+            ?>">
                 <a class="nav-link" href="<?= base_url(); ?>User/Complain/List" data-toggle="collapse" data-target="#collapsePagesLaporan" aria-expanded="true" aria-controls="collapsePagesLaporan">
 
                     <i class="fas fa-fw fa-paper-plane"></i>
@@ -140,15 +142,24 @@ $routes = [
                 Komplain Diterima
             </div>
 
-            <li class="nav-item">
-                <a class="nav-link" href="">
+            <li class="nav-item <?php
+                if ($navigation == "ComplainedList") {
+                    echo "active";
+                }
+            ?>">
+                <a class="nav-link" href="<?= base_url(); ?>User/Complained/ListComplained">
                     <i class="fas fa-fw fa-list"></i>
-                    <span>Daftar Komplain</span></a>
+                    <span>Daftar Komplain</span>
+                </a>
             </li>
-            <li class="nav-item  <?php
-                                    //todo if navigation
-                                    ?>">
-                <a class="nav-link" href="<?= base_url(); ?>Admin/Dashboard" data-toggle="collapse" data-target="#collapsePagesPenyelesaianKomplain" aria-expanded="true" aria-controls="collapsePagesPenyelesaianKomplain">
+
+            <li class="nav-item 
+             <?php
+            if ($navigation == "Complained") {
+                echo "active";
+            }
+            ?>">
+                <a class="nav-link" href="<?= base_url(); ?>User/Complained" data-toggle="collapse" data-target="#collapsePagesPenyelesaianKomplain" aria-expanded="true" aria-controls="collapsePagesPenyelesaianKomplain">
 
                     <i class="fas fa-fw fa-inbox"></i>
                     <span>Penyelesaian Komplain <span style="margin-left:15%;">Diajukan</span></span>
@@ -203,6 +214,9 @@ $routes = [
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <?= $login->NOMOR_INDUK; ?>
+                                </a>
                                 <a class="dropdown-item" href="#">
                                     <?= "DIVISI ".$login->NAMA_DIVISI; ?>
                                 </a>
