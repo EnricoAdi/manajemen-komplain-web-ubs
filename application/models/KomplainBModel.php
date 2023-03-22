@@ -32,6 +32,7 @@ class KomplainBModel extends CI_Model
             $komplainb->T_KOREKTIF = $obj->T_KOREKTIF;
             $komplainb->T_PREVENTIF = $obj->T_PREVENTIF;
             $komplainb->KEBERATAN = $obj->KEBERATAN;
+ 
             return $komplainb;
         }
         return null;

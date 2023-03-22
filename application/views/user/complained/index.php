@@ -1,6 +1,6 @@
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Daftar Komplain Mendatang dari Divisi Lain</h1>
  
-<a href="<?= base_url()?>User/Complain/Add/page/1">
+<a href="<?= base_url()?>User/Complained/Penugasan">
 
     <button type="button" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>;
         padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;">

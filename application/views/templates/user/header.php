@@ -168,7 +168,7 @@ $routes = [
 
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Penyelesaian Komplain</h6>
-                        <a class="collapse-item" href="<?= base_url(); ?>User/">Penugasan</a>
+                        <a class="collapse-item" href="<?= base_url(); ?>User/Complained/Penugasan">Penugasan</a>
                         <a class="collapse-item" href="<?= base_url(); ?>User/">Done</a>
                     </div>
                 </div>

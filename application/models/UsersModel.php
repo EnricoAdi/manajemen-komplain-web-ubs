@@ -41,6 +41,17 @@ class UsersModel extends CI_Model
         }
         return null;
     }
+    public function fetchUsersByDivisi($kode_divisi, $kode_hak_akses){
+        if($kode_hak_akses=='all'){ 
+            return $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA_DIVISI FROM USERS u left join USERS a 
+            on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODE_DIVISI = u.KODE_DIVISI where u.KODE_DIVISI = ?",
+            array($kode_divisi))->result();
+        }else{ 
+            return $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA_DIVISI FROM USERS u left join USERS a 
+            on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODE_DIVISI = u.KODE_DIVISI where u.KODE_DIVISI = ? and u.KODE_HAK_AKSES = ?",
+            array($kode_divisi,$kode_hak_akses))->result();
+        }
+    }
     public function login($user)
     {
         $this->session->set_userdata('user_login', $user);

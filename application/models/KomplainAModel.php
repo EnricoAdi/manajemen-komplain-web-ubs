@@ -86,6 +86,12 @@ class KomplainAModel extends CI_Model
             $komplainA->NAMA_DIVISI = $resultQuery->NAMA_DIVISI;  
             $komplainA->DESKRIPSI_MASALAH= $resultQuery->DESKRIPSI_MASALAH; 
 
+            $penerbit = $this->db->query('SELECT U.*, D.* 
+            FROM USERS U JOIN DIVISI D ON U.KODE_DIVISI = D.KODE_DIVISI 
+            WHERE U.NOMOR_INDUK = ?',array($resultQuery->USER_PENERBIT))->result();
+
+            $komplainA->PENERBIT = $penerbit[0];
+
             return $komplainA;
         }
         return null;
