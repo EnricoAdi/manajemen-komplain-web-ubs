@@ -173,8 +173,13 @@ $routes = [
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">
+            <li class="nav-item 
+                <?php
+                if ($navigation == "Feedback") {
+                    echo "active";
+                }
+            ?>">
+                <a class="nav-link" href="<?= base_url(); ?>User/Complained/Penyelesaian">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Komplain Ditugaskan</span></a>
             </li>

@@ -91,7 +91,12 @@ class KomplainAModel extends CI_Model
             WHERE U.NOMOR_INDUK = ?',array($resultQuery->USER_PENERBIT))->result();
 
             $komplainA->PENERBIT = $penerbit[0];
-
+            
+            $feedback = $this->db->query('SELECT *
+            FROM KOMPLAINB WHERE NO_KOMPLAIN = ?',array($resultQuery->NO_KOMPLAIN))->result();
+            
+            $komplainA->FEEDBACK = $feedback[0];
+            
             return $komplainA;
         }
         return null;
@@ -155,6 +160,23 @@ class KomplainAModel extends CI_Model
             JOIN SUB_TOPIK2 S2 ON S2.SUB_TOPIK2 = KA.SUB_TOPIK2
             WHERE T.DIV_TUJUAN = $kode_divisi AND KA.STATUS = '$status'")->result();
         }
+    }
+    
+    public function fetchByUserDitugaskan($nomor_induk){  
+        return $this->db->query("SELECT KA.*, KB.*,D.*, 
+        DU.NAMA_DIVISI AS DIVISI_PENGIRIM,T.DESKRIPSI AS TDESKRIPSI, 
+        S1.DESKRIPSI AS S1DESKRIPSI,
+        S2.DESKRIPSI AS S2DESKRIPSI
+        FROM KOMPLAINA KA 
+        JOIN KOMPLAINB KB ON KA.NO_KOMPLAIN = KB.NO_KOMPLAIN 
+        JOIN TOPIK T ON T.KODE_TOPIK = KA.TOPIK 
+        JOIN DIVISI D ON D.KODE_DIVISI = T.DIV_TUJUAN 
+        JOIN USERS U ON U.NOMOR_INDUK = KA.USER_PENERBIT
+        JOIN DIVISI DU ON DU.KODE_DIVISI = U.KODE_DIVISI
+        JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1 = KA.SUB_TOPIK1
+        JOIN SUB_TOPIK2 S2 ON S2.SUB_TOPIK2 = KA.SUB_TOPIK2
+        WHERE KA.PENUGASAN = $nomor_induk")->result();
+        
     }
     public function insert()
     {
