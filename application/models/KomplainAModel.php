@@ -114,7 +114,7 @@ class KomplainAModel extends CI_Model
     }
 
     public function fetchFromUser($nomor_induk, $status)
-    {
+    { 
         if ($status == 'all') {
             return $this->db->query("SELECT KA.*, KB.*,D.* FROM KOMPLAINA KA 
             JOIN KOMPLAINB KB ON KA.NO_KOMPLAIN = KB.NO_KOMPLAIN JOIN TOPIK T ON T.KODE_TOPIK = KA.TOPIK 

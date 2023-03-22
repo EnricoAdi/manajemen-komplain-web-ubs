@@ -11,7 +11,7 @@
         Kembali
     </button>
 </a>
-<form action="<?= base_url() ?>User/Complain/Add/pageProcess1" method="post" class="mt-4" style="color:black;">
+<form action="<?= base_url() ?>User/Complained/Penugasan/addPenugasan/<?=$komplain->NO_KOMPLAIN?>" method="post" class="mt-4" style="color:black;">
 <div class="row">
     <div class="col"> 
     <label for="" class="form-label mt-4">Nomor Feedback : <?= $komplain->NO_KOMPLAIN; ?> </label> 
@@ -28,14 +28,27 @@
              <label for="subtopik2" class="form-label mt-4">Subtopik 2</label>
              <input type="text" class="form-control" name="subtopik2"  value="<?=$komplain->SUB_TOPIK2;?> - <?=$komplain->S2DESKRIPSI;?>" disabled>
 
-             <label for="user" class="form-label mt-4">User untuk ditugaskan</label> 
-              <select name="" class="form-control" id="">
+             <label for="user" class="form-label mt-4">User untuk ditugaskan</label>  
+               
                 <?php
-                    foreach($users as $user){
-                        echo "<option value='$user->NOMOR_INDUK'>$user->NOMOR_INDUK - $user->NAMA </option>";
+                    if($komplain->PENUGASAN != null){ 
+                        echo "<select name='user' class='form-control' disabled>";
+                        foreach($users as $user){
+                            if($user->NOMOR_INDUK == $komplain->PENUGASAN){
+                                echo "<option value='$user->NOMOR_INDUK' selected>$user->NOMOR_INDUK - $user->NAMA </option>";
+
+                            }else{
+                                echo "<option value='$user->NOMOR_INDUK'>$user->NOMOR_INDUK - $user->NAMA </option>"; 
+                            }
+                        }
+                    }else{ 
+                        echo "<select name='user' class='form-control'>";
+                        foreach($users as $user){
+                            echo "<option value='$user->NOMOR_INDUK'>$user->NOMOR_INDUK - $user->NAMA </option>";
+                        }
                     }
-                ?>
-              </select>
+                    echo "</select>";
+                ?> 
          </div>
          <div class="col">
              <label for="" class="form-label">Tanggal Komplain</label>
@@ -48,7 +61,7 @@
      
     <div class="row mt-4">
         <div class="col">
-            <a href="<?= base_url() ?>User/Complain/Add/page/1" class="btn btn-warning" style="color:black; background-color: <?= error_color(); ?>;">
+            <a href="<?= base_url() ?>User/Complained/Penugasan/hapusPenugasan/<?=$komplain->NO_KOMPLAIN?>" class="btn btn-warning" style="color:black; background-color: <?= error_color(); ?>;">
                     
                 <i class="fas fa-fw fa-trash mr-2"></i>
             Hapus Penugasan

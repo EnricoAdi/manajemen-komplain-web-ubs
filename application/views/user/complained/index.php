@@ -54,10 +54,12 @@
             </table>
         </div>
     </div> 
-</div> 
+</div>  
 <?php
     foreach($complains as $complain){
+         
         $url = base_url()."User/Complained/ListComplained/VerifikasiComplain/$complain->NO_KOMPLAIN"; 
+
         echo "
         <div class='modal fade' id='confirmVerifikasiModal$complain->NO_KOMPLAIN' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel'
         aria-hidden='false'>
@@ -78,7 +80,7 @@
                     Subtopik 2 : $complain->SUB_TOPIK2 - $complain->S2DESKRIPSI <br/><br/>
                     Deskripsi Masalah <br/>
                     $complain->DESKRIPSI_MASALAH <br/><br/>
-
+                
                     <input type='checkbox' name='' required/> Saya Menyetujui Verifikasi 
                 </div>
                 <div class='modal-footer'> 

@@ -59,10 +59,31 @@
         
         //fetch list user sedivisi 
         $users = $this->UsersModel->fetchUsersByDivisi($data['login']->KODE_DIVISI,'1');
-        $data['users'] = $users;  
+        $data['users'] = $users;   
 
         $this->load->view("templates/user/header", $data);
         $this->load->view("user/complained/isi-penugasan", $data);
         $this->load->view("templates/user/footer", $data);
+    }
+
+    public function addPenugasan($nomor_komplain){
+        $komplain = $this->KomplainAModel->get($nomor_komplain); 
+        $user =  $this->input->post("user");
+
+        $komplain->PENUGASAN = $user;
+        $komplain->updatePenugasanKomplain();
+        
+        $this->session->set_flashdata('header', 'Pesan');
+        $this->session->set_flashdata('message', 'Berhasil Menyimpan Penugasan');
+        redirect("User/Complained/Penugasan/addPage/$nomor_komplain");
+    }
+    public function hapusPenugasan($nomor_komplain){
+        $komplain = $this->KomplainAModel->get($nomor_komplain);
+        
+        $komplain->updateHapusPenugasanKomplain();
+        
+        $this->session->set_flashdata('header', 'Pesan');
+        $this->session->set_flashdata('message', 'Berhasil Menghapus Penugasan');
+        redirect("User/Complained/Penugasan/addPage/$nomor_komplain");
     }
 }

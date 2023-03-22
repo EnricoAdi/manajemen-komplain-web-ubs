@@ -42,7 +42,7 @@
              </select>
          </div>
          <div class="col">
-             <label for="inputPassword5" class="form-label">Topik</label>
+             <label for="" class="form-label">Topik</label>
              <input type="text" class="form-control" id="topik" disabled>
 
              <label for="" class="form-label mt-4">Subtopik 1</label>

@@ -40,8 +40,7 @@
 
             //todo fetch complain user tersebut
             $complains = $this->KomplainAModel->fetchForDivisi($data['login']->KODE_DIVISI,'OPEN'); 
-            $data['complains'] = $complains;
-            
+            $data['complains'] = $complains; 
             // echo "<pre>";
             // var_dump($complains);
             // echo "</pre>";
