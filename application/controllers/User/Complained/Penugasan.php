@@ -68,6 +68,11 @@
 
     public function addPenugasan($nomor_komplain){
         $komplain = $this->KomplainAModel->get($nomor_komplain); 
+        if($komplain->PENUGASAN != null){ 
+            $this->session->set_flashdata('header', 'Pesan');
+            $this->session->set_flashdata('message', 'Penugasan sudah ada');
+            redirect("User/Complained/Penugasan/addPage/$nomor_komplain");
+        }
         $user =  $this->input->post("user");
 
         $komplain->PENUGASAN = $user;
@@ -79,7 +84,11 @@
     }
     public function hapusPenugasan($nomor_komplain){
         $komplain = $this->KomplainAModel->get($nomor_komplain);
-        
+        if($komplain->PENUGASAN == null){ 
+            $this->session->set_flashdata('header', 'Pesan');
+            $this->session->set_flashdata('message', 'Belum ada data penugasan');
+            redirect("User/Complained/Penugasan/addPage/$nomor_komplain");
+        }
         $komplain->updateHapusPenugasanKomplain();
         
         $this->session->set_flashdata('header', 'Pesan');
