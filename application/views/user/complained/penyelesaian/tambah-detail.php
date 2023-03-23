@@ -5,7 +5,7 @@
      </ol>
  </nav>
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Input Penyelesaian Komplain</h1>
-
+ 
 <a href="<?= base_url() ?>User/Complained/Penyelesaian/detail/<?= $komplain->NO_KOMPLAIN; ?>">
 
     <button type="button" class="btn btn-warning" style="color:black; 
@@ -29,23 +29,22 @@
     <div class="row mt-4">
         <div class="col">
             <label for="user" class="form-label">Akar Masalah</label> 
-            <textarea class="form-control" name="akar-masalah" required></textarea>
+            <textarea class="form-control" name="akar-masalah" required><?= $akar; ?></textarea>
         </div> 
         <div class="col">
             <label for="user" class="form-label">Tindakan Preventif</label> 
-            <textarea class="form-control" name="preventif" required></textarea>
+            <textarea class="form-control" name="preventif" required><?= $preventif; ?></textarea>
         </div> 
         <div class="col">
             <label for="user" class="form-label">Tindakan Korektif</label> 
-            <textarea class="form-control" name="korektif" required></textarea>
+            <textarea class="form-control" name="korektif" required><?= $korektif; ?></textarea>
         </div> 
     </div>
 
     <div class="row mt-4">
-        <div class="col">
-
+        <div class="col"> 
             <label class="form-label">Tanggal Deadline</label>
-            <input type="date" name="tanggal" class="form-control">
+            <input type="date" name="tanggal" class="form-control" value="<?= $tanggalDeadline; ?>" required>
 
         </div>
         <div class="col"></div>

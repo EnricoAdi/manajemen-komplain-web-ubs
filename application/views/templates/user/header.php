@@ -220,7 +220,7 @@ $routes = [
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
-                                    <?= $login->NOMOR_INDUK; ?>
+                                    <?= $login->NOMOR_INDUK; ?> - <?= $login->NAMA; ?> 
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     <?= "DIVISI ".$login->NAMA_DIVISI; ?>

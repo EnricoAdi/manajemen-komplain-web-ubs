@@ -55,7 +55,7 @@ class KomplainBModel extends CI_Model
         $this->db->query("UPDATE KOMPLAINB SET 
         AKAR_MASALAH = '$this->AKAR_MASALAH',
         T_KOREKTIF = '$this->T_KOREKTIF',
-        T_PREVENTIF = '$this->T_PREVENTIF',
+        T_PREVENTIF = '$this->T_PREVENTIF'
         where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
     }
     
