@@ -175,13 +175,43 @@ class KomplainAModel extends CI_Model
         JOIN DIVISI DU ON DU.KODE_DIVISI = U.KODE_DIVISI
         JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1 = KA.SUB_TOPIK1
         JOIN SUB_TOPIK2 S2 ON S2.SUB_TOPIK2 = KA.SUB_TOPIK2
-        WHERE KA.PENUGASAN = $nomor_induk")->result();
-        
+        WHERE KA.PENUGASAN = $nomor_induk")->result(); 
+    }
+    public function fetchComplainSudahDiisi($kode_divisi){ 
+        return $this->db->query("SELECT KA.*, KB.*,D.*, 
+        DU.NAMA_DIVISI AS DIVISI_PENGIRIM, T.DESKRIPSI AS TDESKRIPSI,
+        S1.DESKRIPSI AS S1DESKRIPSI,
+        S2.DESKRIPSI AS S2DESKRIPSI
+        FROM KOMPLAINA KA 
+        JOIN KOMPLAINB KB ON KA.NO_KOMPLAIN = KB.NO_KOMPLAIN 
+        JOIN TOPIK T ON T.KODE_TOPIK = KA.TOPIK 
+        JOIN DIVISI D ON D.KODE_DIVISI = T.DIV_TUJUAN 
+        JOIN USERS U ON U.NOMOR_INDUK = KA.USER_PENERBIT
+        JOIN DIVISI DU ON DU.KODE_DIVISI = U.KODE_DIVISI
+        JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1 = KA.SUB_TOPIK1
+        JOIN SUB_TOPIK2 S2 ON S2.SUB_TOPIK2 = KA.SUB_TOPIK2
+        WHERE T.DIV_TUJUAN = $kode_divisi AND KA.STATUS = 'PEND' 
+        AND KB.T_KOREKTIF is not null AND KA.TGL_DONE is null")->result();
+    }
+    public function fetchKomplainDone($nomor_induk){
+        return $this->db->query("SELECT KA.*, KB.*,D.*, 
+        DU.NAMA_DIVISI AS DIVISI_PENGIRIM,T.DESKRIPSI AS TDESKRIPSI, 
+        S1.DESKRIPSI AS S1DESKRIPSI,
+        S2.DESKRIPSI AS S2DESKRIPSI
+        FROM KOMPLAINA KA 
+        JOIN KOMPLAINB KB ON KA.NO_KOMPLAIN = KB.NO_KOMPLAIN 
+        JOIN TOPIK T ON T.KODE_TOPIK = KA.TOPIK 
+        JOIN DIVISI D ON D.KODE_DIVISI = T.DIV_TUJUAN 
+        JOIN USERS U ON U.NOMOR_INDUK = KA.USER_PENERBIT
+        JOIN DIVISI DU ON DU.KODE_DIVISI = U.KODE_DIVISI
+        JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1 = KA.SUB_TOPIK1
+        JOIN SUB_TOPIK2 S2 ON S2.SUB_TOPIK2 = KA.SUB_TOPIK2
+        WHERE KA.USER_PENERBIT = $nomor_induk and KA.TGL_DONE is not null")->result(); 
     }
     public function insert()
     {
         // $this->db->insert('KOMPLAINA', $this); 
-        $this->db->query("INSERT INTO KOMPLAINA VALUES ('$this->NO_KOMPLAIN', '$this->TOPIK', '$this->SUB_TOPIK1', '$this->SUB_TOPIK2', TO_DATE('$this->TGL_KEJADIAN', 'YYYY-MM-DD'), NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '$this->STATUS', NULL, NULL, NULL, NULL, NULL, '$this->USER_PENERBIT')");
+        $this->db->query("INSERT INTO KOMPLAINA VALUES ('$this->NO_KOMPLAIN', '$this->TOPIK', '$this->SUB_TOPIK1', '$this->SUB_TOPIK2', TO_DATE('$this->TGL_KEJADIAN', 'YYYY-MM-DD'), TO_DATE('$this->TGL_TERBIT', 'YYYY-MM-DD'), NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '$this->STATUS', NULL, NULL, NULL, NULL, NULL, '$this->USER_PENERBIT')");
     }
     public function update()
     {   
@@ -246,6 +276,17 @@ class KomplainAModel extends CI_Model
     public function updateDeadlinePenyelesaianKomplain(){  
         $this->db->query("UPDATE KOMPLAINA SET 
         TGL_DEADLINE = TO_DATE('$this->TGL_DEADLINE', 'YYYY-MM-DD')
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
+    }
+    public function deleteDeadlinePenyelesaianKomplain(){  
+        $this->db->query("UPDATE KOMPLAINA SET 
+        TGL_DEADLINE = null
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
+    }
+    public function donePenyelesaianKomplain(){
+        $this->db->query("UPDATE KOMPLAINA SET 
+        TGL_DONE = TO_DATE('$this->TGL_DONE', 'YYYY-MM-DD'),
+        USER_DONE = '$this->USER_DONE'
         where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
     }
     public function delete()

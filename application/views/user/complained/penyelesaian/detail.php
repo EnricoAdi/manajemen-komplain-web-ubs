@@ -42,7 +42,7 @@
         <?php 
             $primaryColor = primary_color();
             $urlAdd = base_url()."User/Complained/Penyelesaian/addPage/$komplain->NO_KOMPLAIN";
-            $urlEdit = base_url()."";
+            $urlEdit = base_url()."User/Complained/Penyelesaian/editPage/$komplain->NO_KOMPLAIN";
             if($komplain->FEEDBACK->T_KOREKTIF=="" || $komplain->FEEDBACK->T_KOREKTIF==null ){
                 //jika belum ada penyelesaian
                 echo " 

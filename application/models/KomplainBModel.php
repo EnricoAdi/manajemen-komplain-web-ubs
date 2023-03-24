@@ -58,6 +58,13 @@ class KomplainBModel extends CI_Model
         T_PREVENTIF = '$this->T_PREVENTIF'
         where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
     }
+    public function deletePenyelesaianKomplain(){  
+        $this->db->query("UPDATE KOMPLAINB SET 
+        AKAR_MASALAH = null,
+        T_KOREKTIF = null,
+        T_PREVENTIF = null
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
+    }
     
     public function updateBandingKomplain(){  
         $this->db->query("UPDATE KOMPLAINB SET 

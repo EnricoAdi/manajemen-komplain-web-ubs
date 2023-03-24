@@ -41,4 +41,8 @@ class LampiranModel extends CI_Model
     public function deleteByKomplain(){ 
         $this->db->query('DELETE FROM LAMPIRAN WHERE NO_KOMPLAIN = '.$this->NO_KOMPLAIN);
     }
+    public function deleteByKomplainForFeedback(){ 
+        $this->db->query('DELETE FROM LAMPIRAN WHERE NO_KOMPLAIN = ? and TIPE=1'
+        ,array($this->NO_KOMPLAIN));
+    }
 }

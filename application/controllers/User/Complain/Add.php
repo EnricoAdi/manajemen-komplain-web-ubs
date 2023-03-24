@@ -126,7 +126,7 @@
             $newkomplain->TGL_KEJADIAN = $tanggal;
             
 
-            $newkomplain->TGL_TERBIT = null;
+            $newkomplain->TGL_TERBIT = $today;
             $newkomplain->TGL_VERIFIKASI = null;
             $newkomplain->USER_VERIFIKASI = null;
             $newkomplain->TGL_CANCEL = null;

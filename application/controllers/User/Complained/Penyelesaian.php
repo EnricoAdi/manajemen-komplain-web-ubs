@@ -86,7 +86,25 @@
         $this->load->view("templates/user/header", $data);
         $this->load->view("user/complained/penyelesaian/tambah-detail", $data);
         $this->load->view("templates/user/footer", $data);
+    }
+    public function editPage($nomor_komplain){ 
+        $data = $this->data;
+        $data['page_title'] = "Input Penyelesaian Komplain";
+        $data['login'] = $this->UsersModel->getLogin();
+        
+        $komplain = $this->KomplainAModel->get($nomor_komplain); 
 
+        if($komplain==null){
+            $this->session->set_flashdata('header', 'Pesan');
+            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
+            redirect('User/Complained/Penyelesaian');
+        }   
+        
+        $data['komplain'] = $komplain;  
+        
+        $this->load->view("templates/user/header", $data);
+        $this->load->view("user/complained/penyelesaian/edit", $data);
+        $this->load->view("templates/user/footer", $data);
     }
     public function lampiranPage($nomor_komplain){ 
         $data = $this->data;
@@ -236,6 +254,7 @@
        
                 $resultmail = send_mail($this->UsersModel->getLogin()->EMAIL, 
                 $header, $template); 
+                // $resultmail = true;
                 
                 $this->session->unset_userdata('akar');
                 $this->session->unset_userdata('preventif');
@@ -322,5 +341,13 @@
             </footer>
           </body>
         </html>"; 
+   }
+
+   public function editPenyelesaianProcess($nomor_komplain){
+        $tanggal = $this->input->post('tanggal');
+        echo "<pre>";
+        var_dump($tanggal);
+        echo "</pre>";
+        //TODO
    }
 }

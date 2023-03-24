@@ -129,8 +129,12 @@ $routes = [
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">
+            <li class="nav-item <?php
+                if ($navigation == "Solved") {
+                    echo "active";
+                }
+            ?>">
+                <a class="nav-link" href="<?= base_url(); ?>User/Complain/Solved">
                     <i class="fas fa-fw fa-envelope-open"></i>
                     <span>Penyelesaian Komplain <span style="margin-left:15%;">Diterima</span></span></a>
             </li>
@@ -169,7 +173,7 @@ $routes = [
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Penyelesaian Komplain</h6>
                         <a class="collapse-item" href="<?= base_url(); ?>User/Complained/Penugasan">Penugasan</a>
-                        <a class="collapse-item" href="<?= base_url(); ?>User/">Done</a>
+                        <a class="collapse-item" href="<?= base_url(); ?>User/Complained/Done">Done</a>
                     </div>
                 </div>
             </li>
