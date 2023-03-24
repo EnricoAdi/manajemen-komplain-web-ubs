@@ -15,6 +15,7 @@
                         <th>Subtopik 2</th>
                         <th>Deskripsi Masalah</th> 
                         <th>Divisi Pengirim</th> 
+                        <th>Status</th> 
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -31,6 +32,7 @@
                             echo "<td>$complain->SUB_TOPIK2</td>";
                             echo "<td>$complain->DESKRIPSI_MASALAH</td>";
                             echo "<td>$complain->DIVISI_PENGIRIM</td>";
+                            echo "<td>$complain->STATUS</td>";
                             echo "<td>  
                                     <a href='$urlDetail'> 
                                         <button class='btn btn-warning' style='color:black'>

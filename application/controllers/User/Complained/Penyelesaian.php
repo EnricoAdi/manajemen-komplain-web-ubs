@@ -184,6 +184,8 @@
         }else{
             //update deadline
             $komplain->TGL_DEADLINE = $tanggalDeadline;
+            $komplain->TGL_PENANGANAN = $today;
+            $komplain->USER_PENANGANAN = $this->UsersModel->getLogin()->NOMOR_INDUK;
             $komplain->updateDeadlinePenyelesaianKomplain();
 
             //update komplainB

@@ -289,6 +289,27 @@ class KomplainAModel extends CI_Model
         USER_DONE = '$this->USER_DONE'
         where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
     }
+
+    public function updateBandingKomplain(){ 
+        $this->db->query("UPDATE KOMPLAINA SET 
+        TGL_BANDING = TO_DATE('$this->TGL_BANDING', 'YYYY-MM-DD'),
+        USER_BANDING = '$this->USER_BANDING'
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
+    }
+    public function updateCancelKomplain(){ 
+        $this->db->query("UPDATE KOMPLAINA SET 
+        TGL_CANCEL = TO_DATE('$this->TGL_CANCEL', 'YYYY-MM-DD'),
+        USER_CANCEL = '$this->USER_CANCEL',
+        STATUS = 'CANCEL'
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
+    }
+    public function updateValidasiKomplain(){ 
+        $this->db->query("UPDATE KOMPLAINA SET 
+        TGL_VALIDASI = TO_DATE('$this->TGL_VALIDASI', 'YYYY-MM-DD'),
+        USER_VALIDASI = '$this->USER_VALIDASI',
+        STATUS = 'CLOSE'
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
+    }
     public function delete()
     { 
         $this->db->where('NO_KOMPLAIN', $this->NO_KOMPLAIN);
