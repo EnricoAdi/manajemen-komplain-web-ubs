@@ -21,13 +21,13 @@
      </div>
      <div class="row mt-4">
          <div class="col"> 
-             <button class="btn btn-primary" style=" width:100%;">
+             <button class="btn btn-primary" style=" width:100%; background-color: <?= primary_color(); ?>;">
                  <i class="fas fa-fw fa-file mr-2" style="font-weight: bolder;"></i>
                  Buat Laporan
              </button>
          </div>
          <div class="col">
-             <button class="btn btn-primary" style=" width:100%;">
+             <button class="btn btn-primary" style=" width:100%; background-color: <?= primary_color(); ?>;">
                  <i class="fas fa-fw fa-print mr-2" style="font-weight: bolder;"></i>
                  Cetak Laporan
              </button></div>

@@ -19,12 +19,11 @@ class TopikModel extends CI_Model
        return $this->db->query('SELECT T.*, D.NAMA_DIVISI FROM TOPIK T JOIN DIVISI D ON 
        D.KODE_DIVISI=T.DIV_TUJUAN')->result();
     }
-    public function get($kode_topik){
-        $this->db->select('*');
-        $this->db->from('TOPIK');
-        $this->db->where('KODE_TOPIK',$kode_topik);  
-        $query = $this->db->get() 
-            ->result();
+    public function get($kode_topik){ 
+        $query = $this->db->query("SELECT T.*, D.NAMA_DIVISI 
+        FROM TOPIK T JOIN DIVISI D ON D.KODE_DIVISI = T.DIV_TUJUAN
+        WHERE T.KODE_TOPIK = '".$kode_topik."'")->result(); 
+ 
         if(sizeof($query)>0){
             return $query[0]; 
         }

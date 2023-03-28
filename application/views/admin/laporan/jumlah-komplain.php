@@ -18,14 +18,14 @@
  
 
             <label for="topik" class="form-label"></label>
-            <button class="btn btn-primary" style="margin-top: 102px; width: 100%;">
+            <button class="btn btn-primary" style="margin-top: 102px; width: 100%;background-color: <?= primary_color(); ?>;">
 
             <i class="fas fa-fw fa-file mr-2"></i>
                 Buat Laporan</button>
         </div>
         <div class="col">
             <label for="topik" class="form-label"></label>
-            <button class="btn btn-primary" style="margin-top: 102px; width:100%;">
+            <button class="btn btn-primary" style="margin-top: 102px; width:100%;background-color: <?= primary_color(); ?>;">
 
                 <i class="fas fa-fw fa-print mr-2" style="font-weight: bolder;"></i>
                 Cetak Laporan</button>

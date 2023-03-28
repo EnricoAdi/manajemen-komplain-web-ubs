@@ -13,10 +13,11 @@ class SubTopik2Model extends CI_Model
         parent::__construct(); 
     }
     public function fetch(){ 
-       return $this->db->query('SELECT S2.*, 
-       S1.DESKRIPSI AS DESKRIPSI_SUBTOPIK1,
-       T.TOPIK FROM SUB_TOPIK2 S2 JOIN SUB_TOPIK1 S1 
-       ON S2.SUB_TOPIK1 = S1.SUB_TOPIK1 JOIN TOPIK T ON T.KODE_TOPIK = S2.KODE_TOPIK')
+       return $this->db->query('SELECT S2.*, S2.DESKRIPSI AS S2DESKRIPSI, 
+       S1.DESKRIPSI AS DESKRIPSI_SUBTOPIK1, S1.DESKRIPSI AS S1DESKRIPSI,T.TOPIK AS TDESKRIPSI,
+       T.TOPIK, D.NAMA_DIVISI FROM SUB_TOPIK2 S2 JOIN SUB_TOPIK1 S1 
+       ON S2.SUB_TOPIK1 = S1.SUB_TOPIK1 JOIN TOPIK T ON T.KODE_TOPIK = S2.KODE_TOPIK
+       JOIN DIVISI D ON T.DIV_TUJUAN = D.KODE_DIVISI')
        ->result();
     }
     public function get($subtopik2){
@@ -64,15 +65,19 @@ class SubTopik2Model extends CI_Model
      }
     public function fetchSubtopikAll($divisi, $in){ 
         if($in){ 
-        return $this->db->query('SELECT S2.SUB_TOPIK2, S2.DESKRIPSI AS S2DESKRIPSI, 
-            S2.SUB_TOPIK1, S1.DESKRIPSI AS S1DESKRIPSI, S2.KODE_TOPIK, T.TOPIK AS TDESKRIPSI 
+            return $this->db->query('SELECT S2.SUB_TOPIK2, S2.DESKRIPSI AS S2DESKRIPSI, 
+            S2.SUB_TOPIK1, S1.DESKRIPSI AS S1DESKRIPSI, S2.KODE_TOPIK, T.TOPIK AS TDESKRIPSI,
+            D.NAMA_DIVISI 
             FROM SUB_TOPIK2 S2 JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1=S2.SUB_TOPIK1 
-            JOIN TOPIK T ON S2.KODE_TOPIK=T.KODE_TOPIK WHERE T.DIV_TUJUAN='.$divisi)->result();
+            JOIN TOPIK T ON S2.KODE_TOPIK=T.KODE_TOPIK 
+            JOIN DIVISI D ON D.KODE_DIVISI = T.DIV_TUJUAN WHERE T.DIV_TUJUAN='.$divisi)->result();
         }else{ 
             return $this->db->query('SELECT S2.SUB_TOPIK2, S2.DESKRIPSI AS S2DESKRIPSI, 
-            S2.SUB_TOPIK1, S1.DESKRIPSI AS S1DESKRIPSI, S2.KODE_TOPIK, T.TOPIK AS TDESKRIPSI 
+            S2.SUB_TOPIK1, S1.DESKRIPSI AS S1DESKRIPSI, S2.KODE_TOPIK, T.TOPIK AS TDESKRIPSI,
+            D.NAMA_DIVISI 
             FROM SUB_TOPIK2 S2 JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1=S2.SUB_TOPIK1 
-            JOIN TOPIK T ON S2.KODE_TOPIK=T.KODE_TOPIK WHERE T.DIV_TUJUAN<>'.$divisi)->result();
+            JOIN TOPIK T ON S2.KODE_TOPIK=T.KODE_TOPIK 
+            JOIN DIVISI D ON D.KODE_DIVISI = T.DIV_TUJUAN WHERE T.DIV_TUJUAN<>'.$divisi)->result();
         }
      }
 }

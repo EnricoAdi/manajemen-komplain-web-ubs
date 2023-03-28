@@ -48,7 +48,7 @@
     </div>
     <div class="row mt-4">
         <div class="col">
-            <a href="<?= base_url() ?>User/Complain/Add/page/1" class="btn btn-warning" style="color:black; background-color: <?= error_color(); ?>;">Sebelumnya</a>
+            <a href="<?= base_url() ?>User/Complain/Add/page/1" class="btn btn-danger" style="color:white; background-color: <?= error_color(); ?>;">Sebelumnya</a>
             <button type="submit" id="btnNext" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>; width:120px;">
 
                 <i class="fas fa-fw fa-paper-plane mr-2"></i>

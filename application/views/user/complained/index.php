@@ -30,7 +30,7 @@
                 <?php 
                         foreach ($complains as $complain) {
                             
-                            $urlDetail = base_url()."User/Complain/Detail/index/$complain->NO_KOMPLAIN";
+                            $urlTranfer = base_url()."User/Complained/Transfer/index/$complain->NO_KOMPLAIN";
                             echo "<tr>";
                             echo "<td>".$complain->NO_KOMPLAIN."</td>";
                             echo "<td>".$complain->TGL_KEJADIAN."</td>";
@@ -42,10 +42,12 @@
                                         Verifikasi
                                     </button> 
 
-                                    <button class='btn btn-danger' id='$complain->NO_KOMPLAIN' style='color:black'>
-                                    <i class='fas fa-fw fa-stop'></i> 
-                                        Transfer
-                                    </button>   
+                                    <a href='$urlTranfer'>
+                                        <button class='btn btn-danger' id='$complain->NO_KOMPLAIN' style='color:black'>
+                                        <i class='fas fa-fw fa-stop'></i> 
+                                            Transfer
+                                        </button>   
+                                    </a>   
                             </td>";
                            echo "</tr>";
                         }
@@ -83,8 +85,7 @@
                 
                     <input type='checkbox' name='' required/> Saya Menyetujui Verifikasi 
                 </div>
-                <div class='modal-footer'> 
-                    <button class='btn btn-secondary' type='button' style='color:black;' data-dismiss='modal'>TUTUP</button>
+                <div class='modal-footer'>  
                     <button class='btn btn-success'style='color:black;' type='submit'>VERIFIKASI</button>
                     </div>
                 </div>

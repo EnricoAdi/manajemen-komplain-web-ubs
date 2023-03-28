@@ -114,6 +114,9 @@
             $message = "Sistem telah mencatat anda melakukan pembatalan (cancel) atas komplain $nomor_komplain, terima kasih.";
             $template = $this->templateEmail($header, $this->UsersModel->getLogin()->NAMA,
             $message);
+            
+            $resultmail = send_mail($this->UsersModel->getLogin()->EMAIL, 
+            $header, $template); 
 
         }else{
             //validasi

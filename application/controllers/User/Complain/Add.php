@@ -175,7 +175,7 @@
                         $ext = pathinfo($lampirans['name'][$i], PATHINFO_EXTENSION);
 
                         $config['upload_path'] = './uploads/';
-                        $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg|txt';
+                        $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg|txt|docx|xlsx|csv';
                         $config['max_size'] = 5000; // in Kilobytes
                         $config['file_name'] = $getNewFileName;
 

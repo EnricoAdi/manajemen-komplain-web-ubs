@@ -1,7 +1,7 @@
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Ubah Email</h1>
 <a href="<?= base_url() ?>Admin/Master/Email">
 
-    <button type="button" class="btn btn-warning" style="color:black; 
+    <button type="button" class="btn btn-warning" style="color:white; 
         padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;
         background-color:<?= error_color(); ?>">
 
@@ -44,7 +44,7 @@
     <div class="row mt-4">
 
         <div class="col">
-            <button class="btn btn-danger" id="btnDelete" style="color:black;width:100px;">
+            <button class="btn btn-danger" id="btnDelete" style="color:white;width:100px; background-color:<?= error_color(); ?>">
 
                 <i class="fas fa-fw fa-trash"></i> Hapus</button>
             <button type="submit" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>;width:100px;">Ubah</button>

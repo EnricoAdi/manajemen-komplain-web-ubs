@@ -11,12 +11,15 @@ class SubTopik1Model extends CI_Model
         parent::__construct(); 
     }
     public function fetch(){ 
-       return $this->db->query('SELECT S.*, T.TOPIK FROM SUB_TOPIK1 S 
-       JOIN TOPIK T ON S.KODE_TOPIK = T.KODE_TOPIK')->result();
+       return $this->db->query('SELECT S.*, T.TOPIK, D.NAMA_DIVISI FROM SUB_TOPIK1 S 
+       JOIN TOPIK T ON S.KODE_TOPIK = T.KODE_TOPIK
+       JOIN DIVISI D ON D.KODE_DIVISI = T.DIV_TUJUAN')->result();
     }
     public function get($subtopik1){
-        $query = $this->db->query('SELECT S.*, T.TOPIK FROM SUB_TOPIK1 S JOIN TOPIK T 
-        ON S.KODE_TOPIK = T.KODE_TOPIK WHERE S.SUB_TOPIK1 = '.$subtopik1)->result(); 
+        $query = $this->db->query('SELECT S.*, T.TOPIK, D.NAMA_DIVISI 
+        FROM SUB_TOPIK1 S JOIN TOPIK T ON S.KODE_TOPIK = T.KODE_TOPIK 
+        JOIN DIVISI D ON D.KODE_DIVISI = T.DIV_TUJUAN
+        WHERE S.SUB_TOPIK1 = '.$subtopik1)->result(); 
  
         if(sizeof($query)>0){
             return $query[0];

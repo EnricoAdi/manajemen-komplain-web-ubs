@@ -1,7 +1,7 @@
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Tambah Subtopik1</h1>
 <a href="<?= base_url() ?>Admin/Master/Subtopik1">
 
-    <button type="button" class="btn btn-warning" style="color:black; 
+    <button type="button" class="btn btn-warning" style="color:white; 
         padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;
         background-color:<?= error_color(); ?>">
 
@@ -25,7 +25,10 @@
                 ?>
             </select>
         </div>
-        <div class="col"></div>
+        <div class="col">
+            <!-- <label for="deskripsi" class="form-label">Divisi</label>
+            <input type="text" class="form-control" id="txtDivisi" disabled> -->
+        </div>
     </div>
     <div class="row">
         <div class="col">

@@ -3,7 +3,7 @@ function asset_url(){
    return base_url().'assets/';
 }
 function error_color(){
-   return "#ff5447";
+   return "#A3180D";
 }
 function primary_color(){
    return "#004882";
