@@ -1,21 +1,13 @@
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Tambah Email</h1>
-<a href="<?= base_url() ?>Admin/Master/Email">
 
-    <button type="button" class="btn btn-warning" style="color:white; 
-        padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;
-        background-color:<?= error_color(); ?>">
+<?= error_button("Kembali", "fas fa-fw fa-step-backward", "", "", "Admin/Master/Email") ?>
 
-        <i class="fas fa-fw fa-step-backward"></i>
-        Kembali
-    </button>
-
-</a>
 <form action="<?= base_url() ?>Admin/Master/Email/AddProcess" method="post" class="mt-4" style="color:black;">
     <input type="hidden" name="inputAtasan" id="inputAtasan">
     <div class="row">
         <div class="col">
             <label type="button" for="user" title="Pastikan divisi user dan atasan sesuai" class="form-label">User</label>
-            <select name="user" class="form-control"> 
+            <select name="user" class="form-control">
                 <?php
                 foreach ($users_no_email as $user) {
                     echo "<option value='$user->NOMOR_INDUK'>$user->NAMA_DIVISI - $user->NOMOR_INDUK - $user->NAMA</option>";
@@ -41,8 +33,8 @@
         </div>
     </div>
     <div class="row mt-4">
-        <div class="col">
-            <button type="submit" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>;">Tambah</button>
+        <div class="col"> 
+            <?= primary_submit_button("Tambah")?>
         </div>
     </div>
 </form>

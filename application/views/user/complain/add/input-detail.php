@@ -5,7 +5,7 @@
     </ol>
 </nav>
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Tambah Komplain Baru</h1>
- 
+
 
 <form action="<?= base_url() ?>User/Complain/Add/addComplainProcess" method="post" class="mt-4" style="color:black;" enctype="multipart/form-data">
     <input type="hidden" name="inputSubtopik2" id="inputSubtopik2" value="">
@@ -48,11 +48,8 @@
     </div>
     <div class="row mt-4">
         <div class="col">
-            <a href="<?= base_url() ?>User/Complain/Add/page/1" class="btn btn-danger" style="color:white; background-color: <?= error_color(); ?>;">Sebelumnya</a>
-            <button type="submit" id="btnNext" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>; width:120px;">
-
-                <i class="fas fa-fw fa-paper-plane mr-2"></i>
-                Kirim</button>
+            <?= error_button("Sebelumnya", null, "", "", base_url() . "User/Complain/Add/page/1"); ?>
+            <?= primary_submit_button("Kirim", "fas fa-fw fa-paper-plane mr-2", "btnNext", "") ?>
         </div>
     </div>
 </form>

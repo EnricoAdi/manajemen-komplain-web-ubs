@@ -2,7 +2,7 @@
 
 <a href="<?= base_url() ?>User/Complain/Solved">
 
-    <button type="button" class="btn btn-warning" style="color:black; 
+    <button type="button" class="btn btn-warning" style="color:white; 
         padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;
         background-color:<?= error_color(); ?>">
 

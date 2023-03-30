@@ -2,7 +2,7 @@
  
 <a href="<?= base_url() ?>User/Complained/Penyelesaian/detail/<?= $komplain->NO_KOMPLAIN; ?>">
 
-    <button type="button" class="btn btn-warning" style="color:black; 
+    <button type="button" class="btn btn-danger" style="color:white; 
         padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;
         background-color:<?= error_color(); ?>">
 

@@ -77,6 +77,7 @@
         $today = date('Y-m-d'); 
         
         $resultmail = false;
+        $resultmailRecepient = false;
  
         //isi apabila banding
         if($keputusan=='banding'){
@@ -97,11 +98,22 @@
             $header = "Sukses melakukan banding penyelesaian komplain";
             $message = "Sistem telah mencatat anda melakukan banding atas komplain $nomor_komplain, dengan keluhan $permintaanBanding. Mohon ditunggu untuk tindakan lanjutan dari divisi bersangkutan. Terima kasih.";
 
-            $template = $this->templateEmail($header, $this->UsersModel->getLogin()->NAMA,
+            $template = templateEmail($header, $this->UsersModel->getLogin()->NAMA,
             $message);
    
             $resultmail = send_mail($this->UsersModel->getLogin()->EMAIL, 
             $header, $template); 
+
+
+            
+            $headerRecipient = "Sukses melakukan banding penyelesaian komplain";
+            $messageRecipient = "Sistem telah mencatat anda mendapatkan banding atas komplain $nomor_komplain, dengan keluhan $permintaanBanding. Mohon menindaklanjuti permintaan divisi bersangkutan. Terima kasih.";
+
+            $templateRecipient =  templateEmail($headerRecipient, $komplain->PENERBIT->NAMA,
+            $messageRecipient);
+
+            $resultmailRecepient = send_mail($komplain->PENERBIT->EMAIL, 
+            $headerRecipient, $templateRecipient); 
 
         }else if($keputusan=='cancel'){
             //update komplainA
@@ -112,7 +124,7 @@
             
             $header = "Sukses membatalkan penyelesaian komplain";
             $message = "Sistem telah mencatat anda melakukan pembatalan (cancel) atas komplain $nomor_komplain, terima kasih.";
-            $template = $this->templateEmail($header, $this->UsersModel->getLogin()->NAMA,
+            $template = templateEmail($header, $this->UsersModel->getLogin()->NAMA,
             $message);
             
             $resultmail = send_mail($this->UsersModel->getLogin()->EMAIL, 
@@ -127,13 +139,13 @@
            
             $header = "Sukses memvalidasi penyelesaian komplain";
             $message = "Sistem telah mencatat anda telah melakukan validasi atas komplain $nomor_komplain, terima kasih atas kerja sama anda.";
-            $template = $this->templateEmail($header, $this->UsersModel->getLogin()->NAMA,
+            $template = templateEmail($header, $this->UsersModel->getLogin()->NAMA,
             $message);
    
             $resultmail = send_mail($this->UsersModel->getLogin()->EMAIL, 
             $header, $template); 
         }
-        if($resultmail==true){ 
+        if($resultmail==true && $resultmailRecepient==true){ 
             $this->session->set_flashdata('header', 'Pesan');
             $this->session->set_flashdata('message', 'Berhasil memberikan keputusan pada penyelesaian komplain, silahkan cek email anda');
             redirect('User/Complain/Solved');
@@ -144,73 +156,5 @@
         }
     }
 
-    public function templateEmail($header,$nama, $message){
-        return "<!DOCTYPE html>
-        <html>
-          <head>
-            <meta charset='utf-8'>
-            <title>$header</title>
-            <style> 
-              * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-              }
-               
-              body {
-                font-family: Arial, sans-serif;
-                color: #333;
-              } 
-              header {
-                background-color: #f5f5f5;
-                padding: 20px;
-                text-align: center;
-              }
-              
-              header h1 {
-                font-size: 32px;
-                margin-bottom: 20px;
-              }
-               
-              .content {
-                padding: 20px;
-              }
-               
-              .cta-button {
-                display: inline-block;
-                background-color: #337ab7;
-                color: #fff;
-                border-radius: 4px;
-                padding: 10px 20px;
-                text-decoration: none;
-                margin-top: 20px;
-              }
-              
-              .cta-button:hover {
-                background-color: #23527c;
-              }
-               
-              footer {
-                background-color: #f5f5f5;
-                padding: 20px;
-                text-align: center;
-                font-size: 14px;
-              }
-            </style>
-          </head>
-          <body>
-            <header>
-              <h1>$header</h1>
-            </header>
-            <div class='content'>
-              <p>Halo, $nama!</p>
-              <br>
-              <p>$message</p> 
-            </div>
-            <footer>
-              <p>&copy; PT UBS - SIB ISTTS</p>
-            </footer>
-          </body>
-        </html>"; 
-   }
+     
 }

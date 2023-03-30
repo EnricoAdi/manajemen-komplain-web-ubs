@@ -2,11 +2,9 @@
 
 <a href="<?= base_url() ?>User/Complained/Penugasan">
 
-    <button type="button" class="btn btn-warning" style="color:black; 
+    <button type="button" class="btn btn-warning" style="color:white; 
         padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;
-        background-color:<?= error_color(); ?>">
-
-
+        background-color:<?= error_color(); ?>"> 
         <i class="fas fa-fw fa-step-backward mr-2"></i>
         Kembali
     </button>

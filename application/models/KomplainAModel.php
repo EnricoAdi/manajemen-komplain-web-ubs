@@ -44,7 +44,7 @@ class KomplainAModel extends CI_Model
         JOIN DIVISI D ON D.KODE_DIVISI = T.DIV_TUJUAN 
         JOIN SUB_TOPIK1 ST1 ON ST1.SUB_TOPIK1 = KA.SUB_TOPIK1
         JOIN SUB_TOPIK2 ST2 ON ST2.SUB_TOPIK2 = KA.SUB_TOPIK2
-        JOIN TOPIK T ON T.KODE_TOPIK = KA.TOPIK
+        JOIN TOPIK T ON T.KODE_TOPIK = KA.TOPIK 
         WHERE KB.NO_KOMPLAIN = ?',array($no_komplain))->result();
 
         if (sizeof($query) > 0) {
@@ -95,7 +95,7 @@ class KomplainAModel extends CI_Model
             $feedback = $this->db->query('SELECT *
             FROM KOMPLAINB WHERE NO_KOMPLAIN = ?',array($resultQuery->NO_KOMPLAIN))->result();
             
-            $komplainA->FEEDBACK = $feedback[0];
+            $komplainA->FEEDBACK = $feedback[0]; 
             
             return $komplainA;
         }
