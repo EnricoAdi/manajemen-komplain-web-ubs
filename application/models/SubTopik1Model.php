@@ -47,13 +47,12 @@ class SubTopik1Model extends CI_Model
         $this->db->update('SUB_TOPIK1', $this); 
     }
     public function delete(){
-        // $this->db->where('SUB_TOPIK1', $this->SUB_TOPIK1);
-        // $this->db->delete('SUB_TOPIK1'); 
-        $this->db->query('DELETE FROM SUB_TOPIK1 WHERE SUB_TOPIK1 = ? and KODE_TOPIK = ?',
-            array($this->SUB_TOPIK1, $this->KODE_TOPIK) );
+        $this->db->where('SUB_TOPIK1', $this->SUB_TOPIK1);
+        $this->db->where('KODE_TOPIK', $this->KODE_TOPIK);
+        $this->db->delete('SUB_TOPIK1');  
     }
     public function fetchSubtopik2(){ 
-       return $this->db->query('SELECT S.* FROM SUB_TOPIK2 S  where S.SUB_TOPIK1 = ? and S.KDOE_TOPIK = ?',
+       return $this->db->query('SELECT S.* FROM SUB_TOPIK2 S  where S.SUB_TOPIK1 = ? and S.KODE_TOPIK = ?',
        array($this->SUB_TOPIK1, $this->KODE_TOPIK)
        )->result();
     }

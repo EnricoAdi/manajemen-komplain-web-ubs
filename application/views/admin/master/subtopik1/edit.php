@@ -17,10 +17,10 @@
                 foreach ($list_topik as $topik) {
                     $kodesubstr = substr($topik->KODE_TOPIK, 0, 3);
                     if ($topik->KODE_TOPIK == $subtopic->KODE_TOPIK) {
-                        echo "<option value='$topik->KODE_TOPIK' selected >$kodesubstr - $topik->TOPIK</option>";
+                        echo "<option value='$topik->KODE_TOPIK' selected >$kodesubstr - $topik->TOPIK - $topik->NAMA_DIVISI</option>";
                     } else {
 
-                        echo "<option value='$topik->KODE_TOPIK' >$kodesubstr - $topik->TOPIK</option>";
+                        echo "<option value='$topik->KODE_TOPIK' >$kodesubstr - $topik->TOPIK  - $topik->NAMA_DIVISI</option>";
                     }
                 }
                 ?>
@@ -54,7 +54,7 @@
             <div class="modal-body">Apakah anda yakin ingin menghapus subtopik 1 ini?</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
-                <a class="btn btn-danger" href="<?= base_url() ?>Admin/Master/Subtopik1/DeleteProcess/<?= $subtopic->SUB_TOPIK1; ?>">Ya</a>
+                <a class="btn btn-danger" href="<?= base_url() ?>Admin/Master/Subtopik1/DeleteProcess/<?= $subtopic->KODE_TOPIK; ?>/<?= $subtopic->SUB_TOPIK1; ?>">Ya</a>
             </div>
         </div>
     </div>
