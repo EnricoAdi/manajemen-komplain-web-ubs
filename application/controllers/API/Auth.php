@@ -21,7 +21,7 @@ class Auth extends REST_Controller
         $this->response([
             'status' => true,
             'message' => 'Unauthorized',
-            'data' =>  'helloa'
+            'data' =>  'hello'
         ], REST_Controller::HTTP_OK);
     }
     public function index_post()
@@ -38,7 +38,8 @@ class Auth extends REST_Controller
                 'message' => 'Nomor Induk tidak ditemukan'
             ], REST_Controller::HTTP_NOT_FOUND);
         } else {
-            if (password_verify($password, $userFound->PASSWORD)) {
+            // if (password_verify($password, $userFound->PASSWORD)) {
+            if ($password == $userFound->PASSWORD) {
                 $this->UsersModel->login($userFound);
 
                 $token = array(
@@ -62,6 +63,7 @@ class Auth extends REST_Controller
                 $this->response([
                     'status' => true,
                     'message' => 'Login Berhasil',
+                    'hak_akses'=> $userFound->KODE_HAK_AKSES,
                     'token' => $jwt,
                     'exp' => $exp
                 ], 200);

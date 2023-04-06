@@ -1,4 +1,4 @@
-<?php  
+<?php
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,9 +12,9 @@
     <meta name="author" content="">
 
     <title><?= $page_title ?> </title>
-    <link rel="icon" type="image/x-icon" href="<?= asset_url(); ?>images/logo.png"> 
+    <link rel="icon" type="image/x-icon" href="<?= asset_url(); ?>images/logo.png">
     <link href="<?= asset_url(); ?>css/fontNunito.css" rel="stylesheet">
- 
+
     <link href="<?= asset_url(); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <link href="<?= asset_url(); ?>css/template/sb-admin-2.min.css" rel="stylesheet">
@@ -35,28 +35,28 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-                <img src="<?= asset_url(); ?>images/logo.png" alt="ubs" style="width:100%;">
+                <img src="<?= asset_url(); ?>images/logo.png" alt="ubs" style="width:100%; margin-top:30px; border-radius:10px;">
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+            <hr class="sidebar-divider my-2">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item <?php 
-                if($navigation=="Dashboard"){
-                    echo "active";
-                }
-            ?>">
+            <li class="nav-item <?php
+                                if ($navigation == "Dashboard") {
+                                    echo "active";
+                                }
+                                ?>">
                 <a class="nav-link" href="<?= base_url(); ?>Admin/Dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
-            <li class="nav-item  <?php 
-                if($navigation=="Master"){
-                    echo "active";
-                }
-            ?>">
+            <li class="nav-item  <?php
+                                    if ($navigation == "Master") {
+                                        echo "active";
+                                    }
+                                    ?>">
                 <a class="nav-link" href="<?= base_url(); ?>Admin/Dashboard" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
 
                     <i class="fas fa-fw fa-book"></i>
@@ -66,17 +66,17 @@
 
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Menu Master :</h6>
-                        <a class="collapse-item" href="<?= base_url(); ?>Admin/Master/Topik/Menu">Master Topik</a> 
-                        <a class="collapse-item" href="<?= base_url(); ?>Admin/Master/User">Master User</a> 
-                        <a class="collapse-item" href="<?= base_url(); ?>Admin/Master/Email">Master Email</a> 
+                        <a class="collapse-item" href="<?= base_url(); ?>Admin/Master/Topik/Menu">Master Topik</a>
+                        <a class="collapse-item" href="<?= base_url(); ?>Admin/Master/User">Master User</a>
+                        <a class="collapse-item" href="<?= base_url(); ?>Admin/Master/Email">Master Email</a>
                     </div>
                 </div>
-            </li> 
-            <li class="nav-item  <?php 
-                if($navigation=="Laporan"){
-                    echo "active";
-                }
-            ?>">
+            </li>
+            <li class="nav-item  <?php
+                                    if ($navigation == "Laporan") {
+                                        echo "active";
+                                    }
+                                    ?>">
                 <a class="nav-link" href="<?= base_url(); ?>Admin/Dashboard" data-toggle="collapse" data-target="#collapsePagesLaporan" aria-expanded="true" aria-controls="collapsePagesLaporan">
 
                     <i class="fas fa-fw fa-file"></i>
@@ -86,9 +86,9 @@
 
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Laporan :</h6>
-                        <a class="collapse-item" href="<?= base_url(); ?>Admin/Laporan/JumlahKomplain">Laporan Jumlah Komplain</a> 
-                        <a class="collapse-item" href="<?= base_url(); ?>Admin/Laporan/DetailFeedback">Laporan Detail Feedback</a> 
-                        <a class="collapse-item" href="<?= base_url(); ?>Admin/Laporan/PerTopik">Laporan Per Topik</a> 
+                        <a class="collapse-item" href="<?= base_url(); ?>Admin/Laporan/JumlahKomplain">Laporan Jumlah Komplain</a>
+                        <a class="collapse-item" href="<?= base_url(); ?>Admin/Laporan/DetailFeedback">Laporan Detail Feedback</a>
+                        <a class="collapse-item" href="<?= base_url(); ?>Admin/Laporan/PerTopik">Laporan Per Topik</a>
                     </div>
                 </div>
             </li>
@@ -107,10 +107,10 @@
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
-            <div id="content"> 
+            <div id="content">
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    
+
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
@@ -119,7 +119,7 @@
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) --> 
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <div class="topbar-divider d-none d-sm-block"></div>
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">

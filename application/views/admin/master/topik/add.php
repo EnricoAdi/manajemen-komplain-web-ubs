@@ -1,15 +1,7 @@
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Tambah Topik</h1>
-<a href="<?= base_url() ?>Admin/Master/Topik">
 
-    <button type="button" class="btn btn-warning" style="color:white; 
-        padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;
-        background-color:<?= error_color(); ?>">
-        
-        <i class="fas fa-fw fa-step-backward"></i>
-        Kembali
-    </button>
+<?= error_button("Kembali", "fas fa-fw fa-step-backward", "", "", "Admin/Master/Topik") ?>
 
-</a> 
 <form action="<?= base_url() ?>Admin/Master/Topik/AddProcess" method="post" class="mt-4" style="color:black;">
     <div class="row">
         <div class="col">

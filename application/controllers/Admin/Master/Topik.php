@@ -76,7 +76,7 @@ class Topik extends CI_Controller
         $nama = $this->input->post("nama");
         $deskripsi = $this->input->post("deskripsi");
 
-        $kode = $this->TopikModel->getNewKode($topik);
+        $kode = $this->TopikModel->getNewKode($topik, $divisi);
         $newTopik = new TopikModel();
         $newTopik->KODE_TOPIK = $kode;
         $newTopik->AU = 'T';

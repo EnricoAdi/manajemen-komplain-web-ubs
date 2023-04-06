@@ -1,15 +1,7 @@
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Tambah Subtopik2 </h1>
-<a href="<?= base_url() ?>Admin/Master/Subtopik2">
 
-    <button type="button" class="btn btn-warning" style="color:white; 
-        padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;
-        background-color:<?= error_color(); ?>">
+<?= error_button("Kembali", "fas fa-fw fa-step-backward", "", "", "Admin/Master/Subtopik2") ?>
 
-        <i class="fas fa-fw fa-step-backward"></i>
-        Kembali
-    </button>
-
-</a>
 <form action="<?= base_url() ?>Admin/Master/Subtopik2/AddProcess" method="post" class="mt-4" style="color:black;">
     <div class="row">
         <div class="col">
@@ -43,7 +35,7 @@
     </div>
     <div class="row mt-4">
         <div class="col">
-            <button type="submit" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>;">Tambah</button>
+            <?= primary_submit_button("Tambah", "fas fa-fw fa-plus") ?>
         </div>
     </div>
 </form>
@@ -71,8 +63,8 @@
         labelTopik.innerText = "Topik : " + kodeTopikShow + topikShow;
         labelDivisi.innerText = "Divisi : " + subTopik1.value.substring(indexDivisi + 1);
 
-        inputKodeSubtopik1.value = subTopik1.value.substring(indexSubtopik1 + 1);
-        inputKodeTopik.value = subTopik1.value.substring(0, 5);
+        inputKodeSubtopik1.value = subTopik1.value.substring(indexSubtopik1 + 1,indexDivisi);
+        inputKodeTopik.value = subTopik1.value.substring(0, indexTopik-1);
 
         subTopik1.addEventListener('change', function() {
             let indexSubtopik1 = subTopik1.value.indexOf("@");
@@ -84,8 +76,8 @@
             labelTopik.innerText = "Topik : " + kodeTopikShow + topikShow;
             labelDivisi.innerText = "Divisi : " + subTopik1.value.substring(indexDivisi + 1);
 
-            inputKodeSubtopik1.value = subTopik1.value.substring(indexSubtopik1 + 1);
-            inputKodeTopik.value = subTopik1.value.substring(0, 5);
+            inputKodeSubtopik1.value = subTopik1.value.substring(indexSubtopik1 + 1,indexDivisi);
+            inputKodeTopik.value = subTopik1.value.substring(0, indexTopik-1);
         });
     }
 </script>

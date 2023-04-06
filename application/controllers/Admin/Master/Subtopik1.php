@@ -57,8 +57,8 @@ class Subtopik1 extends CI_Controller
     }
     public function AddProcess()
     { 
-        $newkode = $this->SubTopik1Model->getNewKode(); 
         $topik = strtoupper($this->input->post("topik")); 
+        $newkode = $this->SubTopik1Model->getNewKode($topik); 
         $deskripsi = $this->input->post("deskripsi");
          
         $newSubTopik1 = new SubTopik1Model();
@@ -70,28 +70,34 @@ class Subtopik1 extends CI_Controller
         $this->session->set_flashdata('message', 'Berhasil Menambahkan Subtopik 1 ');
         redirect('Admin/Master/Subtopik1');
     }
-    public function Detail($kode)
+    public function Detail($kodetopik,$kodesubtopik1)
     {
         $data = $this->data;
         $data['page_title'] = "Detail Subtopik 1 Master";
         $data['list_topik'] = $this->TopikModel->fetch();
         $data['login'] = $this->UsersModel->getLogin();
 
-        $subtopic = $this->SubTopik1Model->get($kode);
+        $subtopic = $this->SubTopik1Model->get($kodesubtopik1,$kodetopik);
+        if($subtopic==null){
+            $this->session->set_flashdata('header', 'Pesan');
+            $this->session->set_flashdata('message', 'Subtopik 1 Tidak Ditemukan');
+            redirect('Admin/Master/Subtopik1');
+        }
+
         $data['subtopic'] = $subtopic; 
         $this->load->view("templates/admin/header", $data);
         $this->load->view("admin/master/Subtopik1/edit", $data);
         $this->load->view("templates/admin/footer", $data);
     }
 
-    public function EditProcess($kode)
+    public function EditProcess($kodetopik,$kodesubtopik1)
     {
-        $topik = strtoupper($this->input->post("topik")); 
+        // $topik = strtoupper($this->input->post("topik")); 
         $deskripsi = $this->input->post("deskripsi");
 
         $updateSubtopik = new SubTopik1Model();
-        $updateSubtopik->SUB_TOPIK1 = $kode;
-        $updateSubtopik->KODE_TOPIK = $topik; 
+        $updateSubtopik->SUB_TOPIK1 = $kodesubtopik1;
+        $updateSubtopik->KODE_TOPIK = $kodetopik; 
         $updateSubtopik->DESKRIPSI = $deskripsi;
         $updateSubtopik->update();
 
@@ -100,16 +106,17 @@ class Subtopik1 extends CI_Controller
         redirect('Admin/Master/Subtopik1');
     }
 
-    public function DeleteProcess($kode)
+    public function DeleteProcess($kodetopik,$kodesubtopik1)
     { 
         $subtopik1Delete = new SubTopik1Model();
-        $subtopik1Delete->SUB_TOPIK1 = $kode; 
+        $subtopik1Delete->SUB_TOPIK1 = $kodesubtopik1; 
+        $subtopik1Delete->KODE_TOPIK = $kodetopik; 
 
         $jumlahSubtopik2 = sizeof($subtopik1Delete->fetchSubtopik2());
         if ($jumlahSubtopik2 > 0) {
             $this->session->set_flashdata('header', 'Pesan');
             $this->session->set_flashdata('message', 'Gagal Menghapus Subtopik1, Karena Subtopik Ini Memiliki Subtopik 2 aktif');
-            redirect('Admin/Master/Subtopik1/Detail/' . $kode);
+            redirect("Admin/Master/Subtopik1/Detail/$kodetopik/$kodesubtopik1");
         } else {
 
             $subtopik1Delete->delete();

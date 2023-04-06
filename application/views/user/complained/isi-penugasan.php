@@ -58,7 +58,7 @@
 
     <div class="row mt-4">
         <div class="col">
-            <button id="btnDelete" class="btn btn-warning" style="color:black; background-color: <?= error_color(); ?>;">
+            <button id="btnDelete" class="btn btn-warning" style=" background-color: <?= error_color(); ?>;">
 
                 <i class="fas fa-fw fa-trash mr-2"></i>
                 Hapus Penugasan

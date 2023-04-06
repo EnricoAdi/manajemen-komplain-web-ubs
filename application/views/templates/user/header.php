@@ -84,11 +84,11 @@ $routes = [
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <img src="<?= asset_url(); ?>images/logo.png" alt="ubs" style="width:100%;">
+                <img src="<?= asset_url(); ?>images/logo.png" alt="ubs" style="width:100%; margin-top:30px; border-radius:10px;">
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+            <hr class="sidebar-divider my-2">
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item  

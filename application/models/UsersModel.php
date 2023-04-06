@@ -7,7 +7,7 @@ class UsersModel extends CI_Model
     public $NAMA;
     public $KODE_HAK_AKSES;
     public $EMAIL;
-    public $KODE_DIVISI;
+    public $KODEDIV;
     public $KODE_ATASAN;
 
     public function __construct()
@@ -17,23 +17,23 @@ class UsersModel extends CI_Model
     }
     public function fetch()
     {
-        return $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA_DIVISI FROM USERS u left join USERS a 
-        on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODE_DIVISI = u.KODE_DIVISI")->result();
+        return $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA AS NAMA_DIVISI FROM USERS u left join USERS a 
+        on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODEDIV = u.KODEDIV")->result();
     }
     public function fetchWithoutEmail()
     {
-        return $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA_DIVISI FROM USERS u left join USERS a 
-        on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODE_DIVISI = u.KODE_DIVISI where u.EMAIL is null")->result();
+        return $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA AS NAMA_DIVISI FROM USERS u left join USERS a 
+        on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODEDIV = u.KODEDIV where u.EMAIL is null")->result();
     }
     public function fetchAtasan()
     {
-        return $this->db->query("SELECT U.*,D.NAMA_DIVISI FROM USERS U join DIVISI D on D.KODE_DIVISI = U.KODE_DIVISI
+        return $this->db->query("SELECT U.*,D.NAMA AS NAMA_DIVISI FROM USERS U join DIVISI D on D.KODEDIV = U.KODEDIV
         WHERE KODE_HAK_AKSES='2'")->result();
     }
     public function get($nomor_induk)
     {
-        $query = $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA_DIVISI FROM USERS u left join USERS a 
-        on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODE_DIVISI = u.KODE_DIVISI where u.NOMOR_INDUK = ?",
+        $query = $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA AS NAMA_DIVISI FROM USERS u left join USERS a 
+        on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODEDIV = u.KODEDIV where u.NOMOR_INDUK = ?",
         array($nomor_induk))->result();
  
         if (sizeof($query) > 0) {
@@ -41,15 +41,15 @@ class UsersModel extends CI_Model
         }
         return null;
     }
-    public function fetchUsersByDivisi($kode_divisi, $kode_hak_akses){
+    public function fetchUsersByDivisi($KODEDIV, $kode_hak_akses){
         if($kode_hak_akses=='all'){ 
-            return $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA_DIVISI FROM USERS u left join USERS a 
-            on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODE_DIVISI = u.KODE_DIVISI where u.KODE_DIVISI = ?",
-            array($kode_divisi))->result();
+            return $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA AS NAMA_DIVISI FROM USERS u left join USERS a 
+            on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODEDIV = u.KODEDIV where u.KODEDIV = ?",
+            array($KODEDIV))->result();
         }else{ 
-            return $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA_DIVISI FROM USERS u left join USERS a 
-            on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODE_DIVISI = u.KODE_DIVISI where u.KODE_DIVISI = ? and u.KODE_HAK_AKSES = ?",
-            array($kode_divisi,$kode_hak_akses))->result();
+            return $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA AS NAMA_DIVISI FROM USERS u left join USERS a 
+            on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODEDIV = u.KODEDIV where u.KODEDIV = ? and u.KODE_HAK_AKSES = ?",
+            array($KODEDIV,$kode_hak_akses))->result();
         }
     }
     public function login($user)
@@ -67,7 +67,7 @@ class UsersModel extends CI_Model
     public function divisi()
     {
         $this->load->model('DivisiModel');
-        return $this->DivisiModel->get($this->KODE_DIVISI);
+        return $this->DivisiModel->get($this->KODEDIV);
     }
     public function hak_akses()
     {

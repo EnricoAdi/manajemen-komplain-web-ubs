@@ -8,7 +8,7 @@ class TopikModel extends CI_Model
     public $AU;
     public $DIV_TUJUAN;
     public $NAMA;
-    // public $NAMA_DIVISI;
+    // public $NAMA AS NAMA_DIVISI;
     
 
     public function __construct()
@@ -16,12 +16,12 @@ class TopikModel extends CI_Model
         parent::__construct(); 
     }
     public function fetch(){ 
-       return $this->db->query('SELECT T.*, D.NAMA_DIVISI FROM TOPIK T JOIN DIVISI D ON 
-       D.KODE_DIVISI=T.DIV_TUJUAN')->result();
+       return $this->db->query('SELECT T.*, D.NAMA AS NAMA_DIVISI FROM TOPIK T JOIN DIVISI D ON 
+       D.KODEDIV=T.DIV_TUJUAN ORDER BY KODE_TOPIK ASC')->result();
     }
     public function get($kode_topik){ 
-        $query = $this->db->query("SELECT T.*, D.NAMA_DIVISI 
-        FROM TOPIK T JOIN DIVISI D ON D.KODE_DIVISI = T.DIV_TUJUAN
+        $query = $this->db->query("SELECT T.*, D.NAMA AS NAMA_DIVISI 
+        FROM TOPIK T JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN
         WHERE T.KODE_TOPIK = '".$kode_topik."'")->result(); 
  
         if(sizeof($query)>0){
@@ -29,7 +29,7 @@ class TopikModel extends CI_Model
         }
         return null;
     } 
-    public function getNewKode($topik){
+    public function getNewKode_DEPRECATED($topik){
         $getFirstWord = substr($topik, 0, 1);
         $nowyear =  substr(date('Y'), 2);
         $this->db->select('count(*)+1 as newKode');
@@ -40,6 +40,10 @@ class TopikModel extends CI_Model
         $query = $this->db->get()->result(); 
         $urutan = $query[0]->NEWKODE;  
         $kode = $getFirstWord.$nowyear.str_pad($urutan, 2, "0", STR_PAD_LEFT);
+        return $kode;  
+    }
+    public function getNewKode($topik, $divtujuan){
+        $kode = substr($topik,0,1) . $divtujuan; 
         return $kode;  
     }
     public function insert(){

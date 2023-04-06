@@ -1,15 +1,7 @@
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Ubah Subtopik2 </h1>
-<a href="<?= base_url() ?>Admin/Master/Subtopik2">
 
-    <button type="button" class="btn btn-warning" style="color:white; 
-        padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;
-        background-color:<?= error_color(); ?>">
+<?= error_button("Kembali", "fas fa-fw fa-step-backward", "", "", "Admin/Master/Subtopik2") ?>
 
-        <i class="fas fa-fw fa-step-backward"></i>
-        Kembali
-    </button>
-
-</a>
 <form action="<?= base_url() ?>Admin/Master/Subtopik2/EditProcess/<?= $subtopic->SUB_TOPIK2; ?>" method="post" class="mt-4" style="color:black;">
     <div class="row">
         <div class="col">
@@ -47,10 +39,10 @@
     </div>
     <div class="row mt-4">
         <div class="col">
-            <button class="btn btn-danger" id="btnDelete" style="color:white;width:100px; background-color:<?= error_color(); ?>">
+            <?= error_button("Hapus", "fas fa-fw fa-trash", "btnDelete") ?>
 
-                <i class="fas fa-fw fa-trash"></i> Hapus</button>
-            <button type="submit" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>;width:100px;">Ubah</button>
+            <?= primary_submit_button("Ubah", "fas fa-fw fa-pen") ?>
+
         </div>
     </div>
 </form>
@@ -77,7 +69,7 @@
     //Script ini digunakan untuk mengubah label topik sesuai dengan subtopik 1 yang dipilih
     //dan juga mendapatkan kode topik dan subtopik 1 yang dipilih yang dimasukkan ke input hidden
     //gunanya untuk memudahkan proses insert data ke database, namun tetap memudahkan user untuk memilih topik dan subtopik 1 dari tampilan yang diberikan
-    window.onload = function() { 
+    window.onload = function() {
         let labelDivisi = document.getElementById('labelDivisi');
         let labelTopik = document.getElementById('labelTopik');
 
@@ -95,8 +87,8 @@
         labelTopik.innerText = "Topik : " + kodeTopikShow + topikShow;
         labelDivisi.innerText = "Divisi : " + subTopik1.value.substring(indexDivisi + 1);
 
-        inputKodeSubtopik1.value = subTopik1.value.substring(indexSubtopik1 + 1);
-        inputKodeTopik.value = subTopik1.value.substring(0, 5);
+        inputKodeSubtopik1.value = subTopik1.value.substring(indexSubtopik1 + 1, indexDivisi);
+        inputKodeTopik.value = subTopik1.value.substring(0, indexTopik - 1);
 
         subTopik1.addEventListener('change', function() {
             let indexSubtopik1 = subTopik1.value.indexOf("@");
@@ -108,8 +100,8 @@
             labelTopik.innerText = "Topik : " + kodeTopikShow + topikShow;
             labelDivisi.innerText = "Divisi : " + subTopik1.value.substring(indexDivisi + 1);
 
-            inputKodeSubtopik1.value = subTopik1.value.substring(indexSubtopik1 + 1);
-            inputKodeTopik.value = subTopik1.value.substring(0, 5);
+            inputKodeSubtopik1.value = subTopik1.value.substring(indexSubtopik1 + 1, indexDivisi);
+            inputKodeTopik.value = subTopik1.value.substring(0, indexTopik - 1);
         });
     }
 </script>

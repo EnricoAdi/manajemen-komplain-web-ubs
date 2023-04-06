@@ -80,8 +80,7 @@
      
     <div class="row mt-4">
         <div class="col">  
-            <button type="submit" id="btnDelete" class="btn btn-danger" style="color:black; 
-            background-color: <?= error_color(); ?>; width:120px;">
+            <button type="submit" id="btnDelete" class="btn btn-danger" style=" background-color: <?= error_color(); ?>; width:120px;">
  
                 Hapus</button>
             <button type="submit" id="btnDone" class="btn btn-warning" 

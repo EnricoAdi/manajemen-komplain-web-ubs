@@ -62,7 +62,7 @@ class Subtopik2 extends CI_Controller
         $kode_topik = strtoupper($this->input->post("inputKodeTopik")); 
         $subtopik1 = strtoupper($this->input->post("inputKodeSubtopik1"));  
         $deskripsi = $this->input->post("deskripsi");
-         
+            
         $newSubTopik2 = new SubTopik2Model();
         $newSubTopik2->KODE_TOPIK = $kode_topik;
         $newSubTopik2->SUB_TOPIK1 = $subtopik1;
@@ -93,8 +93,7 @@ class Subtopik2 extends CI_Controller
         $kode_topik = strtoupper($this->input->post("inputKodeTopik")); 
         $subtopik1 = strtoupper($this->input->post("inputKodeSubtopik1"));  
         $deskripsi = $this->input->post("deskripsi");
-         
-
+          
         $updateSubtopik2 = new SubTopik2Model();
         $updateSubtopik2->KODE_TOPIK = $kode_topik;
         $updateSubtopik2->SUB_TOPIK1 = $subtopik1;

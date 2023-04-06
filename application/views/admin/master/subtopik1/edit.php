@@ -1,35 +1,31 @@
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Edit Subtopik1</h1>
-<a href="<?= base_url() ?>Admin/Master/Subtopik1">
-    <button type="button" class="btn btn-warning" style="color:white; 
-        padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;
-        background-color:<?= error_color(); ?>">
 
-        <i class="fas fa-fw fa-step-backward"></i>
-        Kembali
-    </button>
+<?= error_button("Kembali","fas fa-fw fa-step-backward","","","Admin/Master/Subtopik1")?>
 
-</a>
-
-<form action="<?= base_url() ?>Admin/Master/Subtopik1/EditProcess/<?= $subtopic->SUB_TOPIK1; ?>" method="post" class="mt-4" style="color:black;">
+<form action="<?= base_url() ?>Admin/Master/Subtopik1/EditProcess/<?= $subtopic->KODE_TOPIK; ?>/<?= $subtopic->SUB_TOPIK1; ?>" method="post" class="mt-4" style="color:black;">
     <div class="row">
+        <div class="col"> 
+            <label for="topik" class="form-label">Kode Subtopik 1</label>
+            <input type="text" class="form-control" value="<?= $subtopic->SUB_TOPIK1;?>" disabled>
+        </div>
         <div class="col">
+            
             <label for="topik" class="form-label">Topik</label>
-            <select name="topik" class="form-control">
+            <select name="topik" class="form-control" disabled>
 
                 <?php
                 foreach ($list_topik as $topik) {
                     $kodesubstr = substr($topik->KODE_TOPIK, 0, 3);
                     if ($topik->KODE_TOPIK == $subtopic->KODE_TOPIK) {
-                        echo "<option value='$topik->KODE_TOPIK' selected>$kodesubstr - $topik->TOPIK</option>";
+                        echo "<option value='$topik->KODE_TOPIK' selected >$kodesubstr - $topik->TOPIK</option>";
                     } else {
 
-                        echo "<option value='$topik->KODE_TOPIK'>$kodesubstr - $topik->TOPIK</option>";
+                        echo "<option value='$topik->KODE_TOPIK' >$kodesubstr - $topik->TOPIK</option>";
                     }
                 }
                 ?>
             </select>
         </div>
-        <div class="col"></div>
     </div>
     <div class="row">
         <div class="col">
@@ -38,11 +34,10 @@
         </div>
     </div>
     <div class="row mt-4">
-        <div class="col">
-            <button class="btn btn-danger" id="btnDelete" style="color:white;width:100px; background-color:<?= error_color(); ?>;">
-            <i class="fas fa-fw fa-trash"></i>Hapus</button> 
-            <button type="submit" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>;width:100px;">Ubah</button>
-        </div>
+        <div class="col">  
+            <?= error_button("Hapus","fas fa-fw fa-trash","btnDelete")?>
+            <?= primary_submit_button("Ubah","fas fa-fw fa-pen")?>
+         </div>
     </div>
 </form> 
 

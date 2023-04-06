@@ -1,15 +1,6 @@
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Ubah Email</h1>
-<a href="<?= base_url() ?>Admin/Master/Email">
-
-    <button type="button" class="btn btn-warning" style="color:white; 
-        padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;
-        background-color:<?= error_color(); ?>">
-
-        <i class="fas fa-fw fa-step-backward"></i>
-        Kembali
-    </button>
-
-</a>
+ 
+<?= error_button("Kembali","fas fa-fw fa-step-backward","","","Admin/Master/Email")?>
 <form action="<?= base_url() ?>Admin/Master/Email/EditProcess/<?= $user->NOMOR_INDUK; ?>" method="post" class="mt-4" style="color:black;">
     <input type="hidden" name="inputAtasan" id="inputAtasan">
     <div class="row">
@@ -43,12 +34,12 @@
     </div>
     <div class="row mt-4">
 
-        <div class="col">
-            <button class="btn btn-danger" id="btnDelete" style="color:white;width:100px; background-color:<?= error_color(); ?>">
+        <div class="col"> 
+                
+            <?= error_button("Hapus","fas fa-fw fa-trash","btnDelete","")?>
 
-                <i class="fas fa-fw fa-trash"></i> Hapus</button>
-            <button type="submit" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>;width:100px;">Ubah</button>
-        </div>
+            <?= primary_submit_button("Ubah","fas fa-fw fa-pen","","")?>
+            </div>
     </div>
 </form>
 
@@ -63,8 +54,8 @@
             </div>
             <div class="modal-body">Apakah anda yakin ingin menghapus data email dan atasan user ini?</div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
-                <a class="btn btn-primary" href="<?= base_url() ?>Admin/Master/Email/DeleteProcess/<?= $user->NOMOR_INDUK; ?>">Ya</a>
+                <button class="btn btn-secondary" type="button" style=" padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;" data-dismiss="modal">Tidak</button> 
+                <?= error_button("Ya","","","","Admin/Master/Email/DeleteProcess/$user->NOMOR_INDUK")?>
             </div>
         </div>
     </div>
