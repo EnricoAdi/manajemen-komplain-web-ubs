@@ -30,17 +30,16 @@ class Auth extends REST_Controller
         $password = $this->post('password');
 
         $exp = time() + 36000;
-        $userFound = $this->UsersModel->get($nomor_induk);
-        if ($userFound == null) {
-
+        // $userFound = $this->UsersModel->get($nomor_induk);
+        $userFound = cekLogin($nomor_induk, $password);
+        if ($userFound->code == 404) { 
             $this->response([
                 'status' => false,
                 'message' => 'Nomor Induk tidak ditemukan'
             ], REST_Controller::HTTP_NOT_FOUND);
-        } else {
-            // if (password_verify($password, $userFound->PASSWORD)) {
-            if ($password == $userFound->PASSWORD) {
-                $this->UsersModel->login($userFound);
+        } else { 
+            if ($userFound->code == 200) {
+                // $this->UsersModel->login($userFound);
 
                 $token = array(
                     "iss" => 'apprestservice',
@@ -63,7 +62,10 @@ class Auth extends REST_Controller
                 $this->response([
                     'status' => true,
                     'message' => 'Login Berhasil',
-                    'hak_akses'=> $userFound->KODE_HAK_AKSES,
+                    'hak_akses'=> $userFound->data->KODE_HAK_AKSES,
+                    'divisi'=> $userFound->data->NAMA_DIVISI,
+                    'nama'=> $userFound->data->NAMA,
+                    'nomor_induk'=> $userFound->data->NOMOR_INDUK,
                     'token' => $jwt,
                     'exp' => $exp
                 ], 200);

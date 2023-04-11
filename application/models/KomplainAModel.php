@@ -39,7 +39,7 @@ class KomplainAModel extends CI_Model
     public function get($no_komplain)
     {  
         $query = $this->db->query('SELECT KA.*, KB.*,D.*, ST1.DESKRIPSI AS S1DESKRIPSI, 
-        ST2.DESKRIPSI AS S2DESKRIPSI, T.TOPIK AS TDESKRIPSI FROM KOMPLAINA KA
+        ST2.DESKRIPSI AS S2DESKRIPSI, T.TOPIK AS TDESKRIPSI, D.NAMA AS NAMA_DIVISI FROM KOMPLAINA KA
         JOIN KOMPLAINB KB ON KA.NO_KOMPLAIN = KB.NO_KOMPLAIN JOIN TOPIK T ON T.KODE_TOPIK = KA.TOPIK 
         JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN 
         JOIN SUB_TOPIK1 ST1 ON ST1.SUB_TOPIK1 = KA.SUB_TOPIK1
@@ -82,13 +82,13 @@ class KomplainAModel extends CI_Model
             $komplainA->S1DESKRIPSI = $resultQuery->S1DESKRIPSI;
             $komplainA->S2DESKRIPSI = $resultQuery->S2DESKRIPSI;
             $komplainA->TDESKRIPSI = $resultQuery->TDESKRIPSI;
-            $komplainA->KODE_DIVISI = $resultQuery->KODE_DIVISI;
+            $komplainA->KODEDIV = $resultQuery->KODEDIV;
             $komplainA->NAMA_DIVISI = $resultQuery->NAMA_DIVISI;  
             $komplainA->DESKRIPSI_MASALAH= $resultQuery->DESKRIPSI_MASALAH; 
  
 
             $penerbit = $this->db->query('SELECT U.*, D.* 
-            FROM USERS U JOIN DIVISI D ON U.KODE_DIVISI = D.KODEDIV 
+            FROM USERS U JOIN DIVISI D ON U.KODEDIV = D.KODEDIV 
             WHERE U.NOMOR_INDUK = ?',array($resultQuery->USER_PENERBIT))->result();
 
             $komplainA->PENERBIT = $penerbit[0];
@@ -131,10 +131,10 @@ class KomplainAModel extends CI_Model
             JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN WHERE KA.USER_PENERBIT = $nomor_induk AND KA.STATUS = '$status'")->result();
         }
     }
-    public function fetchForDivisi($kode_divisi,$status){ 
+    public function fetchForDivisi($KODEDIV,$status){ 
         if ($status == 'all') {
             return $this->db->query("SELECT KA.*, KB.*,D.*, 
-            DU.NAMA_DIVISI AS DIVISI_PENGIRIM,T.DESKRIPSI AS TDESKRIPSI, 
+            DU.NAMA AS DIVISI_PENGIRIM,T.DESKRIPSI AS TDESKRIPSI, 
             S1.DESKRIPSI AS S1DESKRIPSI,
             S2.DESKRIPSI AS S2DESKRIPSI
             FROM KOMPLAINA KA 
@@ -142,13 +142,13 @@ class KomplainAModel extends CI_Model
             JOIN TOPIK T ON T.KODE_TOPIK = KA.TOPIK 
             JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN 
             JOIN USERS U ON U.NOMOR_INDUK = KA.USER_PENERBIT
-            JOIN DIVISI DU ON DU.KODE_DIVISI = U.KODE_DIVISI
+            JOIN DIVISI DU ON DU.KODEDIV = U.KODEDIV
             JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1 = KA.SUB_TOPIK1
             JOIN SUB_TOPIK2 S2 ON S2.SUB_TOPIK2 = KA.SUB_TOPIK2
-            WHERE T.DIV_TUJUAN = $kode_divisi")->result();
+            WHERE T.DIV_TUJUAN = $KODEDIV")->result();
         } else {
             return $this->db->query("SELECT KA.*, KB.*,D.*, 
-            DU.NAMA_DIVISI AS DIVISI_PENGIRIM, T.DESKRIPSI AS TDESKRIPSI,
+            DU.NAMA AS DIVISI_PENGIRIM, T.DESKRIPSI AS TDESKRIPSI,
             S1.DESKRIPSI AS S1DESKRIPSI,
             S2.DESKRIPSI AS S2DESKRIPSI
             FROM KOMPLAINA KA 
@@ -156,16 +156,16 @@ class KomplainAModel extends CI_Model
             JOIN TOPIK T ON T.KODE_TOPIK = KA.TOPIK 
             JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN 
             JOIN USERS U ON U.NOMOR_INDUK = KA.USER_PENERBIT
-            JOIN DIVISI DU ON DU.KODE_DIVISI = U.KODE_DIVISI
+            JOIN DIVISI DU ON DU.KODEDIV = U.KODEDIV
             JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1 = KA.SUB_TOPIK1
             JOIN SUB_TOPIK2 S2 ON S2.SUB_TOPIK2 = KA.SUB_TOPIK2
-            WHERE T.DIV_TUJUAN = $kode_divisi AND KA.STATUS = '$status'")->result();
+            WHERE T.DIV_TUJUAN = $KODEDIV AND KA.STATUS = '$status'")->result();
         }
     }
     
     public function fetchByUserDitugaskan($nomor_induk){  
         return $this->db->query("SELECT KA.*, KB.*,D.*, 
-        DU.NAMA_DIVISI AS DIVISI_PENGIRIM,T.DESKRIPSI AS TDESKRIPSI, 
+        DU.NAMA AS DIVISI_PENGIRIM,T.DESKRIPSI AS TDESKRIPSI, 
         S1.DESKRIPSI AS S1DESKRIPSI,
         S2.DESKRIPSI AS S2DESKRIPSI
         FROM KOMPLAINA KA 
@@ -173,14 +173,14 @@ class KomplainAModel extends CI_Model
         JOIN TOPIK T ON T.KODE_TOPIK = KA.TOPIK 
         JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN 
         JOIN USERS U ON U.NOMOR_INDUK = KA.USER_PENERBIT
-        JOIN DIVISI DU ON DU.KODE_DIVISI = U.KODE_DIVISI
+        JOIN DIVISI DU ON DU.KODEDIV = U.KODEDIV
         JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1 = KA.SUB_TOPIK1
         JOIN SUB_TOPIK2 S2 ON S2.SUB_TOPIK2 = KA.SUB_TOPIK2
         WHERE KA.PENUGASAN = $nomor_induk")->result(); 
     }
-    public function fetchComplainSudahDiisi($kode_divisi){ 
+    public function fetchComplainSudahDiisi($KODEDIV){ 
         return $this->db->query("SELECT KA.*, KB.*,D.*, 
-        DU.NAMA_DIVISI AS DIVISI_PENGIRIM, T.DESKRIPSI AS TDESKRIPSI,
+        DU.NAMA AS DIVISI_PENGIRIM, T.DESKRIPSI AS TDESKRIPSI,
         S1.DESKRIPSI AS S1DESKRIPSI,
         S2.DESKRIPSI AS S2DESKRIPSI
         FROM KOMPLAINA KA 
@@ -188,15 +188,15 @@ class KomplainAModel extends CI_Model
         JOIN TOPIK T ON T.KODE_TOPIK = KA.TOPIK 
         JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN 
         JOIN USERS U ON U.NOMOR_INDUK = KA.USER_PENERBIT
-        JOIN DIVISI DU ON DU.KODE_DIVISI = U.KODE_DIVISI
+        JOIN DIVISI DU ON DU.KODEDIV = U.KODEDIV
         JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1 = KA.SUB_TOPIK1
         JOIN SUB_TOPIK2 S2 ON S2.SUB_TOPIK2 = KA.SUB_TOPIK2
-        WHERE T.DIV_TUJUAN = $kode_divisi AND KA.STATUS = 'PEND' 
+        WHERE T.DIV_TUJUAN = $KODEDIV AND KA.STATUS = 'PEND' 
         AND KB.T_KOREKTIF is not null AND KA.TGL_DONE is null")->result();
     }
     public function fetchKomplainDone($nomor_induk){
         return $this->db->query("SELECT KA.*, KB.*,D.*, 
-        DU.NAMA_DIVISI AS DIVISI_PENGIRIM,T.DESKRIPSI AS TDESKRIPSI, 
+        DU.NAMA AS DIVISI_PENGIRIM,T.DESKRIPSI AS TDESKRIPSI, 
         S1.DESKRIPSI AS S1DESKRIPSI,
         S2.DESKRIPSI AS S2DESKRIPSI
         FROM KOMPLAINA KA 
@@ -204,7 +204,7 @@ class KomplainAModel extends CI_Model
         JOIN TOPIK T ON T.KODE_TOPIK = KA.TOPIK 
         JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN 
         JOIN USERS U ON U.NOMOR_INDUK = KA.USER_PENERBIT
-        JOIN DIVISI DU ON DU.KODE_DIVISI = U.KODE_DIVISI
+        JOIN DIVISI DU ON DU.KODEDIV = U.KODEDIV
         JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1 = KA.SUB_TOPIK1
         JOIN SUB_TOPIK2 S2 ON S2.SUB_TOPIK2 = KA.SUB_TOPIK2
         WHERE KA.USER_PENERBIT = $nomor_induk and KA.TGL_DONE is not null")->result(); 

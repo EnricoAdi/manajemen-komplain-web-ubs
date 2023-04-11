@@ -20,7 +20,7 @@
                 foreach ($list_subtopik1 as $subtopik) {
                     // echo "<option value='$subtopik->SUB_TOPIK1'>$subtopik->SUB_TOPIK1 - $subtopik->DESKRIPSI</option>";
 
-                    echo "<option value='$subtopik->KODE_TOPIK - $subtopik->TOPIK @$subtopik->SUB_TOPIK1^$subtopik->NAMA_DIVISI'>$subtopik->SUB_TOPIK1 - $subtopik->DESKRIPSI</option>";
+                    echo "<option value='$subtopik->KODE_TOPIK - $subtopik->TOPIK @$subtopik->SUB_TOPIK1^$subtopik->NAMA_DIVISI'>$subtopik->NAMA_DIVISI - $subtopik->SUB_TOPIK1 - $subtopik->DESKRIPSI</option>";
                 }
                 ?>
             </select>
@@ -78,6 +78,9 @@
 
             inputKodeSubtopik1.value = subTopik1.value.substring(indexSubtopik1 + 1,indexDivisi);
             inputKodeTopik.value = subTopik1.value.substring(0, indexTopik-1);
+
+            // console.log(inputKodeSubtopik1.value);
+            // console.log(inputKodeTopik.value);
         });
     }
 </script>

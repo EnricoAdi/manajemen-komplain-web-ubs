@@ -957,7 +957,7 @@ Insert into KP.SUB_TOPIK1
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S114', '0001', 'BARANG TAJAM');
+   ('SHL4', '0001', 'BARANG TAJAM');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
@@ -1145,15 +1145,15 @@ Insert into KP.SUB_TOPIK1
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D25', '0001', 'LAPORAN BULANAN');
+   ('DAC', '0001', 'LAPORAN BULANAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D25', '0002', 'LAPORAN MINGGUAN');
+   ('DAC', '0002', 'LAPORAN MINGGUAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D25', '0003', 'LAPORAN HARIAN');
+   ('DAC', '0003', 'LAPORAN HARIAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
@@ -1249,375 +1249,375 @@ Insert into KP.SUB_TOPIK1
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0001', 'KUNCI PENGAMAN');
+   ('QAT', '0001', 'KUNCI PENGAMAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0002', 'KUNCI VEER');
+   ('QAT', '0002', 'KUNCI VEER');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0003', 'KUNCI PLONG');
+   ('QAT', '0003', 'KUNCI PLONG');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0004', 'KOLONGAN');
+   ('QAT', '0004', 'KOLONGAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0005', 'KEBERSIHAN');
+   ('QAT', '0005', 'KEBERSIHAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0006', 'SELEPAN');
+   ('QAT', '0006', 'SELEPAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0007', 'PIPA');
+   ('QAT', '0007', 'PIPA');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0008', 'MAINAN/ KOMPONEN');
+   ('QAT', '0008', 'MAINAN/ KOMPONEN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0009', 'BATU');
+   ('QAT', '0009', 'BATU');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0010', 'CAP');
+   ('QAT', '0010', 'CAP');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0011', 'HASIL PATRIAN');
+   ('QAT', '0011', 'HASIL PATRIAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0012', 'PIR');
+   ('QAT', '0012', 'PIR');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0013', 'RANTAI');
+   ('QAT', '0013', 'RANTAI');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0014', 'PANJANG');
+   ('QAT', '0014', 'PANJANG');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0015', 'BERAT');
+   ('QAT', '0015', 'BERAT');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0016', 'MODEL');
+   ('QAT', '0016', 'MODEL');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0017', 'Data fixed asset');
+   ('QAT', '0017', 'Data fixed asset');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0018', 'Data BOM');
+   ('QAT', '0018', 'Data BOM');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q27', '0019', 'Data');
+   ('QAT', '0019', 'Data');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('C27', '0001', 'HPP');
+   ('CAT', '0001', 'HPP');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D27', '0001', 'Tidak sesuai target');
+   ('DAT', '0001', 'Tidak sesuai target');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D27', '0002', 'Data fixed asset');
+   ('DAT', '0002', 'Data fixed asset');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S27', '0001', 'Produk');
+   ('SAT', '0001', 'Produk');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S27', '0002', 'APAR ( ALAT PEMADAM API RINGAN');
+   ('SAT', '0002', 'APAR ( ALAT PEMADAM API RINGAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S27', '0003', 'APD ( ALAT PELINDUNG DIRI )');
+   ('SAT', '0003', 'APD ( ALAT PELINDUNG DIRI )');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S27', '0004', 'EMERGENCY LAMP');
+   ('SAT', '0004', 'EMERGENCY LAMP');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S27', '0005', 'EMERGENCY EXIT');
+   ('SAT', '0005', 'EMERGENCY EXIT');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S27', '0006', 'MSDS ( MATERIAL SAFETY DATA SHEET )');
+   ('SAT', '0006', 'MSDS ( MATERIAL SAFETY DATA SHEET )');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('M27', '0001', 'Komplain');
+   ('MAT', '0001', 'Komplain');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('E27', '0001', 'Polusi');
+   ('EAT', '0001', 'Polusi');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('E27', '0002', 'TATA LAYOUT');
+   ('EAT', '0002', 'TATA LAYOUT');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q12', '0001', 'KAWAT SOLID');
+   ('QBH', '0001', 'KAWAT SOLID');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q12', '0002', 'KAWAT HOLLOW');
+   ('QBH', '0002', 'KAWAT HOLLOW');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q12', '0003', 'KAWAT KOREA');
+   ('QBH', '0003', 'KAWAT KOREA');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q12', '0004', 'KAWAT PATRI');
+   ('QBH', '0004', 'KAWAT PATRI');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q12', '0005', 'KREMIK');
+   ('QBH', '0005', 'KREMIK');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q12', '0006', 'LENTUR');
+   ('QBH', '0006', 'LENTUR');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q12', '0007', 'PLAKATO');
+   ('QBH', '0007', 'PLAKATO');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q12', '0008', 'PLAT');
+   ('QBH', '0008', 'PLAT');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q12', '0009', 'PLAT SANDWICH');
+   ('QBH', '0009', 'PLAT SANDWICH');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q12', '0010', 'TUBE ');
+   ('QBH', '0010', 'TUBE ');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q12', '0011', 'CP LEBURAN');
+   ('QBH', '0011', 'CP LEBURAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q12', '0012', 'DATA FIXED ASSET');
+   ('QBH', '0012', 'DATA FIXED ASSET');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q12', '0013', 'DATA BOM');
+   ('QBH', '0013', 'DATA BOM');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q12', '0014', 'DATA');
+   ('QBH', '0014', 'DATA');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('C12', '0001', 'HPP');
+   ('CBH', '0001', 'HPP');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D12', '0001', 'WAKTU');
+   ('DBH', '0001', 'WAKTU');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D12', '0002', 'DATA FIXED ASSET');
+   ('DBH', '0002', 'DATA FIXED ASSET');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D12', '0003', 'BERAT');
+   ('DBH', '0003', 'BERAT');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D12', '0004', 'JUMLAH');
+   ('DBH', '0004', 'JUMLAH');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D12', '0005', 'STOK ALLOY/24K');
+   ('DBH', '0005', 'STOK ALLOY/24K');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S12', '0001', 'APAR ( ALAT PEMADAM API RINGAN');
+   ('SBH', '0001', 'APAR ( ALAT PEMADAM API RINGAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S12', '0002', 'APD ( ALAT PELINDUNG DIRI )');
+   ('SBH', '0002', 'APD ( ALAT PELINDUNG DIRI )');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S12', '0003', 'EMERGENCY LAMP');
+   ('SBH', '0003', 'EMERGENCY LAMP');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S12', '0004', 'EMERGENCY EXIT');
+   ('SBH', '0004', 'EMERGENCY EXIT');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S12', '0005', 'MSDS ( MATERIAL SAFETY DATA SHEET )');
+   ('SBH', '0005', 'MSDS ( MATERIAL SAFETY DATA SHEET )');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('M12', '0001', 'PELAYANAN');
+   ('MBH', '0001', 'PELAYANAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('M12', '0002', 'Komplain');
+   ('MBH', '0002', 'Komplain');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('E12', '0001', 'TATA LAYOUT');
+   ('EBH', '0001', 'TATA LAYOUT');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('E12', '0002', 'PENCEMARAN LINGKUNGAN');
+   ('EBH', '0002', 'PENCEMARAN LINGKUNGAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0001', 'PUTIH RHODIUM');
+   ('QFC', '0001', 'PUTIH RHODIUM');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0002', 'SEPUH HITAM');
+   ('QFC', '0002', 'SEPUH HITAM');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0003', 'Merah 1AU');
+   ('QFC', '0003', 'Merah 1AU');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0004', 'Kuning 1CF');
+   ('QFC', '0004', 'Kuning 1CF');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0005', 'Kuning 1AY');
+   ('QFC', '0005', 'Kuning 1AY');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0006', 'Kuning 1BG');
+   ('QFC', '0006', 'Kuning 1BG');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0007', '1AE/ SGP');
+   ('QFC', '0007', '1AE/ SGP');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0008', 'Kuning 1BX');
+   ('QFC', '0008', 'Kuning 1BX');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0009', 'Kuning 1AN');
+   ('QFC', '0009', 'Kuning 1AN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0010', 'Kuning 1CE');
+   ('QFC', '0010', 'Kuning 1CE');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0011', 'Jig 3 W');
+   ('QFC', '0011', 'Jig 3 W');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0012', 'Sepuh Tembaga');
+   ('QFC', '0012', 'Sepuh Tembaga');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0013', 'Settingan kunci gelang');
+   ('QFC', '0013', 'Settingan kunci gelang');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0014', 'Settingan Anting');
+   ('QFC', '0014', 'Settingan Anting');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0015', 'Bentuk barang');
+   ('QFC', '0015', 'Bentuk barang');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0016', 'Batu');
+   ('QFC', '0016', 'Batu');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0017', 'Pergeseran berat');
+   ('QFC', '0017', 'Pergeseran berat');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0018', 'Enamel');
+   ('QFC', '0018', 'Enamel');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0019', 'Catafor');
+   ('QFC', '0019', 'Catafor');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0020', 'Data');
+   ('QFC', '0020', 'Data');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D19', '0001', 'Ketepatan waktu pengiriman');
+   ('DFC', '0001', 'Ketepatan waktu pengiriman');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D19', '0002', 'BDP');
+   ('DFC', '0002', 'BDP');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D19', '0003', 'Data fixed asset');
+   ('DFC', '0003', 'Data fixed asset');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('M19', '0001', 'Perilaku Jajaran Gol IV keatas');
+   ('MFC', '0001', 'Perilaku Jajaran Gol IV keatas');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('M19', '0002', 'Perilaku Jajaran Gol IV kebawah');
+   ('MFC', '0002', 'Perilaku Jajaran Gol IV kebawah');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('M19', '0003', 'Komplain');
+   ('MFC', '0003', 'Komplain');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('E19', '0001', 'Pencemaran');
+   ('EFC', '0001', 'Pencemaran');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S19', '0001', 'Produk');
+   ('SFC', '0001', 'Produk');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S19', '0002', 'APAR ( ALAT PEMADAM API RINGAN');
+   ('SFC', '0002', 'APAR ( ALAT PEMADAM API RINGAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S19', '0003', 'APD ( ALAT PELINDUNG DIRI )');
+   ('SFC', '0003', 'APD ( ALAT PELINDUNG DIRI )');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S19', '0004', 'EMERGENCY LAMP');
+   ('SFC', '0004', 'EMERGENCY LAMP');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S19', '0005', 'EMERGENCY EXIT');
+   ('SFC', '0005', 'EMERGENCY EXIT');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S19', '0006', 'MSDS ( MATERIAL SAFETY DATA SHEET )');
+   ('SFC', '0006', 'MSDS ( MATERIAL SAFETY DATA SHEET )');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
@@ -1725,7 +1725,7 @@ Insert into KP.SUB_TOPIK1
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('C21', '0001', 'Penjadwalan');
+   ('CPC', '0001', 'Penjadwalan');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
@@ -1737,19 +1737,19 @@ Insert into KP.SUB_TOPIK1
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q28', '0001', 'Analisa');
+   ('QRK', '0001', 'Analisa');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q28', '0002', 'Orderan Material');
+   ('QRK', '0002', 'Orderan Material');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q28', '0003', 'Perak Murni');
+   ('QRK', '0003', 'Perak Murni');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q28', '0004', 'Emas Murni');
+   ('QRK', '0004', 'Emas Murni');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
@@ -1765,27 +1765,27 @@ Insert into KP.SUB_TOPIK1
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('M28', '0001', 'Pelayanan Adm');
+   ('MRK', '0001', 'Pelayanan Adm');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S28', '0001', 'APAR ( ALAT PEMADAM API RINGAN');
+   ('SRK', '0001', 'APAR ( ALAT PEMADAM API RINGAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S28', '0002', 'APD ( ALAT PELINDUNG DIRI )');
+   ('SRK', '0002', 'APD ( ALAT PELINDUNG DIRI )');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S28', '0003', 'EMERGENCY LAMP');
+   ('SRK', '0003', 'EMERGENCY LAMP');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S28', '0004', 'EMERGENCY EXIT');
+   ('SRK', '0004', 'EMERGENCY EXIT');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S28', '0005', 'MSDS ( MATERIAL SAFETY DATA SHEET )');
+   ('SRK', '0005', 'MSDS ( MATERIAL SAFETY DATA SHEET )');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
@@ -1833,59 +1833,59 @@ Insert into KP.SUB_TOPIK1
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q16', '0001', 'HASIL ASAHAN');
+   ('QAP', '0001', 'HASIL ASAHAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q16', '0002', 'SUDUT ATAS');
+   ('QAP', '0002', 'SUDUT ATAS');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q16', '0003', 'INTAN');
+   ('QAP', '0003', 'INTAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q16', '0004', 'Data fixed asset');
+   ('QAP', '0004', 'Data fixed asset');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q16', '0005', 'Data');
+   ('QAP', '0005', 'Data');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('P16', '0001', 'PISAU BARU');
+   ('PAP', '0001', 'PISAU BARU');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D16', '0001', 'PISAU BARU');
+   ('DAP', '0001', 'PISAU BARU');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D16', '0002', 'ASAH');
+   ('DAP', '0002', 'ASAH');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D16', '0003', 'Data fixed asset');
+   ('DAP', '0003', 'Data fixed asset');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S16', '0001', 'Produk');
+   ('SAP', '0001', 'Produk');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S16', '0002', 'APAR ( ALAT PEMADAM API RINGAN');
+   ('SAP', '0002', 'APAR ( ALAT PEMADAM API RINGAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S16', '0003', 'APD ( ALAT PELINDUNG DIRI )');
+   ('SAP', '0003', 'APD ( ALAT PELINDUNG DIRI )');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S16', '0004', 'EMERGENCY LAMP');
+   ('SAP', '0004', 'EMERGENCY LAMP');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S16', '0005', 'EMERGENCY EXIT');
+   ('SAP', '0005', 'EMERGENCY EXIT');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
@@ -2017,131 +2017,131 @@ Insert into KP.SUB_TOPIK1
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0001', 'Kunci pengaman');
+   ('QHL', '0001', 'Kunci pengaman');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0002', 'Kunci Veer');
+   ('QHL', '0002', 'Kunci Veer');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0003', 'Kunci Export');
+   ('QHL', '0003', 'Kunci Export');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0004', 'Kokot');
+   ('QHL', '0004', 'Kokot');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0005', 'Kunci Plong');
+   ('QHL', '0005', 'Kunci Plong');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0006', 'Bentuk ranji');
+   ('QHL', '0006', 'Bentuk ranji');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0007', 'Kebersihan');
+   ('QHL', '0007', 'Kebersihan');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0008', 'Selepan');
+   ('QHL', '0008', 'Selepan');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0009', 'Pipa');
+   ('QHL', '0009', 'Pipa');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0010', 'Mainan/Komponen');
+   ('QHL', '0010', 'Mainan/Komponen');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0011', 'Batu');
+   ('QHL', '0011', 'Batu');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0012', 'Cap');
+   ('QHL', '0012', 'Cap');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0013', 'Patrian');
+   ('QHL', '0013', 'Patrian');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0014', 'Pir');
+   ('QHL', '0014', 'Pir');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0015', 'Rantai');
+   ('QHL', '0015', 'Rantai');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0016', 'Panjang');
+   ('QHL', '0016', 'Panjang');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0017', 'Berat');
+   ('QHL', '0017', 'Berat');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0018', 'Model');
+   ('QHL', '0018', 'Model');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0019', 'Data Fixed Asset');
+   ('QHL', '0019', 'Data Fixed Asset');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0021', 'Data BOM');
+   ('QHL', '0021', 'Data BOM');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0022', 'Data');
+   ('QHL', '0022', 'Data');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D11', '0001', 'Tidak sesuai target');
+   ('DHL', '0001', 'Tidak sesuai target');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D11', '0002', 'Data fixed asset');
+   ('DHL', '0002', 'Data fixed asset');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S11', '0001', 'Produk');
+   ('SHL', '0001', 'Produk');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S11', '0002', 'APAR ( ALAT PEMADAM API RINGAN');
+   ('SHL', '0002', 'APAR ( ALAT PEMADAM API RINGAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S11', '0003', 'APD ( ALAT PELINDUNG DIRI )');
+   ('SHL', '0003', 'APD ( ALAT PELINDUNG DIRI )');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S11', '0004', 'EMERGENCY LAMP');
+   ('SHL', '0004', 'EMERGENCY LAMP');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S11', '0005', 'EMERGENCY EXIT');
+   ('SHL', '0005', 'EMERGENCY EXIT');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S11', '0006', 'MSDS ( MATERIAL SAFETY DATA SHEET )');
+   ('SHL', '0006', 'MSDS ( MATERIAL SAFETY DATA SHEET )');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('M11', '0001', 'Komplain');
+   ('MHL', '0001', 'Komplain');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('E11', '0001', 'Polusi');
+   ('EHL', '0001', 'Polusi');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('E11', '0002', 'TATA LAYOUT');
+   ('EHL', '0002', 'TATA LAYOUT');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
@@ -2221,159 +2221,159 @@ Insert into KP.SUB_TOPIK1
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('C15', '0001', 'HPP');
+   ('CGV', '0001', 'HPP');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D15', '0001', 'Tidak sesuai target');
+   ('DGV', '0001', 'Tidak sesuai target');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D15', '0002', 'Data fixed asset');
+   ('DGV', '0002', 'Data fixed asset');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S15', '0001', 'Produk');
+   ('SGV', '0001', 'Produk');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S15', '0002', 'APAR ( ALAT PEMADAM API RINGAN');
+   ('SGV', '0002', 'APAR ( ALAT PEMADAM API RINGAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S15', '0003', 'APD ( ALAT PELINDUNG DIRI )');
+   ('SGV', '0003', 'APD ( ALAT PELINDUNG DIRI )');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S15', '0004', 'EMERGENCY LAMP');
+   ('SGV', '0004', 'EMERGENCY LAMP');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S15', '0005', 'EMERGENCY EXIT');
+   ('SGV', '0005', 'EMERGENCY EXIT');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S15', '0006', 'MSDS ( MATERIAL SAFETY DATA SHEET )');
+   ('SGV', '0006', 'MSDS ( MATERIAL SAFETY DATA SHEET )');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('M15', '0001', 'Komplain');
+   ('MGV', '0001', 'Komplain');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('E15', '0001', 'Polusi');
+   ('EGV', '0001', 'Polusi');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('E15', '0002', 'TATA LAYOUT');
+   ('EGV', '0002', 'TATA LAYOUT');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0001', 'Berat');
+   ('QKL', '0001', 'Berat');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0002', 'Dimensi');
+   ('QKL', '0002', 'Dimensi');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0003', 'Bentuk');
+   ('QKL', '0003', 'Bentuk');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0004', 'Kebersihan');
+   ('QKL', '0004', 'Kebersihan');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0005', 'Warna');
+   ('QKL', '0005', 'Warna');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0006', 'Selepan');
+   ('QKL', '0006', 'Selepan');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0007', 'Doft');
+   ('QKL', '0007', 'Doft');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0008', 'Poles');
+   ('QKL', '0008', 'Poles');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0009', 'Laseran');
+   ('QKL', '0009', 'Laseran');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0010', 'Sambungan');
+   ('QKL', '0010', 'Sambungan');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0011', 'Plintiran');
+   ('QKL', '0011', 'Plintiran');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0012', 'Kekuatan');
+   ('QKL', '0012', 'Kekuatan');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0013', 'Kepangan atau Lilitan');
+   ('QKL', '0013', 'Kepangan atau Lilitan');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0014', 'Motif atau Model');
+   ('QKL', '0014', 'Motif atau Model');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0015', 'Data BOM');
+   ('QKL', '0015', 'Data BOM');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0016', 'Data');
+   ('QKL', '0016', 'Data');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D09', '0001', 'Delivery');
+   ('DKL', '0001', 'Delivery');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('D09', '0002', 'Data fixed asset');
+   ('DKL', '0002', 'Data fixed asset');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('C09', '0001', 'Susutan');
+   ('CKL', '0001', 'Susutan');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('M09', '0001', 'Komplain');
+   ('MKL', '0001', 'Komplain');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('E09', '0001', 'Polusi');
+   ('EKL', '0001', 'Polusi');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('E09', '0002', 'TATA LAYOUT');
+   ('EKL', '0002', 'TATA LAYOUT');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S09', '0001', 'Produk');
+   ('SKL', '0001', 'Produk');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S09', '0002', 'APAR ( ALAT PEMADAM API RINGAN');
+   ('SKL', '0002', 'APAR ( ALAT PEMADAM API RINGAN');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S09', '0003', 'APD ( ALAT PELINDUNG DIRI )');
+   ('SKL', '0003', 'APD ( ALAT PELINDUNG DIRI )');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S09', '0004', 'EMERGENCY LAMP');
+   ('SKL', '0004', 'EMERGENCY LAMP');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('S09', '0006', 'MSDS ( MATERIAL SAFETY DATA SHEET )');
+   ('SKL', '0006', 'MSDS ( MATERIAL SAFETY DATA SHEET )');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
@@ -2381,7 +2381,7 @@ Insert into KP.SUB_TOPIK1
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q09', '0017', 'Basah');
+   ('QKL', '0017', 'Basah');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
@@ -2389,7 +2389,7 @@ Insert into KP.SUB_TOPIK1
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q11', '0023', 'Basah');
+   ('QHL', '0023', 'Basah');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
@@ -2409,7 +2409,7 @@ Insert into KP.SUB_TOPIK1
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
-   ('Q19', '0021', 'Basah');
+   ('QFC', '0021', 'Basah');
 Insert into KP.SUB_TOPIK1
    (KODE_TOPIK, SUB_TOPIK1, DESKRIPSI)
  Values
@@ -3287,23 +3287,23 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D25', '0001', '0001', 'SETOR MELEBIHI TANGGAL TARGET', 'Y');
+   ('DAC', '0001', '0001', 'SETOR MELEBIHI TANGGAL TARGET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D25', '0002', '0001', 'SETOR MELEBIHI TANGGAL TARGET', 'Y');
+   ('DAC', '0002', '0001', 'SETOR MELEBIHI TANGGAL TARGET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D25', '0003', '0001', 'SETOR MELEBIHI TANGGAL TARGET', 'Y');
+   ('DAC', '0003', '0001', 'SETOR MELEBIHI TANGGAL TARGET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D25', '0003', '0002', 'KETERLAMBATAN VALIDASI DATA', 'Y');
+   ('DAC', '0003', '0002', 'KETERLAMBATAN VALIDASI DATA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D25', '0003', '0003', 'TERLAMBAT PENGIRIMAN DATA PENDUKUNG', 'Y');
+   ('DAC', '0003', '0003', 'TERLAMBAT PENGIRIMAN DATA PENDUKUNG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -4871,31 +4871,31 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q28', '0001', '0001', 'HASIL ANALISA TERBUKTI SALAH', 'Y');
+   ('QRK', '0001', '0001', 'HASIL ANALISA TERBUKTI SALAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q28', '0002', '0001', 'JENIS BARANG TIDAK SAMA DENGAN PERMINTAAN', 'Y');
+   ('QRK', '0002', '0001', 'JENIS BARANG TIDAK SAMA DENGAN PERMINTAAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q28', '0002', '0002', 'KONTAMINASI DARI RISET UNTUK  BOTOL TANPA PERTUKARAN', 'Y');
+   ('QRK', '0002', '0002', 'KONTAMINASI DARI RISET UNTUK  BOTOL TANPA PERTUKARAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q28', '0003', '0001', ' WARNA BATANGAN PERAK KUSAM,KOTOR', 'Y');
+   ('QRK', '0003', '0001', ' WARNA BATANGAN PERAK KUSAM,KOTOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q28', '0003', '0002', ' KADAR PERAK MURNI TIDAK FULL', 'Y');
+   ('QRK', '0003', '0002', ' KADAR PERAK MURNI TIDAK FULL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q28', '0004', '0001', 'WARNA BATANGAN KUSAM, KOTOR', 'Y');
+   ('QRK', '0004', '0001', 'WARNA BATANGAN KUSAM, KOTOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q28', '0004', '0002', 'KADAR EMAS MURNI  TIDAK FULL', 'Y');
+   ('QRK', '0004', '0002', 'KADAR EMAS MURNI  TIDAK FULL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -4923,219 +4923,219 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M28', '0001', '0001', 'PELAYANAN ADM TIDAK RAMAH', 'Y');
+   ('MRK', '0001', '0001', 'PELAYANAN ADM TIDAK RAMAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0001', '0001', 'APAR KADALUARSA', 'Y');
+   ('SRK', '0001', '0001', 'APAR KADALUARSA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0001', '0002', 'TIDAK ADA APAR', 'Y');
+   ('SRK', '0001', '0002', 'TIDAK ADA APAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0001', '0003', 'TEKANAN KURANG', 'Y');
+   ('SRK', '0001', '0003', 'TEKANAN KURANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0001', '0004', 'SELANG NOZZLE RUSAK', 'Y');
+   ('SRK', '0001', '0004', 'SELANG NOZZLE RUSAK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0001', '0005', 'PIN PENGAMAN LEPAS', 'Y');
+   ('SRK', '0001', '0005', 'PIN PENGAMAN LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0002', '0001', 'APD TIDAK DIGUNAKAN', 'Y');
+   ('SRK', '0002', '0001', 'APD TIDAK DIGUNAKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0002', '0002', 'APD TIDAK SESUAI', 'Y');
+   ('SRK', '0002', '0002', 'APD TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0002', '0003', 'APD TIDAK LAYAK PAKAI', 'Y');
+   ('SRK', '0002', '0003', 'APD TIDAK LAYAK PAKAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0003', '0001', 'TIDAK ADA', 'Y');
+   ('SRK', '0003', '0001', 'TIDAK ADA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0003', '0002', 'TIDAK BERFUNGSI', 'Y');
+   ('SRK', '0003', '0002', 'TIDAK BERFUNGSI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0003', '0003', 'PENEMPATAN TIDAK SESUAI', 'Y');
+   ('SRK', '0003', '0003', 'PENEMPATAN TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0004', '0001', 'PINTU TIDAK TERSEDIA', 'Y');
+   ('SRK', '0004', '0001', 'PINTU TIDAK TERSEDIA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0004', '0002', 'PINTU TIDAK SESUAI KETENTUAN', 'Y');
+   ('SRK', '0004', '0002', 'PINTU TIDAK SESUAI KETENTUAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0004', '0003', 'PINTU SULIT DI AKSES', 'Y');
+   ('SRK', '0004', '0003', 'PINTU SULIT DI AKSES', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0004', '0004', 'TIDAK ADA PENUNJUK ARAH', 'Y');
+   ('SRK', '0004', '0004', 'TIDAK ADA PENUNJUK ARAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0004', '0005', 'PENUNJUK ARAH KURANG JELAS', 'Y');
+   ('SRK', '0004', '0005', 'PENUNJUK ARAH KURANG JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0005', '0001', 'MSDS TIDAK TERSEDIA', 'Y');
+   ('SRK', '0005', '0001', 'MSDS TIDAK TERSEDIA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0005', '0002', 'MSDS TIDAK JELAS', 'Y');
+   ('SRK', '0005', '0002', 'MSDS TIDAK JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S28', '0005', '0003', 'MSDS TIDAK LENGKAP', 'Y');
+   ('SRK', '0005', '0003', 'MSDS TIDAK LENGKAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0001', '0001', 'TIDAK RAPAT/ KURANG SETTING', 'Y');
+   ('QHL', '0001', '0001', 'TIDAK RAPAT/ KURANG SETTING', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0001', '0002', 'PENGAMAN LEPAS', 'Y');
+   ('QHL', '0001', '0002', 'PENGAMAN LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0001', '0003', 'JAWAN LEPAS', 'Y');
+   ('QHL', '0001', '0003', 'JAWAN LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0001', '0004', 'LIDAH KUNCI LEPAS', 'Y');
+   ('QHL', '0001', '0004', 'LIDAH KUNCI LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0001', '0005', 'LIDAH KUNCI CEKET', 'Y');
+   ('QHL', '0001', '0005', 'LIDAH KUNCI CEKET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0001', '0006', 'PENGAMAN CEKET', 'Y');
+   ('QHL', '0001', '0006', 'PENGAMAN CEKET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0001', '0007', 'BENTUK TIDAK STANDAR', 'Y');
+   ('QHL', '0001', '0007', 'BENTUK TIDAK STANDAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0002', '0001', 'KUNCI VEER RENGGANG', 'Y');
+   ('QHL', '0002', '0001', 'KUNCI VEER RENGGANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0002', '0002', 'KUNCI VEER LOYO', 'Y');
+   ('QHL', '0002', '0002', 'KUNCI VEER LOYO', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0002', '0003', 'KUNCI VEER SERET/MACET', 'Y');
+   ('QHL', '0002', '0003', 'KUNCI VEER SERET/MACET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0003', '0001', 'TIDAK RAPAT/ KURANG SETTING', 'Y');
+   ('QHL', '0003', '0001', 'TIDAK RAPAT/ KURANG SETTING', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0003', '0002', 'SERET', 'Y');
+   ('QHL', '0003', '0002', 'SERET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0003', '0003', 'DOLL', 'Y');
+   ('QHL', '0003', '0003', 'DOLL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0004', '0001', 'SALAH CAP', 'Y');
+   ('QHL', '0004', '0001', 'SALAH CAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0005', '0001', 'KUNCI PLONG TIDAK KLIK', 'Y');
+   ('QHL', '0005', '0001', 'KUNCI PLONG TIDAK KLIK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0005', '0002', 'KUNCI PLONG SULIT DIBUKA', 'Y');
+   ('QHL', '0005', '0002', 'KUNCI PLONG SULIT DIBUKA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0006', '0001', 'KURANG BULAT', 'Y');
+   ('QHL', '0006', '0001', 'KURANG BULAT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0006', '0002', 'KURANG OVAL', 'Y');
+   ('QHL', '0006', '0002', 'KURANG OVAL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0006', '0003', 'TIDAK FLAT', 'Y');
+   ('QHL', '0006', '0003', 'TIDAK FLAT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0007', '0001', 'TERDAPAT KERAK/NGABUT', 'Y');
+   ('QHL', '0007', '0001', 'TERDAPAT KERAK/NGABUT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0007', '0002', 'LIPATAN PIPA KELUAR KOTORAN', 'Y');
+   ('QHL', '0007', '0002', 'LIPATAN PIPA KELUAR KOTORAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0007', '0003', 'BAGIAN DALAM PIPA KOTOR', 'Y');
+   ('QHL', '0007', '0003', 'BAGIAN DALAM PIPA KOTOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0007', '0004', 'SISA OBAT POLES', 'Y');
+   ('QHL', '0007', '0004', 'SISA OBAT POLES', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0007', '0005', 'BEKAS SPIDOL', 'Y');
+   ('QHL', '0007', '0005', 'BEKAS SPIDOL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0007', '0006', 'BEKAS LAZER', 'Y');
+   ('QHL', '0007', '0006', 'BEKAS LAZER', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0007', '0007', 'KELUAR AIR', 'Y');
+   ('QHL', '0007', '0007', 'KELUAR AIR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0008', '0001', 'BURES/KUSAM/NGGARIS', 'Y');
+   ('QHL', '0008', '0001', 'BURES/KUSAM/NGGARIS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0008', '0002', 'SALAH MOTIF', 'Y');
+   ('QHL', '0008', '0002', 'SALAH MOTIF', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0008', '0003', 'KURANG SELEP/TIDAK PENUH', 'Y');
+   ('QHL', '0008', '0003', 'KURANG SELEP/TIDAK PENUH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0008', '0004', 'LOBANG', 'Y');
+   ('QHL', '0008', '0004', 'LOBANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0008', '0005', 'KURANG RAPI', 'Y');
+   ('QHL', '0008', '0005', 'KURANG RAPI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0009', '0001', 'PATAH ', 'Y');
+   ('QHL', '0009', '0001', 'PATAH ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0009', '0002', 'RETAK/ SOBEK/LUBANG', 'Y');
+   ('QHL', '0009', '0002', 'RETAK/ SOBEK/LUBANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0009', '0003', 'PESOK/DEKOK/DEKIK', 'Y');
+   ('QHL', '0009', '0003', 'PESOK/DEKOK/DEKIK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -5147,19 +5147,19 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0009', '0004', 'KASAR BEKAS KIKIR', 'Y');
+   ('QHL', '0009', '0004', 'KASAR BEKAS KIKIR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0009', '0005', 'TIDAK KILAP', 'Y');
+   ('QHL', '0009', '0005', 'TIDAK KILAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0009', '0006', 'NGEFLEK', 'Y');
+   ('QHL', '0009', '0006', 'NGEFLEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0009', '0007', 'IMPURITY/ KEROPOS', 'Y');
+   ('QHL', '0009', '0007', 'IMPURITY/ KEROPOS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -5171,23 +5171,23 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0009', '0008', 'MOTIF TDK JELAS', 'Y');
+   ('QHL', '0009', '0008', 'MOTIF TDK JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0009', '0009', 'MOTIF TDK STABIL', 'Y');
+   ('QHL', '0009', '0009', 'MOTIF TDK STABIL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0010', '0001', 'LEPAS', 'Y');
+   ('QHL', '0010', '0001', 'LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0010', '0002', 'PATAH/RETAK/LUBANG/PESOK', 'Y');
+   ('QHL', '0010', '0002', 'PATAH/RETAK/LUBANG/PESOK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0010', '0003', 'TAJAM', 'Y');
+   ('QHL', '0010', '0003', 'TAJAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -5195,107 +5195,107 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0010', '0004', 'TIDAK KILAP/BESET', 'Y');
+   ('QHL', '0010', '0004', 'TIDAK KILAP/BESET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0010', '0005', 'KASAR/ BEKAS KIKIR', 'Y');
+   ('QHL', '0010', '0005', 'KASAR/ BEKAS KIKIR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0010', '0006', 'NGEFLEK', 'Y');
+   ('QHL', '0010', '0006', 'NGEFLEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0010', '0007', 'IMPURITY/ KEROPOS', 'Y');
+   ('QHL', '0010', '0007', 'IMPURITY/ KEROPOS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0010', '0008', 'MLEOT/TIDAK SIMETRIS', 'Y');
+   ('QHL', '0010', '0008', 'MLEOT/TIDAK SIMETRIS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0011', '0001', 'LEPAS', 'Y');
+   ('QHL', '0011', '0001', 'LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0011', '0002', 'BURES /KUSAM/ PECAH/ CUIL', 'Y');
+   ('QHL', '0011', '0002', 'BURES /KUSAM/ PECAH/ CUIL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0011', '0003', 'TALAH WARNA', 'Y');
+   ('QHL', '0011', '0003', 'TALAH WARNA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0012', '0001', 'TALAH KODE', 'Y');
+   ('QHL', '0012', '0001', 'TALAH KODE', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0012', '0002', 'TALAH KADAR', 'Y');
+   ('QHL', '0012', '0002', 'TALAH KADAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0012', '0003', 'TIDAK ADA', 'Y');
+   ('QHL', '0012', '0003', 'TIDAK ADA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0012', '0004', 'TIDAK JELAS', 'Y');
+   ('QHL', '0012', '0004', 'TIDAK JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0012', '0005', 'SALAH POSISI', 'Y');
+   ('QHL', '0012', '0005', 'SALAH POSISI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0013', '0001', 'MBENDOL/ TIDAK RAPI', 'Y');
+   ('QHL', '0013', '0001', 'MBENDOL/ TIDAK RAPI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0013', '0002', 'KURANG PATRI/ KELONCATAN/PUTUS/PATAH', 'Y');
+   ('QHL', '0013', '0002', 'KURANG PATRI/ KELONCATAN/PUTUS/PATAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0014', '0001', 'LOYO', 'Y');
+   ('QHL', '0014', '0001', 'LOYO', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0014', '0002', 'PUTUS', 'Y');
+   ('QHL', '0014', '0002', 'PUTUS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0014', '0003', 'KAWAT TAJAM', 'Y');
+   ('QHL', '0014', '0003', 'KAWAT TAJAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0014', '0004', 'MATA IKAN', 'Y');
+   ('QHL', '0014', '0004', 'MATA IKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0014', '0005', 'KAWAT MUNCUL', 'Y');
+   ('QHL', '0014', '0005', 'KAWAT MUNCUL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0015', '0001', 'PATAH/ MOLOR/ MRUNTUS', 'Y');
+   ('QHL', '0015', '0001', 'PATAH/ MOLOR/ MRUNTUS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0015', '0002', 'RANTAI KOBETO MOTIF TIDAK STANDARD', 'Y');
+   ('QHL', '0015', '0002', 'RANTAI KOBETO MOTIF TIDAK STANDARD', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0016', '0001', 'PANJANG TIDAK SESUAI', 'Y');
+   ('QHL', '0016', '0001', 'PANJANG TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0017', '0001', 'TIDAK SESUAI TOLERANSI', 'T');
+   ('QHL', '0017', '0001', 'TIDAK SESUAI TOLERANSI', 'T');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0018', '0001', 'TIDAK SESUAI/ SALAH', 'Y');
+   ('QHL', '0018', '0001', 'TIDAK SESUAI/ SALAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0018', '0002', 'TIDAK SET (SET-SET AN)', 'Y');
+   ('QHL', '0018', '0002', 'TIDAK SET (SET-SET AN)', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -5443,99 +5443,99 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0018', '0003', 'TIDAK BERPASANGAN (ANTING)', 'Y');
+   ('QHL', '0018', '0003', 'TIDAK BERPASANGAN (ANTING)', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0019', '0001', 'TIDAK MEMBUAT FORM MUTASI', 'Y');
+   ('QHL', '0019', '0001', 'TIDAK MEMBUAT FORM MUTASI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0019', '0002', 'PENGISIAN FORM MUTASI YANG TIDAK LENGKAP', 'Y');
+   ('QHL', '0019', '0002', 'PENGISIAN FORM MUTASI YANG TIDAK LENGKAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0020', '0001', 'SERING TIDAK MEMBUAT FORM MUTASI', 'Y');
+   ('QHL', '0020', '0001', 'SERING TIDAK MEMBUAT FORM MUTASI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0020', '0002', 'PENGISIAN FORM MUTASI YANG TIDAK LENGKAP', 'Y');
+   ('QHL', '0020', '0002', 'PENGISIAN FORM MUTASI YANG TIDAK LENGKAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0021', '0001', 'KADAR', 'Y');
+   ('QHL', '0021', '0001', 'KADAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0021', '0002', 'KOMPONEN BAHAN', 'Y');
+   ('QHL', '0021', '0002', 'KOMPONEN BAHAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0021', '0003', 'PROSES ( DOUBLE / BELUM TERINPUTKAN )', 'Y');
+   ('QHL', '0021', '0003', 'PROSES ( DOUBLE / BELUM TERINPUTKAN )', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0021', '0004', 'SUSUT PROSES ( TERLALU KECIL / BESAR )', 'Y');
+   ('QHL', '0021', '0004', 'SUSUT PROSES ( TERLALU KECIL / BESAR )', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0021', '0005', 'ALLOY YANG TIDAK SESUAI', 'Y');
+   ('QHL', '0021', '0005', 'ALLOY YANG TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0021', '0006', 'JENIS BATU YANG PAKAI', 'Y');
+   ('QHL', '0021', '0006', 'JENIS BATU YANG PAKAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0021', '0007', 'LAMA PROSES YANG TIDAK SESUAI', 'Y');
+   ('QHL', '0021', '0007', 'LAMA PROSES YANG TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0021', '0008', 'RINCIAN BATU YANG DIPASANG PERMAINAN COR TIDAK SESUAI', 'Y');
+   ('QHL', '0021', '0008', 'RINCIAN BATU YANG DIPASANG PERMAINAN COR TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0021', '0009', 'URUTAN PROSES BELUM DIINPUTKAN', 'Y');
+   ('QHL', '0021', '0009', 'URUTAN PROSES BELUM DIINPUTKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0021', '0010', 'LAMA PROSES BELUM DIINPUTKAN', 'Y');
+   ('QHL', '0021', '0010', 'LAMA PROSES BELUM DIINPUTKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0021', '0011', 'RINCIAN BATU MAINAN COR BELUM DIINPUT', 'Y');
+   ('QHL', '0021', '0011', 'RINCIAN BATU MAINAN COR BELUM DIINPUT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0021', '0012', 'DATA BOM DAN BOR TIDAK UPDATE', 'Y');
+   ('QHL', '0021', '0012', 'DATA BOM DAN BOR TIDAK UPDATE', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0022', '0001', 'TARIF ONGKOSAN BELUM TERINPUTKAN', 'Y');
+   ('QHL', '0022', '0001', 'TARIF ONGKOSAN BELUM TERINPUTKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0022', '0002', 'JAM KERJA DARI DEPARTEMEN TERLAMBAT / SALAH', 'Y');
+   ('QHL', '0022', '0002', 'JAM KERJA DARI DEPARTEMEN TERLAMBAT / SALAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0022', '0003', 'TIDAK ADA KONFIRMASI KE AUDIT APABILA ADA PERUBAHAN/KEBIJAKAN', 'Y');
+   ('QHL', '0022', '0003', 'TIDAK ADA KONFIRMASI KE AUDIT APABILA ADA PERUBAHAN/KEBIJAKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0022', '0004', 'HUMAN ERROR (MASALAH DATA)', 'Y');
+   ('QHL', '0022', '0004', 'HUMAN ERROR (MASALAH DATA)', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0022', '0005', 'BUKTI DOKUMEN YANG DIMINTA AUDIT TIDAK SESUAI', 'Y');
+   ('QHL', '0022', '0005', 'BUKTI DOKUMEN YANG DIMINTA AUDIT TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0022', '0006', 'BUKA TUTUP KOMPLIT DATA', 'Y');
+   ('QHL', '0022', '0006', 'BUKA TUTUP KOMPLIT DATA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D11', '0001', '0001', 'TERLAMBAT', 'Y');
+   ('DHL', '0001', '0001', 'TERLAMBAT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -5567,7 +5567,7 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('C21', '0001', '0001', 'TIDAK MELAKUKAN INDEN STOK', 'Y');
+   ('CPC', '0001', '0001', 'TIDAK MELAKUKAN INDEN STOK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -5723,167 +5723,167 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0003', '0005', 'TERLAMBAT MENYERAHKAN LAPORAN HASIL STOK OPNAME', 'Y');
+   ('DFC', '0003', '0005', 'TERLAMBAT MENYERAHKAN LAPORAN HASIL STOK OPNAME', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M19', '0001', '0001', 'BICARA KASAR', 'Y');
+   ('MFC', '0001', '0001', 'BICARA KASAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M19', '0001', '0002', 'TIDAK TANGGUNG JAWAB', 'Y');
+   ('MFC', '0001', '0002', 'TIDAK TANGGUNG JAWAB', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M19', '0001', '0003', 'PEMBUAT ONAR', 'Y');
+   ('MFC', '0001', '0003', 'PEMBUAT ONAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M19', '0001', '0004', 'MANGKIR/ TIDAK DISIPLIN/ TIDAK SOPAN', 'Y');
+   ('MFC', '0001', '0004', 'MANGKIR/ TIDAK DISIPLIN/ TIDAK SOPAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M19', '0001', '0005', 'TIDAK KOOPERATIF', 'Y');
+   ('MFC', '0001', '0005', 'TIDAK KOOPERATIF', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M19', '0002', '0001', 'BICARA KASAR', 'Y');
+   ('MFC', '0002', '0001', 'BICARA KASAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M19', '0002', '0002', 'TIDAK TANGGUNG JAWAB', 'Y');
+   ('MFC', '0002', '0002', 'TIDAK TANGGUNG JAWAB', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M19', '0002', '0003', 'PEMBUAT ONAR', 'Y');
+   ('MFC', '0002', '0003', 'PEMBUAT ONAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M19', '0002', '0004', 'MANGKIR/ TIDAK DISIPLIN/ TIDAK SOPAN', 'Y');
+   ('MFC', '0002', '0004', 'MANGKIR/ TIDAK DISIPLIN/ TIDAK SOPAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M19', '0002', '0005', 'TIDAK KOOPERATIF', 'Y');
+   ('MFC', '0002', '0005', 'TIDAK KOOPERATIF', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M19', '0002', '0006', 'TIDAK KONSISTEN', 'Y');
+   ('MFC', '0002', '0006', 'TIDAK KONSISTEN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M19', '0003', '0001', 'PENANGANAN KOMPLAIN LAMA', 'Y');
+   ('MFC', '0003', '0001', 'PENANGANAN KOMPLAIN LAMA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M19', '0003', '0002', 'KURANG KOOPERATIF DLM PENANGANAN KOMPLAIN', 'Y');
+   ('MFC', '0003', '0002', 'KURANG KOOPERATIF DLM PENANGANAN KOMPLAIN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E19', '0001', '0001', 'SUARA BISING', 'Y');
+   ('EFC', '0001', '0001', 'SUARA BISING', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E19', '0001', '0002', 'SALAH PEMBUANGAN LIMBAH CAIR', 'Y');
+   ('EFC', '0001', '0002', 'SALAH PEMBUANGAN LIMBAH CAIR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E19', '0001', '0003', 'SALAH PEMBUANGAN LIMBAH PADAT', 'Y');
+   ('EFC', '0001', '0003', 'SALAH PEMBUANGAN LIMBAH PADAT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E19', '0001', '0004', 'MENIMBULKAN BAU', 'Y');
+   ('EFC', '0001', '0004', 'MENIMBULKAN BAU', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E19', '0001', '0005', 'MENIMBULKAN ASAP', 'Y');
+   ('EFC', '0001', '0005', 'MENIMBULKAN ASAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E19', '0001', '0006', 'MEMBUANG SAMPAH TIDAK ADA TEMPATNYA', 'Y');
+   ('EFC', '0001', '0006', 'MEMBUANG SAMPAH TIDAK ADA TEMPATNYA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E19', '0001', '0007', 'PELETAKAN BARANG TIDAK PADA TEMPATNYA', 'Y');
+   ('EFC', '0001', '0007', 'PELETAKAN BARANG TIDAK PADA TEMPATNYA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0001', '0001', 'BARANG TAJAM', 'Y');
+   ('SFC', '0001', '0001', 'BARANG TAJAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0002', '0001', 'APAR KADALUARSA', 'Y');
+   ('SFC', '0002', '0001', 'APAR KADALUARSA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0002', '0002', 'TIDAK ADA APAR', 'Y');
+   ('SFC', '0002', '0002', 'TIDAK ADA APAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0002', '0003', 'TEKANAN KURANG', 'Y');
+   ('SFC', '0002', '0003', 'TEKANAN KURANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0002', '0004', 'SELANG NOZZLE RUSAK', 'Y');
+   ('SFC', '0002', '0004', 'SELANG NOZZLE RUSAK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0002', '0005', 'PIN PENGAMAN LEPAS', 'Y');
+   ('SFC', '0002', '0005', 'PIN PENGAMAN LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0003', '0001', 'APD TIDAK DIGUNAKAN', 'Y');
+   ('SFC', '0003', '0001', 'APD TIDAK DIGUNAKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0003', '0002', 'APD TIDAK SESUAI', 'Y');
+   ('SFC', '0003', '0002', 'APD TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0003', '0003', 'APD TIDAK LAYAK PAKAI', 'Y');
+   ('SFC', '0003', '0003', 'APD TIDAK LAYAK PAKAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0004', '0001', 'TIDAK ADA', 'Y');
+   ('SFC', '0004', '0001', 'TIDAK ADA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0004', '0002', 'TIDAK BERFUNGSI', 'Y');
+   ('SFC', '0004', '0002', 'TIDAK BERFUNGSI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0004', '0003', 'PENEMPATAN TIDAK SESUAI', 'Y');
+   ('SFC', '0004', '0003', 'PENEMPATAN TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0005', '0001', 'PINTU TIDAK TERSEDIA', 'Y');
+   ('SFC', '0005', '0001', 'PINTU TIDAK TERSEDIA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0005', '0002', 'PINTU TIDAK SESUAI KETENTUAN', 'Y');
+   ('SFC', '0005', '0002', 'PINTU TIDAK SESUAI KETENTUAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0005', '0003', 'PINTU SULIT DI AKSES', 'Y');
+   ('SFC', '0005', '0003', 'PINTU SULIT DI AKSES', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0005', '0004', 'TIDAK ADA PENUNJUK ARAH', 'Y');
+   ('SFC', '0005', '0004', 'TIDAK ADA PENUNJUK ARAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0005', '0005', 'PENUNJUK ARAH KURANG JELAS', 'Y');
+   ('SFC', '0005', '0005', 'PENUNJUK ARAH KURANG JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0006', '0001', 'MSDS TIDAK TERSEDIA', 'Y');
+   ('SFC', '0006', '0001', 'MSDS TIDAK TERSEDIA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0006', '0002', 'MSDS TIDAK JELAS', 'Y');
+   ('SFC', '0006', '0002', 'MSDS TIDAK JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S19', '0006', '0003', 'MSDS TIDAK LENGKAP', 'Y');
+   ('SFC', '0006', '0003', 'MSDS TIDAK LENGKAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -6207,1083 +6207,1083 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0001', 'IMPURITY ', 'Y');
+   ('QBH', '0001', '0001', 'IMPURITY ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0002', 'ALLOY TIDAK SESUAI', 'Y');
+   ('QBH', '0001', '0002', 'ALLOY TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0003', 'CACAT ', 'Y');
+   ('QBH', '0001', '0003', 'CACAT ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0004', 'DIMENSI TIDAK SESUAI ', 'Y');
+   ('QBH', '0001', '0004', 'DIMENSI TIDAK SESUAI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0005', 'ELONGATION TIDAK SESUAI', 'Y');
+   ('QBH', '0001', '0005', 'ELONGATION TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0006', 'GETAS/ BRITEL', 'Y');
+   ('QBH', '0001', '0006', 'GETAS/ BRITEL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0007', 'KADAR TIDAK SESUAI', 'Y');
+   ('QBH', '0001', '0007', 'KADAR TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0008', 'KAKU ', 'Y');
+   ('QBH', '0001', '0008', 'KAKU ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0009', 'KAWAT KASAR ', 'Y');
+   ('QBH', '0001', '0009', 'KAWAT KASAR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0010', 'KAWAT NYELIP ', 'Y');
+   ('QBH', '0001', '0010', 'KAWAT NYELIP ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0011', 'KOTOR ', 'Y');
+   ('QBH', '0001', '0011', 'KOTOR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0012', 'KROPOS', 'Y');
+   ('QBH', '0001', '0012', 'KROPOS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0013', 'KUSAM ', 'Y');
+   ('QBH', '0001', '0013', 'KUSAM ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0014', 'MENGKOL/SPIRAL', 'Y');
+   ('QBH', '0001', '0014', 'MENGKOL/SPIRAL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0015', 'MRUNTUS ', 'Y');
+   ('QBH', '0001', '0015', 'MRUNTUS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0016', 'NGEREL', 'Y');
+   ('QBH', '0001', '0016', 'NGEREL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0017', 'NGGARIS ', 'Y');
+   ('QBH', '0001', '0017', 'NGGARIS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0018', 'OKSIDASI', 'Y');
+   ('QBH', '0001', '0018', 'OKSIDASI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0019', 'PECAH', 'Y');
+   ('QBH', '0001', '0019', 'PECAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0020', 'PROTOL ', 'Y');
+   ('QBH', '0001', '0020', 'PROTOL ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0021', 'PUTUS - PUTUS', 'Y');
+   ('QBH', '0001', '0021', 'PUTUS - PUTUS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0022', 'WARNA TIDAK SESUAI', 'Y');
+   ('QBH', '0001', '0022', 'WARNA TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0023', 'KURANG/BELUM OVEN', 'Y');
+   ('QBH', '0001', '0023', 'KURANG/BELUM OVEN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0024', 'BELUM RANJI', 'Y');
+   ('QBH', '0001', '0024', 'BELUM RANJI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0001', 'IMPURITY ', 'Y');
+   ('QBH', '0002', '0001', 'IMPURITY ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0002', 'ALLOY TIDAK SESUAI', 'Y');
+   ('QBH', '0002', '0002', 'ALLOY TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0003', 'BERAT BJ TIDAK SESUAI', 'Y');
+   ('QBH', '0002', '0003', 'BERAT BJ TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0004', 'CACAT ', 'Y');
+   ('QBH', '0002', '0004', 'CACAT ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0005', 'DIMENSI TIDAK SESUAI ', 'Y');
+   ('QBH', '0002', '0005', 'DIMENSI TIDAK SESUAI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0006', 'ELONGATION TIDAK SESUAI', 'Y');
+   ('QBH', '0002', '0006', 'ELONGATION TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0007', 'KADAR BODI TIDAK SESUAI', 'Y');
+   ('QBH', '0002', '0007', 'KADAR BODI TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0008', 'KADAR PATRI TIDAK SESUAI', 'Y');
+   ('QBH', '0002', '0008', 'KADAR PATRI TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0009', 'KAWAT KASAR ', 'Y');
+   ('QBH', '0002', '0009', 'KAWAT KASAR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0010', 'KONOSURA JEMBRET', 'Y');
+   ('QBH', '0002', '0010', 'KONOSURA JEMBRET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0011', 'KONOSURA KURANG HITAM', 'Y');
+   ('QBH', '0002', '0011', 'KONOSURA KURANG HITAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0012', 'KONOSURA NUTUP', 'Y');
+   ('QBH', '0002', '0012', 'KONOSURA NUTUP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0013', 'KONOSURA TIDAK TENGAH', 'Y');
+   ('QBH', '0002', '0013', 'KONOSURA TIDAK TENGAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0014', 'KOTOR ', 'Y');
+   ('QBH', '0002', '0014', 'KOTOR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0015', 'KUSAM', 'Y');
+   ('QBH', '0002', '0015', 'KUSAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0016', 'MBLITUT', 'Y');
+   ('QBH', '0002', '0016', 'MBLITUT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0017', 'MLEMBUNG ', 'Y');
+   ('QBH', '0002', '0017', 'MLEMBUNG ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0018', 'MLINTIR', 'Y');
+   ('QBH', '0002', '0018', 'MLINTIR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0019', 'MRUNTUS ', 'Y');
+   ('QBH', '0002', '0019', 'MRUNTUS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0020', 'NGGARIS ', 'Y');
+   ('QBH', '0002', '0020', 'NGGARIS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0021', 'NGLOKOP', 'Y');
+   ('QBH', '0002', '0021', 'NGLOKOP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0022', 'OKSIDASI ', 'Y');
+   ('QBH', '0002', '0022', 'OKSIDASI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0023', 'PATRI BENDOL', 'Y');
+   ('QBH', '0002', '0023', 'PATRI BENDOL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0024', 'PATRI PUTUS', 'Y');
+   ('QBH', '0002', '0024', 'PATRI PUTUS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0025', 'PATRI TIDAK CAIR ', 'Y');
+   ('QBH', '0002', '0025', 'PATRI TIDAK CAIR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0026', 'PATRI TIDAK ADA', 'Y');
+   ('QBH', '0002', '0026', 'PATRI TIDAK ADA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0027', 'PLAT NARIK', 'Y');
+   ('QBH', '0002', '0027', 'PLAT NARIK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0028', 'PROTOL', 'Y');
+   ('QBH', '0002', '0028', 'PROTOL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0029', 'SOBEK', 'Y');
+   ('QBH', '0002', '0029', 'SOBEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0030', 'WARNA TIDAK SESUAI', 'Y');
+   ('QBH', '0002', '0030', 'WARNA TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0031', 'NYERBUK', 'Y');
+   ('QBH', '0002', '0031', 'NYERBUK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0032', 'KAKU ', 'Y');
+   ('QBH', '0002', '0032', 'KAKU ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0033', 'PECAH ', 'Y');
+   ('QBH', '0002', '0033', 'PECAH ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0034', 'KAWAT LENGKET', 'Y');
+   ('QBH', '0002', '0034', 'KAWAT LENGKET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0035', 'GULUNGAN TIDAK SESUAI', 'Y');
+   ('QBH', '0002', '0035', 'GULUNGAN TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0036', 'BERAT BJ TIDAK SESUAI BOM', 'Y');
+   ('QBH', '0002', '0036', 'BERAT BJ TIDAK SESUAI BOM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0001', 'IMPURITY ', 'Y');
+   ('QBH', '0003', '0001', 'IMPURITY ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0002', 'ALLOY TIDAK SESUAI', 'Y');
+   ('QBH', '0003', '0002', 'ALLOY TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0003', 'BERAT BJ TIDAK SESUAI', 'Y');
+   ('QBH', '0003', '0003', 'BERAT BJ TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0004', 'CACAT ', 'Y');
+   ('QBH', '0003', '0004', 'CACAT ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0005', 'DIMENSI TIDAK SESUAI ', 'Y');
+   ('QBH', '0003', '0005', 'DIMENSI TIDAK SESUAI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0006', 'ELONGATION TIDAK SESUAI', 'Y');
+   ('QBH', '0003', '0006', 'ELONGATION TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0007', 'JEBROS', 'Y');
+   ('QBH', '0003', '0007', 'JEBROS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0008', 'KADAR TIDAK SESUAI', 'Y');
+   ('QBH', '0003', '0008', 'KADAR TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0009', 'KAKU ', 'Y');
+   ('QBH', '0003', '0009', 'KAKU ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0010', 'KAWAT KASAR ', 'Y');
+   ('QBH', '0003', '0010', 'KAWAT KASAR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0011', 'KAWAT NYELIP ', 'Y');
+   ('QBH', '0003', '0011', 'KAWAT NYELIP ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0012', 'KOTOR ', 'Y');
+   ('QBH', '0003', '0012', 'KOTOR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0013', 'KUSAM ', 'Y');
+   ('QBH', '0003', '0013', 'KUSAM ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0014', 'MRUNTUS ', 'Y');
+   ('QBH', '0003', '0014', 'MRUNTUS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0015', 'NGGARIS ', 'Y');
+   ('QBH', '0003', '0015', 'NGGARIS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0016', 'NGLOKOP', 'Y');
+   ('QBH', '0003', '0016', 'NGLOKOP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0017', 'OKSIDASI ', 'Y');
+   ('QBH', '0003', '0017', 'OKSIDASI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0018', 'PECAH ', 'Y');
+   ('QBH', '0003', '0018', 'PECAH ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0019', 'PROTOL ', 'Y');
+   ('QBH', '0003', '0019', 'PROTOL ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0020', 'WARNA TIDAK SESUAI', 'Y');
+   ('QBH', '0003', '0020', 'WARNA TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0021', 'KAWAT SOBEK', 'Y');
+   ('QBH', '0003', '0021', 'KAWAT SOBEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0022', 'BERAT BJ TIDAK SESUAI BOM', 'Y');
+   ('QBH', '0003', '0022', 'BERAT BJ TIDAK SESUAI BOM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0001', 'ALLOY TIDAK SESUAI', 'Y');
+   ('QBH', '0004', '0001', 'ALLOY TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0002', 'CACAT ', 'Y');
+   ('QBH', '0004', '0002', 'CACAT ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0003', 'DIMENSI TIDAK SESUAI ', 'Y');
+   ('QBH', '0004', '0003', 'DIMENSI TIDAK SESUAI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0004', 'GETAS', 'Y');
+   ('QBH', '0004', '0004', 'GETAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0005', 'IMPURITY ', 'Y');
+   ('QBH', '0004', '0005', 'IMPURITY ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0006', 'KADAR TIDAK SESUAI', 'Y');
+   ('QBH', '0004', '0006', 'KADAR TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0007', 'KAKU ', 'Y');
+   ('QBH', '0004', '0007', 'KAKU ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0008', 'KAWAT KASAR ', 'Y');
+   ('QBH', '0004', '0008', 'KAWAT KASAR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0009', 'KAWAT NYELIP ', 'Y');
+   ('QBH', '0004', '0009', 'KAWAT NYELIP ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0010', 'KOTOR ', 'Y');
+   ('QBH', '0004', '0010', 'KOTOR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0011', 'KROPOS', 'Y');
+   ('QBH', '0004', '0011', 'KROPOS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0012', 'KUSAM ', 'Y');
+   ('QBH', '0004', '0012', 'KUSAM ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0013', 'MRUNTUS ', 'Y');
+   ('QBH', '0004', '0013', 'MRUNTUS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0014', 'NGGARIS ', 'Y');
+   ('QBH', '0004', '0014', 'NGGARIS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0015', 'OKSIDASI ', 'Y');
+   ('QBH', '0004', '0015', 'OKSIDASI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0016', 'PATRI PUTUS', 'Y');
+   ('QBH', '0004', '0016', 'PATRI PUTUS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0017', 'PATRI TIDAK CAIR ', 'Y');
+   ('QBH', '0004', '0017', 'PATRI TIDAK CAIR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0018', 'PECAH ', 'Y');
+   ('QBH', '0004', '0018', 'PECAH ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0019', 'PROTOL ', 'Y');
+   ('QBH', '0004', '0019', 'PROTOL ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0020', 'WARNA TIDAK SESUAI', 'Y');
+   ('QBH', '0004', '0020', 'WARNA TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0005', '0001', 'IMPURITY ', 'Y');
+   ('QBH', '0005', '0001', 'IMPURITY ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0005', '0002', 'KADAR TIDAK SESUAI', 'Y');
+   ('QBH', '0005', '0002', 'KADAR TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0005', '0003', 'KUSAM', 'Y');
+   ('QBH', '0005', '0003', 'KUSAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0005', '0004', 'OKSIDASI / KOPONG', 'Y');
+   ('QBH', '0005', '0004', 'OKSIDASI / KOPONG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0005', '0005', 'ALLOY TIDAK SESUAI', 'Y');
+   ('QBH', '0005', '0005', 'ALLOY TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0005', '0006', 'WARNA TIDAK SESUAI', 'Y');
+   ('QBH', '0005', '0006', 'WARNA TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0001', 'IMPURITY ', 'Y');
+   ('QBH', '0006', '0001', 'IMPURITY ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0002', 'CACAT ', 'Y');
+   ('QBH', '0006', '0002', 'CACAT ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0003', 'KOTOR ', 'Y');
+   ('QBH', '0006', '0003', 'KOTOR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0004', 'KUSAM ', 'Y');
+   ('QBH', '0006', '0004', 'KUSAM ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0005', 'MRUNTUS ', 'Y');
+   ('QBH', '0006', '0005', 'MRUNTUS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0006', 'NGGARIS ', 'Y');
+   ('QBH', '0006', '0006', 'NGGARIS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0007', 'OKSIDASI ', 'Y');
+   ('QBH', '0006', '0007', 'OKSIDASI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0008', 'PECAH ', 'Y');
+   ('QBH', '0006', '0008', 'PECAH ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0009', 'PROTOL ', 'Y');
+   ('QBH', '0006', '0009', 'PROTOL ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0010', 'DIMENSI TIDAK SESUAI ', 'Y');
+   ('QBH', '0006', '0010', 'DIMENSI TIDAK SESUAI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0011', 'ARAH RANJI SALAH', 'Y');
+   ('QBH', '0006', '0011', 'ARAH RANJI SALAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0012', 'BENTUK RANJI JELEK', 'Y');
+   ('QBH', '0006', '0012', 'BENTUK RANJI JELEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0013', 'DEKOK ', 'Y');
+   ('QBH', '0006', '0013', 'DEKOK ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0014', 'HASIL POTONG MINGKUP', 'Y');
+   ('QBH', '0006', '0014', 'HASIL POTONG MINGKUP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0015', 'KADAR TIDAK SESUAI', 'Y');
+   ('QBH', '0006', '0015', 'KADAR TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0016', 'ALLOY TIDAK SESUAI', 'Y');
+   ('QBH', '0006', '0016', 'ALLOY TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0017', 'LIPATAN NYELIP', 'Y');
+   ('QBH', '0006', '0017', 'LIPATAN NYELIP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0018', 'LIPATAN TIDAK SIMETRIS', 'Y');
+   ('QBH', '0006', '0018', 'LIPATAN TIDAK SIMETRIS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0019', 'MBLITUT', 'Y');
+   ('QBH', '0006', '0019', 'MBLITUT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0020', 'MOTIF KURANG JELAS', 'Y');
+   ('QBH', '0006', '0020', 'MOTIF KURANG JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0021', 'MOTIF LUBANG', 'Y');
+   ('QBH', '0006', '0021', 'MOTIF LUBANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0022', 'MOTIF TIDAK SESUAI', 'Y');
+   ('QBH', '0006', '0022', 'MOTIF TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0023', 'PESOK ', 'Y');
+   ('QBH', '0006', '0023', 'PESOK ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0024', 'POTONGAN DOUBLE', 'Y');
+   ('QBH', '0006', '0024', 'POTONGAN DOUBLE', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0025', 'POTONGAN KASAR / JEMBRET', 'Y');
+   ('QBH', '0006', '0025', 'POTONGAN KASAR / JEMBRET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0026', 'POTONGAN TIDAK SESUAI', 'Y');
+   ('QBH', '0006', '0026', 'POTONGAN TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0027', 'SOBEK', 'Y');
+   ('QBH', '0006', '0027', 'SOBEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0028', 'TUBE TIDAK FLAT', 'Y');
+   ('QBH', '0006', '0028', 'TUBE TIDAK FLAT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0029', 'UKURAN POTONG TIDAK SESUAI', 'Y');
+   ('QBH', '0006', '0029', 'UKURAN POTONG TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0030', 'UKURAN RJ TIDAK SESUAI ( BSR/KECIL )', 'Y');
+   ('QBH', '0006', '0030', 'UKURAN RJ TIDAK SESUAI ( BSR/KECIL )', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0031', 'WARNA TIDAK SESUAI', 'Y');
+   ('QBH', '0006', '0031', 'WARNA TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0032', 'BERAT BJ TIDAK SESUAI BOM', 'Y');
+   ('QBH', '0006', '0032', 'BERAT BJ TIDAK SESUAI BOM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0001', 'IMPURITY', 'Y');
+   ('QBH', '0007', '0001', 'IMPURITY', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0002', 'KAKU ', 'Y');
+   ('QBH', '0007', '0002', 'KAKU ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0003', 'CACAT ', 'Y');
+   ('QBH', '0007', '0003', 'CACAT ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0004', 'KOTOR ', 'Y');
+   ('QBH', '0007', '0004', 'KOTOR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0005', 'KUSAM ', 'Y');
+   ('QBH', '0007', '0005', 'KUSAM ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0006', 'MRUNTUS ', 'Y');
+   ('QBH', '0007', '0006', 'MRUNTUS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0007', 'NGGARIS ', 'Y');
+   ('QBH', '0007', '0007', 'NGGARIS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0008', 'OKSIDASI ', 'Y');
+   ('QBH', '0007', '0008', 'OKSIDASI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0009', 'PECAH ', 'Y');
+   ('QBH', '0007', '0009', 'PECAH ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0010', 'PROTOL ', 'Y');
+   ('QBH', '0007', '0010', 'PROTOL ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0011', 'DIMENSI TIDAK SESUAI ', 'Y');
+   ('QBH', '0007', '0011', 'DIMENSI TIDAK SESUAI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0012', 'KADAR TIDAK SESUAI', 'Y');
+   ('QBH', '0007', '0012', 'KADAR TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0013', 'ALLOY TIDAK SESUAI', 'Y');
+   ('QBH', '0007', '0013', 'ALLOY TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0014', 'KAWAT KASAR ', 'Y');
+   ('QBH', '0007', '0014', 'KAWAT KASAR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0015', 'KONOSURA JEMBRET', 'Y');
+   ('QBH', '0007', '0015', 'KONOSURA JEMBRET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0016', 'KONOSURA NUTUP', 'Y');
+   ('QBH', '0007', '0016', 'KONOSURA NUTUP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0017', 'KONOSURA TIDAK TENGAH', 'Y');
+   ('QBH', '0007', '0017', 'KONOSURA TIDAK TENGAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0018', 'MBLITUT', 'Y');
+   ('QBH', '0007', '0018', 'MBLITUT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0019', 'MLEMBUNG ', 'Y');
+   ('QBH', '0007', '0019', 'MLEMBUNG ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0020', 'MLINTIR', 'Y');
+   ('QBH', '0007', '0020', 'MLINTIR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0021', 'NGLOKOP', 'Y');
+   ('QBH', '0007', '0021', 'NGLOKOP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0022', 'PATRI TIDAK CAIR ', 'Y');
+   ('QBH', '0007', '0022', 'PATRI TIDAK CAIR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0023', 'SOBEK', 'Y');
+   ('QBH', '0007', '0023', 'SOBEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0024', 'WARNA TIDAK SESUAI', 'Y');
+   ('QBH', '0007', '0024', 'WARNA TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0025', 'PATRI RONTOK/NYERBUK', 'Y');
+   ('QBH', '0007', '0025', 'PATRI RONTOK/NYERBUK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0026', 'PATRI TIDAK ADA', 'Y');
+   ('QBH', '0007', '0026', 'PATRI TIDAK ADA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0027', 'KONUSURA TERLALU LEBAR', 'Y');
+   ('QBH', '0007', '0027', 'KONUSURA TERLALU LEBAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0028', 'BERAT BJ TIDAK SESUAI', 'Y');
+   ('QBH', '0007', '0028', 'BERAT BJ TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0029', 'PATRI PUTUS', 'Y');
+   ('QBH', '0007', '0029', 'PATRI PUTUS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0030', 'PLAT NARIK', 'Y');
+   ('QBH', '0007', '0030', 'PLAT NARIK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0001', 'IMPURITY ', 'Y');
+   ('QBH', '0008', '0001', 'IMPURITY ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0002', 'KAKU ', 'Y');
+   ('QBH', '0008', '0002', 'KAKU ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0003', 'CACAT ', 'Y');
+   ('QBH', '0008', '0003', 'CACAT ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0004', 'KOTOR ', 'Y');
+   ('QBH', '0008', '0004', 'KOTOR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0005', 'KUSAM ', 'Y');
+   ('QBH', '0008', '0005', 'KUSAM ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0006', 'MRUNTUS ', 'Y');
+   ('QBH', '0008', '0006', 'MRUNTUS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0007', 'NGGARIS ', 'Y');
+   ('QBH', '0008', '0007', 'NGGARIS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0008', 'OKSIDASI ', 'Y');
+   ('QBH', '0008', '0008', 'OKSIDASI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0009', 'PECAH ', 'Y');
+   ('QBH', '0008', '0009', 'PECAH ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0010', 'PROTOL ', 'Y');
+   ('QBH', '0008', '0010', 'PROTOL ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0011', 'DIMENSI TIDAK SESUAI ', 'Y');
+   ('QBH', '0008', '0011', 'DIMENSI TIDAK SESUAI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0012', 'KADAR TIDAK SESUAI', 'Y');
+   ('QBH', '0008', '0012', 'KADAR TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0013', 'ALLOY TIDAK SESUAI', 'Y');
+   ('QBH', '0008', '0013', 'ALLOY TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0014', 'KROPOS', 'Y');
+   ('QBH', '0008', '0014', 'KROPOS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0015', 'MENGKOL', 'Y');
+   ('QBH', '0008', '0015', 'MENGKOL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0016', 'POTONGAN KASAR / JEMBRET', 'Y');
+   ('QBH', '0008', '0016', 'POTONGAN KASAR / JEMBRET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0017', 'POTONGAN TIDAK SESUAI', 'Y');
+   ('QBH', '0008', '0017', 'POTONGAN TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0018', 'SOBEK', 'Y');
+   ('QBH', '0008', '0018', 'SOBEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0019', 'WARNA TIDAK SESUAI', 'Y');
+   ('QBH', '0008', '0019', 'WARNA TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0001', 'IMPURITY', 'Y');
+   ('QBH', '0009', '0001', 'IMPURITY', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0002', 'KAKU', 'Y');
+   ('QBH', '0009', '0002', 'KAKU', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0003', 'CACAT ', 'Y');
+   ('QBH', '0009', '0003', 'CACAT ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0004', 'KOTOR ', 'Y');
+   ('QBH', '0009', '0004', 'KOTOR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0005', 'KUSAM ', 'Y');
+   ('QBH', '0009', '0005', 'KUSAM ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0006', 'MRUNTUS ', 'Y');
+   ('QBH', '0009', '0006', 'MRUNTUS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0007', 'NGGARIS ', 'Y');
+   ('QBH', '0009', '0007', 'NGGARIS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0008', 'OKSIDASI ', 'Y');
+   ('QBH', '0009', '0008', 'OKSIDASI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0009', 'PECAH ', 'Y');
+   ('QBH', '0009', '0009', 'PECAH ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0010', 'PROTOL ', 'Y');
+   ('QBH', '0009', '0010', 'PROTOL ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0011', 'DIMENSI TIDAK SESUAI ', 'Y');
+   ('QBH', '0009', '0011', 'DIMENSI TIDAK SESUAI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0012', 'KADAR TIDAK SESUAI', 'Y');
+   ('QBH', '0009', '0012', 'KADAR TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0013', 'ALLOY TIDAK SESUAI', 'Y');
+   ('QBH', '0009', '0013', 'ALLOY TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0014', 'PATRI BENDOL', 'Y');
+   ('QBH', '0009', '0014', 'PATRI BENDOL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0015', 'POTONGAN JINJING', 'Y');
+   ('QBH', '0009', '0015', 'POTONGAN JINJING', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0016', 'WARNA TIDAK SESUAI', 'Y');
+   ('QBH', '0009', '0016', 'WARNA TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0001', 'IMPURITY ', 'Y');
+   ('QBH', '0010', '0001', 'IMPURITY ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0002', 'KAKU  ', 'Y');
+   ('QBH', '0010', '0002', 'KAKU  ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0003', 'CACAT', 'Y');
+   ('QBH', '0010', '0003', 'CACAT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0004', 'KOTOR ', 'Y');
+   ('QBH', '0010', '0004', 'KOTOR ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0005', 'SELEPAN KUSAM', 'Y');
+   ('QBH', '0010', '0005', 'SELEPAN KUSAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0006', 'MRUNTUS ', 'Y');
+   ('QBH', '0010', '0006', 'MRUNTUS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0007', 'NGGARIS ', 'Y');
+   ('QBH', '0010', '0007', 'NGGARIS ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0008', 'OKSIDASI ', 'Y');
+   ('QBH', '0010', '0008', 'OKSIDASI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0009', 'PECAH', 'Y');
+   ('QBH', '0010', '0009', 'PECAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0010', 'PROTOL ', 'Y');
+   ('QBH', '0010', '0010', 'PROTOL ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0011', 'DIMENSI TIDAK SESUAI ', 'Y');
+   ('QBH', '0010', '0011', 'DIMENSI TIDAK SESUAI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0012', 'MASIH ADA MEDIA (CU/PLASTIK)', 'Y');
+   ('QBH', '0010', '0012', 'MASIH ADA MEDIA (CU/PLASTIK)', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0013', 'ARAH RANJI SALAH', 'Y');
+   ('QBH', '0010', '0013', 'ARAH RANJI SALAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0014', 'BEKAS SOLDER KELIHATAN', 'Y');
+   ('QBH', '0010', '0014', 'BEKAS SOLDER KELIHATAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0015', 'BENTUK RANJI JELEK', 'Y');
+   ('QBH', '0010', '0015', 'BENTUK RANJI JELEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0016', 'BERAT BJ TIDAK SESUAI', 'Y');
+   ('QBH', '0010', '0016', 'BERAT BJ TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0017', 'BOLA BOLA NGLEMPIT', 'Y');
+   ('QBH', '0010', '0017', 'BOLA BOLA NGLEMPIT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0018', 'DEKOK ', 'Y');
+   ('QBH', '0010', '0018', 'DEKOK ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0019', 'KADAR TIDAK SESUAI', 'Y');
+   ('QBH', '0010', '0019', 'KADAR TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0020', 'ALLOY TIDAK SESUAI', 'Y');
+   ('QBH', '0010', '0020', 'ALLOY TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0021', 'KROPOS', 'Y');
+   ('QBH', '0010', '0021', 'KROPOS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0022', 'MBLITUT', 'Y');
+   ('QBH', '0010', '0022', 'MBLITUT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0023', 'MOTIF KURANG JELAS', 'Y');
+   ('QBH', '0010', '0023', 'MOTIF KURANG JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0024', 'MOTIF LUBANG', 'Y');
+   ('QBH', '0010', '0024', 'MOTIF LUBANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0025', 'MOTIF TIDAK SESUAI', 'Y');
+   ('QBH', '0010', '0025', 'MOTIF TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0026', 'PESOK ', 'Y');
+   ('QBH', '0010', '0026', 'PESOK ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0027', 'PLINTIRAN BEDA', 'Y');
+   ('QBH', '0010', '0027', 'PLINTIRAN BEDA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0028', 'POTONGAN DOUBLE', 'Y');
+   ('QBH', '0010', '0028', 'POTONGAN DOUBLE', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0029', 'POTONGAN JINJING', 'Y');
+   ('QBH', '0010', '0029', 'POTONGAN JINJING', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0030', 'POTONGAN KASAR / JEMBRET', 'Y');
+   ('QBH', '0010', '0030', 'POTONGAN KASAR / JEMBRET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0031', 'POTONGAN TIDAK SESUAI', 'Y');
+   ('QBH', '0010', '0031', 'POTONGAN TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0032', 'SOBEK', 'Y');
+   ('QBH', '0010', '0032', 'SOBEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0033', 'SUDUT TERLALU TAJAM', 'Y');
+   ('QBH', '0010', '0033', 'SUDUT TERLALU TAJAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0034', 'TINGGI GELOMBANG TIDAK SESUAI', 'Y');
+   ('QBH', '0010', '0034', 'TINGGI GELOMBANG TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0035', 'TUBE BENGKOK', 'Y');
+   ('QBH', '0010', '0035', 'TUBE BENGKOK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0036', 'TUBE TIDAK FLAT', 'Y');
+   ('QBH', '0010', '0036', 'TUBE TIDAK FLAT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0037', 'TUBE TIDAK PUTUS ( PROSES BOLA )', 'Y');
+   ('QBH', '0010', '0037', 'TUBE TIDAK PUTUS ( PROSES BOLA )', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0038', 'UKURAN POTONG TIDAK SESUAI', 'Y');
+   ('QBH', '0010', '0038', 'UKURAN POTONG TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0039', 'UKURAN RJ TIDAK SESUAI ( BSR/KECIL )', 'Y');
+   ('QBH', '0010', '0039', 'UKURAN RJ TIDAK SESUAI ( BSR/KECIL )', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0040', 'WARNA TIDAK SESUAI', 'Y');
+   ('QBH', '0010', '0040', 'WARNA TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0011', '0001', 'STANDARISASI CP TIDAK SAMA DENGAN REFENARY (DARI BAHAN)', 'Y');
+   ('QBH', '0011', '0001', 'STANDARISASI CP TIDAK SAMA DENGAN REFENARY (DARI BAHAN)', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0012', '0001', 'SERING TIDAK MEMBUAT FORM MUTASI', 'Y');
+   ('QBH', '0012', '0001', 'SERING TIDAK MEMBUAT FORM MUTASI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0012', '0002', 'PENGISIAN FORM MUTASI YANG TIDAK LENGKAP', 'Y');
+   ('QBH', '0012', '0002', 'PENGISIAN FORM MUTASI YANG TIDAK LENGKAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0013', '0001', 'DATA BOM 3/4 BELUM DIINPUTKAN', 'Y');
+   ('QBH', '0013', '0001', 'DATA BOM 3/4 BELUM DIINPUTKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0013', '0002', 'DATA BOR 3/4 BELUM DIINPUTKAN', 'Y');
+   ('QBH', '0013', '0002', 'DATA BOR 3/4 BELUM DIINPUTKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0013', '0003', 'UPDATE DATA BOM DAN BOR TIDAK DISAMPAIKAN ', 'Y');
+   ('QBH', '0013', '0003', 'UPDATE DATA BOM DAN BOR TIDAK DISAMPAIKAN ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0013', '0004', 'DATA BOM DAN BOR  3/4 TIDAK UPDATE', 'Y');
+   ('QBH', '0013', '0004', 'DATA BOM DAN BOR  3/4 TIDAK UPDATE', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0014', '0001', 'TARIF ONGKOS 3/4 BELUM DIINPUT', 'Y');
+   ('QBH', '0014', '0001', 'TARIF ONGKOS 3/4 BELUM DIINPUT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0014', '0002', 'JAM KERJA DARI DEPARTEMEN YANG TERLAMBAT / SALAH', 'Y');
+   ('QBH', '0014', '0002', 'JAM KERJA DARI DEPARTEMEN YANG TERLAMBAT / SALAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0014', '0003', 'TIDAK ADA KONFIRMASI KE AUDIT APABILA ADA PERUBAHAN / KEBIJAKAN ', 'Y');
+   ('QBH', '0014', '0003', 'TIDAK ADA KONFIRMASI KE AUDIT APABILA ADA PERUBAHAN / KEBIJAKAN ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0014', '0004', 'HUMAN ERROR ( MASALAH DATA )', 'Y');
+   ('QBH', '0014', '0004', 'HUMAN ERROR ( MASALAH DATA )', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0014', '0005', 'BUKTI DOKUMEN YANG DIMINTA AUDIT TIDAK SESUAI', 'Y');
+   ('QBH', '0014', '0005', 'BUKTI DOKUMEN YANG DIMINTA AUDIT TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0014', '0006', 'BUKA TUTUP KOMPLIT DATA', 'Y');
+   ('QBH', '0014', '0006', 'BUKA TUTUP KOMPLIT DATA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('C12', '0001', '0001', 'TERLALU TINGGI', 'Y');
+   ('CBH', '0001', '0001', 'TERLALU TINGGI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0001', '0001', 'SETORAN TERLAMBAT', 'Y');
+   ('DBH', '0001', '0001', 'SETORAN TERLAMBAT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0001', '0002', 'TIDAK ADA SETORAN', 'Y');
+   ('DBH', '0001', '0002', 'TIDAK ADA SETORAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0001', '0003', 'SETORAN NUMPUK DIAKHIR JAM', 'Y');
+   ('DBH', '0001', '0003', 'SETORAN NUMPUK DIAKHIR JAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0001', '0004', 'SALAH TANGGAL SETOR', 'Y');
+   ('DBH', '0001', '0004', 'SALAH TANGGAL SETOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0001', '0005', 'SALAH GELOMBANG SETOR', 'Y');
+   ('DBH', '0001', '0005', 'SALAH GELOMBANG SETOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0001', '0006', 'TERLALU AWAL', 'Y');
+   ('DBH', '0001', '0006', 'TERLALU AWAL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0001', '0007', 'TELAT PENGESAHAN', 'Y');
+   ('DBH', '0001', '0007', 'TELAT PENGESAHAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0001', '0008', 'RESCHEDULE TIDAK SETOR', 'Y');
+   ('DBH', '0001', '0008', 'RESCHEDULE TIDAK SETOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0001', '0009', 'CP TEBUSAN TERLAMBAT ', 'Y');
+   ('DBH', '0001', '0009', 'CP TEBUSAN TERLAMBAT ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0001', '0010', 'TUTUPAN PROSES YANG MENDEKATI CUT OFF ONGKOSAN ( KHUSUSNYA UTK TUKANG BORONGAN )', 'Y');
+   ('DBH', '0001', '0010', 'TUTUPAN PROSES YANG MENDEKATI CUT OFF ONGKOSAN ( KHUSUSNYA UTK TUKANG BORONGAN )', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0002', '0001', 'TERLALU LAMA DALAM MENANGGAPI VARIAN HASIL STOCK OPNAME ASSET', 'Y');
+   ('DBH', '0002', '0001', 'TERLALU LAMA DALAM MENANGGAPI VARIAN HASIL STOCK OPNAME ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -7315,495 +7315,495 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0001', '0001', 'TIDAK RAPAT/ KURANG SETTING', 'Y');
+   ('QAT', '0001', '0001', 'TIDAK RAPAT/ KURANG SETTING', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0001', '0002', 'PENGAMAN LEPAS', 'Y');
+   ('QAT', '0001', '0002', 'PENGAMAN LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0001', '0003', 'PENGAMAN CEKET', 'Y');
+   ('QAT', '0001', '0003', 'PENGAMAN CEKET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0001', '0004', 'JAWAN LEPAS', 'Y');
+   ('QAT', '0001', '0004', 'JAWAN LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0001', '0005', 'LIDAH KUNCI LEPAS', 'Y');
+   ('QAT', '0001', '0005', 'LIDAH KUNCI LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0001', '0006', 'LIDAH KUNCI CEKET', 'Y');
+   ('QAT', '0001', '0006', 'LIDAH KUNCI CEKET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0001', '0007', 'BENTUK TIDAK STANDAR', 'Y');
+   ('QAT', '0001', '0007', 'BENTUK TIDAK STANDAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0001', '0008', 'SALAH ALLOY', 'Y');
+   ('QAT', '0001', '0008', 'SALAH ALLOY', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0002', '0001', 'KUNCI VEER RENGGANG', 'Y');
+   ('QAT', '0002', '0001', 'KUNCI VEER RENGGANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0002', '0002', 'KUNCI VEER LOYO', 'Y');
+   ('QAT', '0002', '0002', 'KUNCI VEER LOYO', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0002', '0003', 'KUNCI VEER SERET/MACET', 'Y');
+   ('QAT', '0002', '0003', 'KUNCI VEER SERET/MACET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0002', '0004', 'SALAH ALLOY', 'Y');
+   ('QAT', '0002', '0004', 'SALAH ALLOY', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0003', '0001', 'KUNCI PLONG TIDAK KLIK', 'Y');
+   ('QAT', '0003', '0001', 'KUNCI PLONG TIDAK KLIK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0003', '0002', 'KUNCI PLONG SULIT DIBUKA', 'Y');
+   ('QAT', '0003', '0002', 'KUNCI PLONG SULIT DIBUKA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0003', '0003', 'SALAH ALLOY', 'Y');
+   ('QAT', '0003', '0003', 'SALAH ALLOY', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0004', '0001', 'KURANG BULAT/ OVAL', 'Y');
+   ('QAT', '0004', '0001', 'KURANG BULAT/ OVAL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0004', '0002', 'TIDAK RATA', 'Y');
+   ('QAT', '0004', '0002', 'TIDAK RATA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0005', '0001', 'TERDAPAT KERAK/NGABUT', 'Y');
+   ('QAT', '0005', '0001', 'TERDAPAT KERAK/NGABUT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0005', '0002', 'LIPATAN PIPA KELUAR KOTORAN', 'Y');
+   ('QAT', '0005', '0002', 'LIPATAN PIPA KELUAR KOTORAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0005', '0003', 'BAGIAN DALAM PIPA KOTOR', 'Y');
+   ('QAT', '0005', '0003', 'BAGIAN DALAM PIPA KOTOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0005', '0004', 'SISA OBAT POLES', 'Y');
+   ('QAT', '0005', '0004', 'SISA OBAT POLES', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0005', '0005', 'BEKAS SPIDOL', 'Y');
+   ('QAT', '0005', '0005', 'BEKAS SPIDOL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0005', '0006', 'BEKAS LAZER', 'Y');
+   ('QAT', '0005', '0006', 'BEKAS LAZER', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0005', '0007', 'KELUAR AIR', 'Y');
+   ('QAT', '0005', '0007', 'KELUAR AIR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0006', '0001', 'BURES/KUSAM/NGGARIS', 'Y');
+   ('QAT', '0006', '0001', 'BURES/KUSAM/NGGARIS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0006', '0002', 'SALAH MOTIF', 'Y');
+   ('QAT', '0006', '0002', 'SALAH MOTIF', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0006', '0003', 'KURANG SELEP/TIDAK PENUH', 'Y');
+   ('QAT', '0006', '0003', 'KURANG SELEP/TIDAK PENUH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0006', '0004', 'LUBANG', 'Y');
+   ('QAT', '0006', '0004', 'LUBANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0006', '0005', 'TIDAK RAPI', 'Y');
+   ('QAT', '0006', '0005', 'TIDAK RAPI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0007', '0001', 'PATAH ', 'Y');
+   ('QAT', '0007', '0001', 'PATAH ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0007', '0002', 'RETAK/ SOBEK/LUBANG', 'Y');
+   ('QAT', '0007', '0002', 'RETAK/ SOBEK/LUBANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0007', '0003', 'RESOK/DEKOK/DEKIK', 'Y');
+   ('QAT', '0007', '0003', 'RESOK/DEKOK/DEKIK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0007', '0004', 'KASAR BEKAS KIKIR', 'Y');
+   ('QAT', '0007', '0004', 'KASAR BEKAS KIKIR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0007', '0005', 'TIDAK KILAP', 'Y');
+   ('QAT', '0007', '0005', 'TIDAK KILAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0007', '0006', 'NGEFLEK', 'Y');
+   ('QAT', '0007', '0006', 'NGEFLEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0007', '0007', 'IMPURITY/ KEROPOS', 'Y');
+   ('QAT', '0007', '0007', 'IMPURITY/ KEROPOS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0008', '0001', 'LEPAS', 'Y');
+   ('QAT', '0008', '0001', 'LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0008', '0002', 'PATAH/RETAK/LUBANG/PESOK', 'Y');
+   ('QAT', '0008', '0002', 'PATAH/RETAK/LUBANG/PESOK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0008', '0003', 'TAJAM', 'Y');
+   ('QAT', '0008', '0003', 'TAJAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0008', '0004', 'TIDAK KILAP/BESET', 'Y');
+   ('QAT', '0008', '0004', 'TIDAK KILAP/BESET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0008', '0005', 'KASAR/ BEKAS KIKIR', 'Y');
+   ('QAT', '0008', '0005', 'KASAR/ BEKAS KIKIR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0008', '0006', 'NGEFLEK', 'Y');
+   ('QAT', '0008', '0006', 'NGEFLEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0008', '0007', 'IMPURITY/ KEROPOS', 'Y');
+   ('QAT', '0008', '0007', 'IMPURITY/ KEROPOS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0009', '0001', 'LEPAS', 'Y');
+   ('QAT', '0009', '0001', 'LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0009', '0002', 'BURES /KUSAM/ PECAH/ CUIL', 'Y');
+   ('QAT', '0009', '0002', 'BURES /KUSAM/ PECAH/ CUIL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0009', '0003', 'SALAH WARNA', 'Y');
+   ('QAT', '0009', '0003', 'SALAH WARNA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0010', '0001', 'SALAH KODE/ CAP', 'Y');
+   ('QAT', '0010', '0001', 'SALAH KODE/ CAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0010', '0002', 'SALAH KADAR', 'Y');
+   ('QAT', '0010', '0002', 'SALAH KADAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0010', '0003', 'TIDAK ADA CAP', 'Y');
+   ('QAT', '0010', '0003', 'TIDAK ADA CAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0010', '0004', 'TIDAK JELAS', 'Y');
+   ('QAT', '0010', '0004', 'TIDAK JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0010', '0005', 'SALAH POSISI', 'Y');
+   ('QAT', '0010', '0005', 'SALAH POSISI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0011', '0001', 'MBENDOL/ TIDAK RAPI', 'Y');
+   ('QAT', '0011', '0001', 'MBENDOL/ TIDAK RAPI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0011', '0002', 'KURANG PATRI/ KELONCATAN/PUTUS/PATAH', 'Y');
+   ('QAT', '0011', '0002', 'KURANG PATRI/ KELONCATAN/PUTUS/PATAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0012', '0001', 'LOYO', 'Y');
+   ('QAT', '0012', '0001', 'LOYO', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0012', '0002', 'PUTUS', 'Y');
+   ('QAT', '0012', '0002', 'PUTUS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0012', '0003', 'KAWAT TAJAM', 'Y');
+   ('QAT', '0012', '0003', 'KAWAT TAJAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0012', '0004', 'MATA IKAN', 'Y');
+   ('QAT', '0012', '0004', 'MATA IKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0012', '0005', 'KAWAT MUNCUL', 'Y');
+   ('QAT', '0012', '0005', 'KAWAT MUNCUL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0013', '0001', 'PATAH/ MOLOR/ MRUNTUS', 'Y');
+   ('QAT', '0013', '0001', 'PATAH/ MOLOR/ MRUNTUS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0013', '0002', 'RANTAI KOBETO MOTIF TIDAK STANDARD', 'Y');
+   ('QAT', '0013', '0002', 'RANTAI KOBETO MOTIF TIDAK STANDARD', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0014', '0001', 'PANJANG TIDAK SESUAI', 'Y');
+   ('QAT', '0014', '0001', 'PANJANG TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0015', '0001', 'TIDAK SESUAI TOLERANSI', 'Y');
+   ('QAT', '0015', '0001', 'TIDAK SESUAI TOLERANSI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0016', '0001', 'TIDAK SESUAI/ SALAH', 'Y');
+   ('QAT', '0016', '0001', 'TIDAK SESUAI/ SALAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0016', '0002', 'TIDAK SET (SET-SET AN)', 'Y');
+   ('QAT', '0016', '0002', 'TIDAK SET (SET-SET AN)', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0016', '0003', 'TIDAK BERPASANGAN (ANTING)', 'Y');
+   ('QAT', '0016', '0003', 'TIDAK BERPASANGAN (ANTING)', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0017', '0001', 'SERING TIDAK MEMBUAT FORM MUTASI', 'Y');
+   ('QAT', '0017', '0001', 'SERING TIDAK MEMBUAT FORM MUTASI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0017', '0002', 'PENGISIAN FORM MUTASI YANG TIDAK LENGKAP', 'Y');
+   ('QAT', '0017', '0002', 'PENGISIAN FORM MUTASI YANG TIDAK LENGKAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0018', '0001', 'KADAR', 'Y');
+   ('QAT', '0018', '0001', 'KADAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0018', '0002', 'KOMPONEN BAHAN', 'Y');
+   ('QAT', '0018', '0002', 'KOMPONEN BAHAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0018', '0003', 'PROSES ( DOUBLE / BELUM TERINPUTKAN )', 'Y');
+   ('QAT', '0018', '0003', 'PROSES ( DOUBLE / BELUM TERINPUTKAN )', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0018', '0004', 'SUSUT PROSES ( TERLALU KECIL / BESAR )', 'Y');
+   ('QAT', '0018', '0004', 'SUSUT PROSES ( TERLALU KECIL / BESAR )', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0018', '0005', 'ALLOY YANG TIDAK SESUAI', 'Y');
+   ('QAT', '0018', '0005', 'ALLOY YANG TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0018', '0006', 'JENIS BATU YANG PAKAI', 'Y');
+   ('QAT', '0018', '0006', 'JENIS BATU YANG PAKAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0018', '0007', 'LAMA PROSES YANG TIDAK SESUAI', 'Y');
+   ('QAT', '0018', '0007', 'LAMA PROSES YANG TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0018', '0008', 'RINCIAN BATU YANG DIPASANG PERMAINAN COR TIDAK SESUAI', 'Y');
+   ('QAT', '0018', '0008', 'RINCIAN BATU YANG DIPASANG PERMAINAN COR TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0018', '0009', 'URUTAN PROSES BELUM DIINPUTKAN', 'Y');
+   ('QAT', '0018', '0009', 'URUTAN PROSES BELUM DIINPUTKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0018', '0010', 'LAMA PROSES BELUM DIINPUTKAN', 'Y');
+   ('QAT', '0018', '0010', 'LAMA PROSES BELUM DIINPUTKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0018', '0011', 'RINCIAN BATU MAINAN COR BELUM DIINPUT', 'Y');
+   ('QAT', '0018', '0011', 'RINCIAN BATU MAINAN COR BELUM DIINPUT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0018', '0012', 'DATA BOM DAN BOR TIDAK UPDATE', 'Y');
+   ('QAT', '0018', '0012', 'DATA BOM DAN BOR TIDAK UPDATE', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0019', '0001', 'TARIF ONGKOSAN BELUM TERINPUTKAN', 'Y');
+   ('QAT', '0019', '0001', 'TARIF ONGKOSAN BELUM TERINPUTKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0019', '0002', 'JAM KERJA DARI DEPARTEMEN TERLAMBAT / SALAH', 'Y');
+   ('QAT', '0019', '0002', 'JAM KERJA DARI DEPARTEMEN TERLAMBAT / SALAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0019', '0003', 'TIDAK ADA KONFIRMASI KE AUDIT APABILA ADA PERUBAHAN/KEBIJAKAN', 'Y');
+   ('QAT', '0019', '0003', 'TIDAK ADA KONFIRMASI KE AUDIT APABILA ADA PERUBAHAN/KEBIJAKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0019', '0004', 'HUMAN ERROR (MASALAH DATA)', 'Y');
+   ('QAT', '0019', '0004', 'HUMAN ERROR (MASALAH DATA)', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0019', '0005', 'BUKTI DOKUMEN YANG DIMINTA AUDIT TIDAK SESUAI', 'Y');
+   ('QAT', '0019', '0005', 'BUKTI DOKUMEN YANG DIMINTA AUDIT TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q27', '0019', '0006', 'BUKA TUTUP KOMPLIT DATA', 'Y');
+   ('QAT', '0019', '0006', 'BUKA TUTUP KOMPLIT DATA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('C27', '0001', '0001', 'TERLALU TINGGI', 'Y');
+   ('CAT', '0001', '0001', 'TERLALU TINGGI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D27', '0001', '0001', 'TERLAMBAT', 'Y');
+   ('DAT', '0001', '0001', 'TERLAMBAT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D27', '0001', '0002', 'TIDAK 100 %', 'Y');
+   ('DAT', '0001', '0002', 'TIDAK 100 %', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D27', '0001', '0003', 'CP TEBUSAN TERLAMBAT', 'Y');
+   ('DAT', '0001', '0003', 'CP TEBUSAN TERLAMBAT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D27', '0002', '0001', 'TERLAMBAT MEMBERIKAN FORM MUTASI ASSET', 'Y');
+   ('DAT', '0002', '0001', 'TERLAMBAT MEMBERIKAN FORM MUTASI ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D27', '0002', '0002', 'TERLALU LAMA FOLLOW UP VARIAN STOK OPNAME ASSET', 'Y');
+   ('DAT', '0002', '0002', 'TERLALU LAMA FOLLOW UP VARIAN STOK OPNAME ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D27', '0002', '0003', 'TERLAMBAT MELAKUKAN PENGESAHAN PENERIMAAN ASSET', 'Y');
+   ('DAT', '0002', '0003', 'TERLAMBAT MELAKUKAN PENGESAHAN PENERIMAAN ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D27', '0002', '0004', 'TERLAMBAT MENGEMBALIKAN FORM PENERIMAAN TAMBAHAN ASSET', 'Y');
+   ('DAT', '0002', '0004', 'TERLAMBAT MENGEMBALIKAN FORM PENERIMAAN TAMBAHAN ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D27', '0002', '0005', 'TERLAMBAT MENYERAHKAN LAPORAN HASIL STOK OPNAME', 'Y');
+   ('DAT', '0002', '0005', 'TERLAMBAT MENYERAHKAN LAPORAN HASIL STOK OPNAME', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0001', '0001', 'BARANG TAJAM', 'Y');
+   ('SAT', '0001', '0001', 'BARANG TAJAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0002', '0001', 'APAR KADALUARSA', 'Y');
+   ('SAT', '0002', '0001', 'APAR KADALUARSA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0002', '0002', 'TIDAK ADA APAR', 'Y');
+   ('SAT', '0002', '0002', 'TIDAK ADA APAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0002', '0003', 'TEKANAN KURANG', 'Y');
+   ('SAT', '0002', '0003', 'TEKANAN KURANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0002', '0004', 'SELANG NOZZLE RUSAK', 'Y');
+   ('SAT', '0002', '0004', 'SELANG NOZZLE RUSAK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0002', '0005', 'PIN PENGAMAN LEPAS', 'Y');
+   ('SAT', '0002', '0005', 'PIN PENGAMAN LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0003', '0001', 'APD TIDAK DIGUNAKAN', 'Y');
+   ('SAT', '0003', '0001', 'APD TIDAK DIGUNAKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0003', '0002', 'APD TIDAK SESUAI', 'Y');
+   ('SAT', '0003', '0002', 'APD TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0003', '0003', 'APD TIDAK LAYAK PAKAI', 'Y');
+   ('SAT', '0003', '0003', 'APD TIDAK LAYAK PAKAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0004', '0001', 'TIDAK ADA', 'Y');
+   ('SAT', '0004', '0001', 'TIDAK ADA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0004', '0002', 'TIDAK BERFUNGSI', 'Y');
+   ('SAT', '0004', '0002', 'TIDAK BERFUNGSI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0004', '0003', 'PENEMPATAN TIDAK SESUAI', 'Y');
+   ('SAT', '0004', '0003', 'PENEMPATAN TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0005', '0001', 'PINTU TIDAK TERSEDIA', 'Y');
+   ('SAT', '0005', '0001', 'PINTU TIDAK TERSEDIA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0005', '0002', 'PINTU TIDAK SESUAI KETENTUAN', 'Y');
+   ('SAT', '0005', '0002', 'PINTU TIDAK SESUAI KETENTUAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0005', '0003', 'PINTU SULIT DI AKSES', 'Y');
+   ('SAT', '0005', '0003', 'PINTU SULIT DI AKSES', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0005', '0004', 'TIDAK ADA PENUNJUK ARAH', 'Y');
+   ('SAT', '0005', '0004', 'TIDAK ADA PENUNJUK ARAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0005', '0005', 'PENUNJUK ARAH KURANG JELAS', 'Y');
+   ('SAT', '0005', '0005', 'PENUNJUK ARAH KURANG JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0006', '0001', 'MSDS TIDAK TERSEDIA', 'Y');
+   ('SAT', '0006', '0001', 'MSDS TIDAK TERSEDIA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0006', '0002', 'MSDS TIDAK JELAS', 'Y');
+   ('SAT', '0006', '0002', 'MSDS TIDAK JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S27', '0006', '0003', 'MSDS TIDAK LENGKAP', 'Y');
+   ('SAT', '0006', '0003', 'MSDS TIDAK LENGKAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M27', '0001', '0001', 'PENANGANAN KOMPLAIN LAMA', 'Y');
+   ('MAT', '0001', '0001', 'PENANGANAN KOMPLAIN LAMA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M27', '0001', '0002', 'KURANG KOOPERATIF DLM PENANGANAN KOMPLAIN', 'Y');
+   ('MAT', '0001', '0002', 'KURANG KOOPERATIF DLM PENANGANAN KOMPLAIN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E27', '0001', '0001', 'PROSES KERJA MENIMBULKAN BAU', 'Y');
+   ('EAT', '0001', '0001', 'PROSES KERJA MENIMBULKAN BAU', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E27', '0001', '0002', 'PROSES KERJA MENIMBULKAN ASAP', 'Y');
+   ('EAT', '0001', '0002', 'PROSES KERJA MENIMBULKAN ASAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E27', '0001', '0003', 'LANTAI KERJA LICIN', 'Y');
+   ('EAT', '0001', '0003', 'LANTAI KERJA LICIN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E27', '0001', '0004', 'SALAH PEMBUANGAN LIMBAH CAIR', 'Y');
+   ('EAT', '0001', '0004', 'SALAH PEMBUANGAN LIMBAH CAIR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E27', '0002', '0001', 'SIRKULASI RUANGAN KURANG BAIK', 'Y');
+   ('EAT', '0002', '0001', 'SIRKULASI RUANGAN KURANG BAIK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E27', '0002', '0002', 'RUANGAN TERLALU GELAP', 'Y');
+   ('EAT', '0002', '0002', 'RUANGAN TERLALU GELAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E27', '0002', '0003', 'AREA KERJA TERLALU SEMPIT', 'Y');
+   ('EAT', '0002', '0003', 'AREA KERJA TERLALU SEMPIT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -8399,7 +8399,7 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S114', '0001', '0001', 'BARANG LANCIP', 'Y');
+   ('SHL4', '0001', '0001', 'BARANG LANCIP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -8739,167 +8739,167 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0002', '0002', 'SERING TERLAMBAT MEMBERIKAN FORM MUTASI ATAU INFORMASI MENGENAI ASET', 'Y');
+   ('DBH', '0002', '0002', 'SERING TERLAMBAT MEMBERIKAN FORM MUTASI ATAU INFORMASI MENGENAI ASET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0002', '0003', 'TERLAMBAT MENYERAHKAN LAPORAN HASIL STOCK OPNAME', 'Y');
+   ('DBH', '0002', '0003', 'TERLAMBAT MENYERAHKAN LAPORAN HASIL STOCK OPNAME', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0002', '0004', 'SETELAH TERIMA BARANG TIDAK LANGSUNG DISAHKAN (HARUS MENUNGGU DIKONFIRMASI DARI AUDIT FA)', 'Y');
+   ('DBH', '0002', '0004', 'SETELAH TERIMA BARANG TIDAK LANGSUNG DISAHKAN (HARUS MENUNGGU DIKONFIRMASI DARI AUDIT FA)', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0002', '0005', 'TERLAMBAT MENGEMBALIKAN FORM PENERIMAAN TAMBAHAN ASSET', 'Y');
+   ('DBH', '0002', '0005', 'TERLAMBAT MENGEMBALIKAN FORM PENERIMAAN TAMBAHAN ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0003', '0001', 'BERAT KURANG DARI TOLERANSI', 'Y');
+   ('DBH', '0003', '0001', 'BERAT KURANG DARI TOLERANSI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0003', '0002', 'BERAT LEBIH DARI TOLERANSI SETOR', 'Y');
+   ('DBH', '0003', '0002', 'BERAT LEBIH DARI TOLERANSI SETOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0003', '0003', 'TIDAK ADA SETORAN', 'Y');
+   ('DBH', '0003', '0003', 'TIDAK ADA SETORAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0004', '0001', 'JUMLAH KURANG DARI TOLERANSI', 'Y');
+   ('DBH', '0004', '0001', 'JUMLAH KURANG DARI TOLERANSI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0004', '0002', 'JUMLAH LEBIH DARI TOLERANSI SETOR', 'Y');
+   ('DBH', '0004', '0002', 'JUMLAH LEBIH DARI TOLERANSI SETOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0004', '0003', 'TIDAK ADA SETORAN', 'Y');
+   ('DBH', '0004', '0003', 'TIDAK ADA SETORAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0005', '0001', 'STOK ALLOY KOSONG', 'Y');
+   ('DBH', '0005', '0001', 'STOK ALLOY KOSONG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D12', '0005', '0002', 'STOK 24 KOSONG', 'Y');
+   ('DBH', '0005', '0002', 'STOK 24 KOSONG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0001', '0001', 'APAR KADALUARSA', 'Y');
+   ('SBH', '0001', '0001', 'APAR KADALUARSA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0001', '0002', 'TIDAK ADA APAR', 'Y');
+   ('SBH', '0001', '0002', 'TIDAK ADA APAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0001', '0003', 'TEKANAN KURANG', 'Y');
+   ('SBH', '0001', '0003', 'TEKANAN KURANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0001', '0004', 'SELANG NOZZLE RUSAK', 'Y');
+   ('SBH', '0001', '0004', 'SELANG NOZZLE RUSAK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0001', '0005', 'PIN PENGAMAN LEPAS', 'Y');
+   ('SBH', '0001', '0005', 'PIN PENGAMAN LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0002', '0001', 'APD TIDAK DIGUNAKAN', 'Y');
+   ('SBH', '0002', '0001', 'APD TIDAK DIGUNAKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0002', '0002', 'APD TIDAK SESUAI', 'Y');
+   ('SBH', '0002', '0002', 'APD TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0002', '0003', 'APD TIDAK LAYAK PAKAI', 'Y');
+   ('SBH', '0002', '0003', 'APD TIDAK LAYAK PAKAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0003', '0001', 'TIDAK ADA', 'Y');
+   ('SBH', '0003', '0001', 'TIDAK ADA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0003', '0002', 'TIDAK BERFUNGSI', 'Y');
+   ('SBH', '0003', '0002', 'TIDAK BERFUNGSI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0003', '0003', 'PENEMPATAN TIDAK SESUAI', 'Y');
+   ('SBH', '0003', '0003', 'PENEMPATAN TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0004', '0001', 'PINTU TIDAK TERSEDIA', 'Y');
+   ('SBH', '0004', '0001', 'PINTU TIDAK TERSEDIA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0004', '0002', 'PINTU TIDAK SESUAI KETENTUAN', 'Y');
+   ('SBH', '0004', '0002', 'PINTU TIDAK SESUAI KETENTUAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0004', '0003', 'PINTU SULIT DI AKSES', 'Y');
+   ('SBH', '0004', '0003', 'PINTU SULIT DI AKSES', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0004', '0004', 'TIDAK ADA PENUNJUK ARAH', 'Y');
+   ('SBH', '0004', '0004', 'TIDAK ADA PENUNJUK ARAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0004', '0005', 'PENUNJUK ARAH KURANG JELAS', 'Y');
+   ('SBH', '0004', '0005', 'PENUNJUK ARAH KURANG JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0005', '0001', 'MSDS TIDAK TERSEDIA', 'Y');
+   ('SBH', '0005', '0001', 'MSDS TIDAK TERSEDIA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0005', '0002', 'MSDS TIDAK JELAS', 'Y');
+   ('SBH', '0005', '0002', 'MSDS TIDAK JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S12', '0005', '0003', 'MSDS TIDAK LENGKAP', 'Y');
+   ('SBH', '0005', '0003', 'MSDS TIDAK LENGKAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M12', '0001', '0001', 'PELAYANAN TERHADAP ORANG YANG BELAJAR KURANG MENYENANGKAN', 'Y');
+   ('MBH', '0001', '0001', 'PELAYANAN TERHADAP ORANG YANG BELAJAR KURANG MENYENANGKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M12', '0002', '0002', 'KURANG KOOPERATIF DLM PENANGANAN KOMPLAIN', 'Y');
+   ('MBH', '0002', '0002', 'KURANG KOOPERATIF DLM PENANGANAN KOMPLAIN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E12', '0001', '0001', 'SIRKULASI RUANGAN KURANG BAIK', 'Y');
+   ('EBH', '0001', '0001', 'SIRKULASI RUANGAN KURANG BAIK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E12', '0001', '0002', 'RUANGAN TERLALU GELAP', 'Y');
+   ('EBH', '0001', '0002', 'RUANGAN TERLALU GELAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E12', '0001', '0003', 'AREA KERJA TERLALU SEMPIT', 'Y');
+   ('EBH', '0001', '0003', 'AREA KERJA TERLALU SEMPIT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E12', '0002', '0001', 'SALAH PEMBUANGAN LIMBAH CAIR', 'Y');
+   ('EBH', '0002', '0001', 'SALAH PEMBUANGAN LIMBAH CAIR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E12', '0002', '0002', 'RUANGAN KERJA BERASAP', 'Y');
+   ('EBH', '0002', '0002', 'RUANGAN KERJA BERASAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E12', '0002', '0003', 'RUANGAN KERJA BISING', 'Y');
+   ('EBH', '0002', '0003', 'RUANGAN KERJA BISING', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E12', '0002', '0004', 'ASAP BAKARAN TERLALU PEKAT', 'Y');
+   ('EBH', '0002', '0004', 'ASAP BAKARAN TERLALU PEKAT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E12', '0002', '0005', 'MENIMBULKAN BAU', 'Y');
+   ('EBH', '0002', '0005', 'MENIMBULKAN BAU', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -9243,139 +9243,139 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0001', '0002', 'BERET', 'Y');
+   ('QAP', '0001', '0002', 'BERET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0001', '0003', 'KUALITAS ASAH MASIH BERULANG', 'Y');
+   ('QAP', '0001', '0003', 'KUALITAS ASAH MASIH BERULANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0002', '0001', 'MIRING', 'Y');
+   ('QAP', '0002', '0001', 'MIRING', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0003', '0003', 'LEPAS', 'Y');
+   ('QAP', '0003', '0003', 'LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0004', '0001', 'SERING TIDAK MEMBUAT FORM MUTASI', 'Y');
+   ('QAP', '0004', '0001', 'SERING TIDAK MEMBUAT FORM MUTASI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0004', '0002', 'PENGISIAN FORM MUTASI YANG TIDAK LENGKAP', 'Y');
+   ('QAP', '0004', '0002', 'PENGISIAN FORM MUTASI YANG TIDAK LENGKAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0005', '0001', 'TIDAK ADA KONFIRMASI KE AUDIT APABILA ADA PERUBAHAN/KEBIJAKAN', 'Y');
+   ('QAP', '0005', '0001', 'TIDAK ADA KONFIRMASI KE AUDIT APABILA ADA PERUBAHAN/KEBIJAKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0005', '0002', 'HUMAN ERROR (MASALAH DATA)', 'Y');
+   ('QAP', '0005', '0002', 'HUMAN ERROR (MASALAH DATA)', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0005', '0003', 'BUKTI DOKUMEN YANG DIMINTA AUDIT TIDAK SESUAI', 'Y');
+   ('QAP', '0005', '0003', 'BUKTI DOKUMEN YANG DIMINTA AUDIT TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('P16', '0001', '0001', 'PISAU BARU GARIS', 'Y');
+   ('PAP', '0001', '0001', 'PISAU BARU GARIS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D16', '0001', '0001', 'TERLAMBAT DARI TANGGAL DEADLINE', 'Y');
+   ('DAP', '0001', '0001', 'TERLAMBAT DARI TANGGAL DEADLINE', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D16', '0002', '0001', 'TERLAMBAT DARI TANGGAL DEADLINE', 'Y');
+   ('DAP', '0002', '0001', 'TERLAMBAT DARI TANGGAL DEADLINE', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D16', '0003', '0001', 'TERLAMBAT MEMBERIKAN FORM MUTASI ASSET', 'Y');
+   ('DAP', '0003', '0001', 'TERLAMBAT MEMBERIKAN FORM MUTASI ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D16', '0003', '0002', 'TERLALU LAMA FOLLOW UP VARIAN STOK OPNAME ASSET', 'Y');
+   ('DAP', '0003', '0002', 'TERLALU LAMA FOLLOW UP VARIAN STOK OPNAME ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D16', '0003', '0003', 'TERLAMBAT MELAKUKAN PENGESAHAN PENERIMAAN ASSET', 'Y');
+   ('DAP', '0003', '0003', 'TERLAMBAT MELAKUKAN PENGESAHAN PENERIMAAN ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D16', '0003', '0004', 'TERLAMBAT MENGEMBALIKAN FORM PENERIMAAN TAMBAHAN ASSET', 'Y');
+   ('DAP', '0003', '0004', 'TERLAMBAT MENGEMBALIKAN FORM PENERIMAAN TAMBAHAN ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D16', '0003', '0005', 'TERLAMBAT MENYERAHKAN LAPORAN HASIL STOK OPNAME', 'Y');
+   ('DAP', '0003', '0005', 'TERLAMBAT MENYERAHKAN LAPORAN HASIL STOK OPNAME', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0001', '0001', 'BARANG TAJAM', 'Y');
+   ('SAP', '0001', '0001', 'BARANG TAJAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0002', '0001', 'APAR KADALUARSA', 'Y');
+   ('SAP', '0002', '0001', 'APAR KADALUARSA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0002', '0002', 'TIDAK ADA APAR', 'Y');
+   ('SAP', '0002', '0002', 'TIDAK ADA APAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0002', '0003', 'TEKANAN KURANG', 'Y');
+   ('SAP', '0002', '0003', 'TEKANAN KURANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0002', '0004', 'SELANG NOZZLE RUSAK', 'Y');
+   ('SAP', '0002', '0004', 'SELANG NOZZLE RUSAK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0002', '0005', 'PIN PENGAMAN LEPAS', 'Y');
+   ('SAP', '0002', '0005', 'PIN PENGAMAN LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0003', '0001', 'APD TIDAK DIGUNAKAN', 'Y');
+   ('SAP', '0003', '0001', 'APD TIDAK DIGUNAKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0003', '0002', 'APD TIDAK SESUAI', 'Y');
+   ('SAP', '0003', '0002', 'APD TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0003', '0003', 'APD TIDAK LAYAK PAKAI', 'Y');
+   ('SAP', '0003', '0003', 'APD TIDAK LAYAK PAKAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0004', '0001', 'TIDAK ADA', 'Y');
+   ('SAP', '0004', '0001', 'TIDAK ADA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0004', '0002', 'TIDAK BERFUNGSI', 'Y');
+   ('SAP', '0004', '0002', 'TIDAK BERFUNGSI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0004', '0003', 'PENEMPATAN TIDAK SESUAI', 'Y');
+   ('SAP', '0004', '0003', 'PENEMPATAN TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0005', '0001', 'PINTU TIDAK TERSEDIA', 'Y');
+   ('SAP', '0005', '0001', 'PINTU TIDAK TERSEDIA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0005', '0002', 'PINTU TIDAK SESUAI KETENTUAN', 'Y');
+   ('SAP', '0005', '0002', 'PINTU TIDAK SESUAI KETENTUAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0005', '0003', 'PINTU SULIT DI AKSES', 'Y');
+   ('SAP', '0005', '0003', 'PINTU SULIT DI AKSES', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0005', '0004', 'TIDAK ADA PENUNJUK ARAH', 'Y');
+   ('SAP', '0005', '0004', 'TIDAK ADA PENUNJUK ARAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S16', '0005', '0005', 'PENUNJUK ARAH KURANG JELAS', 'Y');
+   ('SAP', '0005', '0005', 'PENUNJUK ARAH KURANG JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -9395,155 +9395,155 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('C15', '0001', '0001', 'TERLALU TINGGI', 'Y');
+   ('CGV', '0001', '0001', 'TERLALU TINGGI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D15', '0001', '0001', 'TERLAMBAT', 'Y');
+   ('DGV', '0001', '0001', 'TERLAMBAT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D15', '0001', '0002', 'TIDAK 100 %', 'Y');
+   ('DGV', '0001', '0002', 'TIDAK 100 %', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D15', '0001', '0003', 'CP TEBUSAN TERLAMBAT', 'Y');
+   ('DGV', '0001', '0003', 'CP TEBUSAN TERLAMBAT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D15', '0002', '0001', 'TERLAMBAT MEMBERIKAN FORM MUTASI ASSET', 'Y');
+   ('DGV', '0002', '0001', 'TERLAMBAT MEMBERIKAN FORM MUTASI ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D15', '0002', '0002', 'TERLALU LAMA FOLLOW UP VARIAN STOK OPNAME ASSET', 'Y');
+   ('DGV', '0002', '0002', 'TERLALU LAMA FOLLOW UP VARIAN STOK OPNAME ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D15', '0002', '0003', 'TERLAMBAT MELAKUKAN PENGESAHAN PENERIMAAN ASSET', 'Y');
+   ('DGV', '0002', '0003', 'TERLAMBAT MELAKUKAN PENGESAHAN PENERIMAAN ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D15', '0002', '0004', 'TERLAMBAT MENGEMBALIKAN FORM PENERIMAAN TAMBAHAN ASSET', 'Y');
+   ('DGV', '0002', '0004', 'TERLAMBAT MENGEMBALIKAN FORM PENERIMAAN TAMBAHAN ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D15', '0002', '0005', 'TERLAMBAT MENYERAHKAN LAPORAN HASIL STOK OPNAME', 'Y');
+   ('DGV', '0002', '0005', 'TERLAMBAT MENYERAHKAN LAPORAN HASIL STOK OPNAME', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0001', '0001', 'BARANG TAJAM', 'Y');
+   ('SGV', '0001', '0001', 'BARANG TAJAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0002', '0001', 'APAR KADALUARSA', 'Y');
+   ('SGV', '0002', '0001', 'APAR KADALUARSA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0002', '0002', 'TIDAK ADA APAR', 'Y');
+   ('SGV', '0002', '0002', 'TIDAK ADA APAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0002', '0003', 'TEKANAN KURANG', 'Y');
+   ('SGV', '0002', '0003', 'TEKANAN KURANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0002', '0004', 'SELANG NOZZLE RUSAK', 'Y');
+   ('SGV', '0002', '0004', 'SELANG NOZZLE RUSAK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0002', '0005', 'PIN PENGAMAN LEPAS', 'Y');
+   ('SGV', '0002', '0005', 'PIN PENGAMAN LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0003', '0001', 'APD TIDAK DIGUNAKAN', 'Y');
+   ('SGV', '0003', '0001', 'APD TIDAK DIGUNAKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0003', '0002', 'APD TIDAK SESUAI', 'Y');
+   ('SGV', '0003', '0002', 'APD TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0003', '0003', 'APD TIDAK LAYAK PAKAI', 'Y');
+   ('SGV', '0003', '0003', 'APD TIDAK LAYAK PAKAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0004', '0001', 'TIDAK ADA', 'Y');
+   ('SGV', '0004', '0001', 'TIDAK ADA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0004', '0002', 'TIDAK BERFUNGSI', 'Y');
+   ('SGV', '0004', '0002', 'TIDAK BERFUNGSI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0004', '0003', 'PENEMPATAN TIDAK SESUAI', 'Y');
+   ('SGV', '0004', '0003', 'PENEMPATAN TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0005', '0001', 'PINTU TIDAK TERSEDIA', 'Y');
+   ('SGV', '0005', '0001', 'PINTU TIDAK TERSEDIA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0005', '0002', 'PINTU TIDAK SESUAI KETENTUAN', 'Y');
+   ('SGV', '0005', '0002', 'PINTU TIDAK SESUAI KETENTUAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0005', '0003', 'PINTU SULIT DI AKSES', 'Y');
+   ('SGV', '0005', '0003', 'PINTU SULIT DI AKSES', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0005', '0004', 'TIDAK ADA PENUNJUK ARAH', 'Y');
+   ('SGV', '0005', '0004', 'TIDAK ADA PENUNJUK ARAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0005', '0005', 'PENUNJUK ARAH KURANG JELAS', 'Y');
+   ('SGV', '0005', '0005', 'PENUNJUK ARAH KURANG JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0006', '0001', 'MSDS TIDAK TERSEDIA', 'Y');
+   ('SGV', '0006', '0001', 'MSDS TIDAK TERSEDIA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0006', '0002', 'MSDS TIDAK JELAS', 'Y');
+   ('SGV', '0006', '0002', 'MSDS TIDAK JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S15', '0006', '0003', 'MSDS TIDAK LENGKAP', 'Y');
+   ('SGV', '0006', '0003', 'MSDS TIDAK LENGKAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M15', '0001', '0001', 'PENANGANAN KOMPLAIN LAMA', 'Y');
+   ('MGV', '0001', '0001', 'PENANGANAN KOMPLAIN LAMA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M15', '0001', '0002', 'KURANG KOOPERATIF DLM PENANGANAN KOMPLAIN', 'Y');
+   ('MGV', '0001', '0002', 'KURANG KOOPERATIF DLM PENANGANAN KOMPLAIN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E15', '0001', '0001', 'PROSES KERJA MENIMBULKAN BAU', 'Y');
+   ('EGV', '0001', '0001', 'PROSES KERJA MENIMBULKAN BAU', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E15', '0001', '0002', 'PROSES KERJA MENIMBULKAN ASAP', 'Y');
+   ('EGV', '0001', '0002', 'PROSES KERJA MENIMBULKAN ASAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E15', '0001', '0003', 'LANTAI KERJA LICIN', 'Y');
+   ('EGV', '0001', '0003', 'LANTAI KERJA LICIN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E15', '0001', '0004', 'SALAH PEMBUANGAN LIMBAH CAIR', 'Y');
+   ('EGV', '0001', '0004', 'SALAH PEMBUANGAN LIMBAH CAIR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E15', '0002', '0001', 'SIRKULASI RUANGAN KURANG BAIK', 'Y');
+   ('EGV', '0002', '0001', 'SIRKULASI RUANGAN KURANG BAIK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E15', '0002', '0002', 'RUANGAN TERLALU GELAP', 'Y');
+   ('EGV', '0002', '0002', 'RUANGAN TERLALU GELAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E15', '0002', '0003', 'AREA KERJA TERLALU SEMPIT', 'Y');
+   ('EGV', '0002', '0003', 'AREA KERJA TERLALU SEMPIT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -10115,467 +10115,467 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0018', '0004', 'WARNA REAL ALLOY', 'Y');
+   ('QHL', '0018', '0004', 'WARNA REAL ALLOY', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0002', '0004', 'KUNCI TIDAK SESUAI SOM', 'Y');
+   ('QHL', '0002', '0004', 'KUNCI TIDAK SESUAI SOM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0001', '0001', 'TIDAK SESUAI KM', 'Y');
+   ('QKL', '0001', '0001', 'TIDAK SESUAI KM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0002', '0001', 'TIDAK SESUAI KM', 'Y');
+   ('QKL', '0002', '0001', 'TIDAK SESUAI KM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0002', '0002', 'UKURAN GULUNGAN / KRENGKENG TIDAK STANDAR', 'Y');
+   ('QKL', '0002', '0002', 'UKURAN GULUNGAN / KRENGKENG TIDAK STANDAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0003', '0001', 'KAKU', 'Y');
+   ('QKL', '0003', '0001', 'KAKU', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0003', '0002', 'LEMES', 'Y');
+   ('QKL', '0003', '0002', 'LEMES', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0003', '0003', 'STADION (OMEGA)', 'Y');
+   ('QKL', '0003', '0003', 'STADION (OMEGA)', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0003', '0004', 'ARANG', 'Y');
+   ('QKL', '0003', '0004', 'ARANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0003', '0005', 'MLINTIR', 'Y');
+   ('QKL', '0003', '0005', 'MLINTIR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0003', '0006', 'MULET', 'Y');
+   ('QKL', '0003', '0006', 'MULET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0003', '0007', 'KESTABILAN', 'Y');
+   ('QKL', '0003', '0007', 'KESTABILAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0003', '0008', 'NEKUK', 'Y');
+   ('QKL', '0003', '0008', 'NEKUK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0003', '0009', 'MENGKOL', 'Y');
+   ('QKL', '0003', '0009', 'MENGKOL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0003', '0010', 'KRESEK', 'Y');
+   ('QKL', '0003', '0010', 'KRESEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0003', '0011', 'RING MALIK', 'Y');
+   ('QKL', '0003', '0011', 'RING MALIK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0003', '0012', 'MOLOR', 'Y');
+   ('QKL', '0003', '0012', 'MOLOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0003', '0013', 'NGEPIR', 'Y');
+   ('QKL', '0003', '0013', 'NGEPIR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0004', '0001', 'KOTOR', 'Y');
+   ('QKL', '0004', '0001', 'KOTOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0004', '0002', 'BUSEM', 'Y');
+   ('QKL', '0004', '0002', 'BUSEM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0004', '0003', 'NGABUT / MUTIH', 'Y');
+   ('QKL', '0004', '0003', 'NGABUT / MUTIH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0004', '0004', 'BERKARAT / TEYENG', 'Y');
+   ('QKL', '0004', '0004', 'BERKARAT / TEYENG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0005', '0001', 'KURANG CERAH', 'Y');
+   ('QKL', '0005', '0001', 'KURANG CERAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0005', '0002', 'LUNTUR', 'Y');
+   ('QKL', '0005', '0002', 'LUNTUR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0005', '0003', 'GOSONG', 'Y');
+   ('QKL', '0005', '0003', 'GOSONG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0006', '0001', 'NGGARIS', 'Y');
+   ('QKL', '0006', '0001', 'NGGARIS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0006', '0002', 'NYACAH', 'Y');
+   ('QKL', '0006', '0002', 'NYACAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0006', '0003', 'NYERBUK', 'Y');
+   ('QKL', '0006', '0003', 'NYERBUK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0006', '0004', 'BESET', 'Y');
+   ('QKL', '0006', '0004', 'BESET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0006', '0005', 'PECAH ', 'Y');
+   ('QKL', '0006', '0005', 'PECAH ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0006', '0006', 'BOLONG', 'Y');
+   ('QKL', '0006', '0006', 'BOLONG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0006', '0007', 'KASAR / TAJAM', 'Y');
+   ('QKL', '0006', '0007', 'KASAR / TAJAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0006', '0008', 'KERLIP', 'Y');
+   ('QKL', '0006', '0008', 'KERLIP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0006', '0009', 'PESOK / DEKOK', 'Y');
+   ('QKL', '0006', '0009', 'PESOK / DEKOK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0006', '0010', 'TIPIS', 'Y');
+   ('QKL', '0006', '0010', 'TIPIS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0006', '0011', 'TIDAK RATA ', 'Y');
+   ('QKL', '0006', '0011', 'TIDAK RATA ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0007', '0001', 'TIDAK RATA', 'Y');
+   ('QKL', '0007', '0001', 'TIDAK RATA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0008', '0001', 'TIDAK KILAP', 'Y');
+   ('QKL', '0008', '0001', 'TIDAK KILAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0009', '0001', 'BOLONG', 'Y');
+   ('QKL', '0009', '0001', 'BOLONG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0009', '0002', 'TIDAK RATA', 'Y');
+   ('QKL', '0009', '0002', 'TIDAK RATA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0010', '0001', 'HALUS', 'Y');
+   ('QKL', '0010', '0001', 'HALUS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0010', '0002', 'BENDOL', 'Y');
+   ('QKL', '0010', '0002', 'BENDOL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0010', '0003', 'JUMLAH TIDAK SESUAI', 'Y');
+   ('QKL', '0010', '0003', 'JUMLAH TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0010', '0004', 'BANYAK SAMBUNGAN', 'Y');
+   ('QKL', '0010', '0004', 'BANYAK SAMBUNGAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0011', '0001', 'JUMLAH PLINTIRAN', 'Y');
+   ('QKL', '0011', '0001', 'JUMLAH PLINTIRAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0011', '0002', 'KESTABILAN', 'Y');
+   ('QKL', '0011', '0002', 'KESTABILAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0012', '0001', 'GETAS', 'Y');
+   ('QKL', '0012', '0001', 'GETAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0012', '0002', 'KEROPOS', 'Y');
+   ('QKL', '0012', '0002', 'KEROPOS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0013', '0001', 'NGLOKOR', 'Y');
+   ('QKL', '0013', '0001', 'NGLOKOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0013', '0002', 'KESTABILAN', 'Y');
+   ('QKL', '0013', '0002', 'KESTABILAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0014', '0001', 'SALAH MOTIF / MODEL', 'Y');
+   ('QKL', '0014', '0001', 'SALAH MOTIF / MODEL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0015', '0001', 'KADAR', 'Y');
+   ('QKL', '0015', '0001', 'KADAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0015', '0002', 'KOMPONEN BAHAN', 'Y');
+   ('QKL', '0015', '0002', 'KOMPONEN BAHAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0015', '0003', 'PROSES ( DOUBLE / BELUM TERINPUTKAN )', 'Y');
+   ('QKL', '0015', '0003', 'PROSES ( DOUBLE / BELUM TERINPUTKAN )', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0015', '0004', 'SUSUT PROSES ( TERLALU KECIL / BESAR )', 'Y');
+   ('QKL', '0015', '0004', 'SUSUT PROSES ( TERLALU KECIL / BESAR )', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0015', '0005', 'ALLOY YANG TIDAK SESUAI', 'Y');
+   ('QKL', '0015', '0005', 'ALLOY YANG TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0015', '0006', 'JENIS BATU YANG PAKAI', 'Y');
+   ('QKL', '0015', '0006', 'JENIS BATU YANG PAKAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0015', '0007', 'LAMA PROSES YANG TIDAK SESUAI', 'Y');
+   ('QKL', '0015', '0007', 'LAMA PROSES YANG TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0015', '0008', 'PROSES UBS BELUM TERINPUTKAN', 'Y');
+   ('QKL', '0015', '0008', 'PROSES UBS BELUM TERINPUTKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0015', '0009', 'LAMA PROSES BELUM TERINPUTKAN', 'Y');
+   ('QKL', '0015', '0009', 'LAMA PROSES BELUM TERINPUTKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0015', '0010', 'DATA BOM 3/4 BELUM DIINPUTKAN', 'Y');
+   ('QKL', '0015', '0010', 'DATA BOM 3/4 BELUM DIINPUTKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0015', '0011', 'DATA BOR 3/4 BELUM DIINPUTKAN', 'Y');
+   ('QKL', '0015', '0011', 'DATA BOR 3/4 BELUM DIINPUTKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0015', '0012', 'DATA BOM DAN BOR TIDAK UPDATE', 'Y');
+   ('QKL', '0015', '0012', 'DATA BOM DAN BOR TIDAK UPDATE', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0016', '0001', 'JAM KERJA DARI DEPARTEMEN YANG TERLAMBAT / SALAH', 'Y');
+   ('QKL', '0016', '0001', 'JAM KERJA DARI DEPARTEMEN YANG TERLAMBAT / SALAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0016', '0002', 'TIDAK ADA KONFIRMASI KE AUDIT APABILA ADA PERUBAHAN / KEBIJAKAN ', 'Y');
+   ('QKL', '0016', '0002', 'TIDAK ADA KONFIRMASI KE AUDIT APABILA ADA PERUBAHAN / KEBIJAKAN ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0016', '0003', 'BUKTI DOKUMEN YANG DIMINTA AUDIT TIDAK SESUAI', 'Y');
+   ('QKL', '0016', '0003', 'BUKTI DOKUMEN YANG DIMINTA AUDIT TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0016', '0004', 'BUKA TUTUP KOMPLIT DATA', 'Y');
+   ('QKL', '0016', '0004', 'BUKA TUTUP KOMPLIT DATA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0016', '0005', 'HUMAN ERROR ( MASALAH DATA )', 'Y');
+   ('QKL', '0016', '0005', 'HUMAN ERROR ( MASALAH DATA )', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D09', '0001', '0001', 'SETORAN BARANG JADI KURANG', 'Y');
+   ('DKL', '0001', '0001', 'SETORAN BARANG JADI KURANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D09', '0001', '0002', 'SETORAN BARANG JADI  KELEBIHAN', 'Y');
+   ('DKL', '0001', '0002', 'SETORAN BARANG JADI  KELEBIHAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D09', '0001', '0003', 'BARANG JADI KEPAGIAN', 'Y');
+   ('DKL', '0001', '0003', 'BARANG JADI KEPAGIAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D09', '0001', '0004', 'BARANG JADI TELAT', 'Y');
+   ('DKL', '0001', '0004', 'BARANG JADI TELAT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D09', '0001', '0005', 'SALAH BON / TERTUKAR', 'Y');
+   ('DKL', '0001', '0005', 'SALAH BON / TERTUKAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D09', '0001', '0006', 'SALAH KIRIM DIVISI ', 'Y');
+   ('DKL', '0001', '0006', 'SALAH KIRIM DIVISI ', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D09', '0001', '0008', 'BARANG YANG SUDAH DITERIMA BELUM DISAHKAN', 'Y');
+   ('DKL', '0001', '0008', 'BARANG YANG SUDAH DITERIMA BELUM DISAHKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D09', '0002', '0001', 'TERLAMBAT MEMBERIKAN FORM MUTASI ASSET', 'Y');
+   ('DKL', '0002', '0001', 'TERLAMBAT MEMBERIKAN FORM MUTASI ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D09', '0002', '0002', 'TERLALU LAMA FOLLOW UP VARIAN STOK OPNAME ASSET', 'Y');
+   ('DKL', '0002', '0002', 'TERLALU LAMA FOLLOW UP VARIAN STOK OPNAME ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D09', '0002', '0003', 'TERLAMBAT MELAKUKAN PENGESAHAN PENERIMAAN ASSET', 'Y');
+   ('DKL', '0002', '0003', 'TERLAMBAT MELAKUKAN PENGESAHAN PENERIMAAN ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D09', '0002', '0004', 'TERLAMBAT MENGEMBALIKAN FORM PENERIMAAN TAMBAHAN ASSET', 'Y');
+   ('DKL', '0002', '0004', 'TERLAMBAT MENGEMBALIKAN FORM PENERIMAAN TAMBAHAN ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D09', '0002', '0005', 'TERLAMBAT MENYERAHKAN LAPORAN HASIL STOK OPNAME', 'Y');
+   ('DKL', '0002', '0005', 'TERLAMBAT MENYERAHKAN LAPORAN HASIL STOK OPNAME', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('C09', '0001', '0001', 'SUSUT', 'Y');
+   ('CKL', '0001', '0001', 'SUSUT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('C09', '0001', '0002', 'KADAR NAIK TURUN', 'Y');
+   ('CKL', '0001', '0002', 'KADAR NAIK TURUN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('C09', '0001', '0003', 'SISA BAHAN KECAMPUR ALLOY/ KADAR LAIN', 'Y');
+   ('CKL', '0001', '0003', 'SISA BAHAN KECAMPUR ALLOY/ KADAR LAIN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('C09', '0001', '0004', 'CP KOTOR', 'Y');
+   ('CKL', '0001', '0004', 'CP KOTOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('C09', '0001', '0005', 'BERAT NON AU TIDAK SESUAI', 'Y');
+   ('CKL', '0001', '0005', 'BERAT NON AU TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('C09', '0001', '0006', 'ADA BARANG NON AU YANG DISETOR', 'Y');
+   ('CKL', '0001', '0006', 'ADA BARANG NON AU YANG DISETOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('C09', '0001', '0007', 'SALAH INPUT JUMLAH BENANG (NON AU)', 'Y');
+   ('CKL', '0001', '0007', 'SALAH INPUT JUMLAH BENANG (NON AU)', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M09', '0001', '0001', 'PENANGANAN KOMPLAIN LAMA', 'Y');
+   ('MKL', '0001', '0001', 'PENANGANAN KOMPLAIN LAMA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M09', '0001', '0002', 'KURANG KOOPERATIF DLM PENANGANAN KOMPLAIN', 'Y');
+   ('MKL', '0001', '0002', 'KURANG KOOPERATIF DLM PENANGANAN KOMPLAIN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E09', '0001', '0001', 'PROSES KERJA MENIMBULKAN BAU', 'Y');
+   ('EKL', '0001', '0001', 'PROSES KERJA MENIMBULKAN BAU', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E09', '0001', '0002', 'PROSES KERJA MENIMBULKAN ASAP', 'Y');
+   ('EKL', '0001', '0002', 'PROSES KERJA MENIMBULKAN ASAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E09', '0001', '0003', 'LANTAI KERJA LICIN', 'Y');
+   ('EKL', '0001', '0003', 'LANTAI KERJA LICIN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E09', '0002', '0001', 'SALAH PEMBUANGAN LIMBAH CAIR', 'Y');
+   ('EKL', '0002', '0001', 'SALAH PEMBUANGAN LIMBAH CAIR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E09', '0002', '0002', 'SIRKULASI RUANGAN KURANG BAIK', 'Y');
+   ('EKL', '0002', '0002', 'SIRKULASI RUANGAN KURANG BAIK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E09', '0002', '0003', 'RUANGAN TERLALU GELAP', 'Y');
+   ('EKL', '0002', '0003', 'RUANGAN TERLALU GELAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E09', '0002', '0004', 'AREA KERJA TERLALU SEMPIT', 'Y');
+   ('EKL', '0002', '0004', 'AREA KERJA TERLALU SEMPIT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0001', '0001', 'BARANG TAJAM', 'Y');
+   ('SKL', '0001', '0001', 'BARANG TAJAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0002', '0001', 'APAR KADALUARSA', 'Y');
+   ('SKL', '0002', '0001', 'APAR KADALUARSA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0002', '0002', 'TIDAK ADA APAR', 'Y');
+   ('SKL', '0002', '0002', 'TIDAK ADA APAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0002', '0003', 'TEKANAN KURANG', 'Y');
+   ('SKL', '0002', '0003', 'TEKANAN KURANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0002', '0004', 'SELANG NOZZLE RUSAK', 'Y');
+   ('SKL', '0002', '0004', 'SELANG NOZZLE RUSAK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0002', '0005', 'PIN PENGAMAN LEPAS', 'Y');
+   ('SKL', '0002', '0005', 'PIN PENGAMAN LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0003', '0001', 'APD TIDAK DIGUNAKAN', 'Y');
+   ('SKL', '0003', '0001', 'APD TIDAK DIGUNAKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0003', '0002', 'APD TIDAK SESUAI', 'Y');
+   ('SKL', '0003', '0002', 'APD TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0003', '0003', 'APD TIDAK LAYAK PAKAI', 'Y');
+   ('SKL', '0003', '0003', 'APD TIDAK LAYAK PAKAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0004', '0001', 'TIDAK ADA', 'Y');
+   ('SKL', '0004', '0001', 'TIDAK ADA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0004', '0002', 'TIDAK BERFUNGSI', 'Y');
+   ('SKL', '0004', '0002', 'TIDAK BERFUNGSI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0004', '0003', 'PENEMPATAN TIDAK SESUAI', 'Y');
+   ('SKL', '0004', '0003', 'PENEMPATAN TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0005', '0001', 'PINTU TIDAK TERSEDIA', 'Y');
+   ('SKL', '0005', '0001', 'PINTU TIDAK TERSEDIA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0005', '0002', 'PINTU TIDAK SESUAI KETENTUAN', 'Y');
+   ('SKL', '0005', '0002', 'PINTU TIDAK SESUAI KETENTUAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0005', '0003', 'PINTU SULIT DI AKSES', 'Y');
+   ('SKL', '0005', '0003', 'PINTU SULIT DI AKSES', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0005', '0004', 'TIDAK ADA PENUNJUK ARAH', 'Y');
+   ('SKL', '0005', '0004', 'TIDAK ADA PENUNJUK ARAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0005', '0005', 'PENUNJUK ARAH KURANG JELAS', 'Y');
+   ('SKL', '0005', '0005', 'PENUNJUK ARAH KURANG JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0006', '0001', 'MSDS TIDAK TERSEDIA', 'Y');
+   ('SKL', '0006', '0001', 'MSDS TIDAK TERSEDIA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0006', '0002', 'MSDS TIDAK JELAS', 'Y');
+   ('SKL', '0006', '0002', 'MSDS TIDAK JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S09', '0006', '0003', 'MSDS TIDAK LENGKAP', 'Y');
+   ('SKL', '0006', '0003', 'MSDS TIDAK LENGKAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -10583,7 +10583,7 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D09', '0001', '0009', 'SALAH ROLL / GULUNGAN', 'Y');
+   ('DKL', '0001', '0009', 'SALAH ROLL / GULUNGAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -10851,663 +10851,663 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D11', '0001', '0002', 'TIDAK 100 %', 'Y');
+   ('DHL', '0001', '0002', 'TIDAK 100 %', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D11', '0001', '0003', 'CP TEBUSAN TERLAMBAT', 'Y');
+   ('DHL', '0001', '0003', 'CP TEBUSAN TERLAMBAT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D11', '0002', '0001', 'TERLAMBAT MEMBERIKAN FORM MUTASI ASSET', 'Y');
+   ('DHL', '0002', '0001', 'TERLAMBAT MEMBERIKAN FORM MUTASI ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D11', '0002', '0002', 'TERLALU LAMA FOLLOW UP VARIAN STOK OPNAME ASSET', 'Y');
+   ('DHL', '0002', '0002', 'TERLALU LAMA FOLLOW UP VARIAN STOK OPNAME ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D11', '0002', '0003', 'TERLAMBAT MELAKUKAN PENGESAHAN PENERIMAAN ASSET', 'Y');
+   ('DHL', '0002', '0003', 'TERLAMBAT MELAKUKAN PENGESAHAN PENERIMAAN ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D11', '0002', '0004', 'TERLAMBAT MENGEMBALIKAN FORM PENERIMAAN TAMBAHAN ASSET', 'Y');
+   ('DHL', '0002', '0004', 'TERLAMBAT MENGEMBALIKAN FORM PENERIMAAN TAMBAHAN ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D11', '0002', '0005', 'TERLAMBAT MENYERAHKAN LAPORAN HASIL STOK OPNAME', 'Y');
+   ('DHL', '0002', '0005', 'TERLAMBAT MENYERAHKAN LAPORAN HASIL STOK OPNAME', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0001', '0001', 'BARANG TAJAM', 'Y');
+   ('SHL', '0001', '0001', 'BARANG TAJAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0002', '0001', 'APAR KADALUARSA', 'Y');
+   ('SHL', '0002', '0001', 'APAR KADALUARSA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0002', '0002', 'TIDAK ADA APAR', 'Y');
+   ('SHL', '0002', '0002', 'TIDAK ADA APAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0002', '0003', 'TEKANAN KURANG', 'Y');
+   ('SHL', '0002', '0003', 'TEKANAN KURANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0002', '0004', 'SELANG NOZZLE RUSAK', 'Y');
+   ('SHL', '0002', '0004', 'SELANG NOZZLE RUSAK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0002', '0005', 'PIN PENGAMAN LEPAS', 'Y');
+   ('SHL', '0002', '0005', 'PIN PENGAMAN LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0003', '0001', 'APD TIDAK DIGUNAKAN', 'Y');
+   ('SHL', '0003', '0001', 'APD TIDAK DIGUNAKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0003', '0002', 'APD TIDAK SESUAI', 'Y');
+   ('SHL', '0003', '0002', 'APD TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0003', '0003', 'APD TIDAK LAYAK PAKAI', 'Y');
+   ('SHL', '0003', '0003', 'APD TIDAK LAYAK PAKAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0004', '0001', 'TIDAK ADA', 'Y');
+   ('SHL', '0004', '0001', 'TIDAK ADA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0004', '0002', 'TIDAK BERFUNGSI', 'Y');
+   ('SHL', '0004', '0002', 'TIDAK BERFUNGSI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0004', '0003', 'PENEMPATAN TIDAK SESUAI', 'Y');
+   ('SHL', '0004', '0003', 'PENEMPATAN TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0005', '0001', 'PINTU TIDAK TERSEDIA', 'Y');
+   ('SHL', '0005', '0001', 'PINTU TIDAK TERSEDIA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0005', '0002', 'PINTU TIDAK SESUAI KETENTUAN', 'Y');
+   ('SHL', '0005', '0002', 'PINTU TIDAK SESUAI KETENTUAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0005', '0003', 'PINTU SULIT DI AKSES', 'Y');
+   ('SHL', '0005', '0003', 'PINTU SULIT DI AKSES', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0005', '0004', 'TIDAK ADA PENUNJUK ARAH', 'Y');
+   ('SHL', '0005', '0004', 'TIDAK ADA PENUNJUK ARAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0005', '0005', 'PENUNJUK ARAH KURANG JELAS', 'Y');
+   ('SHL', '0005', '0005', 'PENUNJUK ARAH KURANG JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0006', '0001', 'MSDS TIDAK TERSEDIA', 'Y');
+   ('SHL', '0006', '0001', 'MSDS TIDAK TERSEDIA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0006', '0002', 'MSDS TIDAK JELAS', 'Y');
+   ('SHL', '0006', '0002', 'MSDS TIDAK JELAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('S11', '0006', '0003', 'MSDS TIDAK LENGKAP', 'Y');
+   ('SHL', '0006', '0003', 'MSDS TIDAK LENGKAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M11', '0001', '0001', 'PENANGANAN KOMPLAIN LAMA', 'Y');
+   ('MHL', '0001', '0001', 'PENANGANAN KOMPLAIN LAMA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('M11', '0001', '0002', 'KURANG KOOPERATIF DLM PENANGANAN KOMPLAIN', 'Y');
+   ('MHL', '0001', '0002', 'KURANG KOOPERATIF DLM PENANGANAN KOMPLAIN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E11', '0001', '0001', 'PROSES KERJA MENIMBULKAN BAU', 'Y');
+   ('EHL', '0001', '0001', 'PROSES KERJA MENIMBULKAN BAU', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E11', '0001', '0002', 'PROSES KERJA MENIMBULKAN ASAP', 'Y');
+   ('EHL', '0001', '0002', 'PROSES KERJA MENIMBULKAN ASAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E11', '0001', '0003', 'LANTAI KERJA LICIN', 'Y');
+   ('EHL', '0001', '0003', 'LANTAI KERJA LICIN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E11', '0001', '0004', 'SALAH PEMBUANGAN LIMBAH CAIR', 'Y');
+   ('EHL', '0001', '0004', 'SALAH PEMBUANGAN LIMBAH CAIR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E11', '0002', '0001', 'SIRKULASI RUANGAN KURANG BAIK', 'Y');
+   ('EHL', '0002', '0001', 'SIRKULASI RUANGAN KURANG BAIK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E11', '0002', '0002', 'RUANGAN TERLALU GELAP', 'Y');
+   ('EHL', '0002', '0002', 'RUANGAN TERLALU GELAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('E11', '0002', '0003', 'AREA KERJA TERLALU SEMPIT', 'Y');
+   ('EHL', '0002', '0003', 'AREA KERJA TERLALU SEMPIT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0001', '0001', 'KEHITAMAN', 'Y');
+   ('QFC', '0001', '0001', 'KEHITAMAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0001', '0002', 'TIDAK RATA/ BELANG', 'Y');
+   ('QFC', '0001', '0002', 'TIDAK RATA/ BELANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0001', '0003', 'NGEDOFT/KURANG KILAP', 'Y');
+   ('QFC', '0001', '0003', 'NGEDOFT/KURANG KILAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0001', '0004', 'RONTOK/ MUDAH PUDAR', 'Y');
+   ('QFC', '0001', '0004', 'RONTOK/ MUDAH PUDAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0001', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
+   ('QFC', '0001', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0002', '0001', 'KURANG HITAM', 'Y');
+   ('QFC', '0002', '0001', 'KURANG HITAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0002', '0002', 'KEHITAMAN', 'Y');
+   ('QFC', '0002', '0002', 'KEHITAMAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0002', '0003', 'TIDAK RATA/ BELANG', 'Y');
+   ('QFC', '0002', '0003', 'TIDAK RATA/ BELANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0002', '0004', 'NGEDOFT/KURANG KILAP', 'Y');
+   ('QFC', '0002', '0004', 'NGEDOFT/KURANG KILAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0002', '0005', 'MUDAH PUDAR', 'Y');
+   ('QFC', '0002', '0005', 'MUDAH PUDAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0002', '0006', 'SALAH KOMPOSISI WARNA', 'Y');
+   ('QFC', '0002', '0006', 'SALAH KOMPOSISI WARNA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0003', '0001', 'KEHITAMAN/ GOSONG', 'Y');
+   ('QFC', '0003', '0001', 'KEHITAMAN/ GOSONG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0003', '0002', 'KURANG PINKIS', 'Y');
+   ('QFC', '0003', '0002', 'KURANG PINKIS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0003', '0003', 'TIDAK RATA/ BELANG', 'Y');
+   ('QFC', '0003', '0003', 'TIDAK RATA/ BELANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0003', '0004', 'NGEDOFT/KURANG KILAP', 'Y');
+   ('QFC', '0003', '0004', 'NGEDOFT/KURANG KILAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0003', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
+   ('QFC', '0003', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0004', '0001', 'GESER DARI STANDART', 'Y');
+   ('QFC', '0004', '0001', 'GESER DARI STANDART', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0004', '0002', 'TIDAK RATA/ BELANG', 'Y');
+   ('QFC', '0004', '0002', 'TIDAK RATA/ BELANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0004', '0003', 'NGEDOFT/ KURANG KILAP', 'Y');
+   ('QFC', '0004', '0003', 'NGEDOFT/ KURANG KILAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0004', '0004', 'MUDAH PUDAR', 'Y');
+   ('QFC', '0004', '0004', 'MUDAH PUDAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0004', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
+   ('QFC', '0004', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0004', '0006', 'KUSAM/ LETHEK', 'Y');
+   ('QFC', '0004', '0006', 'KUSAM/ LETHEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0005', '0001', 'GESER DARI STANDART', 'Y');
+   ('QFC', '0005', '0001', 'GESER DARI STANDART', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0005', '0002', 'TIDAK RATA/ BELANG', 'Y');
+   ('QFC', '0005', '0002', 'TIDAK RATA/ BELANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0005', '0003', 'NGEDOFT/ KURANG KILAP', 'Y');
+   ('QFC', '0005', '0003', 'NGEDOFT/ KURANG KILAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0005', '0004', 'MUDAH PUDAR', 'Y');
+   ('QFC', '0005', '0004', 'MUDAH PUDAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0005', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
+   ('QFC', '0005', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0005', '0006', 'KUSAM/ LETHEK', 'Y');
+   ('QFC', '0005', '0006', 'KUSAM/ LETHEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0006', '0001', 'GESER DARI STANDART', 'Y');
+   ('QFC', '0006', '0001', 'GESER DARI STANDART', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0006', '0002', 'TIDAK RATA/ BELANG', 'Y');
+   ('QFC', '0006', '0002', 'TIDAK RATA/ BELANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0006', '0003', 'NGEDOFT/ KURANG KILAP', 'Y');
+   ('QFC', '0006', '0003', 'NGEDOFT/ KURANG KILAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0006', '0004', 'MUDAH PUDAR', 'Y');
+   ('QFC', '0006', '0004', 'MUDAH PUDAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0006', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
+   ('QFC', '0006', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0006', '0006', 'KUSAM/ LETHEK', 'Y');
+   ('QFC', '0006', '0006', 'KUSAM/ LETHEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0007', '0001', 'GESER DARI STANDART', 'Y');
+   ('QFC', '0007', '0001', 'GESER DARI STANDART', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0007', '0002', 'TIDAK RATA/ BELANG', 'Y');
+   ('QFC', '0007', '0002', 'TIDAK RATA/ BELANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0007', '0003', 'NGEDOFT/ KURANG KILAP', 'Y');
+   ('QFC', '0007', '0003', 'NGEDOFT/ KURANG KILAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0007', '0004', 'MUDAH PUDAR', 'Y');
+   ('QFC', '0007', '0004', 'MUDAH PUDAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0007', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
+   ('QFC', '0007', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0007', '0006', 'KUSAM/ LETHEK', 'Y');
+   ('QFC', '0007', '0006', 'KUSAM/ LETHEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0008', '0001', 'GESER DARI STANDART', 'Y');
+   ('QFC', '0008', '0001', 'GESER DARI STANDART', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0008', '0002', 'TIDAK RATA/ BELANG', 'Y');
+   ('QFC', '0008', '0002', 'TIDAK RATA/ BELANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0008', '0003', 'NGEDOFT/ KURANG KILAP', 'Y');
+   ('QFC', '0008', '0003', 'NGEDOFT/ KURANG KILAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0008', '0004', 'MUDAH PUDAR', 'Y');
+   ('QFC', '0008', '0004', 'MUDAH PUDAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0008', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
+   ('QFC', '0008', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0008', '0006', 'KUSAM/ LETHEK', 'Y');
+   ('QFC', '0008', '0006', 'KUSAM/ LETHEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0009', '0001', 'GESER DARI STANDART', 'Y');
+   ('QFC', '0009', '0001', 'GESER DARI STANDART', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0009', '0002', 'TIDAK RATA/ BELANG', 'Y');
+   ('QFC', '0009', '0002', 'TIDAK RATA/ BELANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0009', '0003', 'NGEDOFT/ KURANG KILAP', 'Y');
+   ('QFC', '0009', '0003', 'NGEDOFT/ KURANG KILAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0009', '0004', 'MUDAH PUDAR', 'Y');
+   ('QFC', '0009', '0004', 'MUDAH PUDAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0009', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
+   ('QFC', '0009', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0009', '0006', 'KUSAM/ LETHEK', 'Y');
+   ('QFC', '0009', '0006', 'KUSAM/ LETHEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0010', '0001', 'GESER DARI STANDART', 'Y');
+   ('QFC', '0010', '0001', 'GESER DARI STANDART', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0010', '0002', 'TIDAK RATA/ BELANG', 'Y');
+   ('QFC', '0010', '0002', 'TIDAK RATA/ BELANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0010', '0003', 'NGEDOFT/ KURANG KILAP', 'Y');
+   ('QFC', '0010', '0003', 'NGEDOFT/ KURANG KILAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0010', '0004', 'MUDAH PUDAR', 'Y');
+   ('QFC', '0010', '0004', 'MUDAH PUDAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0010', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
+   ('QFC', '0010', '0005', 'SALAH KOMPOSISI WARNA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0010', '0006', 'KUSAM/ LETHEK', 'Y');
+   ('QFC', '0010', '0006', 'KUSAM/ LETHEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0011', '0001', 'KOMPOSISI WARNA TIDAK SEIMBANG', 'Y');
+   ('QFC', '0011', '0001', 'KOMPOSISI WARNA TIDAK SEIMBANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0011', '0002', 'SEKAT HITAM', 'Y');
+   ('QFC', '0011', '0002', 'SEKAT HITAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0011', '0003', 'SALAH KOMPOSISI WARNA', 'Y');
+   ('QFC', '0011', '0003', 'SALAH KOMPOSISI WARNA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0011', '0004', 'GESER DARI STANDART', 'Y');
+   ('QFC', '0011', '0004', 'GESER DARI STANDART', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0011', '0005', 'TIDAK RATA/ BELANG', 'Y');
+   ('QFC', '0011', '0005', 'TIDAK RATA/ BELANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0011', '0006', 'NGEDOFT/ KURANG KILAP', 'Y');
+   ('QFC', '0011', '0006', 'NGEDOFT/ KURANG KILAP', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0011', '0007', 'MUDAH PUDAR', 'Y');
+   ('QFC', '0011', '0007', 'MUDAH PUDAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0011', '0008', 'KUSAM/ LETHEK', 'Y');
+   ('QFC', '0011', '0008', 'KUSAM/ LETHEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0012', '0001', 'KETEBALAN TEMBAGA TIDAK STANDART', 'Y');
+   ('QFC', '0012', '0001', 'KETEBALAN TEMBAGA TIDAK STANDART', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0012', '0002', 'TIDAK RATA/ BELANG', 'Y');
+   ('QFC', '0012', '0002', 'TIDAK RATA/ BELANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0012', '0003', 'TEMBAGA TERKELUPAS', 'Y');
+   ('QFC', '0012', '0003', 'TEMBAGA TERKELUPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0012', '0004', 'KUSAM', 'Y');
+   ('QFC', '0012', '0004', 'KUSAM', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0013', '0001', 'LOSS TIDAK NGUNCI', 'Y');
+   ('QFC', '0013', '0001', 'LOSS TIDAK NGUNCI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0013', '0002', 'MULUT PIPA/TUBE GOYANG', 'Y');
+   ('QFC', '0013', '0002', 'MULUT PIPA/TUBE GOYANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0013', '0003', 'TIDAK BISA DIBUKA/ SERET', 'Y');
+   ('QFC', '0013', '0003', 'TIDAK BISA DIBUKA/ SERET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0013', '0004', 'PEER TIDAK KEMBALI', 'Y');
+   ('QFC', '0013', '0004', 'PEER TIDAK KEMBALI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0013', '0005', 'LIDAH KUNCI PUTUS', 'Y');
+   ('QFC', '0013', '0005', 'LIDAH KUNCI PUTUS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0013', '0006', 'ADA MEDIA', 'Y');
+   ('QFC', '0013', '0006', 'ADA MEDIA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0014', '0001', 'ARKAD PEYOT', 'Y');
+   ('QFC', '0014', '0001', 'ARKAD PEYOT', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0014', '0002', 'KPG KPU LOSS', 'Y');
+   ('QFC', '0014', '0002', 'KPG KPU LOSS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0014', '0003', 'KPG KPU SERET', 'Y');
+   ('QFC', '0014', '0003', 'KPG KPU SERET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0014', '0004', 'ULIR SERET', 'Y');
+   ('QFC', '0014', '0004', 'ULIR SERET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0014', '0005', 'ULIR LOSS', 'Y');
+   ('QFC', '0014', '0005', 'ULIR LOSS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0015', '0001', 'PIPA BERUBAH BENTUK', 'Y');
+   ('QFC', '0015', '0001', 'PIPA BERUBAH BENTUK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0015', '0002', 'MAINAN BERUBAH BENTUK', 'Y');
+   ('QFC', '0015', '0002', 'MAINAN BERUBAH BENTUK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0015', '0003', 'BESET BESET', 'Y');
+   ('QFC', '0015', '0003', 'BESET BESET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0015', '0004', 'SALAH PACKING BARANG', 'Y');
+   ('QFC', '0015', '0004', 'SALAH PACKING BARANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0016', '0001', 'BATU LEPAS', 'Y');
+   ('QFC', '0016', '0001', 'BATU LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0016', '0002', 'BATU PECAH', 'Y');
+   ('QFC', '0016', '0002', 'BATU PECAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0017', '0001', 'SUSUT BASAH', 'Y');
+   ('QFC', '0017', '0001', 'SUSUT BASAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0017', '0002', 'SALAH NON AU', 'Y');
+   ('QFC', '0017', '0002', 'SALAH NON AU', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0017', '0003', 'SALAH PANJANG', 'Y');
+   ('QFC', '0017', '0003', 'SALAH PANJANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0017', '0004', 'SALAH MODEL', 'Y');
+   ('QFC', '0017', '0004', 'SALAH MODEL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0017', '0005', 'SALAH KADAR', 'Y');
+   ('QFC', '0017', '0005', 'SALAH KADAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0018', '0001', 'SALAH KOMPOSISI ENAMEL', 'Y');
+   ('QFC', '0018', '0001', 'SALAH KOMPOSISI ENAMEL', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0018', '0002', 'ENAMEL TERKELUPAS', 'Y');
+   ('QFC', '0018', '0002', 'ENAMEL TERKELUPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0018', '0003', 'BENTUK ENAMEL JELEK', 'Y');
+   ('QFC', '0018', '0003', 'BENTUK ENAMEL JELEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0019', '0001', 'SALAH KOMPOSISI CATAFOR', 'Y');
+   ('QFC', '0019', '0001', 'SALAH KOMPOSISI CATAFOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0019', '0002', 'WARNA JELEK', 'Y');
+   ('QFC', '0019', '0002', 'WARNA JELEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0019', '0003', 'CATAFOR BELANG', 'Y');
+   ('QFC', '0019', '0003', 'CATAFOR BELANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0019', '0004', 'CATAFOR TERKELUPAS', 'Y');
+   ('QFC', '0019', '0004', 'CATAFOR TERKELUPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0020', '0001', 'TARIF ONGKOSAN BELUM TERINPUTKAN', 'Y');
+   ('QFC', '0020', '0001', 'TARIF ONGKOSAN BELUM TERINPUTKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0020', '0002', 'JAM KERJA DARI DEPARTEMEN TERLAMBAT / SALAH', 'Y');
+   ('QFC', '0020', '0002', 'JAM KERJA DARI DEPARTEMEN TERLAMBAT / SALAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0020', '0003', 'TIDAK ADA KONFIRMASI KE AUDIT APABILA ADA PERUBAHAN/KEBIJAKAN', 'Y');
+   ('QFC', '0020', '0003', 'TIDAK ADA KONFIRMASI KE AUDIT APABILA ADA PERUBAHAN/KEBIJAKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0020', '0004', 'HUMAN ERROR (MASALAH DATA)', 'Y');
+   ('QFC', '0020', '0004', 'HUMAN ERROR (MASALAH DATA)', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0020', '0005', 'BUKTI DOKUMEN YANG DIMINTA AUDIT TIDAK SESUAI', 'Y');
+   ('QFC', '0020', '0005', 'BUKTI DOKUMEN YANG DIMINTA AUDIT TIDAK SESUAI', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0020', '0006', 'BUKA TUTUP KOMPLIT DATA', 'Y');
+   ('QFC', '0020', '0006', 'BUKA TUTUP KOMPLIT DATA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0001', '0001', 'SALAH TUJUAN PENGIRIMAN', 'Y');
+   ('DFC', '0001', '0001', 'SALAH TUJUAN PENGIRIMAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0001', '0002', 'TIDAK SESUAI WAKTU PENGIRIMAN', 'Y');
+   ('DFC', '0001', '0002', 'TIDAK SESUAI WAKTU PENGIRIMAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0001', '0003', 'TIDAK SESUAI BARANG DAN SERAH TERIMA', 'Y');
+   ('DFC', '0001', '0003', 'TIDAK SESUAI BARANG DAN SERAH TERIMA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0001', '0004', 'BARANG HILANG', 'Y');
+   ('DFC', '0001', '0004', 'BARANG HILANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0001', '0005', 'BARANG TERTUKAR', 'Y');
+   ('DFC', '0001', '0005', 'BARANG TERTUKAR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0001', '0006', 'TUTUP VOUCHER', 'Y');
+   ('DFC', '0001', '0006', 'TUTUP VOUCHER', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0001', '0007', 'BATAL SETOR', 'Y');
+   ('DFC', '0001', '0007', 'BATAL SETOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0002', '0001', 'BARANG DT TIDAK SETOR', 'Y');
+   ('DFC', '0002', '0001', 'BARANG DT TIDAK SETOR', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0002', '0002', 'BDP DILUAR TARGET', 'Y');
+   ('DFC', '0002', '0002', 'BDP DILUAR TARGET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0002', '0003', 'TANGGAL LAMA', 'Y');
+   ('DFC', '0002', '0003', 'TANGGAL LAMA', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0002', '0004', 'BARANG DELAY', 'Y');
+   ('DFC', '0002', '0004', 'BARANG DELAY', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0002', '0011', 'CP TEBUSAN TERLAMBAT ( UNTUK DEPARTEMEN PRODUKSI )', 'Y');
+   ('DFC', '0002', '0011', 'CP TEBUSAN TERLAMBAT ( UNTUK DEPARTEMEN PRODUKSI )', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0002', '0012', 'TUTUPAN PROSES YANG MENDEKATI CUT OFF ONGKOSAN ( KHUSUSNYA UTK TUKANG BORONGAN )', 'Y');
+   ('DFC', '0002', '0012', 'TUTUPAN PROSES YANG MENDEKATI CUT OFF ONGKOSAN ( KHUSUSNYA UTK TUKANG BORONGAN )', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0003', '0001', 'TERLAMBAT MEMBERIKAN FORM MUTASI ASSET', 'Y');
+   ('DFC', '0003', '0001', 'TERLAMBAT MEMBERIKAN FORM MUTASI ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0003', '0002', 'TERLALU LAMA FOLLOW UP VARIAN STOK OPNAME ASSET', 'Y');
+   ('DFC', '0003', '0002', 'TERLALU LAMA FOLLOW UP VARIAN STOK OPNAME ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0003', '0003', 'TERLAMBAT MELAKUKAN PENGESAHAN PENERIMAAN ASSET', 'Y');
+   ('DFC', '0003', '0003', 'TERLAMBAT MELAKUKAN PENGESAHAN PENERIMAAN ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D19', '0003', '0004', 'TERLAMBAT MENGEMBALIKAN FORM PENERIMAAN TAMBAHAN ASSET', 'Y');
+   ('DFC', '0003', '0004', 'TERLAMBAT MENGEMBALIKAN FORM PENERIMAAN TAMBAHAN ASSET', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0001', '0008', 'NYACAH', 'Y');
+   ('QAP', '0001', '0008', 'NYACAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D16', '0001', '0005', 'TIDAK FIFO', 'Y');
+   ('DAP', '0001', '0005', 'TIDAK FIFO', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0004', '0021', 'BASAH', NULL);
+   ('QBH', '0004', '0021', 'BASAH', NULL);
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0006', '0033', 'BASAH', NULL);
+   ('QBH', '0006', '0033', 'BASAH', NULL);
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0007', '0031', 'BASAH', NULL);
+   ('QBH', '0007', '0031', 'BASAH', NULL);
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0001', '0005', 'GARIS', 'Y');
+   ('QAP', '0001', '0005', 'GARIS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('P16', '0001', '0004', 'NEKEN', 'Y');
+   ('PAP', '0001', '0004', 'NEKEN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -11523,19 +11523,19 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q09', '0017', '0001', 'SUSUT', 'T');
+   ('QKL', '0017', '0001', 'SUSUT', 'T');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q11', '0023', '0001', 'SUSUT', 'T');
+   ('QHL', '0023', '0001', 'SUSUT', 'T');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0044', 'NGETOK', NULL);
+   ('QBH', '0010', '0044', 'NGETOK', NULL);
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q19', '0021', '0001', 'SUSUT', 'T');
+   ('QFC', '0021', '0001', 'SUSUT', 'T');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -11547,27 +11547,27 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0009', '0017', 'BASAH', NULL);
+   ('QBH', '0009', '0017', 'BASAH', NULL);
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0043', 'LASERAN LUBANG', NULL);
+   ('QBH', '0010', '0043', 'LASERAN LUBANG', NULL);
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0003', '0006', 'PENDEK', 'Y');
+   ('QAP', '0003', '0006', 'PENDEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0001', '0007', 'NYERBUK', 'Y');
+   ('QAP', '0001', '0007', 'NYERBUK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0025', 'ORDERAN TIDAK SESUAI OVEN/TO', NULL);
+   ('QBH', '0001', '0025', 'ORDERAN TIDAK SESUAI OVEN/TO', NULL);
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0046', 'BENTUK POTONGAN TIDAK SIMETRIS', NULL);
+   ('QBH', '0010', '0046', 'BENTUK POTONGAN TIDAK SIMETRIS', NULL);
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -12007,51 +12007,51 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0001', '0004', 'NEKEN', 'Y');
+   ('QAP', '0001', '0004', 'NEKEN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0002', '0002', 'TIDAK STANDART', 'Y');
+   ('QAP', '0002', '0002', 'TIDAK STANDART', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0003', '0004', 'KROPOS', 'Y');
+   ('QAP', '0003', '0004', 'KROPOS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0003', '0005', 'RETAK', 'Y');
+   ('QAP', '0003', '0005', 'RETAK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0003', '0007', 'MATA IKAN', 'Y');
+   ('QAP', '0003', '0007', 'MATA IKAN', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('P16', '0001', '0002', 'GOYANG', 'Y');
+   ('PAP', '0001', '0002', 'GOYANG', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('P16', '0001', '0003', 'LEPAS', 'Y');
+   ('PAP', '0001', '0003', 'LEPAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('P16', '0001', '0005', 'SUDUT TIDAK STANDART', 'Y');
+   ('PAP', '0001', '0005', 'SUDUT TIDAK STANDART', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D16', '0001', '0002', 'STOCK PISAU TERBATAS', 'Y');
+   ('DAP', '0001', '0002', 'STOCK PISAU TERBATAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D16', '0001', '0003', 'STOCK INTAN TERBATAS', 'Y');
+   ('DAP', '0001', '0003', 'STOCK INTAN TERBATAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D16', '0001', '0004', 'STOCK BODY TERBATAS', 'Y');
+   ('DAP', '0001', '0004', 'STOCK BODY TERBATAS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0001', '0026', 'BASAH', NULL);
+   ('QBH', '0001', '0026', 'BASAH', NULL);
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -12059,11 +12059,11 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q16', '0001', '0006', 'NGEFLEK', 'Y');
+   ('QAP', '0001', '0006', 'NGEFLEK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('D16', '0001', '0006', 'TIDAK TERSCHEDULE', 'Y');
+   ('DAP', '0001', '0006', 'TIDAK TERSCHEDULE', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -12071,7 +12071,7 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0008', '0020', 'ORDERAN TIDAK SESUAI OVEN/TO', NULL);
+   ('QBH', '0008', '0020', 'ORDERAN TIDAK SESUAI OVEN/TO', NULL);
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
@@ -12079,39 +12079,39 @@ Insert into KP.SUB_TOPIK2
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0041', 'ORDERAN TIDAK SESUAI OVEN/TO', NULL);
+   ('QBH', '0010', '0041', 'ORDERAN TIDAK SESUAI OVEN/TO', NULL);
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0037', 'BASAH', NULL);
+   ('QBH', '0002', '0037', 'BASAH', NULL);
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0024', 'NYERBUK', 'Y');
+   ('QBH', '0003', '0024', 'NYERBUK', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0002', '0038', 'JEBROS', 'Y');
+   ('QBH', '0002', '0038', 'JEBROS', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0003', '0023', 'BASAH', 'Y');
+   ('QBH', '0003', '0023', 'BASAH', 'Y');
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0005', '0007', 'BASAH', NULL);
+   ('QBH', '0005', '0007', 'BASAH', NULL);
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0042', 'BASAH', NULL);
+   ('QBH', '0010', '0042', 'BASAH', NULL);
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0011', '0002', 'BASAH', NULL);
+   ('QBH', '0011', '0002', 'BASAH', NULL);
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values
-   ('Q12', '0010', '0045', 'MELEMBUNG', NULL);
+   ('QBH', '0010', '0045', 'MELEMBUNG', NULL);
 Insert into KP.SUB_TOPIK2
    (KODE_TOPIK, SUB_TOPIK1, SUB_TOPIK2, DESKRIPSI, AKTIF)
  Values

@@ -2,7 +2,7 @@
 
 <?= error_button("Kembali", "fas fa-fw fa-step-backward", "", "", "Admin/Master/Subtopik2") ?>
 
-<form action="<?= base_url() ?>Admin/Master/Subtopik2/EditProcess/<?= $subtopic->SUB_TOPIK2; ?>" method="post" class="mt-4" style="color:black;">
+<form action="<?= base_url() ?>Admin/Master/Subtopik2/EditProcess/<?= $subtopic->KODE_TOPIK; ?>/<?= $subtopic->SUB_TOPIK1; ?>/<?= $subtopic->SUB_TOPIK2; ?>" method="post" class="mt-4" style="color:black;">
     <div class="row">
         <div class="col">
 
@@ -21,9 +21,9 @@
                 foreach ($list_subtopik1 as $subtopik) {
                     // echo "<option value='$subtopik->SUB_TOPIK1'>$subtopik->SUB_TOPIK1 - $subtopik->DESKRIPSI</option>";
                     if ($subtopic->SUB_TOPIK1 == $subtopik->SUB_TOPIK1) {
-                        echo "<option value='$subtopik->KODE_TOPIK - $subtopik->TOPIK @$subtopik->SUB_TOPIK1^$subtopik->NAMA_DIVISI' selected>$subtopik->SUB_TOPIK1 - $subtopik->DESKRIPSI</option>";
+                        echo "<option value='$subtopik->KODE_TOPIK - $subtopik->TOPIK @$subtopik->SUB_TOPIK1^$subtopik->NAMA_DIVISI' selected>$subtopik->KODE_TOPIK - $subtopik->SUB_TOPIK1 - $subtopik->DESKRIPSI</option>";
                     } else {
-                        echo "<option value='$subtopik->KODE_TOPIK - $subtopik->TOPIK @$subtopik->SUB_TOPIK1^$subtopik->NAMA_DIVISI'>$subtopik->SUB_TOPIK1 - $subtopik->DESKRIPSI</option>";
+                        echo "<option value='$subtopik->KODE_TOPIK - $subtopik->TOPIK @$subtopik->SUB_TOPIK1^$subtopik->NAMA_DIVISI'>$subtopik->KODE_TOPIK - $subtopik->SUB_TOPIK1 - $subtopik->DESKRIPSI</option>";
                     }
                 }
                 ?>
@@ -59,7 +59,7 @@
             <div class="modal-body">Apakah anda yakin ingin menghapus subtopik 2 ini?</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
-                <a class="btn btn-primary" href="<?= base_url() ?>Admin/Master/Subtopik2/DeleteProcess/<?= $subtopic->SUB_TOPIK2; ?>">Ya</a>
+                <a class="btn btn-primary" href="<?= base_url() ?>Admin/Master/Subtopik2/DeleteProcess/<?= $subtopic->KODE_TOPIK; ?>/<?= $subtopic->SUB_TOPIK1; ?>/<?= $subtopic->SUB_TOPIK2; ?>">Ya</a>
             </div>
         </div>
     </div>
