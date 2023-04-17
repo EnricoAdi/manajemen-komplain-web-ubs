@@ -15,7 +15,12 @@ class SubTopik1Model extends CI_Model
        JOIN TOPIK T ON S.KODE_TOPIK = T.KODE_TOPIK
        JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN')->result();
     }
-    public function get($subtopik1, $topik){
+    public function fetchByTopik($kode_topik){ 
+       return $this->db->query("SELECT S.*, T.TOPIK, D.NAMA AS NAMA_DIVISI FROM SUB_TOPIK1 S 
+       JOIN TOPIK T ON S.KODE_TOPIK = T.KODE_TOPIK
+       JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN WHERE S.KODE_TOPIK='$kode_topik'")->result();
+    }
+    public function get($topik,$subtopik1){
         $query = $this->db->query("SELECT S.*, T.TOPIK, D.NAMA AS NAMA_DIVISI 
         FROM SUB_TOPIK1 S JOIN TOPIK T ON S.KODE_TOPIK = T.KODE_TOPIK 
         JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN

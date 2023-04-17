@@ -77,7 +77,7 @@ class Subtopik1 extends CI_Controller
         $data['list_topik'] = $this->TopikModel->fetch();
         $data['login'] = $this->UsersModel->getLogin();
 
-        $subtopic = $this->SubTopik1Model->get($kodesubtopik1,$kodetopik);
+        $subtopic = $this->SubTopik1Model->get($kodetopik,$kodesubtopik1);
         if($subtopic==null){
             $this->session->set_flashdata('header', 'Pesan');
             $this->session->set_flashdata('message', 'Subtopik 1 Tidak Ditemukan');

@@ -125,7 +125,7 @@ $routes = [
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pengajuan Komplain</h6>
                         <a class="collapse-item" href="<?= base_url(); ?>User/Complain/ListComplain">Daftar Komplain</a>
-                        <a class="collapse-item" href="<?= base_url()?>User/Complain/Add/page/1">Tambah Komplain</a>
+                        <a class="collapse-item" href="<?= base_url()?>User/Complain/Add/pilihDivisi">Tambah Komplain</a>
                     </div>
                 </div>
             </li>

@@ -1,6 +1,7 @@
- <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
      <ol class="breadcrumb" style="background-color:#F1F2F5;">
-         <li class="breadcrumb-item active">Tanggal</li>
+         <li class="breadcrumb-item"><a href="<?= base_url() ?>User/Complain/Add/page/1">Topic</a></li>
+         <li class="breadcrumb-item active">Subtopik 2</li>
          <li class="breadcrumb-item">...</li>
      </ol>
  </nav>

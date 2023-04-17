@@ -19,6 +19,10 @@ class TopikModel extends CI_Model
        return $this->db->query('SELECT T.*, D.NAMA AS NAMA_DIVISI FROM TOPIK T JOIN DIVISI D ON 
        D.KODEDIV=T.DIV_TUJUAN ORDER BY KODE_TOPIK ASC')->result();
     }
+    public function fetchByDivisi($kode_divisi){ 
+       return $this->db->query("SELECT T.*, D.NAMA AS NAMA_DIVISI FROM TOPIK T JOIN DIVISI D ON 
+       D.KODEDIV=T.DIV_TUJUAN WHERE D.KODEDIV='$kode_divisi' ORDER BY KODE_TOPIK ASC")->result();
+    }
     public function get($kode_topik){ 
         $query = $this->db->query("SELECT T.*, D.NAMA AS NAMA_DIVISI 
         FROM TOPIK T JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN
