@@ -70,6 +70,8 @@
         
         $komplain = $this->KomplainAModel->get($nomor_komplain); 
 
+        $data['minDate'] = date('Y-m-d');
+
         if($komplain==null){
             $this->session->set_flashdata('header', 'Pesan');
             $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
@@ -92,6 +94,8 @@
         $data['page_title'] = "Input Penyelesaian Komplain";
         $data['login'] = $this->UsersModel->getLogin();
         
+        $data['minDate'] = date('Y-m-d');
+
         $komplain = $this->KomplainAModel->get($nomor_komplain); 
 
         if($komplain==null){
@@ -218,7 +222,7 @@
                         $ext = pathinfo($lampirans['name'][$i], PATHINFO_EXTENSION);
 
                         $config['upload_path'] = './uploads/';
-                        $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg|txt';
+                        $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg|txt|xlsx|docx|csv'; 
                         $config['max_size'] = 5000; // in Kilobytes
                         $config['file_name'] = $getNewFileName;
 
@@ -249,10 +253,12 @@
                 $this->session->set_flashdata('message', 'Terdapat error dalam upload lampiran');
                 redirect('User/Complained/Penyelesaian/lampiranPage/'.$nomor_komplain);
             }else{
+                $topik = $komplain->TOPIK;
+                $subtopik1 = $komplain->SUB_TOPIK1;
                 $subtopik2 = $komplain->SUB_TOPIK2;
                 $header = "Sukses menambahkan penyelesaian komplain";
                 $template = $this->templateEmailSuccessFeedback($header, $this->UsersModel->getLogin()->NAMA,
-                $this->SubTopik2Model->get($subtopik2)->DESKRIPSI);
+                $this->SubTopik2Model->get($topik,$subtopik1,$subtopik2)->DESKRIPSI);
        
                 $resultmail = send_mail($this->UsersModel->getLogin()->EMAIL, 
                 $header, $template); 

@@ -100,10 +100,8 @@
         </div> 
 
     <div class="row mt-4">
-        <div class="col">
-            <button type="submit" id="btnDone" class="btn btn-warning" style="color:white;   background-color: <?= primary_color(); ?>;width:120px;">
-
-                Selesai</button>
+        <div class="col"> 
+                <?= primary_submit_button("Selesai","","btnDone")?>
         </div>
     </div>
 

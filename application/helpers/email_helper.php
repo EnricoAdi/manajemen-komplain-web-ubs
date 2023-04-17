@@ -86,3 +86,15 @@ function templateEmail($header, $nama, $message)
      </body>
    </html>";
 }
+
+function emailToManager($subject,$message){
+  
+  $ci = &get_instance();
+  $getLogin = $ci->UsersModel->getLogin(); 
+  $emailAtasan = $getLogin->EMAIL_ATASAN;
+  $res = false;
+  if($emailAtasan!=null){
+    $res = send_mail("",$subject,$message);
+  }
+  return $res;
+}

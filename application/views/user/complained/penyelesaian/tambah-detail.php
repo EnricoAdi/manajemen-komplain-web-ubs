@@ -20,6 +20,7 @@
 <form action="<?= base_url() ?>User/Complained/Penyelesaian/addPenyelesaianPage1Process/<?= $komplain->NO_KOMPLAIN; ?>" 
     method="post" class="mt-4" style="color:black;">
  
+    <input type="hidden" id="minDate" value="<?= $minDate; ?>">
     <div class="row">
         <div class="col"> 
             <label class="form-label mt-2">Masalah Komplain</label>
@@ -44,18 +45,23 @@
     <div class="row mt-4">
         <div class="col"> 
             <label class="form-label">Tanggal Deadline</label>
-            <input type="date" name="tanggal" class="form-control" value="<?= $tanggalDeadline; ?>" required>
+            <input type="date" name="tanggal" id="tanggal" class="form-control" value="<?= $tanggalDeadline; ?>" required>
 
         </div>
         <div class="col"></div>
         <div class="col"></div>
     </div>
     <div class="row mt-4">
-        <div class="col">  
-            <button type="submit" id="btnNext" class="btn btn-success" style="color:white; 
-            background-color: <?= primary_color(); ?>; width:120px;">
- 
-                Berikutnya</button>
+        <div class="col">   
+            <?= primary_submit_button("Berikutnya","","btnNext") ?>
         </div>
     </div>
 </form>
+
+<script>
+    window.onload = ()=>{  
+        const minDate = document.getElementById("minDate").value;  
+        document.getElementById('tanggal').setAttribute("min", minDate);
+    }
+
+</script>

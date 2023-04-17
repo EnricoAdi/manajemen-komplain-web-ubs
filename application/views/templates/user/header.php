@@ -83,7 +83,7 @@ $routes = [
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <img src="<?= asset_url(); ?>images/logo.png" alt="ubs" style="width:100%; margin-top:30px; border-radius:10px;">
             </a>
 

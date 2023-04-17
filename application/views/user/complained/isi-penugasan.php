@@ -52,21 +52,21 @@
             <input type="text" class="form-control" name="tanggal" value="<?= $komplain->TGL_KEJADIAN; ?>" disabled>
 
             <label for="" class="form-label mt-4">Asal Divisi</label>
-            <input type="text" class="form-control" name="asalDivisi" value="<?= $komplain->PENERBIT->NAMA_DIVISI; ?>" disabled>
+            <input type="text" class="form-control" name="asalDivisi" value="<?= $komplain->PENERBIT->NAMA; ?>" disabled>
         </div>
     </div>
 
     <div class="row mt-4">
-        <div class="col">
-            <button id="btnDelete" class="btn btn-warning" style=" background-color: <?= error_color(); ?>;">
-
-                <i class="fas fa-fw fa-trash mr-2"></i>
-                Hapus Penugasan
-            </button>
-            <button type="submit" id="btnNext" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>; width:220px; margin-left:15px;">
-
-                <i class="fas fa-fw fa-save mr-2"></i>
-                Simpan Penugasan</button>
+        <div class="col">  
+            
+            <?php
+                if ($komplain->PENUGASAN == null) {
+                    echo primary_submit_button("Simpan Penugasan","fas fa-fw fa-save mr-2","",""); 
+                } else{
+                    echo error_button("Hapus Penugasan","fas fa-fw fa-trash mr-2","btnDelete","");
+                }
+            ?>
+          
         </div>
     </div>
 </form>
@@ -83,6 +83,7 @@
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
                 <a class="btn btn-primary" href="<?= base_url() ?>User/Complained/Penugasan/hapusPenugasan/<?= $komplain->NO_KOMPLAIN ?>">Ya</a>
+
             </div>
         </div>
     </div>

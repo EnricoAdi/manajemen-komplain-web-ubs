@@ -39,7 +39,7 @@
         $data['login'] = $this->UsersModel->getLogin();
 
         //fetch complain user tersebut yang statusnya PEND dan belum ada PENUGASAN
-        $complains = $this->KomplainAModel->fetchForDivisi($data['login']->KODE_DIVISI,'PEND'); 
+        $complains = $this->KomplainAModel->fetchForDivisi($data['login']->KODEDIV,'PEND'); 
         $data['complains'] = $complains;
          
         $this->load->view("templates/user/header", $data);
@@ -58,7 +58,7 @@
         $data['komplain'] = $komplain;  
         
         //fetch list user sedivisi 
-        $users = $this->UsersModel->fetchUsersByDivisi($data['login']->KODE_DIVISI,'1');
+        $users = $this->UsersModel->fetchUsersByDivisi($data['login']->KODEDIV,'1');
         $data['users'] = $users;   
 
         $this->load->view("templates/user/header", $data);

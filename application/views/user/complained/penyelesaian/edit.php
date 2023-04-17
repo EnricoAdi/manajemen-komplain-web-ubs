@@ -14,6 +14,7 @@
 <form action="<?= base_url() ?>User/Complained/Penyelesaian/editPenyelesaianProcess/<?= $komplain->NO_KOMPLAIN; ?>" 
     method="post" class="mt-4" style="color:black;">
  
+    <input type="hidden" id="minDate" value="<?= $minDate; ?>">
     <div class="row">
         <div class="col"> 
             <label class="form-label mt-2">Masalah Komplain</label>
@@ -45,7 +46,14 @@
                  
                 echo "</pre>";
             ?>
-            <input type="date" name="tanggal" class="form-control" value="<?= $newFormatDate; ?>" required>
+            <input type="date" name="tanggal" id="tanggal" class="form-control" value="<?= $newFormatDate; ?>" required>
+
+        </div>
+        
+        <div class="col">
+
+        <label class="form-label">Tambah Lampiran</label>
+            <input type="file" class="form-control" name="lampiran[]" style="padding-top:30px; padding-left:20px; height:100px;" multiple>
 
         </div>
         <div class="col">
@@ -71,28 +79,29 @@
                     ?>
                 </tbody>
             </table>
-        </div>
-        <div class="col"></div>
+        </div> 
     </div>
     
-    <div class="row mt-4">
-        <div class="col"> 
-            <label class="form-label">Tambah Lampiran</label>
-            <input type="file" class="form-control" name="lampiran[]" style="padding-top:30px; padding-left:20px; height:100px;" multiple>
+    <!-- <div class="row mt-4">
+        <div class="col">  
 
         </div>
         <div class="col"></div>
         <div class="col"></div>
-    </div>
+    </div> -->
     <div class="row mt-4">
-        <div class="col">  
-            <button type="submit" id="btnNext" class="btn btn-danger" style="color:black; 
-            background-color: <?= error_color(); ?>; width:120px;">
- 
-                Hapus</button>
-            <button type="submit" id="btnNext" class="btn btn-warning" style="color:white;   background-color: <?= primary_color(); ?>;width:120px;">
- 
-                Edit</button>
+        <div class="col">   
+            <?= error_button("Hapus") ?>
+            <?= primary_submit_button("Edit") ?>
         </div>
     </div>
 </form>
+
+
+<script>
+    window.onload = ()=>{  
+        const minDate = document.getElementById("minDate").value;  
+        document.getElementById('tanggal').setAttribute("min", minDate);
+    }
+
+</script>

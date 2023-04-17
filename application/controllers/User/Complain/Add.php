@@ -152,7 +152,8 @@
           $lampirans = $_FILES["lampiran"];
           
           $today = date('Y-m-d'); 
-           
+         
+          $divisi = $this->DivisiModel->get($kode_divisi);
 
           $newkode = $this->KomplainAModel->getNewKode(); 
           $newkomplain = new KomplainAModel();
@@ -244,8 +245,11 @@
               $this->session->set_flashdata('message', 'Terdapat error dalam upload lampiran');
               redirect("User/Complain/Add/pilihLampiran/$kode_divisi/$kode_topik/$kode_subtopik1/$kode_subtopik2");
           }else{ 
+              $topikDes = $this->TopikModel->get($kode_topik)->DESKRIPSI;
+              $subtopik1Des = $this->SubTopik1Model->get($kode_topik,$kode_subtopik1)->DESKRIPSI;
               $subtopik2Des = $this->SubTopik2Model->get($kode_topik,$kode_subtopik1,$subtopik2)->DESKRIPSI;
-              $template = templateEmail("Notifikasi Penambahan Komplain Baru",$this->UsersModel->getLogin()->NAMA, "Sistem mencatat anda telah mengirimkan sebuah komplain baru terkait $subtopik2Des.    Komplain anda akan diteruskan ke divisi bersangkutan, dengan keterangan $deskripsi"
+              $template = templateEmail("Notifikasi Penambahan Komplain Baru",$this->UsersModel->getLogin()->NAMA, 
+              "Sistem mencatat anda telah mengirimkan sebuah komplain baru terkait topik $topikDes - $subtopik1Des - $subtopik2Des. Komplain anda akan diteruskan ke divisi $divisi->NAMA_DIVISI, dengan keterangan '$deskripsi'"
               );
               $resultmail = send_mail($this->UsersModel->getLogin()->EMAIL, 
               'Notifikasi Penambahan Komplain Baru', $template);  
@@ -258,6 +262,8 @@
                   $this->session->set_flashdata('message', 'Berhasil menambahkan komplain baru, namun gagal mengirim email');
                   redirect('User/Complain/ListComplain');
               }
+
+              //TODO email manajer 
               
           }
       }  

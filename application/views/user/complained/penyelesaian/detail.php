@@ -26,7 +26,7 @@
         <input type="text" class="form-control" name="tanggal" value="<?= $komplain->TGL_KEJADIAN; ?>" disabled>
 
         <label for="" class="form-label mt-4">Asal Divisi</label>
-        <input type="text" class="form-control" name="asalDivisi" value="<?= $komplain->PENERBIT->NAMA_DIVISI; ?>" disabled>
+        <input type="text" class="form-control" name="asalDivisi" value="<?= $komplain->PENERBIT->NAMA; ?>" disabled>
 
     </div>
 </div>
@@ -34,27 +34,14 @@
     <div class="col">
         <?php 
             $primaryColor = primary_color();
-            $urlAdd = base_url()."User/Complained/Penyelesaian/addPage/$komplain->NO_KOMPLAIN";
-            $urlEdit = base_url()."User/Complained/Penyelesaian/editPage/$komplain->NO_KOMPLAIN";
+            $urlAdd = "User/Complained/Penyelesaian/addPage/$komplain->NO_KOMPLAIN";
+            $urlEdit = "User/Complained/Penyelesaian/editPage/$komplain->NO_KOMPLAIN";
             if($komplain->FEEDBACK->T_KOREKTIF=="" || $komplain->FEEDBACK->T_KOREKTIF==null ){
-                //jika belum ada penyelesaian
-                echo " 
-                <a href='$urlAdd'> 
-                    <button type='submit' class='btn btn-warning' style='color:white; background-color: $primaryColor; width:220px;'>
-                        <i class='fas fa-fw fa-plus mr-2'></i>
-                        Tambah Penyelesaian
-                    </button>
-                </a>";
+                //jika belum ada penyelesaian 
+                echo primary_button("Tambah Penyelesaian","fas fa-fw fa-plus mr-2","","","$urlAdd");
             }else{
-                 //jika sudah ada penyelesaian 
-                echo "
-                <a href='$urlEdit'>
-                    <button type='submit' class='btn btn-warning' style='color:black; width:220px; margin-left:10px;'>
-
-                        <i class='fas fa-fw fa-pen mr-2'></i>
-                        Ubah Penyelesaian
-                    </button> 
-                </a>";
+                 //jika sudah ada penyelesaian  
+                echo secondary_button("Ubah Penyelesaian","fas fa-fw fa-pen mr-2","","","$urlEdit");
             }
         ?>
        

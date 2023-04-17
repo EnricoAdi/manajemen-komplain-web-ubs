@@ -102,9 +102,7 @@
             $message);
    
             $resultmail = send_mail($this->UsersModel->getLogin()->EMAIL, 
-            $header, $template); 
-
-
+            $header, $template);  
             
             $headerRecipient = "Sukses melakukan banding penyelesaian komplain";
             $messageRecipient = "Sistem telah mencatat anda mendapatkan banding atas komplain $nomor_komplain, dengan keluhan $permintaanBanding. Mohon menindaklanjuti permintaan divisi bersangkutan. Terima kasih.";
@@ -130,6 +128,16 @@
             $resultmail = send_mail($this->UsersModel->getLogin()->EMAIL, 
             $header, $template); 
 
+            
+            $headerRecipient = "Pembatalan penyelesaian komplain";
+            $messageRecipient = "Sistem telah mencatat terdapat pembatalan penyelesaian komplain atas komplain dengan nomor $nomor_komplain.";
+
+            $templateRecipient =  templateEmail($headerRecipient, $komplain->PENERBIT->NAMA,
+            $messageRecipient);
+
+            $resultmailRecepient = send_mail($komplain->PENERBIT->EMAIL, 
+            $headerRecipient, $templateRecipient); 
+
         }else{
             //validasi
             //update komplainA
@@ -144,6 +152,16 @@
    
             $resultmail = send_mail($this->UsersModel->getLogin()->EMAIL, 
             $header, $template); 
+
+            
+            $headerRecipient = "Validasi penyelesaian komplain";
+            $messageRecipient = "Sistem telah mencatat terdapat validasi penyelesaian komplain atas komplain dengan nomor $nomor_komplain.";
+
+            $templateRecipient =  templateEmail($headerRecipient, $komplain->PENERBIT->NAMA,
+            $messageRecipient);
+
+            $resultmailRecepient = send_mail($komplain->PENERBIT->EMAIL, 
+            $headerRecipient, $templateRecipient); 
         }
         if($resultmail==true && $resultmailRecepient==true){ 
             $this->session->set_flashdata('header', 'Pesan');

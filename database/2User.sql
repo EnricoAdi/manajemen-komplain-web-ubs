@@ -673,11 +673,11 @@ Values
  
  
 INSERT into users
-values('12345678', 'enrico', 'Enrico', '1', 'enricoadi49@gmail.com', 'VA', '12345679');
+values('enrico', 'enrico', 'Enrico', '1', 'enricoadi49@gmail.com', 'VA', '12345679');
 INSERT into users
 values('12345679', 'enrico', 'Enrico', '2', 'enrico_a20@mhs.istts.ac.id', 'VA', '');
 INSERT into users
-values('12345680', 'ester', 'Ester', '1', 'gabriel123.ester@gmail.com', 'IT', '');
+values('ester', 'ester', 'Ester', '1', 'esther_g20@mhs.istts.ac.id', 'IT', '');
 INSERT into users
 values('12345681', 'ester', 'Ester', '2', 'estermanager@ubslinux.com', 'IT', '');
 INSERT into users

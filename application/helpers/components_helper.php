@@ -41,6 +41,13 @@ function primary_button($text, $icon = "", $id = "", $class = "", $href="")
   }
   return generate_button("button", "btn-primary $class", $id, $text, $icon, "$primary_color",$href);
 }
+function secondary_button($text, $icon = "", $id = "", $class = "", $href=""){
+  $secondary_color  = secondary_color();
+  if ($icon != "") {
+    $icon = "<i class='$icon'></i>";
+  }
+  return generate_button("button", "btn-warning $class", $id, $text, $icon, "$secondary_color",$href);
+}
 function primary_submit_button($text, $icon = "", $id = "", $class = "")
 {
   $primary_color  = primary_color();

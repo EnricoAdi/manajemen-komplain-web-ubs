@@ -39,11 +39,8 @@
 
                     <div class="col"></div>
                     <div class="col"></div>
-                    <div class="col">
-                        <button type="submit" id="btnNext" class="btn btn-success" style="color:white; 
-            background-color: <?= primary_color(); ?>; width:120px;">
-                            Kirimkan
-                        </button>
+                    <div class="col"> 
+                        <?= primary_submit_button("Kirimkan") ?>
                     </div>
                 </div>
 

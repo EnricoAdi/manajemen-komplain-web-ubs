@@ -39,7 +39,7 @@
             $data['login'] = $this->UsersModel->getLogin();
 
             //todo fetch complain user tersebut
-            $complains = $this->KomplainAModel->fetchForDivisi($data['login']->KODE_DIVISI,'OPEN'); 
+            $complains = $this->KomplainAModel->fetchForDivisi($data['login']->KODEDIV,'OPEN'); 
             $data['complains'] = $complains; 
             // echo "<pre>";
             // var_dump($complains);
