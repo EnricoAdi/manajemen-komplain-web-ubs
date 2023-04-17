@@ -49,7 +49,7 @@
             </select>
         </div>
         <div class="col">
-            <label class="form-label">Unggah Lampiran (.jpg)</label>
+            <label class="form-label">Unggah Lampiran (.jpg, .png, .pdf, .docx, .xlsx, .txt)</label>
             <input type="file" class="form-control" name="lampiran[]" style="padding-top:30px; padding-left:20px; height:100px;" multiple>
         </div>
     </div>

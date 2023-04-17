@@ -57,4 +57,13 @@ function primary_submit_button($text, $icon = "", $id = "", $class = "")
   return generate_button("submit", "btn-primary $class", $id, $text, $icon, "$primary_color","");
 }
 
+function error_submit_button($text, $icon = "", $id = "", $class = "")
+{
+  $error_color  = error_color();
+  if ($icon != "") {
+    $icon = "<i class='$icon'></i>";
+  }
+  return generate_button("submit", "btn-danger $class", $id, $text, $icon, "$error_color","");
+}
+
  

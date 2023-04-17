@@ -21,7 +21,7 @@ class SubTopik2Model extends CI_Model
        ON S2.SUB_TOPIK1 = S1.SUB_TOPIK1 AND S2.KODE_TOPIK = S1.KODE_TOPIK
        JOIN TOPIK T 
        ON T.KODE_TOPIK = S2.KODE_TOPIK 
-       JOIN DIVISI D ON T.DIV_TUJUAN = D.KODEDIV")
+       JOIN DIVISI D ON T.DIV_TUJUAN = D.KODEDIV order by D.NAMA ASC")
        ->result(); 
     }
     public function fetchBySubTopik1($topik,$subtopik1){   

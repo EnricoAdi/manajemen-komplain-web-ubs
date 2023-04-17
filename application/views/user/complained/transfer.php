@@ -26,10 +26,10 @@
                 foreach ($subtopics as $subtopik) {
                     if ($subtopik->SUB_TOPIK2 == $subtopik2) {
                         echo "<option value='$subtopik->KODE_TOPIK&&$subtopik->TDESKRIPSI@@$subtopik->SUB_TOPIK1##$subtopik->S1DESKRIPSI^^$subtopik->SUB_TOPIK2$#$subtopik->S2DESKRIPSI#@$subtopik->NAMA_DIVISI' selected>
-                            $subtopik->SUB_TOPIK2 - $subtopik->S2DESKRIPSI</option>";
+                        $subtopik->NAMA_DIVISI - $subtopik->TOPIK - $subtopik->S1DESKRIPSI - $subtopik->S2DESKRIPSI</option>";
                     } else {
                         echo "<option value='$subtopik->KODE_TOPIK&&$subtopik->TDESKRIPSI@@$subtopik->SUB_TOPIK1##$subtopik->S1DESKRIPSI^^$subtopik->SUB_TOPIK2$#$subtopik->S2DESKRIPSI#@$subtopik->NAMA_DIVISI'>
-                            $subtopik->SUB_TOPIK2 - $subtopik->S2DESKRIPSI</option>";
+                        $subtopik->NAMA_DIVISI - $subtopik->TOPIK - $subtopik->S1DESKRIPSI - $subtopik->S2DESKRIPSI</option>";
                     }
                 }
                 ?>
@@ -54,10 +54,8 @@
     </div>
 
     <div class="row mt-4">
-        <div class="col">
-            <button id="btnTransfer" class="btn btn-danger" style="color:white; background-color:<?= error_color(); ?>">
-                Transfer
-            </button>
+        <div class="col"> 
+            <?= error_button("Transfer","","btnTransfer") ?>
         </div>
     </div>
 </form>

@@ -256,7 +256,9 @@
 
               $this->session->unset_userdata('tanggalPreSended');   
               if($resultmail){ 
-                  $this->session->set_flashdata('message', 'Berhasil menambahkan komplain baru, silahkan cek email anda');
+                
+                $this->session->set_flashdata('header', 'Pesan');
+                $this->session->set_flashdata('message', 'Berhasil menambahkan komplain baru, silahkan cek email anda'); 
                   redirect('User/Complain/ListComplain');
               }else{ 
                   $this->session->set_flashdata('message', 'Berhasil menambahkan komplain baru, namun gagal mengirim email');
