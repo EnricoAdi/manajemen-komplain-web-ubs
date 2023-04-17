@@ -38,7 +38,7 @@ class KomplainAModel extends CI_Model
     }
     public function get($no_komplain)
     {  
-        $query = $this->db->query('SELECT KA.*, KB.*,D.*, ST1.DESKRIPSI AS S1DESKRIPSI, 
+        $query = $this->db->query('SELECT KA.*, KB.*, D.*, ST1.DESKRIPSI AS S1DESKRIPSI, 
         ST2.DESKRIPSI AS S2DESKRIPSI, T.TOPIK AS TDESKRIPSI, D.NAMA AS NAMA_DIVISI FROM KOMPLAINA KA
         JOIN KOMPLAINB KB ON KA.NO_KOMPLAIN = KB.NO_KOMPLAIN 
         JOIN TOPIK T ON T.KODE_TOPIK = KA.TOPIK 

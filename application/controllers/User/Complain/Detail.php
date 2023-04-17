@@ -9,8 +9,8 @@ class Detail extends CI_Controller
         $this->data['page_title'] = "User Page";
         $this->data['navigation'] = "Complain";
 
-        $this->load->library("form_validation");
-        $this->load->library('session');
+        // $this->load->library("form_validation");
+        // $this->load->library('session');
         $this->load->library('upload');
         $this->load->library('email');
 
@@ -41,6 +41,12 @@ class Detail extends CI_Controller
         $data['login'] = $this->UsersModel->getLogin();
 
         $komplain = $this->KomplainAModel->get($nomor_komplain); 
+        if($komplain==null){
+            $this->session->set_flashdata('header', 'Pesan');
+            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
+            redirect('User/Complain/ListComplain');
+        }
+
         $data['komplain'] = $komplain; 
         $this->load->view("templates/user/header", $data);
         $this->load->view("user/complain/detail/index", $data);
@@ -51,15 +57,22 @@ class Detail extends CI_Controller
         $data['page_title'] = "Edit Komplain Diajukan";
         $data['login'] = $this->UsersModel->getLogin();
 
-        $komplain = $this->KomplainAModel->get($nomor_komplain); 
+        $komplain = $this->KomplainAModel->get($nomor_komplain);  
+        if($komplain==null){
+            $this->session->set_flashdata('header', 'Pesan');
+            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
+            redirect('User/Complain/ListComplain');
+        }
+
         $data['komplain'] = $komplain; 
 
+        $data['minDate'] = date('Y-m-d', strtotime('-14 days'));   
         //ambil data subtopik 2, subtopik 1, dan complain selain divisi tersebut
-        $subtopics = $this->SubTopik2Model->fetchSubtopikAll($data['login']->KODE_DIVISI,false); 
+        $subtopics = $this->SubTopik2Model->fetchSubtopikAll($data['login']->KODEDIV,false); 
         $data['subtopics'] = $subtopics;  
 
         $this->load->view("templates/user/header", $data);
-        $this->load->view("user/complain/detail/edit/edit-topic", $data);
+        $this->load->view("user/complain/detail/edit-topic", $data);
         $this->load->view("templates/user/footer", $data);
         
     }
@@ -72,9 +85,9 @@ class Detail extends CI_Controller
             redirect('User/Complain/ListComplain');
         }
 
-        $topik =  $this->input->post("inputTopik");
-        $subtopik1 =  $this->input->post("inputSubtopik1");
-        $subtopik2 =  $this->input->post("inputSubtopik2");
+        // $topik =  $this->input->post("inputTopik");
+        // $subtopik1 =  $this->input->post("inputSubtopik1");
+        // $subtopik2 =  $this->input->post("inputSubtopik2");
         $tanggal =  $this->input->post("tanggal");
 
         $tanggalMin = date('Y-m-d', strtotime('-14 days'));
@@ -91,10 +104,9 @@ class Detail extends CI_Controller
         
         $today = date('Y-m-d');  
          
-        $komplain->TOPIK = $topik;
-        $komplain->SUB_TOPIK1 = $subtopik1;
-        $komplain->SUB_TOPIK2 = $subtopik2;
-        $komplain->SUB_TOPIK2 = $subtopik2;
+        // $komplain->TOPIK = $topik;
+        // $komplain->SUB_TOPIK1 = $subtopik1;
+        // $komplain->SUB_TOPIK2 = $subtopik2; 
 
         // $tglKejadianOracle = "TO_DATE('$tanggal', 'YYYY-MM-DD')"; 
         $komplain->TGL_KEJADIAN = $tanggal;
@@ -160,7 +172,14 @@ class Detail extends CI_Controller
             redirect('User/Complain/ListComplain'); 
         }
     }
-    public function DeleteLampiran($kode_lampiran, $nomor_komplain){
+    public function DeleteLampiran($kode_lampiran, $nomor_komplain){ 
+        $komplain = $this->KomplainAModel->get($nomor_komplain);  
+        if($komplain==null){
+            $this->session->set_flashdata('header', 'Pesan');
+            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
+            redirect('User/Complain/ListComplain');
+        }
+
         $lampiran = new LampiranModel();
         $lampiran->KODE_LAMPIRAN = $kode_lampiran;
         $lampiran->delete();

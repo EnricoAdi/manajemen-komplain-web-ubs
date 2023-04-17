@@ -16,9 +16,11 @@
 
      <div class="row">
         <div class="col">
-             <label class="form-label">Silahkan pilih topik yang mau dikomplain</label>
+             <label class="form-label">Silahkan pilih subtopik2 yang mau dikomplain</label>
              <input type="hidden" name="subtopik1">
              <input type="hidden" name="topik"> <br> 
+             
+             <input type="hidden" id="minDate" value="<?= $minDate; ?>">
              <label for="divisi" class="form-label" >Divisi</label>
              <input type="text" name="divisi" class="form-control mb-3" value="<?= $divisi->KODE_DIVISI; ?> - <?= $divisi->NAMA_DIVISI; ?> " disabled>
              
@@ -33,7 +35,7 @@
              <input type="text" name="subtopik1" class="form-control mb-3" value="<?= $subtopik1->SUB_TOPIK1; ?> - <?= $subtopik1->DESKRIPSI; ?> " disabled>
 
              <label for="tanggal" class="form-label" >Tanggal</label>
-             <input type="date" name="tanggal" class="form-control mb-3">
+             <input type="date" name="tanggal" id="tanggal" class="form-control mb-3">
          </div>
          <div class="col"> 
              <label for="subtopik2" class="form-label" >Subtopik 2</label>
@@ -56,4 +58,9 @@
      </div>
  </form>
 
-  
+<script>
+    window.onload = ()=>{ 
+        const minDate = document.getElementById("minDate").value; 
+        document.getElementById('tanggal').setAttribute("min", minDate);
+    }
+</script>

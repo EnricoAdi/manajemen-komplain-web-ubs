@@ -1,7 +1,7 @@
 
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Daftar Komplain Diajukan</h1>
  
-<a href="<?= base_url()?>User/Complain/Add/page/1">
+<a href="<?= base_url()?>User/Complain/Add/pilihDivisi">
 
     <button type="button" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>;
         padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;">
@@ -30,7 +30,8 @@
                 <tbody>
                     <?php 
                         foreach ($complains as $complain) {
-                            
+                            $yellow = secondary_color();
+                            $red = error_color();
                             $urlDetail = base_url()."User/Complain/Detail/index/$complain->NO_KOMPLAIN";
                             echo "<tr>";
                             echo "<td>".$complain->NO_KOMPLAIN."</td>";
@@ -40,13 +41,13 @@
                             echo "<td>".$complain->STATUS."</td>";
                             echo "<td>  
                                <a href='$urlDetail'>
-                                <button class='btn btn-warning' style='color:black'>
+                                <button class='btn btn-warning' style='background-color:$yellow'>
                                 <i class='fas fa-fw fa-info-circle'></i> 
                                 Detail
                                 </button>
                                 </a>   
 
-                                <button class='btn btn-danger btnDelete' id='$complain->NO_KOMPLAIN' style='color:black'>
+                                <button class='btn btn-danger btnDelete' id='$complain->NO_KOMPLAIN' style='background-color:$red'>
                                 <i class='fas fa-fw fa-trash'></i> 
                                     Hapus
                                 </button>   

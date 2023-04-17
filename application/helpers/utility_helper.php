@@ -11,10 +11,14 @@ function primary_color()
 {
   return "#004882";
 }
+function secondary_color()
+{
+  return "#DCA71F"; 
+}
 function configToken()
 {
   $cnf['exp'] = 3600; //milisecond
-  $cnf['secretkey'] = 'manajemenkomplain15032023';
+  $cnf['secretkey'] = 'manajemenkomplain17042023';
   return $cnf;
 }
 function encrypt($word)

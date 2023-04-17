@@ -7,10 +7,14 @@
     <input type="hidden" name="inputSubtopik2" id="inputSubtopik2" value="">
     <input type="hidden" name="inputSubtopik1" id="inputSubtopik1" value="">
     <input type="hidden" name="inputTopik" id="inputTopik" value="">
-
+    <div class="row">
+        <div class="col"> 
+            <label for="user" class="form-label mt-4">Nomor Komplain : <?=$komplain->NO_KOMPLAIN;?></label>
+        </div>
+     </div>     
     <div class="row">
         <div class="col">
-            <label for="" class="form-label mt-4">Status : <?= $komplain->STATUS; ?></label> 
+            <label for="" class="form-label">Status : <?= $komplain->STATUS; ?></label> 
         </div>
     </div>
     <div class="row">
@@ -51,14 +55,8 @@
         </div>
     </div>
     <div class="row mt-4">
-        <div class="col">
-            <a href="<?= base_url() ?>User/Complain/Detail/edit_page/<?=$komplain->NO_KOMPLAIN; ?>"> 
-                <button class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>; padding-right:40px;padding-left:30px; margin:auto">
-
-                    <i class="fas fa-fw fa-pen" style="padding-right:30px;"></i>
-                    Ubah
-                </button>
-            </a>
+        <div class="col"> 
+            <?= primary_button("Ubah","fas fa-fw fa-pen","","","User/Complain/Detail/edit_page/$komplain->NO_KOMPLAIN")?>
         </div>
     </div>
 </div>

@@ -14,9 +14,14 @@
      <input type="hidden" name="inputSubtopik2" id="inputSubtopik2" value="">
      <input type="hidden" name="inputSubtopik1" id="inputSubtopik1" value="">
      <input type="hidden" name="inputTopik" id="inputTopik" value="">
-
+     <input type="hidden" id="minDate" value="<?= $minDate; ?>">
      <div class="row">
-         <div class="col">
+        <div class="col"> 
+            <label for="user" class="form-label">Nomor Komplain : <?=$komplain->NO_KOMPLAIN;?></label>
+        </div>
+     </div>
+     <div class="row">
+         <div class="col"> 
              <label for="user" class="form-label">Tanggal Kejadian</label>
              <?php
                 $tgl = $komplain->TGL_KEJADIAN;
@@ -26,27 +31,27 @@
              <input type="date" name="tanggal" id="tanggal" class="form-control" value="<?= $tgl; ?>" required>
 
              <label for="subtopik2" class="form-label mt-4">Subtopik 2</label>
-             <select id="subtopik2" class="form-control">
+             <input type="text" id="subtopik2" class="form-control" value="<?= $komplain->SUB_TOPIK2; ?> - <?= $komplain->S2DESKRIPSI; ?>" disabled/>
                  <?php
-                    foreach ($subtopics as $subtopik) { 
-                        if($subtopik->SUB_TOPIK2==$komplain->SUB_TOPIK2){ 
-                            echo "<option value='$subtopik->KODE_TOPIK&&$subtopik->TDESKRIPSI@@$subtopik->SUB_TOPIK1##$subtopik->S1DESKRIPSI^^$subtopik->SUB_TOPIK2$#$subtopik->S2DESKRIPSI' selected>
-                            $subtopik->SUB_TOPIK2 - $subtopik->S2DESKRIPSI</option>";
-                        }else{
-                            echo "<option value='$subtopik->KODE_TOPIK&&$subtopik->TDESKRIPSI@@$subtopik->SUB_TOPIK1##$subtopik->S1DESKRIPSI^^$subtopik->SUB_TOPIK2$#$subtopik->S2DESKRIPSI'>
-                            $subtopik->SUB_TOPIK2 - $subtopik->S2DESKRIPSI</option>"; 
-                        }
-                    }
+                    // foreach ($subtopics as $subtopik) { 
+                    //     if($subtopik->SUB_TOPIK2==$komplain->SUB_TOPIK2){ 
+                    //         echo "<option value='$subtopik->KODE_TOPIK&&$subtopik->TDESKRIPSI@@$subtopik->SUB_TOPIK1##$subtopik->S1DESKRIPSI^^$subtopik->SUB_TOPIK2$#$subtopik->S2DESKRIPSI' selected>
+                    //         $subtopik->SUB_TOPIK2 - $subtopik->S2DESKRIPSI</option>";
+                    //     }else{
+                    //         echo "<option value='$subtopik->KODE_TOPIK&&$subtopik->TDESKRIPSI@@$subtopik->SUB_TOPIK1##$subtopik->S1DESKRIPSI^^$subtopik->SUB_TOPIK2$#$subtopik->S2DESKRIPSI'>
+                    //         $subtopik->SUB_TOPIK2 - $subtopik->S2DESKRIPSI</option>"; 
+                    //     }
+                    // }
                     ?>
 
-             </select>
+             <!-- </input> -->
          </div>
          <div class="col">
              <label for="" class="form-label">Topik</label>
-             <input type="text" class="form-control" id="topik" disabled>
+             <input type="text" class="form-control" id="topik" value="<?= $komplain->TOPIK; ?> - <?= $komplain->TDESKRIPSI; ?>" disabled>
 
              <label for="" class="form-label mt-4">Subtopik 1</label>
-             <input type="text" class="form-control" id="subtopik1" disabled>
+             <input type="text" class="form-control" id="subtopik1" value="<?= $komplain->SUB_TOPIK1; ?> - <?= $komplain->S1DESKRIPSI; ?>" disabled>
          </div>
      </div>
      
@@ -109,9 +114,9 @@
     </div>
      
      <div class="row mt-4">
-         <div class="col">
-             <button type="submit" id="btnNext" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>;">  <i class="fas fa-fw fa-pen mr-2"></i>
-              Ubah</button>
+         <div class="col"> 
+              <?= primary_submit_button("Ubah", "fas fa-fw fa-pen", "btnNext", "") ?>
+      
          </div>
      </div>
  </form> 
@@ -145,7 +150,9 @@
  ?>
  <script type="text/javascript">
      window.onload = function() {
-        
+        const minDate = document.getElementById("minDate").value; 
+        document.getElementById('tanggal').setAttribute("min", minDate);
+
         let btnDeletes = document.getElementsByClassName("btnDelete"); 
         for (let i = 0; i < btnDeletes.length; i++) {
         let element = btnDeletes[i];
@@ -165,13 +172,13 @@
          const inputTopik = document.getElementById('inputTopik');
 
 
-        let originalValue = subTopik2Element.value;
-        setChange(originalValue)  
+        // let originalValue = subTopik2Element.value;
+        // setChange(originalValue)  
         
-        subTopik2Element.addEventListener('change', function() {
-            let originalValue = subTopik2Element.value;
-            setChange(originalValue)  
-        });
+        // subTopik2Element.addEventListener('change', function() {
+        //     let originalValue = subTopik2Element.value;
+        //     setChange(originalValue)  
+        // });
 
      function setChange(originalValue){
 

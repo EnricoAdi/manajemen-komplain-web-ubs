@@ -52,10 +52,13 @@
             $complainA = new KomplainAModel();
             $complainA->NO_KOMPLAIN = $no_komplain;
 
-            $subtopik2 = $this->KomplainAModel->get($no_komplain)->SUB_TOPIK2; 
+            $komplain = $this->KomplainAModel->get($no_komplain);
+            $topik = $komplain->TOPIK; 
+            $subtopik1 = $komplain->SUB_TOPIK1;
+            $subtopik2 = $komplain->SUB_TOPIK2;   
 
             $template = $this->templateEmailSuccessDelete($this->UsersModel->getLogin()->NAMA,
-                $this->SubTopik2Model->get($subtopik2)->DESKRIPSI  );
+                $this->SubTopik2Model->get($topik,$subtopik1,$subtopik2)->DESKRIPSI  );
        
             $resultmail = send_mail($this->UsersModel->getLogin()->EMAIL, 
             'Notifikasi Penghapusan Komplain', $template); 

@@ -95,7 +95,7 @@ class SubTopik2Model extends CI_Model
             FROM SUB_TOPIK2 S2 JOIN SUB_TOPIK1 S1   
             ON S2.SUB_TOPIK1 = S1.SUB_TOPIK1 AND S2.KODE_TOPIK = S1.KODE_TOPIK
             JOIN TOPIK T ON S2.KODE_TOPIK=T.KODE_TOPIK 
-            JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN WHERE T.DIV_TUJUAN='$divisi' and rownum<=1000")->result();
+            JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN WHERE T.DIV_TUJUAN='$divisi'")->result();
         }else{ 
             return $this->db->query("SELECT S2.SUB_TOPIK2, S2.DESKRIPSI AS S2DESKRIPSI, 
             S2.SUB_TOPIK1, S1.DESKRIPSI AS S1DESKRIPSI, S2.KODE_TOPIK, T.TOPIK AS TDESKRIPSI,
@@ -103,7 +103,7 @@ class SubTopik2Model extends CI_Model
             FROM SUB_TOPIK2 S2 JOIN SUB_TOPIK1 S1
             ON S2.SUB_TOPIK1 = S1.SUB_TOPIK1 AND S2.KODE_TOPIK = S1.KODE_TOPIK
             JOIN TOPIK T ON S2.KODE_TOPIK=T.KODE_TOPIK 
-            JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN WHERE T.DIV_TUJUAN<>'$divisi' and rownum<=1000")->result();
+            JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN WHERE T.DIV_TUJUAN<>'$divisi'")->result();
         }
      }
 }
