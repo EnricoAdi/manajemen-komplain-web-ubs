@@ -301,7 +301,8 @@ class KomplainAModel extends CI_Model
     public function updateBandingKomplain(){ 
         $this->db->query("UPDATE KOMPLAINA SET 
         TGL_BANDING = TO_DATE('$this->TGL_BANDING', 'YYYY-MM-DD'),
-        USER_BANDING = '$this->USER_BANDING'
+        USER_BANDING = '$this->USER_BANDING',
+        STATUS = 'CLOSE'
         where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
     }
     public function updateCancelKomplain(){ 

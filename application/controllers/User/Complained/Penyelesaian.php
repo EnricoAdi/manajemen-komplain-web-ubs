@@ -281,6 +281,25 @@
             }
         } 
     }
+    public function deleteFeedback($nomor_komplain){
+        $komplainB = $this->KomplainBModel->get($nomor_komplain); 
+
+        if($komplainB==null){
+            $this->session->set_flashdata('header', 'Pesan');
+            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
+            redirect('User/Complained/Penyelesaian');
+        } 
+        $komplainB->deletePenyelesaianKomplain(); 
+        $lampiran = new LampiranModel();
+        $lampiran->NO_KOMPLAIN = $nomor_komplain;
+        $lampiran->deleteByKomplainForFeedback();
+        
+        $this->session->set_flashdata('header', 'Pesan');
+        $this->session->set_flashdata('message', 'Berhasil hapus penyelesaian komplain');
+        redirect('User/Complained/Penyelesaian');
+
+
+    }
     public function templateEmailSuccessFeedback($header,$nama, $subtopik2){
         return "<!DOCTYPE html>
         <html>
