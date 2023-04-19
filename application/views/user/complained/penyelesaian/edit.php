@@ -11,7 +11,7 @@
     </button>
 </a>
 
-<form action="<?= base_url() ?>User/Complained/Penyelesaian/editPenyelesaianProcess/<?= $komplain->NO_KOMPLAIN; ?>" method="post" class="mt-4" style="color:black;">
+<form action="<?= base_url() ?>User/Complained/Penyelesaian/editPenyelesaianProcess/<?= $komplain->NO_KOMPLAIN; ?>" method="post" class="mt-4" style="color:black;" enctype="multipart/form-data">
 
     <input type="hidden" id="minDate" value="<?= $minDate; ?>">
     <div class="row">
@@ -98,7 +98,7 @@
         </div>
 
     </div>
-    <div class="row">
+    <div class="row mt-2">
         
         <div class="col">
 

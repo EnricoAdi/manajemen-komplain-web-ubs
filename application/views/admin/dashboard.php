@@ -40,7 +40,9 @@
     </div>
   </div>
 </div>
-
+<input type="hidden" id="url" value="<?=base_url()?>">
+<input type="hidden" id="bulanDalamAngka" value="<?=$bulanDalamAngka?>"> 
+<input type="hidden" id="tahunDalamAngka" value="<?=$tahunDalamAngka?>"> 
 <div class="row mb-4">
   <div class="col">
     <?= card_type_1("Total Komplain Bulan $bulanIni", $totalKomplainBulanIni, "fa-book","primary") ?>
@@ -52,6 +54,53 @@
 </div>
 
 <script>
+  const chartDivisi = document.getElementById("chartDivisi");
+  const baseUrl = document.getElementById("url").value;
+  const bulanDalamAngka = document.getElementById("bulanDalamAngka").value;
+  const tahunDalamAngka = document.getElementById("tahunDalamAngka").value;
+
+  let urlDoughnut = `${baseUrl}Admin/Dashboard/jumlahKomplainDivisiByMonth/${bulanDalamAngka}/${tahunDalamAngka}`; 
+  fetch(urlDoughnut).then(res=>res.json())
+  .then(res=>{ 
+    let labels = [];
+    let data = [];
+    let backgroundColor = ['#4e73df', '#1cc88a', '#36b9cc', '#a629cc', '#baa1a4' , '#a229a7']
+    res.forEach(d => {
+      labels.push(d.NAMA)
+      data.push(d.TOTAL)
+    });
+
+    var donutChartDivisi = new Chart(chartDivisi, {
+    type: 'doughnut',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: data,
+        backgroundColor: backgroundColor,
+        hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+        hoverBorderColor: "rgba(234, 236, 244, 1)",
+      }],
+    },
+
+    options: {
+      maintainAspectRatio: false,
+      tooltips: {
+        backgroundColor: "rgb(255,255,255)",
+        bodyFontColor: "#858796",
+        borderColor: '#dddfeb',
+        borderWidth: 1,
+        xPadding: 15,
+        yPadding: 15,
+        displayColors: false,
+        caretPadding: 10,
+      },
+      legend: {
+        display: true
+      },
+      cutoutPercentage: 80,
+    },
+  });
+  })
   // Set new default font family and font color to mimic Bootstrap's default styling
   Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
   Chart.defaults.global.defaultFontColor = '#858796';
@@ -162,37 +211,6 @@
         }
       },
     }
-  });
-  // Bar Chart Example
-  var chartDivisi = document.getElementById("chartDivisi");
-  var donutChartDivisi = new Chart(chartDivisi, {
-    type: 'doughnut',
-    data: {
-      labels: ["Variasi", "IT", "Kalung", "Hollow"],
-      datasets: [{
-        data: [55, 30, 15, 40],
-        backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#a629cc'],
-        hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
-        hoverBorderColor: "rgba(234, 236, 244, 1)",
-      }],
-    },
-
-    options: {
-      maintainAspectRatio: false,
-      tooltips: {
-        backgroundColor: "rgb(255,255,255)",
-        bodyFontColor: "#858796",
-        borderColor: '#dddfeb',
-        borderWidth: 1,
-        xPadding: 15,
-        yPadding: 15,
-        displayColors: false,
-        caretPadding: 10,
-      },
-      legend: {
-        display: false
-      },
-      cutoutPercentage: 80,
-    },
-  });
+  });  
+ 
 </script>

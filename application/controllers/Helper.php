@@ -78,6 +78,8 @@ class Helper extends CI_Controller
             $name = "";
             $firstName = "";
             $lastName = ""; 
+            $angka = rand(1012341,92012341);
+            $angka2 = rand(4012341,92092341);
             if($gender%2==0){ 
                 $firstName = $randomFirstMaleName[rand(0, count($randomFirstMaleName)-1)];
                 $lastName = $randomLastMaleName[rand(0, count($randomLastMaleName)-1)];
@@ -87,7 +89,7 @@ class Helper extends CI_Controller
                 $lastName = $randomLastFemaleName[rand(0, count($randomLastFemaleName)-1)];
             }
             $name = $firstName." ".$lastName;
-            $email = $firstName.$lastName."@gmail.com";
+            $email = $firstName.$lastName."$angka$angka2@gmail.com";
             echo "Insert into USERS";
             echo "<br>";
             echo "    (NOMOR_INDUK, PASSWORD, KODE_HAK_AKSES, KODEDIV, NAMA, EMAIL, KODE_ATASAN)";

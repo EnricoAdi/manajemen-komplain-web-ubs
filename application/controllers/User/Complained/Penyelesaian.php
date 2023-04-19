@@ -393,6 +393,89 @@ class Penyelesaian extends CI_Controller
         $komplainB->T_KOREKTIF = $korektif;
         $komplainB->updatePenyelesaianKomplain();
 
+        $today = date('Y-m-d');
+        
+        $lampirans = $_FILES["lampiran"];
+        $isError = false;
+
+        if ($lampirans['name'][0] != "") {
+            if (!file_exists('./uploads/')) {
+                mkdir('./uploads/', 0777, true);
+            }
+            for ($i = 0; $i < count($lampirans['name']); $i++) {
+                $getNewFileName = 'F_' . generateUID(25);
+
+                if ($i < count($lampirans)) {
+                    $_FILES['lampiran']['name'] = $lampirans['name'][$i];
+                    $_FILES['lampiran']['type'] = $lampirans['type'][$i];
+                    $_FILES['lampiran']['tmp_name'] = $lampirans['tmp_name'][$i];
+                    $_FILES['lampiran']['error'] = $lampirans['error'][$i];
+                    $_FILES['lampiran']['size'] = $lampirans['size'][$i];
+
+                    $ext = pathinfo($lampirans['name'][$i], PATHINFO_EXTENSION);
+
+                    $config['upload_path'] = './uploads/';
+                    $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg|txt|xlsx|docx|csv';
+                    $config['max_size'] = 5000; // in Kilobytes
+                    $config['file_name'] = $getNewFileName;
+
+                    $this->load->library('upload', $config);
+                    $this->upload->initialize($config);
+
+                    if (!$this->upload->do_upload('lampiran')) {
+                        // Handle upload error
+                        $error = $this->upload->display_errors();
+                        // echo $error;
+                        // echo FCPATH.'uploads/';
+                        $isError = true;
+                    } else {
+                        // Upload success
+                        $upload_data = $this->upload->data();
+                        $file_name = $upload_data['file_name'];
+                        $newLampiran = new LampiranModel();
+                        $newLampiran->KODE_LAMPIRAN = $getNewFileName . "." . $ext;
+                        $newLampiran->NO_KOMPLAIN = $nomor_komplain;
+                        $newLampiran->TANGGAL = $today;
+                        $newLampiran->TIPE = 1; //feedback
+                        $newLampiran->insert();
+                    }
+                }
+            }
+        }
+        
+        if ($isError) {
+            $this->session->set_flashdata('message', 'Terdapat error dalam upload lampiran');
+            redirect('User/Complained/Penyelesaian/editPage/' . $nomor_komplain);
+        } else {
+            $topik = $komplainA->TOPIK;
+            $subtopik1 = $komplainA->SUB_TOPIK1;
+            $subtopik2 = $komplainA->SUB_TOPIK2;
+            $s2des = $this->SubTopik2Model->get($topik, $subtopik1, $subtopik2)->DESKRIPSI;
+            $header = "Sukses mengubah penyelesaian komplain";
+            $message = "Sistem mencatat anda mengubah penyelesaian komplain untuk komplain nomor $nomor_komplain . Terima kasih atas kerja sama anda.";
+            $template = templateEmail(
+                $header,
+                $this->UsersModel->getLogin()->NAMA,
+                $message
+            );
+
+            $resultmail = send_mail(
+                $this->UsersModel->getLogin()->EMAIL,
+                $header,
+                $template
+            ); 
+
+            if ($resultmail) {
+                $this->session->set_flashdata('message', 'Berhasil mengubah penyelesaian komplain, silahkan cek email anda');
+                redirect('User/Complained/Penyelesaian');
+            } else {
+                $this->session->set_flashdata('message', 'Berhasil mengubah penyelesaian komplain, namun gagal mengirim email');
+                redirect('User/Complained/Penyelesaian');
+            }
+        }
+
+
+
         $this->session->set_flashdata('header', 'Pesan');
         $this->session->set_flashdata('message', 'Berhasil mengubah penyelesaian komplain');
         redirect('User/Complained/Penyelesaian/editPage/' . $nomor_komplain);

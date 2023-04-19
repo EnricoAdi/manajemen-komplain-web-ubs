@@ -20,11 +20,31 @@
             
             $data['bulanIni'] = date("F"); 
             $data['tahunIni'] = date("Y"); 
-            $totalKomplainBulanIni = 10;
-            $divisiTerbanyak = "Kalung";
+
+            $bulanDalamAngka = date("m"); 
+            $tahunDalamAngka = date("Y"); 
+            
+            $totalKomplainBulanIni = $this->KomplainAModel->getTotalKomplainByMonth($bulanDalamAngka, $tahunDalamAngka); 
+            $divisiTerbanyak = $this->KomplainAModel->divisiKomplainTerbanyakByMonth($bulanDalamAngka, $tahunDalamAngka);
+
+
+            if($divisiTerbanyak==null){
+                $divisiTerbanyak = "Belum ada";
+            }else{
+                $divisiTerbanyak = $divisiTerbanyak->NAMA;
+            } 
+
+            $jumlahKomplainDivisiByMonth = $this->KomplainAModel->jumlahKomplainDivisiByMonth($bulanDalamAngka, $tahunDalamAngka);
+ 
+            $data['bulanDalamAngka'] = $bulanDalamAngka;
+            $data['tahunDalamAngka'] = $tahunDalamAngka;
             $data['totalKomplainBulanIni'] = $totalKomplainBulanIni;
             $data['divisiTerbanyak'] = $divisiTerbanyak;
             loadView_Admin("admin/dashboard", $data);  
+        }
+        public function jumlahKomplainDivisiByMonth($bulanDalamAngka, $tahunDalamAngka){
+            $res = getjumlahKomplainDivisiByMonth($bulanDalamAngka, $tahunDalamAngka);
+            echo json_encode($res);
         }
     }
 ?>
