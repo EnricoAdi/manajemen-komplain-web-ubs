@@ -79,14 +79,9 @@
     </div>
      
     <div class="row mt-4">
-        <div class="col">  
-            <button type="submit" id="btnDelete" class="btn btn-danger" style=" background-color: <?= error_color(); ?>; width:120px;">
- 
-                Hapus</button>
-            <button type="submit" id="btnDone" class="btn btn-warning" 
-            style="color:white;   background-color: <?= primary_color(); ?>;width:120px;">
- 
-                Selesai</button>
+        <div class="col">   
+            <?= error_submit_button("Hapus","fas fa-fw fa-trash mr-2","btnDelete") ?> 
+            <?= primary_submit_button("Selesai","","btnDone")?>
         </div>
     </div>
 </form>

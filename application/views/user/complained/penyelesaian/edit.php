@@ -23,7 +23,7 @@
     <div class="row mt-4">
         <div class="col">
             <label for="user" class="form-label">Akar Masalah</label>
-            <textarea class="form-control" name="akar-masalah" required><?= $komplain->FEEDBACK->AKAR_MASALAH; ?></textarea>
+            <textarea class="form-control" name="akar" required><?= $komplain->FEEDBACK->AKAR_MASALAH; ?></textarea>
         </div>
         <div class="col">
             <label for="user" class="form-label">Tindakan Preventif</label>
@@ -60,13 +60,7 @@
                             echo "<tr>";
                             echo "<td>";
                             echo '<a href="' . base_url() . 'uploads/' . $lampiran->KODE_LAMPIRAN . '" target="_blank">Lampiran ' . $counter . '</a>';
-                            echo "</td>";
-                            // echo "<td><a href=''><button class='btn btn-danger' style='color:white;'>
-                            // <i class='fas fa-fw fa-trash'></i>
-                            // Hapus</button> </a></td>"; 
-                            echo "<td><button class='btn btn-danger btnDelete' id='$counter' style='color:white;'>
-                                <i class='fas fa-fw fa-trash'></i>
-                                Hapus</button> </td>";
+                            echo "</td>"; 
                             echo "</tr>";
                             $counter = $counter + 1;
                         }
@@ -84,16 +78,16 @@
                     $counter = 1;
                     foreach ($komplain->LAMPIRAN as $lampiran) {
                         if ($lampiran->TIPE == 1) {
+                            $url = base_url()."User/Complained/Penyelesaian/deleteLampiran/$komplain->NO_KOMPLAIN/$lampiran->KODE_LAMPIRAN";
                             echo "<tr>";
                             echo "<td>";
                             echo '<a href="' . base_url() . 'uploads/' . $lampiran->KODE_LAMPIRAN . '" target="_blank">Lampiran ' . $counter . '</a>';
-                            echo "</td>";
-                            // echo "<td><a href=''><button class='btn btn-danger' style='color:white;'>
-                            // <i class='fas fa-fw fa-trash'></i>
-                            // Hapus</button> </a></td>"; 
-                            echo "<td><button class='btn btn-danger btnDelete' id='$counter' style='color:white;'>
+                            echo "</td>";  
+
+                            echo "<td><a href='$url' class='btn btn-danger btnDelete'> 
                                 <i class='fas fa-fw fa-trash'></i>
-                                Hapus</button> </td>";
+                                Hapus </a> 
+                            </td>";
                             echo "</tr>";
                             $counter = $counter + 1;
                         }
@@ -108,23 +102,16 @@
         
         <div class="col">
 
-            <label class="form-label">Tambah Lampiran Penyelesaian</label>
+            <label class="form-label">Tambah Lampiran Penyelesaian (tidak wajib)</label>
             <input type="file" class="form-control" name="lampiran[]" style="padding-top:30px; padding-left:20px; height:100px;" multiple>
 
         </div>
         <div class="col"></div>
-    </div>
-    <!-- <div class="row mt-4">
-        <div class="col">  
-
-        </div>
-        <div class="col"></div>
-        <div class="col"></div>
-    </div> -->
+    </div> 
     <div class="row mt-4">
         <div class="col">
-            <?= error_button("Hapus", "fas fa-fw fa-trash", "btnDelete") ?>
-            <?= primary_submit_button("Edit") ?>
+            <?= error_button("Hapus", "fas fa-fw fa-trash mr-2", "btnDelete") ?>
+            <?= primary_submit_button("Edit","fas fa-fw fa-pen mr-2") ?>
         </div>
     </div>
 </form>
