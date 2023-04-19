@@ -12,14 +12,14 @@
 
     <div class="card shadow mb-4 mt-4">
       <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Komplain Masuk Tahun Ini</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Komplain Masuk Tahun <?=$tahunIni;?></h6>
       </div>
       <div class="card-body">
         <div class="chart-bar">
           <canvas id="chartKomplainMasuk"></canvas>
         </div>
         <hr>
-        Grafik Jumlah Komplain Masuk Tahun 2022
+        Grafik Jumlah Komplain Masuk Tahun <?=$tahunIni;?>
       </div>
     </div>
 
@@ -35,7 +35,7 @@
           <canvas id="chartDivisi"></canvas>
         </div>
         <hr>
-        Grafik Divisi Terkomplain Bulan Desember
+        Grafik Divisi Terkomplain Bulan <?=$bulanIni;?>
       </div>
     </div>
   </div>
@@ -43,11 +43,11 @@
 
 <div class="row mb-4">
   <div class="col">
-    <?= card_type_1("Total Komplain Bulan Desember", "10", "fa-book","primary") ?>
+    <?= card_type_1("Total Komplain Bulan $bulanIni", $totalKomplainBulanIni, "fa-book","primary") ?>
 
   </div>
   <div class="col">
-    <?= card_type_1("Divisi Terkomplain Terbanyak", "Kalung", "fa-user","primary") ?>
+    <?= card_type_1("Divisi Terkomplain Terbanyak", $divisiTerbanyak, "fa-user","primary") ?>
 </div>
 </div>
 

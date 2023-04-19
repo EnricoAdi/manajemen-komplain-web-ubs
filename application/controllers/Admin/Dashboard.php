@@ -17,7 +17,13 @@
             $data = $this->data;
             $data['page_title'] = "Dashboard Admin";
             $data['login'] = $this->UsersModel->getLogin(); 
- 
+            
+            $data['bulanIni'] = date("F"); 
+            $data['tahunIni'] = date("Y"); 
+            $totalKomplainBulanIni = 10;
+            $divisiTerbanyak = "Kalung";
+            $data['totalKomplainBulanIni'] = $totalKomplainBulanIni;
+            $data['divisiTerbanyak'] = $divisiTerbanyak;
             loadView_Admin("admin/dashboard", $data);  
         }
     }
