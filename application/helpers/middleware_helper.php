@@ -18,10 +18,10 @@ function middleware_auth($hak_akses_target){
             redirect('User/Dashboard'); //end user
         }
         if ($hak_akses == '2') { 
-            redirect('Manager'); //manager
+            redirect('Manager/Dashboard'); //manager
         }
         if ($hak_akses == '3') { 
-            redirect('GM'); //manager
+            redirect('GM/Dashboard'); //manager
         }
         else { 
             redirect('Admin'); //admin

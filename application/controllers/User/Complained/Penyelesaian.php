@@ -12,25 +12,8 @@ class Penyelesaian extends CI_Controller
         $this->load->library("form_validation");
         $this->load->library('session');
 
-        //middleware
-        if ($this->UsersModel->getLogin() == null) {
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Silahkan Login Terlebih Dahulu');
-            redirect('Auth');
-        }
-
-        //jika tidak ada akses, maka redirect ke halaman dashboard berdasarkan hak aksesnya
-        $hak_akses = $this->UsersModel->getLogin()->KODE_HAK_AKSES;
-        if ($hak_akses != 1) {
-            if ($hak_akses == '4') {
-                redirect('Admin/Dashboard'); //admin
-            }
-            if ($hak_akses == '2') {
-                redirect('Manager'); //manager
-            } else {
-                redirect('GM'); //general manager
-            }
-        }
+       
+        middleware_auth(1); //hak akses user 
     }
     public function index()
     {
