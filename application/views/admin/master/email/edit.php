@@ -38,7 +38,7 @@
                 
             <?= error_button("Hapus","fas fa-fw fa-trash","btnDelete","")?>
 
-            <?= primary_submit_button("Ubah","fas fa-fw fa-pen","","")?>
+            <?= primary_submit_button("Ubah","fas fa-fw fa-pen")?>
             </div>
     </div>
 </form>

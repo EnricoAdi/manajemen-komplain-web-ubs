@@ -37,6 +37,15 @@ class UsersModel extends CI_Model
         array($nomor_induk))->result();
  
         if (sizeof($query) > 0) {
+            // $user = new UsersModel();
+            // $user->NOMOR_INDUK = $query[0]->NOMOR_INDUK;
+            // $user->NAMA = $query[0]->NAMA;
+            // $user->KODE_HAK_AKSES = $query[0]->KODE_HAK_AKSES;
+            // $user->EMAIL = $query[0]->EMAIL;
+            // $user->KODEDIV = $query[0]->KODEDIV;
+            // $user->KODE_ATASAN = $query[0]->KODE_ATASAN;
+            // $user->NAMA_ATASAN = $query[0]->NAMA_ATASAN;
+            // $user->EMAIL_ATASAN = $query[0]->EMAIL_ATASAN; 
             return $query[0];
         }
         return null;
@@ -74,11 +83,21 @@ class UsersModel extends CI_Model
         $this->load->model('HakAksesModel');
         return $this->HakAksesModel->get($this->KODE_HAK_AKSES);
     }
+    
+    public function insert(){
+        $this->db->insert('USERS', $this); 
+    }
+
     public function update()
     {
         $this->db->where('NOMOR_INDUK', $this->NOMOR_INDUK);
         $this->db->update('USERS', $this);
-    }
+    } 
+
+    public function delete(){
+        $this->db->where('NOMOR_INDUK', $this->NOMOR_INDUK);
+        $this->db->delete('USERS');  
+    } 
     public function addEmail()
     {
         $this->db->query(

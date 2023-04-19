@@ -28,7 +28,7 @@
             //controller ini digunakan untuk menampilkan halaman input user
             $data = $this->data;
             $data['page_title'] = "Input User";
-            $data['list_divisi'] = $this->DivisiModel->fetch(); 
+            $data['listDivisi'] = $this->DivisiModel->fetch(); 
             loadView_Admin("admin/master/user/add", $data); 
         }
 
@@ -40,21 +40,72 @@
                 redirectWith("Admin/Master/User","User tidak ditemukan");
             } 
             $data['user'] = $user;
-            $data['list_divisi'] = $this->DivisiModel->fetch(); 
+            $data['listDivisi'] = $this->DivisiModel->fetch(); 
             loadView_Admin("admin/master/user/edit", $data); 
         }
+        public function AddProcess(){
+            $nomor_induk = $this->input->post("nomor_induk");
 
-        public function editProcess($nomor_induk){
+            //cek collision nomor induk
             $user = $this->UsersModel->get($nomor_induk);
-            if($user == null){
-                redirectWith("Admin/Master/User","User tidak ditemukan");
-            } 
+            if($user != null){
+                redirectWith("Admin/Master/User","Nomor induk sudah digunakan");
+            }
+
+            $nama = $this->input->post("nama");
+            $divisi = $this->input->post("divisi");
+            $hak_akses = $this->input->post("hak_akses");
+
+            $password = $this->input->post("nomor_induk");
+            
+            $user = new UsersModel();
+            $user->NOMOR_INDUK = $nomor_induk;
+            $user->NAMA = $nama;
+            $user->KODEDIV = $divisi;
+            $user->KODE_HAK_AKSES = $hak_akses;
+            $user->PASSWORD = $password;
+            $user->KODE_ATASAN = null;
+            $user->insert();
+
+            redirectWith("Admin/Master/User","Berhasil menambahkan user baru");
+
         }
-        public function deleteProcess($nomor_induk){
+
+        public function EditProcess($nomor_induk){
             $user = $this->UsersModel->get($nomor_induk);
             if($user == null){
                 redirectWith("Admin/Master/User","User tidak ditemukan");
             } 
+            $nama = $this->input->post("nama");
+            $divisi = $this->input->post("divisi");
+            $hak_akses = $this->input->post("hak_akses");
+
+
+            try{
+                $user = new UsersModel();
+                $user->NOMOR_INDUK = $nomor_induk;
+                $user->NAMA = $nama;
+                $user->KODEDIV = $divisi;
+                $user->KODE_HAK_AKSES = $hak_akses; 
+                $user->update();
+                redirectWith("Admin/Master/User","Berhasil mengubah user");
+            }catch(Exception $e){
+                redirectWith("Admin/Master/User/detail/$nomor_induk","Gagal mengubah user");
+            }
+        }
+        public function DeleteProcess($nomor_induk){
+            $user = $this->UsersModel->get($nomor_induk);
+            if($user == null){
+                redirectWith("Admin/Master/User","User tidak ditemukan");
+            } 
+            try{
+                $user = new UsersModel();
+                $user->NOMOR_INDUK = $nomor_induk;
+                $user->delete();
+                redirectWith("Admin/Master/User","Berhasil menghapus user");
+            }catch(Exception $e){
+                redirectWith("Admin/Master/User/detail/$nomor_induk","Gagal menghapus user");
+            }
         }
     }   
 ?>
