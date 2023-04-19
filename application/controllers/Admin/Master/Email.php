@@ -9,25 +9,8 @@ class Email extends CI_Controller{
 
         $this->load->library("form_validation");
 
-        //code ini digunakan untuk menjadi sebuah midlleware jika user mencoba akses halaman ini tanpa login
-        if ($this->UsersModel->getLogin() == null) {
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Silahkan Login Terlebih Dahulu');
-            redirect('Auth');
-        }
-
-        //jika tidak ada akses, maka redirect ke halaman dashboard berdasarkan hak aksesnya
-        $hak_akses = $this->UsersModel->getLogin()->KODE_HAK_AKSES;
-        if ($hak_akses != 4) {
-            if ($hak_akses == '1') {
-                redirect('User/Dashboard'); //end user
-            }
-            if ($hak_akses == '2') {
-                redirect('Manager'); //manager
-            } else {
-                redirect('GM'); //general manager
-            }
-        }
+        
+        middleware_auth(4); //hak akses admin
     }
 
     public function index(){
