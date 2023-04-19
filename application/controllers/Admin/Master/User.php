@@ -20,8 +20,7 @@
              $data['page_title'] = "Master User";
      
              $users = $this->UsersModel->fetch();
-             $data['users'] = $users;  
-             
+             $data['users'] = $users;   
              loadView_Admin("admin/master/user/index", $data);
         }
  
@@ -29,9 +28,33 @@
             //controller ini digunakan untuk menampilkan halaman input user
             $data = $this->data;
             $data['page_title'] = "Input User";
-            $data['list_divisi'] = $this->DivisiModel->fetch();
-            $data['list_role'] = $this->RoleModel->fetch();
+            $data['list_divisi'] = $this->DivisiModel->fetch(); 
             loadView_Admin("admin/master/user/add", $data); 
+        }
+
+        public function detail($nomor_induk){
+            $data = $this->data;
+            $data['page_title'] = "Input User";
+            $user = $this->UsersModel->get($nomor_induk);
+            if($user == null){
+                redirectWith("Admin/Master/User","User tidak ditemukan");
+            } 
+            $data['user'] = $user;
+            $data['list_divisi'] = $this->DivisiModel->fetch(); 
+            loadView_Admin("admin/master/user/edit", $data); 
+        }
+
+        public function editProcess($nomor_induk){
+            $user = $this->UsersModel->get($nomor_induk);
+            if($user == null){
+                redirectWith("Admin/Master/User","User tidak ditemukan");
+            } 
+        }
+        public function deleteProcess($nomor_induk){
+            $user = $this->UsersModel->get($nomor_induk);
+            if($user == null){
+                redirectWith("Admin/Master/User","User tidak ditemukan");
+            } 
         }
     }   
 ?>
