@@ -6,29 +6,25 @@ class Detail extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        middleware_auth(1); //hak akses user 
         $this->data['page_title'] = "User Page";
         $this->data['navigation'] = "Complain";
-
-        // $this->load->library("form_validation");
-        // $this->load->library('session');
+        $this->data['login'] = $this->UsersModel->getLogin();
+ 
         $this->load->library('upload');
         $this->load->library('email');
 
         
-        middleware_auth(1); //hak akses user 
     }
     public function index($nomor_komplain){
         
         $data = $this->data;
         $data['page_title'] = "Detail Komplain Diajukan";
-        $data['login'] = $this->UsersModel->getLogin();
+        
 
         $komplain = $this->KomplainAModel->get($nomor_komplain); 
-        if($komplain==null){
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-            redirect('User/Complain/ListComplain');
-        }
+        middleware_komplainA($nomor_komplain,'User/Complain/ListComplain');
+             
 
         $data['komplain'] = $komplain; 
         $this->load->view("templates/user/header", $data);
@@ -38,14 +34,11 @@ class Detail extends CI_Controller
     public function edit_page($nomor_komplain){ 
         $data = $this->data;
         $data['page_title'] = "Edit Komplain Diajukan";
-        $data['login'] = $this->UsersModel->getLogin();
+        
 
         $komplain = $this->KomplainAModel->get($nomor_komplain);  
-        if($komplain==null){
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-            redirect('User/Complain/ListComplain');
-        }
+        
+        middleware_komplainA($nomor_komplain,'User/Complain/ListComplain');
 
         $data['komplain'] = $komplain; 
 
@@ -62,11 +55,8 @@ class Detail extends CI_Controller
     public function EditKomplain($nomor_komplain){  
          
         $komplain = $this->KomplainAModel->get($nomor_komplain);  
-        if($komplain==null){
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-            redirect('User/Complain/ListComplain');
-        }
+        
+        middleware_komplainA($nomor_komplain,'User/Complain/ListComplain');
 
         // $topik =  $this->input->post("inputTopik");
         // $subtopik1 =  $this->input->post("inputSubtopik1");
@@ -157,11 +147,8 @@ class Detail extends CI_Controller
     }
     public function DeleteLampiran($kode_lampiran, $nomor_komplain){ 
         $komplain = $this->KomplainAModel->get($nomor_komplain);  
-        if($komplain==null){
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-            redirect('User/Complain/ListComplain');
-        }
+        
+        middleware_komplainA($nomor_komplain,'User/Complain/ListComplain');
 
         $lampiran = new LampiranModel();
         $lampiran->KODE_LAMPIRAN = $kode_lampiran;

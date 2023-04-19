@@ -4,21 +4,21 @@
     class Add extends CI_Controller {
         public function __construct(){
             parent::__construct();
+            middleware_auth(1); //hak akses user 
             $this->data['page_title'] = "User Page";
             $this->data['navigation'] = "Complain";  
+            $this->data['login'] = $this->UsersModel->getLogin();
  
             $this->load->library("form_validation");  
             $this->load->library('session'); 
             $this->load->library('upload');
             $this->load->library('email');
 
-            middleware_auth(1); //hak akses user 
 
         }
         public function pilihDivisi(){
           $data = $this->data;
           $data['page_title'] = "Tambah Komplain Baru";
-          $data['login'] = $this->UsersModel->getLogin();
  
           $data['allDivisi'] = $this->DivisiModel->fetch();
           $this->load->view("templates/user/header", $data);
@@ -32,7 +32,6 @@
         public function pilihTopik($divisi=null){
           $data = $this->data;
           $data['page_title'] = "Pilih Topik Tambah Komplain Baru";
-          $data['login'] = $this->UsersModel->getLogin();
  
           if($divisi==null){
             $this->session->set_flashdata('message', 'Silahkan memilih divisi untuk dikomplain terlebih dahulu');
@@ -53,7 +52,7 @@
           
           $data = $this->data;
           $data['page_title'] = "Tambah Komplain Baru";
-          $data['login'] = $this->UsersModel->getLogin();
+          
  
           if($divisi==null || $topik==null){
             $this->session->set_flashdata('message', 'Silahkan memilih divisi untuk dikomplain terlebih dahulu');
@@ -74,7 +73,7 @@
         public function pilihSubTopik2($kode_divisi=null,$kode_topik=null,$kode_subtopik1=null){
           $data = $this->data;
           $data['page_title'] = "Tambah Komplain Baru";
-          $data['login'] = $this->UsersModel->getLogin();
+          
  
           $data['minDate'] = date('Y-m-d', strtotime('-14 days'));   
           if($kode_divisi==null || $kode_topik==null ||$kode_subtopik1==null){
@@ -108,8 +107,7 @@
         }
         public function pilihLampiran($kode_divisi=null,$kode_topik=null,$kode_subtopik1=null,$kode_subtopik2=null){
           $data = $this->data;
-          $data['page_title'] = "Tambah Komplain Baru";
-          $data['login'] = $this->UsersModel->getLogin();
+          $data['page_title'] = "Tambah Komplain Baru"; 
  
           $data['tanggalPreSended'] = $this->session->userdata('tanggalPreSended');
           $data['divisi'] = $this->DivisiModel->get($kode_divisi);
@@ -256,7 +254,7 @@
         public function page_DEPRECATED($page){
             $data = $this->data;
             $data['page_title'] = "Tambah Komplain Baru";
-            $data['login'] = $this->UsersModel->getLogin();
+            
 
             //todo fetch complain user tersebut
             

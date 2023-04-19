@@ -6,17 +6,20 @@
             $this->data['page_title'] = "Halaman Penyelesaian Komplain Diterima";
             $this->data['navigation'] = "Solved";  
 
+            middleware_auth(1); //hak akses user 
+            
+            $this->data['login'] = $this->UsersModel->getLogin();
+            
             $this->load->model('UsersModel');
             $this->load->library("form_validation");  
             $this->load->library('session'); 
 
-            middleware_auth(1); //hak akses user 
     }
     public function index(){
         
         $data = $this->data;
         $data['page_title'] = "Halaman Daftar Penyelesaian Komplain Diterima";
-        $data['login'] = $this->UsersModel->getLogin();
+        
 
         //fetch complain user tersebut yang statusnya PEND dan belum ada PENUGASAN
         $complains = $this->KomplainAModel->fetchKomplainDone($data['login']->NOMOR_INDUK); 
@@ -30,7 +33,7 @@
         
         $data = $this->data;
         $data['page_title'] = "Halaman Detail Penyelesaian Komplain Diterima";
-        $data['login'] = $this->UsersModel->getLogin();
+        
         $komplain = $this->KomplainAModel->get($nomor_komplain);
 
         if($komplain==null){

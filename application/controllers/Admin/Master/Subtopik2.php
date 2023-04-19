@@ -27,9 +27,7 @@ class Subtopik2 extends CI_Controller
 
         $subtopics = $this->SubTopik2Model->fetch();
         $data['subtopics'] = $subtopics;  
-        $this->load->view("templates/admin/header", $data);
-        $this->load->view("admin/master/subtopik2/index", $data);
-        $this->load->view("templates/admin/footer", $data);
+        loadView_Admin("admin/master/subtopik2/index", $data); 
     } 
     public function Add()
     {
@@ -38,10 +36,8 @@ class Subtopik2 extends CI_Controller
         // $data['list_topik'] = $this->TopikModel->fetch();
         $data['list_subtopik1'] = $this->SubTopik1Model->fetch();
         $data['login'] = $this->UsersModel->getLogin();
-         
-        $this->load->view("templates/admin/header", $data);
-        $this->load->view("admin/master/subtopik2/add", $data);
-        $this->load->view("templates/admin/footer", $data);
+          
+        loadView_Admin("admin/master/subtopik2/add", $data);
     }
     public function AddProcess()
     { 
@@ -57,9 +53,8 @@ class Subtopik2 extends CI_Controller
         $newSubTopik2->DESKRIPSI = $deskripsi; 
         $newSubTopik2->AKTIF = '1'; 
         $newSubTopik2->insert();
-        $this->session->set_flashdata('header', 'Pesan');
-        $this->session->set_flashdata('message', 'Berhasil Menambahkan Subtopik 2 ');
-        redirect('Admin/Master/Subtopik2');
+        
+        redirectWith('Admin/Master/Subtopik2', 'Berhasil Menambahkan Subtopik 2');
     }
     public function Detail($kode_topik,$kode_subtopik1,$kode_subtopik2)
     {
@@ -70,9 +65,8 @@ class Subtopik2 extends CI_Controller
 
         $subtopic = $this->SubTopik2Model->get($kode_topik,$kode_subtopik1,$kode_subtopik2); 
         $data['subtopic'] = $subtopic;
-        $this->load->view("templates/admin/header", $data);
-        $this->load->view("admin/master/Subtopik2/edit", $data);
-        $this->load->view("templates/admin/footer", $data);
+
+        loadView_Admin("admin/master/Subtopik2/edit", $data); 
     }
 
     public function EditProcess($kode_topik,$kode_subtopik1,$kode_subtopik2)
@@ -87,10 +81,8 @@ class Subtopik2 extends CI_Controller
         $updateSubtopik2->SUB_TOPIK2 = $kode_subtopik2;
         $updateSubtopik2->DESKRIPSI = $deskripsi;  
         $updateSubtopik2->update();
-
-        $this->session->set_flashdata('header', 'Pesan');
-        $this->session->set_flashdata('message', 'Berhasil Mengubah Subtopik 2 ');
-        redirect('Admin/Master/Subtopik2');
+ 
+        redirectWith('Admin/Master/Subtopik2', 'Berhasil Mengubah Subtopik 2');
     }
 
     public function DeleteProcess($kode_topik,$kode_subtopik1,$kode_subtopik2)
@@ -103,16 +95,10 @@ class Subtopik2 extends CI_Controller
 
         $jumlahKomplain = sizeof($subtopik2Delete->fetchKomplain());
         if ($jumlahKomplain > 0) {
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Gagal Menghapus Subtopik2, Karena Subtopik ini memiliki komplain aktif');
-            redirect("Admin/Master/Subtopik2/Detail/$kode_topik/$kode_subtopik1/$kode_subtopik2");
-        } else {
-
-            $subtopik2Delete->delete();
-
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Berhasil Menghapus Subtopik 2 ');
-            redirect('Admin/Master/Subtopik2');
+            redirectWith("Admin/Master/Subtopik2/Detail/$kode_topik/$kode_subtopik1/$kode_subtopik2", 'Gagal Menghapus Subtopik2, Karena Subtopik ini memiliki komplain aktif');  
+        } else { 
+            $subtopik2Delete->delete(); 
+            redirectWith('Admin/Master/Subtopik2', 'Berhasil Menghapus Subtopik 2');
         }
     }
 }

@@ -21,9 +21,8 @@ class Email extends CI_Controller{
  
          $users = $this->UsersModel->fetch();
          $data['users'] = $users;  
-         $this->load->view("templates/admin/header", $data);
-         $this->load->view("admin/master/email/index", $data);
-         $this->load->view("templates/admin/footer", $data);
+
+         loadView_Admin("admin/master/email/index", $data); 
     }
     public function Add(){ 
          //halaman ini digunakan untuk menampilkan form tambah email
@@ -38,10 +37,7 @@ class Email extends CI_Controller{
          $data['users_no_email'] =  $users_no_email;
          $data['managers'] =  $managers;
         
-
-         $this->load->view("templates/admin/header", $data);
-         $this->load->view("admin/master/email/add", $data);
-         $this->load->view("templates/admin/footer", $data);
+        loadView_Admin("admin/master/email/add", $data); 
     }
     public function AddProcess(){ 
         $noInduk_atasan = $this->input->post("inputAtasan"); 
@@ -51,9 +47,7 @@ class Email extends CI_Controller{
         //cek ubslinux
         $posisidomain = strpos($emailUser, "@ubslinux.com");
         // if($posisidomain == false){
-        //     $this->session->set_flashdata('header', 'Pesan');
-        //     $this->session->set_flashdata('message', 'Domain email harus menggunakan @ubslinux.com ! ');
-        //     redirect('Admin/Master/Email/Add');
+        //     redirectWith('Admin/Master/Email/Add','Domain email harus menggunakan @ubslinux.com !');
         // }
 
         $cekCollisionEmail = $this->UsersModel->checkEmailExist($emailUser); 
@@ -106,10 +100,7 @@ class Email extends CI_Controller{
         $data['user'] = $user;   
         $data['managers'] =  $managers;
        
-
-        $this->load->view("templates/admin/header", $data);
-        $this->load->view("admin/master/email/edit", $data);
-        $this->load->view("templates/admin/footer", $data);
+        loadView_Admin("admin/master/email/edit", $data); 
 
     }
     public function EditProcess($nomor_induk){
@@ -121,29 +112,22 @@ class Email extends CI_Controller{
         //cek ubslinux
         // $posisidomain = strpos($emailUser, "@ubslinux.com");
         // if($posisidomain == false){
-        //     $this->session->set_flashdata('header', 'Pesan');
-        //     $this->session->set_flashdata('message', 'Domain email harus menggunakan @ubslinux.com ! ');
-        //     redirect('Admin/Master/Email/Detail/'.$nomor_induk);
-        // }
-
+        //     redirectWith('Admin/Master/Email/Detail/'.$nomor_induk,'Domain email harus menggunakan @ubslinux.com !'); 
+        // } 
         
         $cekCollisionEmail = $this->UsersModel->checkEmailExist($emailUser); 
 
-        if($cekCollisionEmail && $user->EMAIL != $emailUser){ 
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Email ini sudah pernah digunakan! ');
-            redirect('Admin/Master/Email/Detail/'.$nomor_induk);
+        if($cekCollisionEmail && $user->EMAIL != $emailUser){  
+            redirectWith('Admin/Master/Email/Detail/'.$nomor_induk, 'Email ini sudah pernah digunakan!');
         }else{ 
+
             $user = new UsersModel();
             $user->EMAIL = $emailUser;
             $user->NOMOR_INDUK = $nomor_induk;
             $user->KODE_ATASAN = $noInduk_atasan;
             $user->addEmail();
-            
-
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Berhasil Mengubah Email User! ');
-            redirect('Admin/Master/Email');
+        
+            redirectWith('Admin/Master/Email', 'Berhasil Mengubah Email User!');
         }
     }
     public function DeleteProcess($nomor_induk){
@@ -152,11 +136,8 @@ class Email extends CI_Controller{
         $user->NOMOR_INDUK = $nomor_induk;
  
         $user->resetEmail();
-
-        $this->session->set_flashdata('header', 'Pesan');
-        $this->session->set_flashdata('message', 'Berhasil Menghapus data email dan atasan ');
-        redirect('Admin/Master/Email');
-        
+ 
+        redirectWith('Admin/Master/Email', 'Berhasil Menghapus data email dan atasan');
     }
 
 }

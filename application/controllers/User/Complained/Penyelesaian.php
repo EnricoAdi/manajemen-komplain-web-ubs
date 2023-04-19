@@ -8,18 +8,19 @@ class Penyelesaian extends CI_Controller
         $this->data['page_title'] = "Halaman Penyelesaian";
         $this->data['navigation'] = "Feedback";
 
+        middleware_auth(1); //hak akses user 
+        $this->data['login'] = $this->UsersModel->getLogin();
         $this->load->model('UsersModel');
         $this->load->library("form_validation");
         $this->load->library('session');
 
        
-        middleware_auth(1); //hak akses user 
     }
     public function index()
     {
         $data = $this->data;
         $data['page_title'] = "Daftar Komplain Ditugaskan";
-        $data['login'] = $this->UsersModel->getLogin();
+        
 
         //fetch complain user tersebut yang statusnya PEND dan belum ada PENUGASAN
         $complains = $this->KomplainAModel->fetchByUserDitugaskan($data['login']->NOMOR_INDUK);
@@ -34,15 +35,12 @@ class Penyelesaian extends CI_Controller
     {
         $data = $this->data;
         $data['page_title'] = "Detail Komplain Ditugaskan";
-        $data['login'] = $this->UsersModel->getLogin();
+        
 
         $komplain = $this->KomplainAModel->get($nomor_komplain);
 
-        if ($komplain == null) {
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-            redirect('User/Complained/Penyelesaian');
-        }
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian');
+        
         $data['komplain'] = $komplain;
 
         $this->load->view("templates/user/header", $data);
@@ -53,17 +51,13 @@ class Penyelesaian extends CI_Controller
     {
         $data = $this->data;
         $data['page_title'] = "Input Penyelesaian Komplain";
-        $data['login'] = $this->UsersModel->getLogin();
+        
 
         $komplain = $this->KomplainAModel->get($nomor_komplain);
 
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian');
         $data['minDate'] = date('Y-m-d');
-
-        if ($komplain == null) {
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-            redirect('User/Complained/Penyelesaian');
-        }
+ 
         $data['komplain'] = $komplain;
 
         $data['akar'] = $this->session->userdata('akar');
@@ -80,17 +74,13 @@ class Penyelesaian extends CI_Controller
     {
         $data = $this->data;
         $data['page_title'] = "Input Penyelesaian Komplain";
-        $data['login'] = $this->UsersModel->getLogin();
+        
 
         $data['minDate'] = date('Y-m-d');
 
         $komplain = $this->KomplainAModel->get($nomor_komplain);
 
-        if ($komplain == null) {
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-            redirect('User/Complained/Penyelesaian');
-        }
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian');
 
         $data['komplain'] = $komplain;
 
@@ -102,15 +92,11 @@ class Penyelesaian extends CI_Controller
     {
         $data = $this->data;
         $data['page_title'] = "Input Penyelesaian Komplain";
-        $data['login'] = $this->UsersModel->getLogin();
+        
 
-        $komplain = $this->KomplainAModel->get($nomor_komplain);
-
-        if ($komplain == null) {
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-            redirect('User/Complained/Penyelesaian');
-        }
+        $komplain = $this->KomplainAModel->get($nomor_komplain); 
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian');
+         
         $data['komplain'] = $komplain;
 
         $data['akar'] = $this->session->userdata('akar');
@@ -126,11 +112,8 @@ class Penyelesaian extends CI_Controller
     {
         $komplain = $this->KomplainAModel->get($nomor_komplain);
 
-        if ($komplain == null) {
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-            redirect('User/Complained/Penyelesaian');
-        }
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian');
+        
         $akar = $this->input->post('akar-masalah');
         $preventif = $this->input->post('preventif');
         $korektif = $this->input->post('korektif');
@@ -155,11 +138,8 @@ class Penyelesaian extends CI_Controller
     {
         $komplain = $this->KomplainAModel->get($nomor_komplain);
 
-        if ($komplain == null) {
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-            redirect('User/Complained/Penyelesaian');
-        }
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian');
+         
         $akar = $this->session->userdata('akar');
         $preventif  = $this->session->userdata('preventif');
         $korektif = $this->session->userdata('korektif');
@@ -278,11 +258,8 @@ class Penyelesaian extends CI_Controller
     {
         $komplainB = $this->KomplainBModel->get($nomor_komplain);
 
-        if ($komplainB == null) {
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-            redirect('User/Complained/Penyelesaian');
-        }
+        middleware_komplainB($nomor_komplain,'User/Complained/Penyelesaian');
+         
         $komplainB->deletePenyelesaianKomplain();
         $lampiran = new LampiranModel();
         $lampiran->NO_KOMPLAIN = $nomor_komplain;
@@ -296,11 +273,9 @@ class Penyelesaian extends CI_Controller
     public function DeleteLampiran($nomor_komplain, $kode_lampiran)
     {
         $komplain = $this->KomplainAModel->get($nomor_komplain);
-        if ($komplain == null) {
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-            redirect('User/Complained/Penyelesaian');
-        }
+        
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian');
+        
 
         $lampiran = $this->LampiranModel->get($kode_lampiran);
         if ($lampiran == null) {
@@ -396,11 +371,9 @@ class Penyelesaian extends CI_Controller
         $komplainA = $this->KomplainAModel->get($nomor_komplain);
         $komplainB = $this->KomplainBModel->get($nomor_komplain);
 
-        if ($komplainA == null) {
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-            redirect('User/Complained/Penyelesaian');
-        }
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian');
+        middleware_komplainB($nomor_komplain,'User/Complained/Penyelesaian');
+        
         $akar = $this->input->post('akar');
         $preventif  = $this->input->post('preventif');
         $korektif = $this->input->post('korektif');

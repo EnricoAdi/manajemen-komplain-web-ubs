@@ -22,10 +22,8 @@ class Topik extends CI_Controller
 
         $topics = $this->TopikModel->fetch();
         $data['topics'] = $topics;
-
-        $this->load->view("templates/admin/header", $data);
-        $this->load->view("admin/master/topik/index", $data);
-        $this->load->view("templates/admin/footer", $data);
+ 
+        loadView_Admin("admin/master/topik/index", $data);
     }
     public function Menu()
     {
@@ -34,10 +32,8 @@ class Topik extends CI_Controller
         $data = $this->data;
         $data['page_title'] = "Menu Master Topik";
         $data['login'] = $this->UsersModel->getLogin();
-
-        $this->load->view("templates/admin/header", $data);
-        $this->load->view("admin/master/topik/menu", $data);
-        $this->load->view("templates/admin/footer", $data);
+ 
+        loadView_Admin("admin/master/topik/menu", $data);
     }
     public function Add()
     {
@@ -46,9 +42,7 @@ class Topik extends CI_Controller
         $data['page_title'] = "Input Topik";
         $data['list_divisi'] = $this->DivisiModel->fetch();
         $data['login'] = $this->UsersModel->getLogin();
-        $this->load->view("templates/admin/header", $data);
-        $this->load->view("admin/master/topik/add", $data);
-        $this->load->view("templates/admin/footer", $data);
+        loadView_Admin("admin/master/topik/add", $data); 
     }
     public function AddProcess()
     {
@@ -68,9 +62,8 @@ class Topik extends CI_Controller
         $newTopik->TOPIK = $topik;
 
         $newTopik->insert();
-        $this->session->set_flashdata('header', 'Pesan');
-        $this->session->set_flashdata('message', 'Berhasil Menambahkan Topik ');
-        redirect('Admin/Master/Topik');
+        
+        redirectWith("Admin/Master/Topik", "Berhasil Menambahkan Topik");
     }
     public function Detail($kode)
     {
@@ -82,15 +75,17 @@ class Topik extends CI_Controller
 
         $topik = $this->TopikModel->get($kode);
         $data['topic'] = $topik;
+        middleware_topik($topik->KODE_TOPIK, "Admin/Master/Topik");
 
-        $this->load->view("templates/admin/header", $data);
-        $this->load->view("admin/master/topik/edit", $data);
-        $this->load->view("templates/admin/footer", $data);
+        loadView_Admin("admin/master/topik/edit", $data); 
     }
 
     public function EditProcess($kode)
     {
         //controller ini digunakan untuk memproses edit topik
+        
+        middleware_topik($kode, "Admin/Master/Topik");
+        
         $topik =  $this->input->post("topik");
         $divisi = $this->input->post("divisi");
         $nama = $this->input->post("nama");
@@ -104,10 +99,8 @@ class Topik extends CI_Controller
         $updateTopik->DESKRIPSI = $deskripsi;
         $updateTopik->TOPIK = $topik;
         $updateTopik->update();
-
-        $this->session->set_flashdata('header', 'Pesan');
-        $this->session->set_flashdata('message', 'Berhasil Mengubah Topik ');
-        redirect('Admin/Master/Topik');
+ 
+        redirectWith("Admin/Master/Topik", "Berhasil Mengubah Topik");
     }
 
     public function DeleteProcess($kode)
@@ -119,16 +112,12 @@ class Topik extends CI_Controller
 
         $jumlahSubtopik1 = sizeof($topikDelete->fetchSubtopik1());
         if ($jumlahSubtopik1 > 0) {
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Gagal Menghapus Topik, Karena Topik Ini Memiliki Subtopik');
-            redirect('Admin/Master/Topik/Detail/' . $kode);
+            redirectWith("Admin/Master/Topik/Detail/$kode","Gagal Menghapus Topik, Karena Topik Ini Memiliki Subtopik"); 
         } else {
 
             $topikDelete->delete();
-
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Berhasil Menghapus Topik ');
-            redirect('Admin/Master/Topik');
+            redirectWith("Admin/Master/Topik", "Berhasil Menghapus Topik");
+           
         }
     }
 }

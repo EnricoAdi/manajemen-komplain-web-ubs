@@ -43,4 +43,20 @@ function die_dump($element){
   echo "</pre>";
   die();
 }
- 
+
+function redirectWith($url,$message){ 
+  $ci = &get_instance();  
+
+  $ci->session->set_flashdata('header', 'Pesan');
+  $ci->session->set_flashdata('message', $message);
+  redirect($url);
+}
+
+function loadView_Admin($view, $data)
+{
+  $ci = &get_instance(); 
+
+  $ci->load->view("templates/admin/header", $data); 
+  $ci->load->view($view, $data);
+  $ci->load->view("templates/admin/footer", $data); 
+}

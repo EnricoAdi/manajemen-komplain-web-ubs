@@ -6,19 +6,16 @@
             $this->data['page_title'] = "Halaman Penugasan";
             $this->data['navigation'] = "Complained";  
 
+            middleware_auth(1); //hak akses user 
+            $this->data['login'] = $this->UsersModel->getLogin();
             $this->load->model('UsersModel');
             $this->load->library("form_validation");  
-            $this->load->library('session'); 
-
-            
-            middleware_auth(1); //hak akses user 
-
+            $this->load->library('session');  
     }
 
     public function index(){ 
         $data = $this->data;
-        $data['page_title'] = "Penugasan";
-        $data['login'] = $this->UsersModel->getLogin();
+        $data['page_title'] = "Penugasan"; 
 
         //fetch complain user tersebut yang statusnya PEND dan belum ada PENUGASAN
         $complains = $this->KomplainAModel->fetchForDivisi($data['login']->KODEDIV,'PEND'); 
@@ -33,10 +30,12 @@
         
         $data = $this->data;
         $data['page_title'] = "Input Penugasan";
-        $data['login'] = $this->UsersModel->getLogin();
+        
 
         //fetch complain user tersebut yang statusnya PEND dan belum ada PENUGASAN
         $komplain = $this->KomplainAModel->get($nomor_komplain); 
+        middleware_komplainA($nomor_komplain,'User/Complained/Penugasan');
+         
         $data['komplain'] = $komplain;  
         
         //fetch list user sedivisi 
@@ -50,6 +49,8 @@
 
     public function addPenugasan($nomor_komplain){
         $komplain = $this->KomplainAModel->get($nomor_komplain); 
+        middleware_komplainA($nomor_komplain,'User/Complained/Penugasan');
+         
         if($komplain->PENUGASAN != null){ 
             $this->session->set_flashdata('header', 'Pesan');
             $this->session->set_flashdata('message', 'Penugasan sudah ada');
@@ -66,6 +67,8 @@
     }
     public function hapusPenugasan($nomor_komplain){
         $komplain = $this->KomplainAModel->get($nomor_komplain);
+        middleware_komplainA($nomor_komplain,'User/Complained/Penugasan');
+         
         if($komplain->PENUGASAN == null){ 
             $this->session->set_flashdata('header', 'Pesan');
             $this->session->set_flashdata('message', 'Belum ada data penugasan');

@@ -18,10 +18,7 @@
             $data['page_title'] = "Dashboard Admin";
             $data['login'] = $this->UsersModel->getLogin(); 
  
-            $this->load->view("templates/admin/header", $data);
-            $this->load->view("admin/dashboard", $data);
-            $this->load->view("templates/admin/footer", $data);
- 
+            loadView_Admin("admin/dashboard", $data);  
         }
     }
 ?>

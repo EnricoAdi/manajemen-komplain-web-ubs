@@ -6,26 +6,21 @@
             $this->data['page_title'] = "User Page";
             $this->data['navigation'] = "ComplainedList";  
 
-            $this->load->model('UsersModel');
-            $this->load->library("form_validation");  
-            $this->load->library('session');  
-            
             middleware_auth(1); //hak akses user 
+            $this->data['login'] = $this->UsersModel->getLogin(); 
 
+            $this->load->library("form_validation");  
+            $this->load->library('session');   
         }
 
         public function index($nomor_komplain){
             $data = $this->data;
             $data['page_title'] = "Transfer Komplain";
-            $data['login'] = $this->UsersModel->getLogin();
             
+            middleware_komplainA($nomor_komplain,'User/Complained/ListComplained');
+
             $komplain = $this->KomplainAModel->get($nomor_komplain); 
-    
-            if($komplain==null){
-                $this->session->set_flashdata('header', 'Pesan');
-                $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-                redirect('User/Complained/ListComplained');
-            }   
+     
             $subtopics = $this->SubTopik2Model->fetch(); 
             $data['komplain'] = $komplain;  
 
@@ -40,12 +35,9 @@
         }
         public function processTransfer($nomor_komplain){ 
             $komplain = $this->KomplainAModel->get($nomor_komplain); 
-    
-            if($komplain==null){
-                $this->session->set_flashdata('header', 'Pesan');
-                $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-                redirect('User/Complained/ListComplained');
-            }   
+
+            middleware_komplainA($nomor_komplain,'User/Complained/ListComplained');
+             
             //process transfer komplain
             $topik = $this->input->post('inputTopik');
             $subTopik1 = $this->input->post('inputSubtopik1');

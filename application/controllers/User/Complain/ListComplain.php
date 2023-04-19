@@ -5,20 +5,22 @@
             parent::__construct();
             $this->data['page_title'] = "User Page";
             $this->data['navigation'] = "Complain";  
+            middleware_auth(1); //hak akses user 
 
+            $this->data['login'] = $this->UsersModel->getLogin();
+            
             $this->load->model('UsersModel');
             $this->load->library("form_validation");  
             $this->load->library('session'); 
 
            
-            middleware_auth(1); //hak akses user 
 
         }
         
         public function index(){
             $data = $this->data;
             $data['page_title'] = "Daftar Komplain Diajukan";
-            $data['login'] = $this->UsersModel->getLogin();
+            
 
             //todo fetch complain user tersebut
             $complains = $this->KomplainAModel->fetchFromUser($data['login']->NOMOR_INDUK,'all'); 

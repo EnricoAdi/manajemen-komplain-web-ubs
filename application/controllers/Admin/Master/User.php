@@ -7,27 +7,31 @@
             $this->data['page_title'] = "Halaman Master User Admin";
             $this->data['navigation'] = "Master"; 
     
+            middleware_auth(4); //hak akses admin
+            $this->data['login'] = $this->UsersModel->getLogin();
+
             $this->load->library("form_validation");
     
-            middleware_auth(4); //hak akses admin
         }
     
         public function index(){
              //halaman ini digunakan untuk menampilkan daftar user yang ada
              $data = $this->data;
              $data['page_title'] = "Master User";
-             $data['login'] = $this->UsersModel->getLogin();
      
              $users = $this->UsersModel->fetch();
              $data['users'] = $users;  
-             $this->load->view("templates/admin/header", $data);
-             $this->load->view("admin/master/user/index", $data);
-             $this->load->view("templates/admin/footer", $data);
+             
+             loadView_Admin("admin/master/user/index", $data);
         }
-
-        //todo ester
+ 
         public function add(){
-
+            //controller ini digunakan untuk menampilkan halaman input user
+            $data = $this->data;
+            $data['page_title'] = "Input User";
+            $data['list_divisi'] = $this->DivisiModel->fetch();
+            $data['list_role'] = $this->RoleModel->fetch();
+            loadView_Admin("admin/master/user/add", $data); 
         }
     }   
 ?>

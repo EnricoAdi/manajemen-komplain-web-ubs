@@ -6,25 +6,26 @@
             $this->data['page_title'] = "User Page";
             $this->data['navigation'] = "ComplainedList";  
 
+            middleware_auth(1); //hak akses user 
+            $this->data['login'] = $this->UsersModel->getLogin();
+
             $this->load->model('UsersModel');
             $this->load->library("form_validation");  
             $this->load->library('session'); 
 
-            middleware_auth(1); //hak akses user 
 
         }
         public function index(){
             
             $data = $this->data;
             $data['page_title'] = "Daftar Komplain Diterima";
-            $data['login'] = $this->UsersModel->getLogin();
+            
 
-            //todo fetch complain user tersebut
+            //fetch complain user tersebut
+
             $complains = $this->KomplainAModel->fetchForDivisi($data['login']->KODEDIV,'OPEN'); 
             $data['complains'] = $complains; 
-            // echo "<pre>";
-            // var_dump($complains);
-            // echo "</pre>";
+            
             $this->load->view("templates/user/header", $data);
             $this->load->view("user/complained/index", $data);
             $this->load->view("templates/user/footer", $data);
@@ -34,11 +35,8 @@
             $komplain = $this->KomplainAModel->get($nomor_komplain);  
             $user_penerbit = $this->UsersModel->get($komplain->USER_PENERBIT);
             $divisi = $user_penerbit->NAMA_DIVISI;
-            if($komplain==null){
-                $this->session->set_flashdata('header', 'Pesan');
-                $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-                redirect('User/Complained/ListComplained');
-            }
+            middleware_komplainA($nomor_komplain,'User/Complained/ListComplained');
+         
             $komplain->USER_VERIFIKASI = $this->UsersModel->getLogin()->NOMOR_INDUK;
             $komplain->TGL_VERIFIKASI = date('Y-m-d');
             $komplain->updateVerifikasi();
