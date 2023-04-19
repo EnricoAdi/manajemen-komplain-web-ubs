@@ -66,4 +66,22 @@ function error_submit_button($text, $icon = "", $id = "", $class = "")
   return generate_button("submit", "btn-danger $class", $id, $text, $icon, "$error_color","");
 }
 
- 
+
+function card_type_1($judul,$isi,$icon,$warna="primary"){
+   
+  return "
+  <div class='card border-left-$warna shadow h-100 py-2'>
+    <div class='card-body'>
+      <div class='row no-gutters align-items-center'>
+        <div class='col mr-2'>
+          <div class='text-xs font-weight-bold text-$warna text-uppercase mb-1'>
+            $judul</div>
+          <div class='h5 mb-0 font-weight-bold text-gray-800'>$isi</div>
+        </div>
+        <div class='col-auto'>
+          <i class='fas $icon fa-2x text-gray-300'></i>
+        </div>
+      </div>
+    </div>
+  </div>";
+}
