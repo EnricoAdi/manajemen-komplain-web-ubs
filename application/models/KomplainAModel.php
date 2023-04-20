@@ -422,4 +422,10 @@ class KomplainAModel extends CI_Model
         WHERE KOMPLAINA.PENUGASAN = '$nomor_induk' AND KOMPLAINA.STATUS<>'CLOSE'")->result();
         return $query;
     }
+
+
+    public function customFetch($query)
+    {
+        return $this->db->query($query)->result();
+    }
 }

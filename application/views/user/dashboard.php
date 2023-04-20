@@ -28,7 +28,7 @@
         $url = base_url()."User/Complain/Detail/index/$komplain->NO_KOMPLAIN";
         echo " 
                 <a href='$url'> 
-                    <div class='card shadow h-100 py-2 mr-3 mt-3' style='width:200px'>
+                    <div class='card shadow h-100 py-2 mr-3 mt-3' style='width:200px;'>
                         <div class='card-body'>
                             <div class='row no-gutters align-items-center'>
                                 <div class='col mr-2'>
