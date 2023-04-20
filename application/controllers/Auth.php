@@ -1,9 +1,7 @@
 <?php
 
 class Auth extends CI_Controller
-{
-
-
+{ 
     public function __construct()
     {
         parent::__construct();
@@ -23,10 +21,10 @@ class Auth extends CI_Controller
                 redirect('User/Dashboard'); //end user
             }
             if ($hak_akses == '2') {
-                redirect('Manager'); //manager
+                redirect('Manager/Dashboard'); //manager
             }
             if ($hak_akses == '3') {
-                redirect('GM'); //general manager
+                redirect('GM/Dashboard'); //general manager
             } else {
                 redirect('Admin/Dashboard'); //admin
             }
@@ -65,12 +63,12 @@ class Auth extends CI_Controller
                     if ($hak_akses == '2') {
                         $this->session->set_flashdata('message', '');
                         $this->session->set_flashdata('confirmation', '');
-                        redirect('Manager'); //manager
+                        redirect('Manager/Dashboard'); //manager
                     }
                     if ($hak_akses == '3') {
                         $this->session->set_flashdata('message', '');
                         $this->session->set_flashdata('confirmation', '');
-                        redirect('GM'); //general manager
+                        redirect('GM/Dashboard'); //general manager
                     } else {
                         $this->session->set_flashdata('message', '');
                         $this->session->set_flashdata('confirmation', '');

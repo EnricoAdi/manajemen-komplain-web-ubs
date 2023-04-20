@@ -681,5 +681,9 @@ INSERT into users
 values('12311179', 'enrico', 'Enrico', '2', 'enrico2@ubslinux.com', 'IT', '12345679');
 INSERT into users
 values('11311180', 'enrico', 'Enrico', '1', '', 'IT', '12345679');
+INSERT into users
+values('enricoGM', 'enricoGM', 'EnricoGM', '3', '', 'IT', '');
+INSERT into users
+values('emanager', 'emanager', 'EnricoManager', '2', '', 'IT', '');
  
 commit;

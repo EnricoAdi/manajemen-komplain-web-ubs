@@ -78,3 +78,19 @@ function loadView_User($view, $data)
   $ci->load->view($view, $data);
   $ci->load->view("templates/user/footer", $data);  
 }
+function loadView_Manager($view, $data)
+{
+  $ci = &get_instance(); 
+
+  $ci->load->view("templates/manager/header", $data); 
+  $ci->load->view($view, $data);
+  $ci->load->view("templates/manager/footer", $data);  
+}
+function loadView_GM($view, $data)
+{
+  $ci = &get_instance(); 
+
+  $ci->load->view("templates/GM/header", $data); 
+  $ci->load->view($view, $data);
+  $ci->load->view("templates/GM/footer", $data);  
+}
