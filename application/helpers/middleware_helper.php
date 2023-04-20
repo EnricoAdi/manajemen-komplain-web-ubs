@@ -63,7 +63,7 @@ function middleware_komplainA($nomor_komplain,$urlIfError,$strictmodeCreator=fal
         $ci->session->set_flashdata('message', 'Komplain tidak ditemukan');
         redirect($urlIfError);
     }   
-    $allowByDivisi = middleware_unauthorized_komplain_byDivisi($komplain);
+    $allowByDivisi = policy_unauthorized_komplain_byDivisi($komplain);
     if(!$allowByDivisi){  
         redirectWith($urlIfError,'Anda tidak mempunyai akses melihat data komplain ini');
     }
@@ -74,13 +74,13 @@ function middleware_komplainA($nomor_komplain,$urlIfError,$strictmodeCreator=fal
         }
     }
     if($strictmodeDivisiComplained){
-        $allow =  middleware_divisi_solver_komplain_strict($komplain);
+        $allow =  policy_divisi_solver_komplain_strict($komplain);
         if(!$allow){
             redirectWith($urlIfError,'Anda tidak mempunyai akses untuk mengakses data komplain ini');
         }
     }
     if($strictModeSolverComplain){
-        $allow =  middleware_solver_komplain_strict($komplain);
+        $allow =  policy_solver_komplain_strict($komplain);
         if(!$allow){
             redirectWith($urlIfError,'Anda tidak mempunyai akses untuk mengakses data komplain ini');
         }
@@ -111,7 +111,7 @@ function middleware_lampiran_komplain($nomor_komplain,$kode_lampiran,$urlIfError
     }   
 }
 
-function middleware_unauthorized_komplain_byDivisi($komplain){
+function policy_unauthorized_komplain_byDivisi($komplain){
     $ci = &get_instance();  
  
     $kode_divisi_user = $ci->UsersModel->getLogin()->KODEDIV;
@@ -136,7 +136,7 @@ function middleware_author_komplain_strict($komplain){
     $nomor_induk = $ci->UsersModel->getLogin()->NOMOR_INDUK;  
     return ($komplain->USER_PENERBIT == $nomor_induk ); 
 }
-function middleware_divisi_solver_komplain_strict($komplain){  
+function policy_divisi_solver_komplain_strict($komplain){  
     $ci = &get_instance();  
     $kode_divisi_user = $ci->UsersModel->getLogin()->KODEDIV; 
     $topik_penerima = $ci->TopikModel->get($komplain->TOPIK);  
@@ -147,7 +147,7 @@ function middleware_divisi_solver_komplain_strict($komplain){
 /**
  * Middleware ini digunakan untuk diberikan pada hak akses penyelesaian komplain dari user yang diberi akses penugasan
  */
-function middleware_solver_komplain_strict($komplain){  
+function policy_solver_komplain_strict($komplain){  
     $ci = &get_instance();  
     $nomor_induk = $ci->UsersModel->getLogin()->NOMOR_INDUK;  
     return ($komplain->PENUGASAN == $nomor_induk ); 

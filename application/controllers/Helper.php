@@ -39,8 +39,7 @@ class Helper extends CI_Controller
         $this->load->model('KomplainBModel');
         $komplainAs = $this->KomplainAModel->fetch();
         $komplainBs = $this->KomplainBModel->fetch();
-        foreach ($komplainAs as $key => $komplainA) {
-
+        foreach ($komplainAs as $key => $komplainA) { 
             echo "INSERT INTO KOMPLAINA VALUES('$komplainA->NO_KOMPLAIN','$komplainA->TOPIK','$komplainA->SUB_TOPIK1','$komplainA->SUB_TOPIK2','$komplainA->TGL_KEJADIAN','$komplainA->TGL_TERBIT','$komplainA->TGL_VERIFIKASI','$komplainA->USER_VERIFIKASI','$komplainA->TGL_CANCEL','$komplainA->USER_CANCEL','$komplainA->TGL_BANDING','$komplainA->USER_BANDING','$komplainA->TGL_VALIDASI','$komplainA->USER_VALIDASI','$komplainA->PENUGASAN','$komplainA->STATUS','$komplainA->TGL_PENANGANAN','$komplainA->USER_PENANGANAN','$komplainA->TGL_DEADLINE','$komplainA->TGL_DONE','$komplainA->USER_DONE','$komplainA->USER_PENERBIT');";
             echo "<br>";
         }
@@ -49,6 +48,43 @@ class Helper extends CI_Controller
             echo "INSERT INTO KOMPLAINB VALUES('$komplainB->NO_KOMPLAIN','$komplainB->DESKRIPSI_MASALAH','$komplainB->AKAR_MASALAH','$komplainB->T_KOREKTIF','$komplainB->T_PREVENTIF','$komplainB->KEBERATAN');";
             echo "<br>";
         }
+    }
+
+    public function fakerKomplain($qty){
+        $this->load->model('KomplainAModel');
+        $this->load->model('KomplainBModel');
+        $this->load->model('SubTopik2Model');
+        for ($i=1; $i < $qty; $i++) {  
+            $newkode  = str_pad($i, 10, "0", STR_PAD_LEFT);
+            $subtopics2 = $this->SubTopik2Model->fetch();
+            $subtopik2 = $subtopics2[array_rand($subtopics2)]; 
+            //random month between Jan and Dec 
+            $day = rand(1,16);
+            $day  = str_pad($day, 2, "0", STR_PAD_LEFT);
+            $day2 = $day+ rand(4,6);
+            $day2  = str_pad($day2, 2, "0", STR_PAD_LEFT);
+            $day3 = $day2+ rand(4,6);
+            $day3  = str_pad($day3, 2, "0", STR_PAD_LEFT);
+            $months = ["JAN","FEB","MAR","APR"];
+            $month = $months[array_rand($months)];
+
+            $year = 2023;
+            $users = $this->UsersModel->fetch();
+            $user = $users[array_rand($users)];  
+            //random 50 words
+            $words1 =  generateUID(40);
+            $words2 =  generateUID(40);
+            $words3 =  generateUID(40);
+            echo "INSERT INTO KOMPLAINA VALUES('$newkode','$subtopik2->KODE_TOPIK','$subtopik2->SUB_TOPIK1','$subtopik2->SUB_TOPIK2','$day-$month-$year','$day2-$month-$year',null,null,null,null,null,null,null,null,null,'OPEN',null,null,'$day3-$month-$year',null,null,'$user->NOMOR_INDUK');";
+            echo "<br>";
+            echo "<br>";
+
+            echo "INSERT INTO KOMPLAINB VALUES('$newkode','$words1','$words2','$words3','$words1$words2',null);";
+            echo "<br>";
+            echo "<br>";
+            echo "<br>";
+        }
+         
     }
 
     public function exportFakerUser()

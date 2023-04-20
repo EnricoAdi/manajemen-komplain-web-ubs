@@ -8,8 +8,7 @@ class Dashboard extends CI_Controller
         $this->data['page_title'] = "Manager Page";
         $this->data['navigation'] = "Dashboard";
 
-        $this->load->library("form_validation");
-
+        $this->load->library("form_validation"); 
 
         middleware_auth(2); //hak akses manager
         $this->data['login'] = $this->UsersModel->getLogin();

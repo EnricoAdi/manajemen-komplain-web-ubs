@@ -20,7 +20,7 @@
                 <?php
                 foreach ($list_subtopik1 as $subtopik) {
                     // echo "<option value='$subtopik->SUB_TOPIK1'>$subtopik->SUB_TOPIK1 - $subtopik->DESKRIPSI</option>";
-                    if ($subtopic->SUB_TOPIK1 == $subtopik->SUB_TOPIK1) {
+                    if ($subtopic->SUB_TOPIK1 == $subtopik->SUB_TOPIK1 && $subtopic->KODE_TOPIK == $subtopik->KODE_TOPIK) {
                         echo "<option value='$subtopik->KODE_TOPIK - $subtopik->TOPIK @$subtopik->SUB_TOPIK1^$subtopik->NAMA_DIVISI' selected>$subtopik->KODE_TOPIK - $subtopik->SUB_TOPIK1 - $subtopik->DESKRIPSI</option>";
                     } else {
                         echo "<option value='$subtopik->KODE_TOPIK - $subtopik->TOPIK @$subtopik->SUB_TOPIK1^$subtopik->NAMA_DIVISI'>$subtopik->KODE_TOPIK - $subtopik->SUB_TOPIK1 - $subtopik->DESKRIPSI</option>";

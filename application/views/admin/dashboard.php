@@ -58,7 +58,7 @@
 <input type="hidden" id="tahunDalamAngka" value="<?= $tahunDalamAngka ?>">
 <div class="row mb-4">
   <div class="col">
-    <?= card_type_1("Total Komplain Bulan $bulanIni", $totalKomplainBulanIni, "fa-book", "primary") ?>
+    <?= card_type_1("Total Komplain Bulan $bulanIni $tahunDalamAngka", $totalKomplainBulanIni, "fa-book", "primary") ?>
 
   </div>
   <div class="col">
@@ -75,16 +75,20 @@
     const tahunDalamAngka = document.getElementById("tahunDalamAngka").value;
 
     let urlDoughnut = `${baseUrl}Admin/Dashboard/jumlahKomplainDivisiByMonth/${bulanDalamAngka}/${tahunDalamAngka}`;
+    let backgroundColor = ['#4e73df', '#1cc88a', '#36b9cc', '#a629cc', '#baa1a4', '#a229a7'];
+    
     fetch(urlDoughnut).then(res => res.json())
       .then(res => {
         let labels = [];
-        let data = [];
-        let backgroundColor = ['#4e73df', '#1cc88a', '#36b9cc', '#a629cc', '#baa1a4', '#a229a7']
+        let data = []; 
         res.forEach(d => {
           labels.push(d.NAMA)
           data.push(d.TOTAL)
         });
-
+        //random 200 more
+        for (let i = 0; i < data.length - 6 ; i++) {
+          backgroundColor.push(`#${Math.floor(Math.random()*16777215).toString(16)}`);
+        }
         var donutChartDivisi = new Chart(chartDivisi, {
           type: 'doughnut',
           data: {
@@ -161,6 +165,8 @@
           maks = parseInt(d.TOTAL);
         }
       }); 
+      maks = Math.ceil(maks/10)*10;
+      maks+=10;
       var myBarChartKomplainMasuk = new Chart(chartKomplainMasuk, {
         type: 'bar',
         data: {

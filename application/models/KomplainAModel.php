@@ -347,10 +347,10 @@ class KomplainAModel extends CI_Model
         $this->db->delete('KOMPLAINA');
     }
 
-    //untuk laporan
+    //dashboard admin
     public function getTotalKomplainByMonth($bulan, $tahun)
     {
-        $query = $this->db->query("SELECT COUNT(*) as total FROM KOMPLAINA WHERE TO_CHAR(TGL_TERBIT, 'MM') = '$bulan' and TO_CHAR(TGL_TERBIT, 'YYYY') = '$tahun'")->result();
+        $query = $this->db->query("SELECT COUNT(*) as total FROM KOMPLAINA WHERE TO_CHAR(TGL_TERBIT, 'MM') = '$bulan' and TO_CHAR(TGL_TERBIT, 'YYYY') = '$tahun' order by TGL_TERBIT ASC")->result();
         if ($query[0]->TOTAL == null)
             return 0;
         else
@@ -361,6 +361,8 @@ class KomplainAModel extends CI_Model
         $query = $this->db->query("SELECT COUNT(*) as total, D.NAMA  FROM KOMPLAINA K
          JOIN TOPIK T ON K.TOPIK = T.KODE_TOPIK JOIN DIVISI D ON T.DIV_TUJUAN = D.KODEDIV
          WHERE TO_CHAR(TGL_TERBIT, 'MM') = '$bulan' and TO_CHAR(TGL_TERBIT, 'YYYY') = '$tahun' GROUP BY D.NAMA ORDER BY total DESC")->result();
+        if ($query == null)
+             return null;
         if ($query[0] == null)
             return null;
         else

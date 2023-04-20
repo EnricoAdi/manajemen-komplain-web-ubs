@@ -35,11 +35,16 @@
             } 
 
             $jumlahKomplainDivisiByMonth = $this->KomplainAModel->jumlahKomplainDivisiByMonth($bulanDalamAngka, $tahunDalamAngka);
- 
+            
+            $randomColors = [];
+            for($i=0; $i<count($jumlahKomplainDivisiByMonth); $i++){
+                $randomColors[] = sprintf('#%06X', mt_rand(0, 0xFFFFFF));
+            }
             $data['bulanDalamAngka'] = $bulanDalamAngka;
             $data['tahunDalamAngka'] = $tahunDalamAngka;
             $data['totalKomplainBulanIni'] = $totalKomplainBulanIni;
             $data['divisiTerbanyak'] = $divisiTerbanyak;
+            $data['randomColors'] = $randomColors; 
             loadView_Admin("admin/dashboard", $data);  
         }
         public function jumlahKomplainDivisiByMonth($bulanDalamAngka, $tahunDalamAngka){
@@ -49,7 +54,7 @@
         public function jumlahKomplainMasukByYear($tahunDalamAngka){
             $res = getjumlahKomplainMasukByYear($tahunDalamAngka);
             echo json_encode($res);
-        }
+        } 
     }
 ?>
 

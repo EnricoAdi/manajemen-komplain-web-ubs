@@ -13,12 +13,16 @@ function primary_color()
 }
 function secondary_color()
 {
-  return "#DCA71F"; 
+  return "#DCA71F";
+}
+function random_color()
+{
+  return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
 }
 function configToken()
 {
   $cnf['exp'] = 3600; //milisecond
-  $cnf['secretkey'] = 'manajemenkomplain17042023';
+  $cnf['secretkey'] = 'manajemenkomplain20042023';
   return $cnf;
 }
 function encrypt($word)
@@ -37,7 +41,8 @@ function generateUID($length)
   return $UID;
 }
 
-function die_dump($element){
+function die_dump($element)
+{
   echo "<pre>";
   var_dump($element);
   echo "</pre>";
@@ -47,8 +52,9 @@ function die_dump($element){
 /**
  * Function ini untuk melakukan redirect ke url tujuan dengan memberikan pesan lewat modal
  */
-function redirectWith($url,$message){ 
-  $ci = &get_instance();  
+function redirectWith($url, $message)
+{
+  $ci = &get_instance();
 
   $ci->session->set_flashdata('header', 'Pesan');
   $ci->session->set_flashdata('message', $message);
@@ -60,11 +66,11 @@ function redirectWith($url,$message){
  */
 function loadView_Admin($view, $data)
 {
-  $ci = &get_instance(); 
+  $ci = &get_instance();
 
-  $ci->load->view("templates/admin/header", $data); 
+  $ci->load->view("templates/admin/header", $data);
   $ci->load->view($view, $data);
-  $ci->load->view("templates/admin/footer", $data); 
+  $ci->load->view("templates/admin/footer", $data);
 }
 
 /**
@@ -72,25 +78,25 @@ function loadView_Admin($view, $data)
  */
 function loadView_User($view, $data)
 {
-  $ci = &get_instance(); 
+  $ci = &get_instance();
 
-  $ci->load->view("templates/user/header", $data); 
+  $ci->load->view("templates/user/header", $data);
   $ci->load->view($view, $data);
-  $ci->load->view("templates/user/footer", $data);  
+  $ci->load->view("templates/user/footer", $data);
 }
 function loadView_Manager($view, $data)
 {
-  $ci = &get_instance(); 
+  $ci = &get_instance();
 
-  $ci->load->view("templates/manager/header", $data); 
+  $ci->load->view("templates/manager/header", $data);
   $ci->load->view($view, $data);
-  $ci->load->view("templates/manager/footer", $data);  
+  $ci->load->view("templates/manager/footer", $data);
 }
 function loadView_GM($view, $data)
 {
-  $ci = &get_instance(); 
+  $ci = &get_instance();
 
-  $ci->load->view("templates/GM/header", $data); 
+  $ci->load->view("templates/GM/header", $data);
   $ci->load->view($view, $data);
-  $ci->load->view("templates/GM/footer", $data);  
+  $ci->load->view("templates/GM/footer", $data);
 }
