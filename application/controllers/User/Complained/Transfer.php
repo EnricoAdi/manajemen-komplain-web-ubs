@@ -17,7 +17,7 @@
             $data = $this->data;
             $data['page_title'] = "Transfer Komplain";
             
-            middleware_komplainA($nomor_komplain,'User/Complained/ListComplained');
+            middleware_komplainA($nomor_komplain,'User/Complained/ListComplained',false,true,false);
 
             $komplain = $this->KomplainAModel->get($nomor_komplain); 
      
@@ -29,14 +29,13 @@
             $data['subtopics'] = $subtopics; 
             $data['subtopik2'] = $subtopik2; 
 
-            $this->load->view("templates/user/header", $data);
-            $this->load->view("user/complained/transfer", $data);
-            $this->load->view("templates/user/footer", $data);
+            
+            loadView_User("user/complained/transfer", $data); 
         }
         public function processTransfer($nomor_komplain){ 
             $komplain = $this->KomplainAModel->get($nomor_komplain); 
 
-            middleware_komplainA($nomor_komplain,'User/Complained/ListComplained');
+            middleware_komplainA($nomor_komplain,'User/Complained/ListComplained',false,true,false);
              
             //process transfer komplain
             $topik = $this->input->post('inputTopik');

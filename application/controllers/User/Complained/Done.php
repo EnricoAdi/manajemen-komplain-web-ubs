@@ -25,33 +25,27 @@ class Done extends CI_Controller
         $complains = $this->KomplainAModel->fetchComplainSudahDiisi($data['login']->KODEDIV);
         $data['complains'] = $complains;
 
-        $this->load->view("templates/user/header", $data);
-        $this->load->view("user/complained/done/list", $data);
-        $this->load->view("templates/user/footer", $data);
+        loadView_User("user/complained/done/list", $data);
+        
     }
     public function detail($nomor_komplain)
     {
-
         $data = $this->data;
         $data['page_title'] = "Detail Penyelesaian Komplain";
 
-
         $komplain = $this->KomplainAModel->get($nomor_komplain);
 
-        middleware_komplainA($nomor_komplain, 'User/Complained/Done');
+        middleware_komplainA($nomor_komplain, 'User/Complained/Done',false,true,false);
 
         $data['komplain'] = $komplain;
 
-        $this->load->view("templates/user/header", $data);
-        $this->load->view("user/complained/done/detail", $data);
-        $this->load->view("templates/user/footer", $data);
+        loadView_User("user/complained/done/detail", $data); 
     }
     public function successProcess($nomor_komplain)
-    {
-
+    { 
         $komplain = $this->KomplainAModel->get($nomor_komplain);
 
-        middleware_komplainA($nomor_komplain, 'User/Complained/Done');
+        middleware_komplainA($nomor_komplain, 'User/Complained/Done',false,true,false);
 
         $komplain->USER_DONE = $this->UsersModel->getLogin()->NOMOR_INDUK;
         $komplain->TGL_DONE =  date('Y-m-d');
@@ -74,20 +68,17 @@ class Done extends CI_Controller
         );
         // $resultmail = true;
 
-        if ($resultmail) {
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Berhasil done penyelesaian komplain, silahkan cek email anda');
-            redirect('User/Complained/Done');
-        } else {
-            $this->session->set_flashdata('message', 'Berhasil done penyelesaian komplain, namun gagal mengirim email');
-            redirect('User/Complained/Penyelesaian');
+        if ($resultmail) { 
+            redirectWith('User/Complained/Done', 'Berhasil done penyelesaian komplain, silahkan cek email anda');
+        } else { 
+            redirectWith('User/Complained/Penyelesaian', 'Berhasil done penyelesaian komplain, namun gagal mengirim email');
         }
     }
     public function deleteProcess($nomor_komplain)
     {
 
         $komplain = $this->KomplainAModel->get($nomor_komplain);
-        middleware_komplainA($nomor_komplain, 'User/Complained/Done');
+        middleware_komplainA($nomor_komplain, 'User/Complained/Done',false,true,true);
  
         $komplain->deleteDeadlinePenyelesaianKomplain();
         $komplainB = new KomplainBModel();
@@ -118,13 +109,11 @@ class Done extends CI_Controller
         );
         // $resultmail = true;
 
-        if ($resultmail) {
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Berhasil delete penyelesaian komplain, silahkan cek email anda');
-            redirect('User/Complained/Done');
+        if ($resultmail) { 
+            redirectWith('User/Complained/Done', 'Berhasil delete penyelesaian komplain, silahkan cek email anda');
         } else {
-            $this->session->set_flashdata('message', 'Berhasil delete penyelesaian komplain, namun gagal mengirim email');
-            redirect('User/Complained/Penyelesaian');
+            redirectWith('User/Complained/Penyelesaian', 'Berhasil delete penyelesaian komplain, namun gagal mengirim email');
+            
         }
     }
 }

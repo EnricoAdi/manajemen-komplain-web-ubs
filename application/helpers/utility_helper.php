@@ -44,6 +44,9 @@ function die_dump($element){
   die();
 }
 
+/**
+ * Function ini untuk melakukan redirect ke url tujuan dengan memberikan pesan lewat modal
+ */
 function redirectWith($url,$message){ 
   $ci = &get_instance();  
 
@@ -52,6 +55,9 @@ function redirectWith($url,$message){
   redirect($url);
 }
 
+/**
+ * Function ini untuk melakukan load view dengan template admin
+ */
 function loadView_Admin($view, $data)
 {
   $ci = &get_instance(); 
@@ -61,6 +67,9 @@ function loadView_Admin($view, $data)
   $ci->load->view("templates/admin/footer", $data); 
 }
 
+/**
+ * Function ini untuk melakukan load view dengan template user
+ */
 function loadView_User($view, $data)
 {
   $ci = &get_instance(); 

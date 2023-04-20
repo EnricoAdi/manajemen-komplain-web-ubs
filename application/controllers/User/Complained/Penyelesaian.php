@@ -9,11 +9,9 @@ class Penyelesaian extends CI_Controller
         $this->data['navigation'] = "Feedback";
 
         middleware_auth(1); //hak akses user 
-        $this->data['login'] = $this->UsersModel->getLogin();
-        $this->load->model('UsersModel');
+        $this->data['login'] = $this->UsersModel->getLogin(); 
         $this->load->library("form_validation");
-        $this->load->library('session');
-
+        $this->load->library('session'); 
        
     }
     public function index()
@@ -26,9 +24,9 @@ class Penyelesaian extends CI_Controller
         $complains = $this->KomplainAModel->fetchByUserDitugaskan($data['login']->NOMOR_INDUK);
         $data['complains'] = $complains;
 
-        $this->load->view("templates/user/header", $data);
-        $this->load->view("user/complained/penyelesaian/list", $data);
-        $this->load->view("templates/user/footer", $data);
+        
+        loadView_User("user/complained/penyelesaian/list", $data);
+        
     }
 
     public function detail($nomor_komplain)
@@ -39,13 +37,13 @@ class Penyelesaian extends CI_Controller
 
         $komplain = $this->KomplainAModel->get($nomor_komplain);
 
-        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian');
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian',false,true,true);
         
         $data['komplain'] = $komplain;
 
-        $this->load->view("templates/user/header", $data);
-        $this->load->view("user/complained/penyelesaian/detail", $data);
-        $this->load->view("templates/user/footer", $data);
+        
+        loadView_User("user/complained/penyelesaian/detail", $data);
+        
     }
     public function addPage($nomor_komplain)
     {
@@ -55,7 +53,7 @@ class Penyelesaian extends CI_Controller
 
         $komplain = $this->KomplainAModel->get($nomor_komplain);
 
-        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian');
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian',false,true,true);
         $data['minDate'] = date('Y-m-d');
  
         $data['komplain'] = $komplain;
@@ -66,9 +64,9 @@ class Penyelesaian extends CI_Controller
         $data['tanggalDeadline'] = $this->session->userdata('tanggalDeadline');
 
 
-        $this->load->view("templates/user/header", $data);
-        $this->load->view("user/complained/penyelesaian/tambah-detail", $data);
-        $this->load->view("templates/user/footer", $data);
+        
+        loadView_User("user/complained/penyelesaian/tambah-detail", $data);
+        
     }
     public function editPage($nomor_komplain)
     {
@@ -80,13 +78,13 @@ class Penyelesaian extends CI_Controller
 
         $komplain = $this->KomplainAModel->get($nomor_komplain);
 
-        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian');
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian',false,true,true);
 
         $data['komplain'] = $komplain;
 
-        $this->load->view("templates/user/header", $data);
-        $this->load->view("user/complained/penyelesaian/edit", $data);
-        $this->load->view("templates/user/footer", $data);
+        
+        loadView_User("user/complained/penyelesaian/edit", $data);
+        
     }
     public function lampiranPage($nomor_komplain)
     {
@@ -95,7 +93,8 @@ class Penyelesaian extends CI_Controller
         
 
         $komplain = $this->KomplainAModel->get($nomor_komplain); 
-        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian');
+
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian',false,true,true);
          
         $data['komplain'] = $komplain;
 
@@ -104,15 +103,15 @@ class Penyelesaian extends CI_Controller
         $data['korektif'] = $this->session->userdata('korektif');
         $data['tanggalDeadline'] = $this->session->userdata('tanggalDeadline');
 
-        $this->load->view("templates/user/header", $data);
-        $this->load->view("user/complained/penyelesaian/tambah-lampiran", $data);
-        $this->load->view("templates/user/footer", $data);
+        
+        loadView_User("user/complained/penyelesaian/tambah-lampiran", $data);
+        
     }
     public function addPenyelesaianPage1Process($nomor_komplain)
     {
         $komplain = $this->KomplainAModel->get($nomor_komplain);
 
-        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian');
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian',false,true,true);
         
         $akar = $this->input->post('akar-masalah');
         $preventif = $this->input->post('preventif');
@@ -125,10 +124,8 @@ class Penyelesaian extends CI_Controller
         $this->session->set_userdata('preventif', $preventif);
         $this->session->set_userdata('korektif', $korektif);
 
-        if ($tanggalDeadline < $tanggalHariIni) {
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Tanggal deadline tidak boleh kurang dari hari ini');
-            redirect('User/Complained/Penyelesaian/addPage/' . $nomor_komplain);
+        if ($tanggalDeadline < $tanggalHariIni) {  
+            redirectWith('User/Complained/Penyelesaian/addPage/' . $nomor_komplain, 'Tanggal deadline tidak boleh kurang dari hari ini');
         } else {
             $this->session->set_userdata('tanggalDeadline', $tanggalDeadline);
             redirect('User/Complained/Penyelesaian/lampiranPage/' . $nomor_komplain);
@@ -138,7 +135,7 @@ class Penyelesaian extends CI_Controller
     {
         $komplain = $this->KomplainAModel->get($nomor_komplain);
 
-        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian');
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian',false,true,true);
          
         $akar = $this->session->userdata('akar');
         $preventif  = $this->session->userdata('preventif');
@@ -259,6 +256,8 @@ class Penyelesaian extends CI_Controller
     {
         $komplainB = $this->KomplainBModel->get($nomor_komplain);
 
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian',false,true,true);
+
         middleware_komplainB($nomor_komplain,'User/Complained/Penyelesaian');
          
         $komplainB->deletePenyelesaianKomplain();
@@ -275,7 +274,7 @@ class Penyelesaian extends CI_Controller
     {
         $komplain = $this->KomplainAModel->get($nomor_komplain);
         
-        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian');
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian',false,true,true);
         
 
         $lampiran = $this->LampiranModel->get($kode_lampiran);
@@ -372,7 +371,7 @@ class Penyelesaian extends CI_Controller
         $komplainA = $this->KomplainAModel->get($nomor_komplain);
         $komplainB = $this->KomplainBModel->get($nomor_komplain);
 
-        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian');
+        middleware_komplainA($nomor_komplain,'User/Complained/Penyelesaian',false,true,true);
         middleware_komplainB($nomor_komplain,'User/Complained/Penyelesaian');
         
         $akar = $this->input->post('akar');

@@ -23,9 +23,8 @@
           $data['page_title'] = "Tambah Komplain Baru";
  
           $data['allDivisi'] = $this->DivisiModel->fetch();
-          $this->load->view("templates/user/header", $data);
-          $this->load->view("user/complain/add/input-divisi", $data);
-          $this->load->view("templates/user/footer", $data);
+          
+          loadView_User("user/complain/add/input-divisi",$data);
         }
         public function processPilihDivisi(){ 
           $divisi =  $this->input->post("divisi"); 
@@ -41,10 +40,8 @@
           }
           $data["divisi"] =  $this->DivisiModel->get($divisi);  
           $data["allTopik"] = $this->TopikModel->fetchByDivisi($divisi);
-          //todo fetch topik per divisi
-          $this->load->view("templates/user/header", $data);
-          $this->load->view("user/complain/add/input-topik", $data);
-          $this->load->view("templates/user/footer", $data);
+           
+          loadView_User("user/complain/add/input-topik",$data);
         }
         public function processPilihTopik($divisi=null){
           $topik =  $this->input->post("topik"); 
@@ -53,8 +50,7 @@
         public function pilihSubTopik1($divisi=null,$topik=null){ 
           
           $data = $this->data;
-          $data['page_title'] = "Tambah Komplain Baru";
-          
+          $data['page_title'] = "Tambah Komplain Baru"; 
  
           if($divisi==null || $topik==null){
             $this->session->set_flashdata('message', 'Silahkan memilih divisi untuk dikomplain terlebih dahulu');
@@ -64,9 +60,8 @@
           $data["topik"] =  $this->TopikModel->get($topik);  
           $data["allSubTopik1"] = $this->SubTopik1Model->fetchByTopik($topik); 
           //todo fetch topik per divisi
-          $this->load->view("templates/user/header", $data);
-          $this->load->view("user/complain/add/input-subtopik1", $data);
-          $this->load->view("templates/user/footer", $data);
+          
+          loadView_User("user/complain/add/input-subtopik1",$data);
         }
         public function processPilihSubTopik1($divisi=null,$topik=null){
           $subtopik1 =  $this->input->post("subtopik1"); 
@@ -85,11 +80,9 @@
           $data["divisi"] =  $this->DivisiModel->get($kode_divisi);  
           $data["topik"] =  $this->TopikModel->get($kode_topik);  
           $data["subtopik1"] =  $this->SubTopik1Model->get($kode_topik,$kode_subtopik1);  
-          $data["allSubTopik2"] = $this->SubTopik2Model->fetchBySubTopik1($kode_topik,$kode_subtopik1); 
-          //todo fetch topik per divisi
-          $this->load->view("templates/user/header", $data);
-          $this->load->view("user/complain/add/input-subtopik2", $data);
-          $this->load->view("templates/user/footer", $data);
+          $data["allSubTopik2"] = $this->SubTopik2Model->fetchBySubTopik1($kode_topik,$kode_subtopik1);
+          
+          loadView_User("user/complain/add/input-subtopik2",$data);
         }
         public function processPilihSubtopik2($divisi=null,$topik=null,$subtopik1=null){
           $subtopik2 =  $this->input->post("subtopik2"); 
@@ -116,9 +109,7 @@
           $data['topik'] = $this->TopikModel->get($kode_topik);
           $data['subtopik1'] = $this->SubTopik1Model->get($kode_topik,$kode_subtopik1);
           $data['subtopik2'] = $this->SubTopik2Model->get($kode_topik,$kode_subtopik1,$kode_subtopik2);
-          $this->load->view("templates/user/header", $data);
-          $this->load->view("user/complain/add/input-lampiran", $data);
-          $this->load->view("templates/user/footer", $data);
+          loadView_User("user/complain/add/input-lampiran",$data); 
         }
 
         
@@ -257,9 +248,7 @@
             $data = $this->data;
             $data['page_title'] = "Tambah Komplain Baru";
             
-
-            //todo fetch complain user tersebut
-            
+ 
             if($page==1){ 
                 //dapatkan input lama kalau ada
                 $data['subtopik2PreSended'] = $this->session->userdata('subtopik2PreSended');
@@ -290,10 +279,8 @@
                     if($subtopik->SUB_TOPIK2==$subtopik2){  
                         $data['topikShow'] = "$subtopik->KODE_TOPIK - $subtopik->SUB_TOPIK1 - $subtopik->S2DESKRIPSI";
                     }
-                }
-                $this->load->view("templates/user/header", $data);
-                $this->load->view("user/complain/add/input-detail", $data);
-                $this->load->view("templates/user/footer", $data);
+                } 
+                loadView_User("user/complain/add/input-detail", $data);
             }
  
         } 

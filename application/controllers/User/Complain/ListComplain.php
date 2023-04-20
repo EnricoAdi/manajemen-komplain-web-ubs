@@ -8,27 +8,20 @@
             middleware_auth(1); //hak akses user 
 
             $this->data['login'] = $this->UsersModel->getLogin();
-            
-            $this->load->model('UsersModel');
+             
             $this->load->library("form_validation");  
-            $this->load->library('session'); 
-
-           
-
+            $this->load->library('session');  
         }
         
         public function index(){
             $data = $this->data;
-            $data['page_title'] = "Daftar Komplain Diajukan";
-            
+            $data['page_title'] = "Daftar Komplain Diajukan"; 
 
             //todo fetch complain user tersebut
             $complains = $this->KomplainAModel->fetchFromUser($data['login']->NOMOR_INDUK,'all'); 
             $data['complains'] = $complains;
             
-            $this->load->view("templates/user/header", $data);
-            $this->load->view("user/complain/index", $data);
-            $this->load->view("templates/user/footer", $data);
+            loadView_User("user/complain/index",$data); 
  
         }
         public function DeleteComplain($no_komplain){
@@ -58,17 +51,12 @@
 
                 $complainA->delete();
 
-                $this->session->set_flashdata('header', 'Pesan');
-                $this->session->set_flashdata('message', 'Komplain berhasil dihapus, silahkan cek email anda');
-                redirect('User/Complain/ListComplain');
-            }else{ 
-                $this->session->set_flashdata('header', 'Pesan');
-                $this->session->set_flashdata('message', 'Komplain gagal dihapus (email tidak terkirim)');
-                redirect('User/Complain/ListComplain');
+                redirectWith('User/Complain/ListComplain','Komplain berhasil dihapus, silahkan cek email anda'); 
+            }else{  
+                redirectWith('User/Complain/ListComplain','Komplain gagal dihapus (email tidak terkirim)');
             }
         }
-
-
+ 
         public function templateEmailSuccessDelete($nama, $subtopik2){
             return "<!DOCTYPE html>
             <html>

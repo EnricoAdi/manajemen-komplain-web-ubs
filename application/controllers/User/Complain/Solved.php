@@ -9,52 +9,39 @@
             middleware_auth(1); //hak akses user 
             
             $this->data['login'] = $this->UsersModel->getLogin();
-            
-            $this->load->model('UsersModel');
+             
             $this->load->library("form_validation");  
             $this->load->library('session'); 
 
     }
-    public function index(){
-        
+    public function index(){ 
         $data = $this->data;
         $data['page_title'] = "Halaman Daftar Penyelesaian Komplain Diterima";
-        
 
         //fetch complain user tersebut yang statusnya PEND dan belum ada PENUGASAN
         $complains = $this->KomplainAModel->fetchKomplainDone($data['login']->NOMOR_INDUK); 
         $data['complains'] = $complains;
-         
-        $this->load->view("templates/user/header", $data);
-        $this->load->view("user/complain/solved/list", $data);
-        $this->load->view("templates/user/footer", $data);
+
+        loadView_User("user/complain/solved/list",$data); 
     }
+
     public function detail($nomor_komplain){
         
         $data = $this->data;
         $data['page_title'] = "Halaman Detail Penyelesaian Komplain Diterima";
         
+        middleware_komplainA($nomor_komplain,'User/Complain/Solved',true);
         $komplain = $this->KomplainAModel->get($nomor_komplain);
-
-        if($komplain==null){
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-            redirect('User/Complain/Solved');
-        }
+ 
         $data['komplain'] = $komplain;
-
-        $this->load->view("templates/user/header", $data);
-        $this->load->view("user/complain/solved/detail", $data);
-        $this->load->view("templates/user/footer", $data);
+        
+        loadView_User("user/complain/solved/detail",$data); 
     }
     public function solveProcess($nomor_komplain){
+        middleware_komplainA($nomor_komplain,'User/Complain/Solved',true);
+        
         $komplain = $this->KomplainAModel->get($nomor_komplain);
-
-        if($komplain==null){
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Komplain tidak ditemukan');
-            redirect('User/Complain/Solved');
-        }
+ 
         $keputusan = $this->input->post('keputusan');
         $permintaanBanding = $this->input->post('permintaanBanding');
          
@@ -66,9 +53,7 @@
         //isi apabila banding
         if($keputusan=='banding'){
             if($permintaanBanding==''){
-                $this->session->set_flashdata('header', 'Pesan');
-                $this->session->set_flashdata('message', 'Permintaan banding harus diisi');
-                redirect('User/Complain/Solved/detail'.$nomor_komplain);
+                redirectWith('User/Complain/Solved/detail'.$nomor_komplain,'Permintaan banding harus diisi'); 
             }
             $komplainB = new KomplainBModel();
             $komplainB->KEBERATAN = $permintaanBanding;
@@ -148,13 +133,10 @@
             $headerRecipient, $templateRecipient); 
         }
         if($resultmail==true && $resultmailRecepient==true){ 
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Berhasil memberikan keputusan pada penyelesaian komplain, silahkan cek email anda');
-            redirect('User/Complain/Solved');
-        }else{
-            $this->session->set_flashdata('header', 'Peringatan');
-            $this->session->set_flashdata('message', 'Berhasil memberikan keputusan pada penyelesaian komplain, namun gagal mengirim email');
-            redirect('User/Complain/Solved');
+
+            redirectWith('User/Complain/Solved','Berhasil memberikan keputusan pada penyelesaian komplain, silahkan cek email anda'); 
+        }else{ 
+            redirectWith('User/Complain/Solved','Berhasil memberikan keputusan pada penyelesaian komplain, namun gagal mengirim email');
         }
     }
 

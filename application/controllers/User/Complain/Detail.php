@@ -23,13 +23,10 @@ class Detail extends CI_Controller
         
 
         $komplain = $this->KomplainAModel->get($nomor_komplain); 
-        middleware_komplainA($nomor_komplain,'User/Complain/ListComplain');
-             
+        middleware_komplainA($nomor_komplain,'User/Complain/ListComplain',true); 
 
         $data['komplain'] = $komplain; 
-        $this->load->view("templates/user/header", $data);
-        $this->load->view("user/complain/detail/index", $data);
-        $this->load->view("templates/user/footer", $data);
+        loadView_User("user/complain/detail/index",$data); 
     }
     public function edit_page($nomor_komplain){ 
         $data = $this->data;
@@ -38,7 +35,7 @@ class Detail extends CI_Controller
 
         $komplain = $this->KomplainAModel->get($nomor_komplain);  
         
-        middleware_komplainA($nomor_komplain,'User/Complain/ListComplain');
+        middleware_komplainA($nomor_komplain,'User/Complain/ListComplain',true);
 
         $data['komplain'] = $komplain; 
 
@@ -47,16 +44,14 @@ class Detail extends CI_Controller
         $subtopics = $this->SubTopik2Model->fetchSubtopikAll($data['login']->KODEDIV,false); 
         $data['subtopics'] = $subtopics;  
 
-        $this->load->view("templates/user/header", $data);
-        $this->load->view("user/complain/detail/edit-topic", $data);
-        $this->load->view("templates/user/footer", $data);
+        loadView_User("user/complain/detail/edit-topic",$data); 
         
     }
     public function EditKomplain($nomor_komplain){  
          
         $komplain = $this->KomplainAModel->get($nomor_komplain);  
         
-        middleware_komplainA($nomor_komplain,'User/Complain/ListComplain');
+        middleware_komplainA($nomor_komplain,'User/Complain/ListComplain',true);
 
         // $topik =  $this->input->post("inputTopik");
         // $subtopik1 =  $this->input->post("inputSubtopik1");
@@ -65,9 +60,7 @@ class Detail extends CI_Controller
 
         $tanggalMin = date('Y-m-d', strtotime('-14 days'));
         if($tanggal < $tanggalMin){
-            $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Tanggal tidak boleh lebih dari 14 hari');
-            redirect("User/Complain/Detail/edit_page/$nomor_komplain");
+            redirectWith('User/Complain/Detail/edit_page/'.$nomor_komplain,'Tanggal tidak boleh lebih dari 14 hari'); 
         }
 
         
@@ -138,24 +131,20 @@ class Detail extends CI_Controller
             } 
         }  
         if($isError){ 
-            $this->session->set_flashdata('message', 'Terdapat error dalam upload lampiran');
-            redirect('User/Complain/Detail/edit_page/'.$nomor_komplain);
+            redirectWith('User/Complain/Detail/edit_page/'.$nomor_komplain,'Terdapat error dalam upload lampiran'); 
         }else{  
-            $this->session->set_flashdata('message', 'Berhasil mengubah data komplain');
-            redirect('User/Complain/ListComplain'); 
+            redirectWith('User/Complain/ListComplain','Berhasil mengubah data komplain'); 
         }
     }
     public function DeleteLampiran($kode_lampiran, $nomor_komplain){ 
         $komplain = $this->KomplainAModel->get($nomor_komplain);  
         
-        middleware_komplainA($nomor_komplain,'User/Complain/ListComplain');
+        middleware_komplainA($nomor_komplain,'User/Complain/ListComplain',true);
 
         $lampiran = new LampiranModel();
         $lampiran->KODE_LAMPIRAN = $kode_lampiran;
         $lampiran->delete();
-        $this->session->set_flashdata('header', 'Pesan');
-        $this->session->set_flashdata('message', 'Lampiran berhasil dihapus');
-        redirect('User/Complain/Detail/edit_page/'.$nomor_komplain);
+        redirectWith('User/Complain/Detail/edit_page/'.$nomor_komplain,'Berhasil menghapus lampiran'); 
 
     }
 }
