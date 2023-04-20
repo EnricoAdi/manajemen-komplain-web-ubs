@@ -159,6 +159,7 @@ class Penyelesaian extends CI_Controller
             $komplain->TGL_PENANGANAN = $today;
             $komplain->USER_PENANGANAN = $this->UsersModel->getLogin()->NOMOR_INDUK;
             $komplain->updateDeadlinePenyelesaianKomplain();
+            $komplain->updatePenyelesaianKomplain();
 
             //update komplainB
             $komplainB = new KomplainBModel();

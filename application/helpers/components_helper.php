@@ -9,7 +9,7 @@ function generate_button($type, $class, $id, $text, $icon, $backgroundColor, $hr
   if ($href != "") { 
    $url = base_url().$href;
     return "<a href='$url'> 
-      <button type='$type' id='$id' class='btn $class' style='color:white; 
+      <button type='$type' id='$id' class='btn $class animated' style='color:white; 
           padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;
           background-color: $backgroundColor;'>  
           $icon
@@ -17,7 +17,7 @@ function generate_button($type, $class, $id, $text, $icon, $backgroundColor, $hr
         </button>
   </a>";
   } else { 
-    return "<button type='$type' id='$id' class='btn $class' style='color:white; 
+    return "<button type='$type' id='$id' class='btn $class animated' style='color:white; 
       padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;
       background-color: $backgroundColor;'>  
       $icon

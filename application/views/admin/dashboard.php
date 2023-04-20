@@ -1,11 +1,24 @@
 <!-- Page Heading -->
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Dashboard Admin</h1>
+<div style="display:flex"> 
+  <div class="dropdown mb-4 mr-2"> 
+      <button class="btn btn-primary dropdown-toggle" type="button"
+          id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" style=" padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px; background-color: <?=primary_color()?>;">
+          Laporan
+      </button>
+      <div class="mt-2 dropdown-menu animated--fade-in"
+          aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="<?=base_url()?>Admin/Laporan/JumlahKomplain">Laporan Jumlah Komplain</a>
+          <a class="dropdown-item" href="<?=base_url()?>Admin/Laporan/DetailFeedback">Laporan Detail Feedback</a>
+          <a class="dropdown-item" href="<?=base_url()?>Admin/Laporan/PerTopik">Laporan Per Topik</a>
+      </div>
+  </div>
+  <?= primary_button("Master Topik", "", "", "mr-2 mb-2", "Admin/Master/Topik/Menu") ?>
+  <?= primary_button("Master User", "", "", "mr-2 mb-2", "Admin/Master/User") ?>
+  <?= primary_button("Master Email", "", "", "mr-2 mb-2 ", "Admin/Master/Email") ?>
 
-<?= primary_button("Laporan", "", "", "mr-2 mb-2", "Admin/Laporan/DetailFeedback") ?>
-<?= primary_button("Master Topik", "", "", "mr-2 mb-2", "Admin/Master/Topik") ?>
-<?= primary_button("Master User", "", "", "mr-2 mb-2", "Admin/Master/User") ?>
-<?= primary_button("Master Email", "", "", "mr-2 mb-2 ", "Admin/Master/Email") ?>
-
+</div>
 <div class="row">
 
   <div class="col">

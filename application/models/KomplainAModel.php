@@ -296,6 +296,13 @@ class KomplainAModel extends CI_Model
         TGL_DEADLINE = TO_DATE('$this->TGL_DEADLINE', 'YYYY-MM-DD')
         where NO_KOMPLAIN = '$this->NO_KOMPLAIN'");
     }
+    public function updatePenyelesaianKomplain()
+    {
+        $this->db->query("UPDATE KOMPLAINA SET 
+        TGL_PENANGANAN = TO_DATE('$this->TGL_PENANGANAN', 'YYYY-MM-DD'),
+        USER_PENANGANAN = '$this->USER_PENANGANAN'
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'");
+    }
     public function deleteDeadlinePenyelesaianKomplain()
     {
         $this->db->query("UPDATE KOMPLAINA SET 
@@ -366,8 +373,53 @@ class KomplainAModel extends CI_Model
          WHERE TO_CHAR(TGL_TERBIT, 'MM') = '$bulan' and TO_CHAR(TGL_TERBIT, 'YYYY') = '$tahun' GROUP BY D.NAMA ORDER BY total DESC")->result();
         return $query;
     }
-    public function fetchKomplainPerBulanByYear($tahun){
+    public function fetchKomplainPerBulanByYear($tahun)
+    {
         $query = $this->db->query("SELECT RTRIM(TO_CHAR(TGL_TERBIT, 'Month'),' ') as bulan, COUNT(*) as total FROM KOMPLAINA WHERE TO_CHAR(TGL_TERBIT, 'YYYY') = '$tahun' GROUP BY TO_CHAR(TGL_TERBIT, 'Month') ORDER BY TO_CHAR(TGL_TERBIT, 'Month') ASC")->result();
+        return $query;
+    }
+
+    //dashboard user
+    public function getTotalKomplainTerkirimByUser($nomor_induk)
+    {
+        $query = $this->db->query("SELECT COUNT(*) as total FROM KOMPLAINA WHERE USER_PENERBIT = '$nomor_induk'")->result();
+        if ($query[0]->TOTAL == null)
+            return 0;
+        else
+            return $query[0]->TOTAL;
+    }
+    public function getTotalKomplainDiterimaByUser($nomor_induk)
+    {
+        $query = $this->db->query("SELECT COUNT(*) as total FROM KOMPLAINA WHERE PENUGASAN = '$nomor_induk'")->result();
+        if ($query[0]->TOTAL == null)
+            return 0;
+        else
+            return $query[0]->TOTAL;
+    }
+    public function getTotalKomplainSedangDitanganiByUser($nomor_induk)
+    {
+        $query = $this->db->query("SELECT COUNT(*) as total FROM KOMPLAINA WHERE PENUGASAN = '$nomor_induk' and STATUS<>'CLOSE'")->result();
+        if ($query[0]->TOTAL == null)
+            return 0;
+        else
+            return $query[0]->TOTAL;
+    }
+
+    public function fetchKomplainBulanIniByUser($nomor_induk, $bulan, $tahun)
+    {
+        $query = $this->db->query("SELECT KOMPLAINA.*, TOPIK.TOPIK AS NAMATOPIK, DIVISI.NAMA AS NAMADIVISI FROM KOMPLAINA 
+        JOIN TOPIK ON TOPIK.KODE_TOPIK = KOMPLAINA.TOPIK JOIN DIVISI ON DIVISI.KODEDIV = TOPIK.DIV_TUJUAN
+        WHERE USER_PENERBIT = '$nomor_induk' 
+        and TO_CHAR(TGL_TERBIT, 'MM') = '$bulan' and TO_CHAR(TGL_TERBIT, 'YYYY') = '$tahun'")->result();
+        return $query;
+    }
+    public function fetchKomplainPenugasanByUser($nomor_induk)
+    {
+        $query = $this->db->query("SELECT KOMPLAINA.*, KOMPLAINB.*, TOPIK.TOPIK AS NAMATOPIK, DIVISI.NAMA AS NAMADIVISI FROM KOMPLAINA 
+        JOIN TOPIK ON TOPIK.KODE_TOPIK = KOMPLAINA.TOPIK 
+        JOIN DIVISI ON DIVISI.KODEDIV = TOPIK.DIV_TUJUAN
+        JOIN KOMPLAINB ON KOMPLAINA.NO_KOMPLAIN = KOMPLAINB.NO_KOMPLAIN
+        WHERE KOMPLAINA.PENUGASAN = '$nomor_induk' AND KOMPLAINA.STATUS<>'CLOSE'")->result();
         return $query;
     }
 }

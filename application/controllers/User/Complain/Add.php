@@ -13,8 +13,10 @@
             $this->load->library('session'); 
             $this->load->library('upload');
             $this->load->library('email');
-
-
+ 
+        }
+        public function index(){
+          redirect("User/Complain/Add/pilihDivisi");
         }
         public function pilihDivisi(){
           $data = $this->data;

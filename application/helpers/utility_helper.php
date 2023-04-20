@@ -60,3 +60,12 @@ function loadView_Admin($view, $data)
   $ci->load->view($view, $data);
   $ci->load->view("templates/admin/footer", $data); 
 }
+
+function loadView_User($view, $data)
+{
+  $ci = &get_instance(); 
+
+  $ci->load->view("templates/user/header", $data); 
+  $ci->load->view($view, $data);
+  $ci->load->view("templates/user/footer", $data);  
+}
