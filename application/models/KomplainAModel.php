@@ -366,4 +366,8 @@ class KomplainAModel extends CI_Model
          WHERE TO_CHAR(TGL_TERBIT, 'MM') = '$bulan' and TO_CHAR(TGL_TERBIT, 'YYYY') = '$tahun' GROUP BY D.NAMA ORDER BY total DESC")->result();
         return $query;
     }
+    public function fetchKomplainPerBulanByYear($tahun){
+        $query = $this->db->query("SELECT RTRIM(TO_CHAR(TGL_TERBIT, 'Month'),' ') as bulan, COUNT(*) as total FROM KOMPLAINA WHERE TO_CHAR(TGL_TERBIT, 'YYYY') = '$tahun' GROUP BY TO_CHAR(TGL_TERBIT, 'Month') ORDER BY TO_CHAR(TGL_TERBIT, 'Month') ASC")->result();
+        return $query;
+    }
 }

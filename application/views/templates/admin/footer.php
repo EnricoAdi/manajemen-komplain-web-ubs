@@ -86,9 +86,9 @@
   
 
     
-    <script src="<?= asset_url(); ?>js/template/demo/chart-area-demo.js"></script>
+    <!-- <script src="<?= asset_url(); ?>js/template/demo/chart-area-demo.js"></script>
     <script src="<?= asset_url(); ?>js/template/demo/chart-pie-demo.js"></script>
-    <script src="<?= asset_url(); ?>js/template/demo/chart-bar-demo.js"></script>
+    <script src="<?= asset_url(); ?>js/template/demo/chart-bar-demo.js"></script> -->
 
     
     <!-- Datatable -->

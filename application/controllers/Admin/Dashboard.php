@@ -46,6 +46,10 @@
             $res = getjumlahKomplainDivisiByMonth($bulanDalamAngka, $tahunDalamAngka);
             echo json_encode($res);
         }
+        public function jumlahKomplainMasukByYear($tahunDalamAngka){
+            $res = getjumlahKomplainMasukByYear($tahunDalamAngka);
+            echo json_encode($res);
+        }
     }
 ?>
 
