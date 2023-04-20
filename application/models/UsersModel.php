@@ -63,15 +63,15 @@ class UsersModel extends CI_Model
     }
     public function login($user)
     {
-        $this->session->set_userdata('user_login', $user);
+        $this->session->set_userdata('user_login_mkomplain_web_ubs', $user);
     }
     public function logout()
     {
-        $this->session->unset_userdata('user_login');
+        $this->session->unset_userdata('user_login_mkomplain_web_ubs');
     }
     public function getLogin()
     {
-        return $this->session->userdata('user_login');
+        return $this->session->userdata('user_login_mkomplain_web_ubs');
     }
     public function divisi()
     {
