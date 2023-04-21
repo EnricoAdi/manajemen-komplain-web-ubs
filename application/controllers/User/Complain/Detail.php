@@ -26,6 +26,11 @@ class Detail extends CI_Controller
         middleware_komplainA($nomor_komplain,'User/Complain/ListComplain',true); 
 
         $data['komplain'] = $komplain; 
+        $penugasan = null;
+        if($komplain->PENUGASAN!=null){
+            $penugasan = $this->UsersModel->get($komplain->PENUGASAN);
+        }
+        $data['penugasan'] = $penugasan;
         loadView_User("user/complain/detail/index",$data); 
     }
     public function edit_page($nomor_komplain){ 

@@ -12,7 +12,8 @@
 <form action="<?= base_url() ?>User/Complained/Penugasan/addPenugasan/<?= $komplain->NO_KOMPLAIN ?>" method="post" class="mt-4" style="color:black;">
     <div class="row">
         <div class="col">
-            <label for="" class="form-label mt-4">Nomor Feedback : <?= $komplain->NO_KOMPLAIN; ?> </label>
+            <label for="" class="form-label mt-4">Nomor Komplain : <?= $komplain->NO_KOMPLAIN; ?> </label>
+            
         </div>
     </div>
     <div class="row mt-4">

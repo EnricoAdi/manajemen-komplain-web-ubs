@@ -9,10 +9,16 @@
     <input type="hidden" name="inputTopik" id="inputTopik" value="">
     <div class="row">
         <div class="col"> 
-            <label for="user" class="form-label mt-4">Nomor Komplain : <?=$komplain->NO_KOMPLAIN;?></label>
+            <label for="user" class="form-label">Nomor Komplain : <?=$komplain->NO_KOMPLAIN;?></label> <br>
+            <?php
+                if($komplain->PENUGASAN != null){
+                    echo " <label class='form-label'>User Penugasan : $penugasan->NAMA</label>";
+                }
+            ?>
+            
         </div>
      </div>     
-    <div class="row">
+    <div class="row mt-2">
         <div class="col">
             <label for="" class="form-label">Status : <?= $komplain->STATUS; ?></label> 
         </div>

@@ -37,3 +37,35 @@
      </div>
  </form>
  <div>Hasil Laporan :</div>
+ 
+<div class="card shadow mb-4 mt-4">
+     <div class="card-header py-3">
+         <h6 class="m-0 font-weight-bold text-primary">Laporan Detail Feedback</h6>
+     </div>
+     <div class="card-body">
+         <div class="table-responsive">
+             <table class="table table-bordered"  width="100%" cellspacing="0">
+                 <thead> 
+                     <tr>
+                         <th>Tanggal</th>
+                         <th>Pengirim</th>
+                         <th>Aspek</th>
+                         <th>Topik</th>
+                         <th>Subtopik</th>
+                         <th>Masalah</th>
+                         <th>Deskripsi</th>
+                         <th>Akar Masalah</th>
+                         <th>PIC</th> 
+                         <th>SubDepartemen</th> 
+                         <th>PIC Perbaikan</th> 
+                         <th>Tindakan Perbaikan</th> 
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <?php 
+                     ?>
+                 </tbody>
+             </table>
+         </div>
+     </div>
+ </div>

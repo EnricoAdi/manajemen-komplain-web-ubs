@@ -5,7 +5,9 @@
 </a>
 <div class="row mt-4" style="color:black;">
     <div class="col">
-        <div>Status : <?= $komplain->STATUS; ?> </div>
+        <div>Nomor Komplain : <?= $komplain->NO_KOMPLAIN; ?> </div> 
+        <div class="mt-2">Pemberi Komplain : <?= $penerbit->NAMA; ?> </div>
+        <div class="mt-2">Status : <?= $komplain->STATUS; ?> </div>
 
     </div>
 </div>
@@ -54,7 +56,7 @@
     </div>
     <div class="col"></div>
 </div>
-<div class="row mt-4">
+<div class="row mt-4 mb-4">
     <div class="col">
         <?php
         $primaryColor = primary_color();

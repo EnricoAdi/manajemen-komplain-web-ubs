@@ -23,7 +23,7 @@ class Penyelesaian extends CI_Controller
         //fetch complain user tersebut yang statusnya PEND dan belum ada PENUGASAN
         $complains = $this->KomplainAModel->fetchByUserDitugaskan($data['login']->NOMOR_INDUK);
         $data['complains'] = $complains;
-
+        
         
         loadView_User("user/complained/penyelesaian/list", $data);
         
@@ -41,6 +41,10 @@ class Penyelesaian extends CI_Controller
         
         $data['komplain'] = $komplain;
 
+        $penerbit = null;
+        $penerbit = $this->UsersModel->get($komplain->USER_PENERBIT);
+        
+        $data['penerbit'] = $penerbit;
         
         loadView_User("user/complained/penyelesaian/detail", $data);
         

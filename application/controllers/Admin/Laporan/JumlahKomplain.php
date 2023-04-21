@@ -5,6 +5,7 @@
             parent::__construct();
             $this->data['page_title'] = "Admin Page"; 
             $this->data['navigation'] = "Laporan"; 
+            $this->data['login'] = $this->UsersModel->getLogin();
             
             $this->load->library("form_validation");   
 
@@ -12,17 +13,22 @@
             middleware_auth(4); //hak akses admin
 
         }
-        public function index(){
-            
+        public function index(){ 
             $data = $this->data;
-            $data['page_title'] = "Laporan Jumlah Komplain";
-            $data['login'] = $this->UsersModel->getLogin();
-            $data['departemens'] = $this->DivisiModel->fetch();
 
-            $yearnow = date("Y"); 
-            $data['yearnow'] = $yearnow;
-            $this->load->view("templates/admin/header", $data);
-            $this->load->view("admin/laporan/jumlah-komplain", $data);
-            $this->load->view("templates/admin/footer", $data);
+            $data['page_title'] = "Laporan Jumlah Komplain";
+            $data['departemens'] = $this->DivisiModel->fetch();
+ 
+            $data['yearnow'] = date("Y"); 
+            
+            $data['bulanIni'] = date("F");  
+
+            $bulanDalamAngka = date("m"); 
+            $tahunDalamAngka = date("Y"); 
+
+            $data['bulanDalamAngka'] = $bulanDalamAngka;
+            $data['tahunDalamAngka'] = $tahunDalamAngka;
+            
+            loadView_Admin("admin/laporan/jumlah-komplain", $data); 
         }
     }

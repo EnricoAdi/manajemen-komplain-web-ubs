@@ -43,3 +43,31 @@
     </div>
 </form>
 <div>Hasil Laporan :</div>
+<div class="card shadow mb-4 mt-4">
+     <div class="card-header py-3">
+         <h6 class="m-0 font-weight-bold text-primary">Laporan Detail Feedback</h6>
+     </div>
+     <div class="card-body">
+         <div class="table-responsive">
+             <table class="table table-bordered"   width="100%" cellspacing="0">
+                 <thead>
+                    <tr> 
+                         <th rowspan="2" style="vertical-align: middle; text-align: center;">No</th>
+                         <th rowspan="2" style="vertical-align: middle; text-align: center;">Departemen</th> 
+                         <th rowspan="2" style="vertical-align: middle; text-align: center;">Topik</th> 
+                        <th colspan="2" style="vertical-align: middle; text-align: center;">Jumlah Komplain Per Subtopik Berulang</th>
+                        <th rowspan="2" style="vertical-align: middle; text-align: center;">Jumlah</th> 
+                    </tr>
+                     <tr> 
+                         <th style="text-align: center;">Subtopik 1</th>
+                         <th style="text-align: center;">Subtopik 2</th> 
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <?php 
+                     ?>
+                 </tbody>
+             </table>
+         </div>
+     </div>
+ </div>
