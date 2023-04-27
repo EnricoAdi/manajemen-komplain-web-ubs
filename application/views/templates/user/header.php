@@ -115,12 +115,12 @@ $routes = [
                     echo "active";
                 }
             ?>">
-                <a class="nav-link" href="<?= base_url(); ?>User/Complain/List" data-toggle="collapse" data-target="#collapsePagesLaporan" aria-expanded="true" aria-controls="collapsePagesLaporan">
+                <a class="nav-link" href="<?= base_url(); ?>User/Complain/List" data-toggle="collapse" data-target="#collapsePagesPengajuan" aria-expanded="true" aria-controls="collapsePagesPengajuan">
 
                     <i class="fas fa-fw fa-paper-plane"></i>
                     <span>Ajukan Komplain</span>
                 </a>
-                <div id="collapsePagesLaporan" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div id="collapsePagesPengajuan" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
 
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Pengajuan Komplain</h6>

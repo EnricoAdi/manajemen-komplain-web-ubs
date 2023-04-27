@@ -15,7 +15,7 @@
 
      <div class="row">  
          <div class="col">
-             <label for="inputPassword5" class="form-label">Silahkan pilih subtopik1 yang mau dikomplain</label>
+             <label for="" class="form-label">Silahkan pilih subtopik1 yang mau dikomplain</label>
              <input type="hidden" name="subtopik1">
              <input type="hidden" name="topik"> <br> 
              <label for="divisi" class="form-label" >Divisi</label>

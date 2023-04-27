@@ -13,7 +13,7 @@
 
      <div class="row">  
          <div class="col">
-             <label for="inputPassword5" class="form-label">Silahkan pilih divisi yang mau dikomplain</label>
+             <label for="" class="form-label">Silahkan pilih divisi yang mau dikomplain</label>
              <select class="form-control" name="divisi" id="divisi">
                 <?php
                     foreach($allDivisi as $divisi ){ 

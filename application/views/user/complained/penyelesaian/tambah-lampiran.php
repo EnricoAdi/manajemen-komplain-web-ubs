@@ -23,7 +23,7 @@
     <div class="row mt-4">
         <div class="col">
             <label for="user" class="form-label">Input Lampiran (tidak wajib)</label>
-            <input type="file" class="form-control" name="lampiran[]" style="padding-top:30px; padding-left:20px; height:100px;" multiple>
+            <input type="file" class="form-control" name="lampiran[]" style="padding-top:30px; padding-left:20px; height:100px;"  accept=".jpg,.png,.pdf,.docx,.xls,.xlsx,.txt" multiple>
 
         </div>
         <div class="col">

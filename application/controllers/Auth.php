@@ -50,8 +50,7 @@ class Auth extends CI_Controller
                     $this->load->view("auth/login", $data);
                 } else {
                     $this->session->set_flashdata('success', 'Berhasil Login');
-                    $this->UsersModel->login($userFound->data);
-                    //TODO LOGIN   
+                    $this->UsersModel->login($userFound->data); 
                     $hak_akses = $userFound->data->KODE_HAK_AKSES; 
                     if ($hak_akses == '1') {
 
