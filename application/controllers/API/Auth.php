@@ -29,7 +29,7 @@ class Auth extends REST_Controller
         $nomor_induk = $this->post('nomor_induk');
         $password = $this->post('password');
 
-        $exp = time() + 360000;
+        $exp = time() + 3600000;
         // $userFound = $this->UsersModel->get($nomor_induk);
         $userFound = cekLogin($nomor_induk, $password);
         if ($userFound->code == 404) { 

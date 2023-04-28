@@ -11,7 +11,7 @@
              
             $this->load->library("form_validation");  
             $this->load->library('session');  
-        }
+        } 
         
         public function index(){
             $data = $this->data;
