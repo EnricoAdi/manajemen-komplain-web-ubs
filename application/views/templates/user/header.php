@@ -48,7 +48,6 @@ $routes = [
         ]
     ]
 ];
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,12 +63,14 @@ $routes = [
     <title><?= $page_title ?> </title>
     <link rel="icon" type="image/x-icon" href="<?= asset_url(); ?>images/logo.png">
     <!-- Custom fonts for this template-->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="<?= asset_url(); ?>css/fontNunito.css" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="<?= asset_url(); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <link href="<?= asset_url(); ?>css/template/sb-admin-2.min.css" rel="stylesheet">
+    <!-- Data table -->
+    <link href="<?= asset_url(); ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -82,15 +83,20 @@ $routes = [
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <img src="<?= asset_url(); ?>images/logo.png" alt="ubs" style="width:100%;">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                <img src="<?= asset_url(); ?>images/logo.png" alt="ubs" style="width:100%; margin-top:30px; border-radius:10px;">
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+            <hr class="sidebar-divider my-2">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
+            <li class="nav-item  
+            <?php
+                    if ($navigation == "Dashboard") {
+                        echo "active";
+                    }
+            ?>">
                 <a class="nav-link" href="<?= base_url(); ?>User/Dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -103,17 +109,35 @@ $routes = [
             <div class="sidebar-heading">
                 Komplain Diajukan
             </div>
+            <li class="nav-item  
+            <?php
+                if ($navigation == "Complain") {
+                    echo "active";
+                }
+            ?>">
+                <a class="nav-link" href="<?= base_url(); ?>User/Complain/List" data-toggle="collapse" data-target="#collapsePagesPengajuan" aria-expanded="true" aria-controls="collapsePagesPengajuan">
 
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-paper-plane"></i>
-                    <span>Ajukan Komplain</span></a>
-            </li> 
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                    <span>Ajukan Komplain</span>
+                </a>
+                <div id="collapsePagesPengajuan" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Pengajuan Komplain</h6>
+                        <a class="collapse-item" href="<?= base_url(); ?>User/Complain/ListComplain">Daftar Komplain</a>
+                        <a class="collapse-item" href="<?= base_url()?>User/Complain/Add/pilihDivisi">Tambah Komplain</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item <?php
+                if ($navigation == "Solved") {
+                    echo "active";
+                }
+            ?>">
+                <a class="nav-link" href="<?= base_url(); ?>User/Complain/Solved">
                     <i class="fas fa-fw fa-envelope-open"></i>
-                    <span>Penyelesaian Komplain Diterima</span></a>
-            </li> 
+                    <span>Penyelesaian Komplain <span style="margin-left:15%;">Diterima</span></span></a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -122,42 +146,47 @@ $routes = [
                 Komplain Diterima
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <!-- <li class="nav-item active">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-                   
-                    <i class="fas fa-fw fa-paper-plane"></i>
-                    <span>Ajukan Komplain</span>
+            <li class="nav-item <?php
+                if ($navigation == "ComplainedList") {
+                    echo "active";
+                }
+            ?>">
+                <a class="nav-link" href="<?= base_url(); ?>User/Complained/ListComplained">
+                    <i class="fas fa-fw fa-list"></i>
+                    <span>Daftar Komplain</span>
                 </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    dikasih collapse show kalo mau nampilin 
+            </li>
+
+            <li class="nav-item 
+             <?php
+            if ($navigation == "Complained") {
+                echo "active";
+            }
+            ?>">
+                <a class="nav-link" href="<?= base_url(); ?>User/Complained" data-toggle="collapse" data-target="#collapsePagesPenyelesaianKomplain" aria-expanded="true" aria-controls="collapsePagesPenyelesaianKomplain">
+
+                    <i class="fas fa-fw fa-inbox"></i>
+                    <span>Penyelesaian Komplain <span style="margin-left:15%;">Diajukan</span></span>
+                </a>
+                <div id="collapsePagesPenyelesaianKomplain" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item active" href="blank.html">Blank Page</a>
+                        <h6 class="collapse-header">Penyelesaian Komplain</h6>
+                        <a class="collapse-item" href="<?= base_url(); ?>User/Complained/Penugasan">Penugasan</a>
+                        <a class="collapse-item" href="<?= base_url(); ?>User/Complained/Done">Done</a>
                     </div>
                 </div>
-            </li> -->
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-list"></i>
-                    <span>Daftar Komplain</span></a>
             </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+            <li class="nav-item 
+                <?php
+                if ($navigation == "Feedback") {
+                    echo "active";
+                }
+            ?>">
+                <a class="nav-link" href="<?= base_url(); ?>User/Complained/Penyelesaian">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Penyelesaian Komplain Diajukan</span></a>
+                    <span>Komplain Ditugaskan</span></a>
             </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -185,34 +214,21 @@ $routes = [
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        
-
-
-
-                        <div class="topbar-divider d-none d-sm-block"></div> 
+                        <div class="topbar-divider d-none d-sm-block"></div>
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?= $login['NAMA'] ?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?= $login->NAMA; ?></span>
                                 <img class="img-profile rounded-circle" src="<?= asset_url(); ?>images/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <!-- <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
+                                <a class="dropdown-item" href="#">
+                                    <?= $login->NOMOR_INDUK; ?> - <?= $login->NAMA; ?> 
                                 </a>
                                 <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
+                                    <?= "DIVISI ".$login->NAMA_DIVISI; ?>
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a> -->
-                                <!-- <div class="dropdown-divider"></div> -->
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout

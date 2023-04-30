@@ -18,7 +18,7 @@ class HakAksesModel extends CI_Model
         $this->db->from('HAK_AKSES');
         $this->db->where('KODE_HAK_AKSES',$kode_hak_akses);  
         $query = $this->db->get() 
-            ->result_array();
+            ->result();
         if(sizeof($query)>0){
             return $query[0];
         }

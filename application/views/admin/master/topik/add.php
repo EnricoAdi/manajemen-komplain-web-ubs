@@ -1,14 +1,7 @@
-<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Input Topik</h1>
-<a href="<?= base_url() ?>Admin/Master/Topik">
+<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Tambah Topik</h1>
 
-    <button type="button" class="btn btn-warning" style="color:black; 
-        padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px;">
-        
-        <i class="fas fa-fw fa-step-backward"></i>
-        Kembali
-    </button>
+<?= error_button("Kembali", "fas fa-fw fa-step-backward", "", "", "Admin/Master/Topik") ?>
 
-</a> 
 <form action="<?= base_url() ?>Admin/Master/Topik/AddProcess" method="post" class="mt-4" style="color:black;">
     <div class="row">
         <div class="col">
@@ -38,7 +31,7 @@
     </div>
     <div class="row mt-4">
         <div class="col"> 
-            <button type="submit" class="btn btn-warning" style="color:black;">Tambah</button>
+            <button type="submit" class="btn btn-warning" style="color:white; background-color: <?= primary_color(); ?>;">Tambah</button>
         </div> 
     </div>
 </form>

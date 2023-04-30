@@ -20,21 +20,29 @@ class LampiranModel extends CI_Model
         $this->db->from('LAMPIRAN');
         $this->db->where('KODE_LAMPIRAN',$kode_lampiran);  
         $query = $this->db->get() 
-            ->result_array();
+            ->result();
         if(sizeof($query)>0){
             return $query[0];
         }
         return null;
     } 
     public function insert(){
-        $this->db->insert('LAMPIRAN', $this); 
+        // $this->db->insert('LAMPIRAN', $this); 
+        $this->db->query("INSERT INTO LAMPIRAN VALUES('$this->KODE_LAMPIRAN','$this->NO_KOMPLAIN',TO_DATE('$this->TANGGAL','yyyy-mm-dd'),'$this->TIPE')");
     }
     public function update(){
-        $this->db->where('KODE_LAMPIRAN', $this->NO_KOMPLAIN);
+        $this->db->where('KODE_LAMPIRAN', $this->KODE_LAMPIRAN);
         $this->db->update('LAMPIRAN', $this); 
     }
     public function delete(){
-        $this->db->where('KODE_LAMPIRAN', $this->NO_KOMPLAIN);
+        $this->db->where('KODE_LAMPIRAN', $this->KODE_LAMPIRAN);
         $this->db->delete('LAMPIRAN'); 
+    }
+    public function deleteByKomplain(){ 
+        $this->db->query('DELETE FROM LAMPIRAN WHERE NO_KOMPLAIN = '.$this->NO_KOMPLAIN);
+    }
+    public function deleteByKomplainForFeedback(){ 
+        $this->db->query('DELETE FROM LAMPIRAN WHERE NO_KOMPLAIN = ? and TIPE=1'
+        ,array($this->NO_KOMPLAIN));
     }
 }

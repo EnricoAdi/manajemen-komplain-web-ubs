@@ -22,18 +22,54 @@ class KomplainBModel extends CI_Model
         $this->db->from('KOMPLAINB');
         $this->db->where('NO_KOMPLAIN',$no_komplain);  
         $query = $this->db->get() 
-            ->result_array();
+            ->result();
         if(sizeof($query)>0){
-            return $query[0];
+            $obj = $query[0];
+            $komplainb = new KomplainBModel();
+            $komplainb->NO_KOMPLAIN = $obj->NO_KOMPLAIN;
+            $komplainb->DESKRIPSI_MASALAH = $obj->DESKRIPSI_MASALAH;
+            $komplainb->AKAR_MASALAH = $obj->AKAR_MASALAH;
+            $komplainb->T_KOREKTIF = $obj->T_KOREKTIF;
+            $komplainb->T_PREVENTIF = $obj->T_PREVENTIF;
+            $komplainb->KEBERATAN = $obj->KEBERATAN;
+ 
+            return $komplainb;
         }
         return null;
     } 
+
+     
+
     public function insert(){
-        $this->db->insert('HAK_AKSES', $this); 
+        $this->db->insert('KOMPLAINB', $this); 
     }
     public function update(){
         $this->db->where('NO_KOMPLAIN', $this->NO_KOMPLAIN);
         $this->db->update('KOMPLAINB', $this); 
+    }
+    public function updateKomplain(){
+        $this->db->query("UPDATE KOMPLAINB SET DESKRIPSI_MASALAH = '$this->DESKRIPSI_MASALAH' WHERE NO_KOMPLAIN = '$this->NO_KOMPLAIN' ");
+    }
+    
+    public function updatePenyelesaianKomplain(){  
+        $this->db->query("UPDATE KOMPLAINB SET 
+        AKAR_MASALAH = '$this->AKAR_MASALAH',
+        T_KOREKTIF = '$this->T_KOREKTIF',
+        T_PREVENTIF = '$this->T_PREVENTIF'
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
+    }
+    public function deletePenyelesaianKomplain(){  
+        $this->db->query("UPDATE KOMPLAINB SET 
+        AKAR_MASALAH = null,
+        T_KOREKTIF = null,
+        T_PREVENTIF = null
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
+    }
+    
+    public function updateBandingKomplain(){  
+        $this->db->query("UPDATE KOMPLAINB SET 
+        KEBERATAN = '$this->KEBERATAN' 
+        where NO_KOMPLAIN = '$this->NO_KOMPLAIN'"); 
     }
     public function delete(){
         $this->db->where('NO_KOMPLAIN', $this->NO_KOMPLAIN);

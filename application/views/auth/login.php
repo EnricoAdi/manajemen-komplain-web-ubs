@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $page_title ?> </title>
     <link rel="stylesheet" href=" <?= asset_url(); ?>css/login/style.css"> 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link href=" <?= asset_url(); ?>css/fontLato.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="<?= asset_url(); ?>images/logo.png"> 
     <!-- <link href="<?= asset_url(); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?= asset_url(); ?>css/fontawesome.min.css">
     <link href="<?= asset_url(); ?>bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
-<body class="bg-warning" style="color:#004481; margin-bottom:3%;"> 
+<body style="background-color: <?= primary_color()?>; margin-bottom:3%;"> 
     <section class="" style="margin-top: 3%;">
         <div class="container">
 
@@ -48,18 +48,20 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <button type="submit" class="form-control btn btn-primary rounded submit px-3">Login</button>
+                                    <button type="submit" class="form-control btn rounded submit px-3"
+                                    style="background-color: <?= primary_color()?>; color:white;">
+                                        Login</button>
  
                                 </div>
 
-                                <div class="form-group d-md-flex">
+                               <!-- <div class="form-group d-md-flex" style="display:none;">
                                     <div class="w-50 text-left">
                                         <label class="checkbox-wrap checkbox-primary mb-0">Ingat saya
                                             <input type="checkbox" name="remember">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
-                                </div>
+                                </div> -->
                             </form>
                         </div>
                     </div>
@@ -85,7 +87,7 @@
                 </div>
                 <div class="modal-body"><?= $this->session->flashdata('message') ?></div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" type="button" data-dismiss="modal">OK</button> 
+                    <button class="btn" type="button" data-dismiss="modal" style="background-color: <?= primary_color()?>; color:white;">OK</button> 
                 </div>
             </div>
         </div>

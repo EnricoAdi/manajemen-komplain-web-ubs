@@ -8,7 +8,7 @@ class TopikModel extends CI_Model
     public $AU;
     public $DIV_TUJUAN;
     public $NAMA;
-    // public $NAMA_DIVISI;
+    // public $NAMA AS NAMA_DIVISI;
     
 
     public function __construct()
@@ -16,33 +16,24 @@ class TopikModel extends CI_Model
         parent::__construct(); 
     }
     public function fetch(){ 
-       return $this->db->query('SELECT T.*, D.NAMA_DIVISI FROM TOPIK T JOIN DIVISI D ON 
-       D.KODE_DIVISI=T.DIV_TUJUAN')->result();
+       return $this->db->query('SELECT T.*, D.NAMA AS NAMA_DIVISI FROM TOPIK T JOIN DIVISI D ON 
+       D.KODEDIV=T.DIV_TUJUAN ORDER BY KODE_TOPIK ASC')->result();
     }
-    public function get($kode_topik){
-        $this->db->select('*');
-        $this->db->from('TOPIK');
-        $this->db->where('KODE_TOPIK',$kode_topik);  
-        $query = $this->db->get() 
-            ->result_array();
+    public function fetchByDivisi($kode_divisi){ 
+       return $this->db->query("SELECT T.*, D.NAMA AS NAMA_DIVISI FROM TOPIK T JOIN DIVISI D ON 
+       D.KODEDIV=T.DIV_TUJUAN WHERE D.KODEDIV='$kode_divisi' ORDER BY KODE_TOPIK ASC")->result();
+    }
+    public function get($kode_topik){ 
+        $query = $this->db->query("SELECT T.*, D.NAMA AS NAMA_DIVISI 
+        FROM TOPIK T JOIN DIVISI D ON D.KODEDIV = T.DIV_TUJUAN
+        WHERE T.KODE_TOPIK = '$kode_topik'")->result(); 
+ 
         if(sizeof($query)>0){
-            return $query[0];
-        //     $result = $query[0];
-        //    $newtopik =  new TopikModel();
-           
-        //    $newtopik->KODE_TOPIK = $result['KODE_TOPIK'];
-        //    $newtopik->TOPIK = $result['TOPIK'];
-        //    $newtopik->DESKRIPSI = $result['DESKRIPSI'];
-        //    $newtopik->AU = $result['AU'];
-        //    $newtopik->DIV_TUJUAN = $result['DIV_TUJUAN'];
-        //    $newtopik->NAMA= $result['NAMA'];
-        //    $newtopik->NAMA_DIVISI = $result['NAMA_DIVISI'];
-        //    return $newtopik;
-           
+            return $query[0]; 
         }
         return null;
     } 
-    public function getNewKode($topik){
+    public function getNewKode_DEPRECATED($topik){
         $getFirstWord = substr($topik, 0, 1);
         $nowyear =  substr(date('Y'), 2);
         $this->db->select('count(*)+1 as newKode');
@@ -53,6 +44,10 @@ class TopikModel extends CI_Model
         $query = $this->db->get()->result(); 
         $urutan = $query[0]->NEWKODE;  
         $kode = $getFirstWord.$nowyear.str_pad($urutan, 2, "0", STR_PAD_LEFT);
+        return $kode;  
+    }
+    public function getNewKode($topik, $divtujuan){
+        $kode = substr($topik,0,1) . $divtujuan; 
         return $kode;  
     }
     public function insert(){

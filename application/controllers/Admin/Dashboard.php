@@ -4,43 +4,57 @@
         public function __construct(){
             parent::__construct();
             $this->data['page_title'] = "Admin Page"; 
- 
+            $this->data['navigation'] = "Dashboard"; 
+            
             $this->load->library("form_validation");   
 
 
-            //middleware
-            if($this->UsersModel->getLogin() == null){ 
-                $this->session->set_flashdata('header', 'Pesan');
-                $this->session->set_flashdata('message', 'Silahkan Login Terlebih Dahulu');
-                redirect('Auth');
-            }
-
-            //jika tidak ada akses, maka redirect ke halaman dashboard berdasarkan hak aksesnya
-            $hak_akses = $this->UsersModel->getLogin()['KODE_HAK_AKSES'];
-            if($hak_akses!=4){
-                if ($hak_akses == '1') {  
-                    redirect('User/Dashboard'); //end user
-                }
-                if ($hak_akses == '2') { 
-                    redirect('Manager'); //manager
-                }
-                else { 
-                    redirect('GM'); //general manager
-                }
-            }
+           middleware_auth(4); //hak akses admin
 
         }
         
         public function index(){
             $data = $this->data;
             $data['page_title'] = "Dashboard Admin";
-            $data['login'] = $this->UsersModel->getLogin();
+            $data['login'] = $this->UsersModel->getLogin(); 
             
-            $this->load->view("templates/admin/header", $data);
-            $this->load->view("admin/dashboard", $data);
-            $this->load->view("templates/admin/footer", $data);
- 
+            $data['bulanIni'] = date("F"); 
+            $data['tahunIni'] = date("Y"); 
+
+            $bulanDalamAngka = date("m"); 
+            $tahunDalamAngka = date("Y"); 
+            
+            $totalKomplainBulanIni = $this->KomplainAModel->getTotalKomplainByMonth($bulanDalamAngka, $tahunDalamAngka); 
+            $divisiTerbanyak = $this->KomplainAModel->divisiKomplainTerbanyakByMonth($bulanDalamAngka, $tahunDalamAngka);
+
+
+            if($divisiTerbanyak==null){
+                $divisiTerbanyak = "Belum ada";
+            }else{
+                $divisiTerbanyak = $divisiTerbanyak->NAMA;
+            } 
+
+            $jumlahKomplainDivisiByMonth = $this->KomplainAModel->jumlahKomplainDivisiByMonth($bulanDalamAngka, $tahunDalamAngka);
+            
+            $randomColors = [];
+            for($i=0; $i<count($jumlahKomplainDivisiByMonth); $i++){
+                $randomColors[] = sprintf('#%06X', mt_rand(0, 0xFFFFFF));
+            }
+            $data['bulanDalamAngka'] = $bulanDalamAngka;
+            $data['tahunDalamAngka'] = $tahunDalamAngka;
+            $data['totalKomplainBulanIni'] = $totalKomplainBulanIni;
+            $data['divisiTerbanyak'] = $divisiTerbanyak;
+            $data['randomColors'] = $randomColors; 
+            loadView_Admin("admin/dashboard", $data);  
         }
+        public function jumlahKomplainDivisiByMonth($bulanDalamAngka, $tahunDalamAngka){
+            $res = getjumlahKomplainDivisiByMonth($bulanDalamAngka, $tahunDalamAngka);
+            echo json_encode($res);
+        }
+        public function jumlahKomplainMasukByYear($tahunDalamAngka){
+            $res = getjumlahKomplainMasukByYear($tahunDalamAngka);
+            echo json_encode($res);
+        } 
     }
 ?>
 
