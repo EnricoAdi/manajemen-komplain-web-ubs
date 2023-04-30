@@ -44,52 +44,6 @@
             </select>
         </div>
     </div>
-<<<<<<< HEAD
-    <div class="row">
-        <div class="col">
-            <label for="inputPassword5" class="form-label mt-5">Deskripsi</label>
-            <textarea class="form-control" placeholder="" name="deskripsi" required><?= $topic['DESKRIPSI']; ?></textarea>
-        </div> 
-    </div>
-    <div class="row mt-4">
-        <div class="col">  
-            <button class="btn btn-danger" id="btnDelete" style="color:black;width:100px;">Hapus</button> 
-            <button type="submit" class="btn btn-warning" style="color:black;width:100px;">Edit</button>
-        </div> 
-    </div>
-</form>
-
-
-
-<div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="false">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Konfirmasi</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Apakah anda yakin ingin menghapus topik ini?</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
-                    <a class="btn btn-primary" href="<?= base_url() ?>Admin/Master/Topik/DeleteProcess/<?= $topic['KODE_TOPIK']; ?>">Ya</a>
-                </div>
-            </div>
-        </div>
-    </div> 
-
-<script type="text/javascript">
-    function deleteTopik(event) {
-        event.preventDefault(); 
-        $('#confirmDeleteModal').modal('show');
-    }
-    let btnDelete = document.getElementById("btnDelete");
-    btnDelete.addEventListener("click", deleteTopik);
-
-</script>
-=======
     <div class="row mt-4">
         <div class="col">
             <?= error_button("Hapus","fas fa-fw fa-trash","btnDelete")?>
@@ -119,4 +73,3 @@
 
 
 <script src="<?= asset_url(); ?>js/template/confirmDeleteModalMasterTopik.js"></script>
->>>>>>> 14dbd2062b29a228c790312f477da9a55f8b1cc1
