@@ -174,7 +174,7 @@
                   mkdir('./uploads/', 0777, true);
               } 
               for($i=0;$i < count($lampirans['name']);$i++){
-                  $getNewFileName = 'K_'. generateUID(25);
+                  $getNewFileName = 'K_WEB'. generateUID(22).substr($newkode,-3,3);
                   
                   if($i < count($lampirans)){ 
                       $_FILES['lampiran']['name'] = $lampirans['name'][$i];
