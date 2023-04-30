@@ -8,7 +8,7 @@ require APPPATH . '/libraries/SignatureInvalidException.php';
 require APPPATH . '/libraries/JWK.php';
  
 //buat lihat detail complain 
-class Detail extends REST_Controller
+class Index extends REST_Controller
 {
 
     public function __construct()
@@ -35,6 +35,7 @@ class Detail extends REST_Controller
         $this->response([
             'data'=>$komplain,
             'penugasan'=> $penugasan,
+            'url'=> base_url(),
             'status'=>true
         ], REST_Controller::HTTP_OK);
     }
