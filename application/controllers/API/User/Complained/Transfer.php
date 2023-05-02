@@ -36,7 +36,7 @@ class Transfer extends REST_Controller
             return;
         }
          
-        $subtopics = $this->SubTopik2Model->fetch(); 
+        $subtopics = $this->SubTopik2Model->fetchOrder(); 
         $subtopik2 = $komplain->SUB_TOPIK2;
  
         $this->response([
