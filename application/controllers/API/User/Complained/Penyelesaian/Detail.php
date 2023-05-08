@@ -7,7 +7,7 @@ require APPPATH . '/libraries/BeforeValidException.php';
 require APPPATH . '/libraries/SignatureInvalidException.php';
 require APPPATH . '/libraries/JWK.php';
  
-//buat lihat detail complain 
+//buat lihat detail complain penyelesaian
 class Detail extends REST_Controller
 {
 
@@ -32,9 +32,13 @@ class Detail extends REST_Controller
         if($komplain->PENUGASAN!=null){
             $penugasan = $this->UsersModel->get($komplain->PENUGASAN);
         } 
+         
+        $penerbit = $this->UsersModel->get($komplain->USER_PENERBIT);
+        $komplain->DATA_PENERBIT = $penerbit;
         $this->response([
             'data'=>$komplain,
-            'penugasan'=> $penugasan,
+            'penugasan'=> $penugasan, 
+            'url'=> base_url(),
             'status'=>true
         ], REST_Controller::HTTP_OK);
     }

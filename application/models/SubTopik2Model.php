@@ -24,6 +24,17 @@ class SubTopik2Model extends CI_Model
        JOIN DIVISI D ON T.DIV_TUJUAN = D.KODEDIV order by D.NAMA ASC")
        ->result(); 
     }
+    public function fetchOrder(){  
+       return $this->db->query("SELECT distinct S2.*, S2.DESKRIPSI AS S2DESKRIPSI, 
+       S1.DESKRIPSI AS DESKRIPSI_SUBTOPIK1, S1.DESKRIPSI AS S1DESKRIPSI,T.TOPIK AS TDESKRIPSI,
+       T.TOPIK, D.KODEDIV, D.NAMA AS NAMA_DIVISI FROM 
+       SUB_TOPIK2 S2 JOIN SUB_TOPIK1 S1 
+       ON S2.SUB_TOPIK1 = S1.SUB_TOPIK1 AND S2.KODE_TOPIK = S1.KODE_TOPIK
+       JOIN TOPIK T 
+       ON T.KODE_TOPIK = S2.KODE_TOPIK 
+       JOIN DIVISI D ON T.DIV_TUJUAN = D.KODEDIV order by D.NAMA ASC, S2.SUB_TOPIK1 DESC, S2.SUB_TOPIK2 ASC")
+       ->result(); 
+    }
     public function fetchBySubTopik1($topik,$subtopik1){   
        return $this->db->query("SELECT distinct S2.*, S2.DESKRIPSI AS S2DESKRIPSI, 
        S1.DESKRIPSI AS DESKRIPSI_SUBTOPIK1, S1.DESKRIPSI AS S1DESKRIPSI,T.TOPIK AS TDESKRIPSI,

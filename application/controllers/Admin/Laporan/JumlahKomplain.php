@@ -6,9 +6,7 @@
             $this->data['page_title'] = "Admin Page"; 
             $this->data['navigation'] = "Laporan"; 
             $this->data['login'] = $this->UsersModel->getLogin();
-            
-            $this->load->library("form_validation");   
-
+               
 
             middleware_auth(4); //hak akses admin
 
@@ -18,6 +16,7 @@
 
             $data['page_title'] = "Laporan Jumlah Komplain";
             $data['departemens'] = $this->DivisiModel->fetch();
+            $data['selectedDepartemen'] =  $data['departemens'][0];
  
             $data['yearnow'] = date("Y"); 
             

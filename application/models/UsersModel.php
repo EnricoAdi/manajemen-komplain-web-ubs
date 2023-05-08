@@ -17,17 +17,17 @@ class UsersModel extends CI_Model
     }
     public function fetch()
     {
-        return $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA AS NAMA_DIVISI FROM USERS u left join USERS a 
+        return $this->db->query("SELECT u.NOMOR_INDUK,u.NAMA, u.KODE_HAK_AKSES, u.EMAIL, u.KODEDIV, u.KODE_ATASAN, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA AS NAMA_DIVISI FROM USERS u left join USERS a 
         on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODEDIV = u.KODEDIV")->result();
     }
     public function fetchWithoutEmail()
     {
-        return $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA AS NAMA_DIVISI FROM USERS u left join USERS a 
+        return $this->db->query("SELECT u.NOMOR_INDUK,u.NAMA, u.KODE_HAK_AKSES, u.EMAIL, u.KODEDIV, u.KODE_ATASAN, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA AS NAMA_DIVISI FROM USERS u left join USERS a 
         on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODEDIV = u.KODEDIV where u.EMAIL is null")->result();
     }
     public function fetchAtasan()
     {
-        return $this->db->query("SELECT U.*,D.NAMA AS NAMA_DIVISI FROM USERS U join DIVISI D on D.KODEDIV = U.KODEDIV
+        return $this->db->query("SELECT U.NOMOR_INDUK,U.NAMA, U.KODE_HAK_AKSES, U.EMAIL, U.KODEDIV, U.KODE_ATASAN,D.NAMA AS NAMA_DIVISI FROM USERS U join DIVISI D on D.KODEDIV = U.KODEDIV
         WHERE KODE_HAK_AKSES='2'")->result();
     }
     public function get($nomor_induk)
@@ -52,11 +52,11 @@ class UsersModel extends CI_Model
     }
     public function fetchUsersByDivisi($KODEDIV, $kode_hak_akses){
         if($kode_hak_akses=='all'){ 
-            return $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA AS NAMA_DIVISI FROM USERS u left join USERS a 
+            return $this->db->query("SELECT u.NOMOR_INDUK,u.NAMA, u.KODE_HAK_AKSES, u.EMAIL, u.KODEDIV, u.KODE_ATASAN, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA AS NAMA_DIVISI FROM USERS u left join USERS a 
             on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODEDIV = u.KODEDIV where u.KODEDIV = ?",
             array($KODEDIV))->result();
         }else{ 
-            return $this->db->query("SELECT u.*, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA AS NAMA_DIVISI FROM USERS u left join USERS a 
+            return $this->db->query("SELECT u.NOMOR_INDUK,u.NAMA, u.KODE_HAK_AKSES, u.EMAIL, u.KODEDIV, u.KODE_ATASAN, a.NAMA as NAMA_ATASAN, a.EMAIL as EMAIL_ATASAN, d.NAMA AS NAMA_DIVISI FROM USERS u left join USERS a 
             on a.NOMOR_INDUK = u.KODE_ATASAN left join DIVISI d on d.KODEDIV = u.KODEDIV where u.KODEDIV = ? and u.KODE_HAK_AKSES = ?",
             array($KODEDIV,$kode_hak_akses))->result();
         }

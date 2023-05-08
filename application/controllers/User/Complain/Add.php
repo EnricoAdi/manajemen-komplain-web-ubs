@@ -214,7 +214,7 @@
               } 
           } 
           if($isError){ 
-              $this->session->set_flashdata('message', 'Terdapat error dalam upload lampiran');
+              $this->session->set_flashdata('message', 'Terdapat error dalam upload lampiran, pastikan ukuran file tidak lebih dari 5 MB');
               redirect("User/Complain/Add/pilihLampiran/$kode_divisi/$kode_topik/$kode_subtopik1/$kode_subtopik2");
           }else{ 
               $topikDes = $this->TopikModel->get($kode_topik)->DESKRIPSI;
