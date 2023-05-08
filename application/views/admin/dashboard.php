@@ -14,7 +14,19 @@
           <a class="dropdown-item" href="<?=base_url()?>Admin/Laporan/PerTopik">Laporan Per Topik</a>
       </div>
   </div>
-  <?= primary_button("Master Topik", "", "", "mr-2 mb-2", "Admin/Master/Topik/Menu") ?>
+  <div class="dropdown mb-4 mr-2"> 
+      <button class="btn btn-primary dropdown-toggle" type="button"
+          id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" style=" padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px; background-color: <?=primary_color()?>;">
+          Master Topik
+      </button>
+      <div class="mt-2 dropdown-menu animated--fade-in"
+          aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="<?=base_url()?>Admin/Master/Topik">Master Topik</a>
+          <a class="dropdown-item" href="<?=base_url()?>Admin/Master/Subtopik1">Master Subtopik1</a>
+          <a class="dropdown-item" href="<?=base_url()?>Admin/Master/Subtopik2">Master Subtopik2</a> 
+      </div>
+  </div> 
   <?= primary_button("Master User", "", "", "mr-2 mb-2", "Admin/Master/User") ?>
   <?= primary_button("Master Email", "", "", "mr-2 mb-2 ", "Admin/Master/Email") ?>
 
