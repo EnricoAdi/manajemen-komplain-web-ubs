@@ -1,13 +1,32 @@
-<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Laporan Jumlah Komplain</h1>
+<style>
+    @media print{
+       
+        #areaprint{
+            visibility: visible;
+            background-color: white;
+        }
+        #accordionSidebar, #titlePage, #formPrompt{
+            display: none;
+            background-color: white;
+            
+        }
+    }
+</style>
+<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold" id="titlePage">Laporan Jumlah Komplain</h1>
 
-<form action="<?= base_url() ?>Admin/Laporan/JumlahKomplain" method="get" class="mt-4 mb-4" style="color:black;">
+<form action="<?= base_url() ?>Admin/Laporan/JumlahKomplain" method="get" class="mt-4 mb-4"  id="formPrompt">
     <div class="row">
         <div class="col">
             <label for="topik" class="form-label">Departemen</label>
             <select name="divisi" class="form-control">
                 <?php
                 foreach ($departemens as $departemen) {
-                    echo "<option value='$departemen->KODE_DIVISI'>$departemen->NAMA_DIVISI</option>";
+                    if($departemen->KODE_DIVISI == $selectedDepartemen->KODE_DIVISI){    
+                        echo "<option value='$departemen->KODE_DIVISI' selected>$departemen->NAMA_DIVISI</option>";
+                    }else{
+                        echo "<option value='$departemen->KODE_DIVISI'>$departemen->NAMA_DIVISI</option>";
+
+                    }
                 }
                 ?>
             </select>
@@ -25,91 +44,101 @@
         </div>
         <div class="col">
             <label for="topik" class="form-label"></label>
-            <button class="btn btn-primary" style="margin-top: 102px; width:100%;background-color: <?= primary_color(); ?>;">
+            <div class="btn btn-primary" style="margin-top: 102px; width:100%;background-color: <?= primary_color(); ?>;" onclick="cetak()">
 
                 <i class="fas fa-fw fa-print mr-2" style="font-weight: bolder;"></i>
-                Cetak Laporan</button>
+                Cetak Laporan</div>
         </div>
     </div>
-</form>
-<div>Hasil Laporan :</div>
+    <div class="mt-4">Hasil Laporan :</div>
+</form> 
 
-<div class="row">
-
-    <div class="col">
-
-        <div class="card shadow mb-4 mt-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary"> Grafik Jumlah Komplain Masuk Tahun <?= $yearnow; ?></h6>
+<div class=" mb-4 mt-4" style="background-color: white;" id="areaprint">
+    <div class="card-header py-3 d-flex" style="background-color: white;">
+            <img src="<?= asset_url(); ?>images/logo.png" style="width:206px; height:92px; margin-top: 12px;">
+            <div class="ml-4">
+                <h4 class="font-weight-bold">Laporan Jumlah Komplain</h4>
+                <p>Manajemen Komplain</p>
+                <p>Departemen : <?=$selectedDepartemen->NAMA_DIVISI?></p>
+                <p>Tahun : <?= $yearnow; ?></p>
             </div>
-            <div class="card-body">
-                <div class="chart-bar">
-                    <canvas id="chartKomplainMasuk"></canvas>
+     </div>
+    <div class="row"> 
+        <div class="col">
+
+            <div class="card mb-4 mt-4">
+                <div class="card-header py-3" style="background-color: white;">
+                    <h6 class="m-0 font-weight-bold text-primary"> Grafik Jumlah Komplain Masuk Tahun <?= $yearnow; ?></h6>
                 </div>
-                <hr>
-                Komplain Masuk Tahun <?= $yearnow; ?>
+                <div class="card-body">
+                    <div class="chart-bar">
+                        <canvas id="chartKomplainMasuk"></canvas>
+                    </div>
+                    <hr>
+                    Komplain Masuk Tahun <?= $yearnow; ?>
+                </div>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="card mb-4 mt-4">
+                <div class="card-header py-3" style="background-color: white;">
+                    <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
+                </div>
+                <div class="card-body">
+                    <div class="chart-area">
+                        <canvas id="areaChartPenanganan"></canvas>
+                    </div>
+                    <hr>
+                    Kecepatan Penanganan Komplain
+                </div>
             </div>
         </div>
-
     </div>
-    <div class="col">
-        <div class="card shadow mb-4 mt-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
-            </div>
-            <div class="card-body">
-                <div class="chart-area">
-                    <canvas id="areaChartPenanganan"></canvas>
+    <div class="row">
+        <div class="col">
+            
+        <div class="card mb-4 mt-4">
+                <div class="card-header py-3" style="background-color: white;">
+                    <h6 class="m-0 font-weight-bold text-primary"> Grafik Skor Pencapaian Komplain Tahun <?= $yearnow; ?></h6>
                 </div>
-                <hr>
-                Kecepatan Penanganan Komplain
+                <div class="card-body">
+                    <div class="chart-bar">
+                        <canvas id="chartSkorPencapaian"></canvas>
+                    </div>
+                    <hr>
+                    Chart Skor Pencapaian Tahun <?= $yearnow; ?>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card mb-4 mt-4">
+        <div class="card-header py-3" style="background-color: white;">
+            <h6 class="m-0 font-weight-bold text-primary">Rangkuman Laporan Komplain Departemen NamaDepartemen</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Bulan</th>
+                            <th>Jumlah Komplain Diterima</th> 
+                            <th>Jumlah Terlambat Penanganan</th> 
+                            <th>Skor Pencapaian Komplain</th> 
+                            <th>Kecepatan Penanganan (%)</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php 
+                        ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col">
-        
-    <div class="card shadow mb-4 mt-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary"> Grafik Skor Pencapaian Komplain Tahun <?= $yearnow; ?></h6>
-            </div>
-            <div class="card-body">
-                <div class="chart-bar">
-                    <canvas id="chartSkorPencapaian"></canvas>
-                </div>
-                <hr>
-                Chart Skor Pencapaian Tahun <?= $yearnow; ?>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<div class="card shadow mb-4 mt-4">
-     <div class="card-header py-3">
-         <h6 class="m-0 font-weight-bold text-primary">Rangkuman Laporan Komplain Departemen NamaDepartemen</h6>
-     </div>
-     <div class="card-body">
-         <div class="table-responsive">
-             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                 <thead>
-                     <tr>
-                         <th>Bulan</th>
-                         <th>Jumlah Komplain Diterima</th> 
-                         <th>Jumlah Terlambat Penanganan</th> 
-                         <th>Skor Pencapaian Komplain</th> 
-                         <th>Kecepatan Penanganan (%)</th> 
-                     </tr>
-                 </thead>
-                 <tbody>
-                     <?php 
-                     ?>
-                 </tbody>
-             </table>
-         </div>
-     </div>
- </div>
 <script type="text/javascript">
     window.onload = () => {
         Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
@@ -228,4 +257,8 @@
             }
         });
     }
+    
+    function cetak(){ 
+        window.print()
+    } 
 </script>
