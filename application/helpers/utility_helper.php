@@ -100,3 +100,23 @@ function loadView_GM($view, $data)
   $ci->load->view($view, $data);
   $ci->load->view("templates/GM/footer", $data);
 }
+
+function formatDateIndo($dateString){
+  $monthNames = array(
+    'January' => 'Januari',
+    'February' => 'Februari',
+    'March' => 'Maret',
+    'April' => 'April',
+    'May' => 'Mei',
+    'June' => 'Juni',
+    'July' => 'Juli',
+    'August' => 'Agustus',
+    'September' => 'September',
+    'October' => 'Oktober',
+    'November' => 'November',
+    'December' => 'Desember'
+); 
+  $parts = explode('-', $dateString);
+  $formattedDate = ltrim($parts[2], '0') . ' ' . $monthNames[date('F', strtotime($dateString))] . ' ' . $parts[0];
+  return $formattedDate; // contoh output: "8 Mei 2023"
+}

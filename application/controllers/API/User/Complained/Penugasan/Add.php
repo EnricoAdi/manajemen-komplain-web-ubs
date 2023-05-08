@@ -63,9 +63,15 @@ class Add extends REST_Controller
             ], REST_Controller::HTTP_NOT_FOUND); 
             return;
         }
-        $user =  $this->post("user");
-
-        $komplain->PENUGASAN = $user;
+        $userUpd =  $this->post("user");
+        if($userUpd==null){ 
+            $this->response([
+                'message'=>"Input harus lengkap",
+                'status'=>400
+            ], REST_Controller::HTTP_BAD_REQUEST);
+            return;
+        }
+        $komplain->PENUGASAN = $userUpd;
         $komplain->updatePenugasanKomplain();
 
         $this->response([

@@ -9,7 +9,7 @@
         Kembali
     </button>
 </a>
-<form action="<?= base_url() ?>User/Complained/Transfer/processTransfer/<?= $komplain->NO_KOMPLAIN ?>" method="post" class="mt-4" style="color:black;" id="formProcess">
+<form action="<?= base_url() ?>User/Complained/Transfer/processTransfer/<?= $komplain->NO_KOMPLAIN ?>" method="post" class="mt-4" id="formProcess">
     <input type="hidden" name="inputSubtopik2" id="inputSubtopik2" value="">
     <input type="hidden" name="inputSubtopik1" id="inputSubtopik1" value="">
     <input type="hidden" name="inputTopik" id="inputTopik" value="">
@@ -128,8 +128,7 @@
         subTopik2Element.addEventListener('change', function() {
             let originalValue = subTopik2Element.value;
             setChange(originalValue)
-        });
-
+        }); 
     }
     const transferKomplain = (event) => {
         event.preventDefault();

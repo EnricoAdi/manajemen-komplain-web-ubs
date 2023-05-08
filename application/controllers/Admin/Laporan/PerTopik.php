@@ -18,10 +18,23 @@
             $data = $this->data;
             $data['page_title'] = "Laporan Per Topik";
             $data['login'] = $this->UsersModel->getLogin();
+            
             $dateNow = date("Y-m-d");
+            
             $data['dateNow'] = $dateNow;
-            $this->load->view("templates/admin/header", $data);
-            $this->load->view("admin/laporan/per-topik", $data);
-            $this->load->view("templates/admin/footer", $data);
+            $data['dateStart'] = $dateNow;
+            $data['dateEnd'] = $dateNow;
+            
+            $data['formattedDateEnd'] = formatDateIndo($data['dateEnd']);
+            $data['formattedDateStart'] =  formatDateIndo($data['dateStart']);
+
+
+            // $subtopics = $this->SubTopik2Model->fetch();
+            // $data['subtopics'] = $subtopics;  
+            $topics = $this->TopikModel->fetch();
+            $data['topics'] = $topics;   
+            $data['selectedTopic'] = $topics[0];    
+            
+            loadView_Admin( "admin/laporan/per-topik",$data); 
         }
     }

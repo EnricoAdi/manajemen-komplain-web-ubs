@@ -18,9 +18,18 @@
             $data['page_title'] = "Laporan Detail Feedback";
             $data['login'] = $this->UsersModel->getLogin();
             $dateNow = date("Y-m-d");
-            $data['dateNow'] = $dateNow;
-            $this->load->view("templates/admin/header", $data);
-            $this->load->view("admin/laporan/detail-feedback", $data);
-            $this->load->view("templates/admin/footer", $data);
+            $data['dateNow'] = $dateNow; 
+            
+            $data['dateStart'] = $dateNow;
+            $data['dateEnd'] = $dateNow;
+            
+            $data['formattedDateEnd'] = formatDateIndo($data['dateEnd']);
+            $data['formattedDateStart'] =  formatDateIndo($data['dateStart']);
+
+            $topics = $this->TopikModel->fetch();
+            $data['topics'] = $topics;   
+            $data['selectedTopic'] = $topics[0];
+                
+            loadView_Admin("admin/laporan/detail-feedback", $data); 
         }
     }
