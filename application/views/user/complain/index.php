@@ -78,7 +78,7 @@
                 <div class='modal-body'>Apakah anda yakin ingin menghapus komplain $complain->NO_KOMPLAIN?</div>
                 <div class='modal-footer'>
                     <button class='btn btn-secondary' type='button' data-dismiss='modal'>Tidak</button>
-                    <a class='btn btn-primary' href='$urlDelete'>Ya</a>
+                    <a class='btn btn-danger' href='$urlDelete'>Ya</a>
                     </div>
                 </div>
             </div>
@@ -90,13 +90,13 @@
 
 <script type="text/javascript">
  
-window.onload = function(){ 
+window.onload = function(){  
     let btnDeletes = document.getElementsByClassName("btnDelete"); 
     for (let i = 0; i < btnDeletes.length; i++) {
     let element = btnDeletes[i];
     let id = element.id;
     
-    element.onclick = function(){ 
+    element.onclick = function(){  
         console.log( $('#confirmDeleteModal'+id).modal('show'))
         $('#confirmDeleteModal'+id).modal('show');
     }
