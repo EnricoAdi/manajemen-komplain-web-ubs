@@ -67,7 +67,7 @@
         <div class="col">
 
             <div class="card mb-4 mt-4">
-                <div class="card-header py-3">
+                <div class="card-header py-3" style="background-color: white;">
                     <h6 class="m-0 font-weight-bold text-primary"> Grafik Jumlah Komplain Masuk Tahun <?= $yearnow; ?></h6>
                 </div>
                 <div class="card-body">
@@ -82,7 +82,7 @@
         </div>
         <div class="col">
             <div class="card mb-4 mt-4">
-                <div class="card-header py-3">
+                <div class="card-header py-3" style="background-color: white;">
                     <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
                 </div>
                 <div class="card-body">
@@ -99,7 +99,7 @@
         <div class="col">
             
         <div class="card mb-4 mt-4">
-                <div class="card-header py-3">
+                <div class="card-header py-3" style="background-color: white;">
                     <h6 class="m-0 font-weight-bold text-primary"> Grafik Skor Pencapaian Komplain Tahun <?= $yearnow; ?></h6>
                 </div>
                 <div class="card-body">
@@ -115,7 +115,7 @@
     </div>
 
     <div class="card mb-4 mt-4">
-        <div class="card-header py-3">
+        <div class="card-header py-3" style="background-color: white;">
             <h6 class="m-0 font-weight-bold text-primary">Rangkuman Laporan Komplain Departemen NamaDepartemen</h6>
         </div>
         <div class="card-body">
