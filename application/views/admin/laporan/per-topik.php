@@ -5,7 +5,7 @@
             visibility: visible;
             background-color: white;
         }
-        #accordionSidebar, #titlePage, #formPrompt{
+        #accordionSidebar, #titlePage, #formPrompt, #scrollToTop{
             display: none;
             background-color: white;
             
@@ -18,9 +18,9 @@
 
 <form action="<?= base_url() ?>Admin/Laporan/PerTopik" method="get" class="mt-4 mb-4"  id="formPrompt">
 
-    <input type="hidden" name="inputSubtopik2" id="inputSubtopik2" value="">
+    <!-- <input type="hidden" name="inputSubtopik2" id="inputSubtopik2" value="">
     <input type="hidden" name="inputSubtopik1" id="inputSubtopik1" value="">
-    <input type="hidden" name="inputTopik" id="inputTopik" value="">
+    <input type="hidden" name="inputTopik" id="inputTopik" value=""> -->
     
     <input type="hidden" value="" id="divisi" disabled>
 
@@ -29,22 +29,21 @@
             <label for="topik" class="form-label">Periode Mulai :</label>
             <input type="date" name="periodeMulai" class="form-control" value="<?= $dateStart; ?>">
 
-            <label class="form-label mt-4">Topik</label>
+            <label class="form-label mt-4">Divisi</label>
             <!-- <input type="text" id="topik" class="form-control" disabled> --> 
-            <select class="form-control" id="topik" required>
+            <select class="form-control" name="divisi" id="divisi" required>
                 <?php 
-                   foreach ($topics as $topik) {
-                    if ($topik->KODE_TOPIK == $selectedTopic->KODE_TOPIK) {
-                        echo "<option value='$topik->KODE_TOPIK' selected>
-                        $topik->NAMA_DIVISI - $topik->TOPIK </option>";
+                   foreach ($divisis as $divisi) {
+                    if ($divisi->KODE_DIVISI == $selectedDivisi->KODE_DIVISI) {
+                        echo "<option value='$divisi->KODE_DIVISI' selected>
+                        $divisi->NAMA_DIVISI </option>";
                     } else { 
-                        echo "<option value='$topik->KODE_TOPIK'>
-                        $topik->NAMA_DIVISI - $topik->TOPIK </option>"; 
+                        echo "<option value='$divisi->KODE_DIVISI'>
+                        $divisi->NAMA_DIVISI </option>"; 
                     }
                 }
                 ?>
-            </select>
-            </input>
+            </select> 
         </div>
         <div class="col mt-2">
             <label for="topik" class="form-label">Periode Selesai :</label>
@@ -97,7 +96,7 @@
         <div class="ml-4">
             <h4 class="font-weight-bold">Laporan Per Topik</h4>
             <p>Manajemen Komplain</p>
-            <p>Topik : <?= $selectedTopic->TOPIK; ?> Divisi <?= $selectedTopic->NAMA_DIVISI; ?></p>
+            <p>Divisi :  <?= $selectedDivisi->NAMA_DIVISI; ?></p>
             <p>Periode : <?= $formattedDateStart; ?> - <?= $formattedDateEnd; ?></p>
         </div>
      </div>
@@ -117,8 +116,27 @@
                          <th style="text-align: center;">Subtopik 2</th> 
                      </tr>
                  </thead>
-                 <tbody>
-                     <?php 
+                 <tbody> 
+                     <?php  
+                        $topikNow = "";
+                        if(sizeof($allData) > 0){   
+                            echo "
+                            <tr>
+                                <td rowspan='".(sizeof($allData)+1)."'>1</td>
+                                <td rowspan='".(sizeof($allData)+1)."'>$selectedDivisi->NAMA_DIVISI</td>  
+                            </tr>";
+                            $topikNow = $allData[0]->KODE_TOPIK; 
+                        }
+                     foreach ($allData as $key => $value) { 
+                            echo "
+                                <tr> 
+                                    <td>$value->TDESKRIPSI</td>
+                                    <td>$value->SUBTOPIK1</td>
+                                    <td>$value->SUBTOPIK2</td>
+                                    <td>$value->jumlah</td> 
+                                </tr>";
+                        
+                     }
                      ?>
                  </tbody>
              </table>

@@ -12,8 +12,7 @@ class SubTopik2Model extends CI_Model
     {
         parent::__construct(); 
     }
-    public function fetch(){ 
-       $showed = 100000;
+    public function fetch(){  
        return $this->db->query("SELECT distinct S2.*, S2.DESKRIPSI AS S2DESKRIPSI, 
        S1.DESKRIPSI AS DESKRIPSI_SUBTOPIK1, S1.DESKRIPSI AS S1DESKRIPSI,T.TOPIK AS TDESKRIPSI,
        T.TOPIK, D.NAMA AS NAMA_DIVISI FROM 

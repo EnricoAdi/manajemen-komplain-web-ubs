@@ -5,7 +5,7 @@
             visibility: visible;
             background-color: white;
         }
-        #accordionSidebar, #titlePage, #formPrompt{
+        #accordionSidebar, #titlePage, #formPrompt, #scrollToTop{
             display: none;
             background-color: white;
             
@@ -22,7 +22,19 @@
              <input type="date" name="periodeMulai" class="form-control" value="<?= $dateStart; ?>">
 
              <label for="" class="form-label mt-4">Topik</label>
-             <input type="text" class="form-control" required>
+             <select class="form-control" name="topik" id="topik" required>
+                <?php 
+                   foreach ($topics as $topik) {
+                    if ($topik->KODE_TOPIK == $selectedTopic->KODE_TOPIK) {
+                        echo "<option value='$topik->KODE_TOPIK' selected>
+                        $topik->NAMA_DIVISI - $topik->TOPIK </option>";
+                    } else { 
+                        echo "<option value='$topik->KODE_TOPIK'>
+                        $topik->NAMA_DIVISI - $topik->TOPIK </option>"; 
+                    }
+                }
+                ?>
+            </select> 
          </div>
          <div class="col mt-2">
              <label for="topik" class="form-label">Periode Selesai :</label>
