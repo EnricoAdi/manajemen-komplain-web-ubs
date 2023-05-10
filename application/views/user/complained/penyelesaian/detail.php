@@ -5,8 +5,9 @@
 </a>
 <div class="row mt-4" style="color:black;">
     <div class="col">
-        <div>Nomor Komplain : <?= $komplain->NO_KOMPLAIN; ?> </div> 
-        <div class="mt-2">Pemberi Komplain : <?= $penerbit->NAMA; ?> </div>
+        <div>Nomor Komplain : <?= $komplain->NO_KOMPLAIN; ?> </div>   
+     
+        <div class="mt-2">Pemberi Komplain : <?= $penerbit->NOMOR_INDUK; ?> - <?= ucfirst($penerbit->NAMA); ?> </div>
         <div class="mt-2">Status : <?= $komplain->STATUS; ?> </div>
 
     </div>

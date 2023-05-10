@@ -21,6 +21,16 @@
     </div>
     <div class="row">
         <div class="col"> 
+            <label class="form-label mt-2">Topik : <?= $komplain->TDESKRIPSI;?> - <?= $komplain->S1DESKRIPSI;?> - <?= $komplain->S2DESKRIPSI;?></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">  
+            <label class="form-label mt-2">Pemberi komplain :  <?= $komplain->PENERBIT->NOMOR_INDUK;?> - <?= $komplain->PENERBIT->NAMAPENERBIT;?></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col"> 
             <label class="form-label mt-2">Masalah Komplain</label>
             <textarea class="form-control" disabled><?= $komplain->DESKRIPSI_MASALAH; ?></textarea>
         </div>

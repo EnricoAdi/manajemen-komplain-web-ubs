@@ -66,7 +66,10 @@ class Penyelesaian extends CI_Controller
         $data['preventif'] = $this->session->userdata('preventif');
         $data['korektif'] = $this->session->userdata('korektif');
         $data['tanggalDeadline'] = $this->session->userdata('tanggalDeadline');
-
+     
+        if($data['tanggalDeadline']==null){
+            $data['tanggalDeadline'] = date('Y-m-d');
+        }
 
         
         loadView_User("user/complained/penyelesaian/tambah-detail", $data);

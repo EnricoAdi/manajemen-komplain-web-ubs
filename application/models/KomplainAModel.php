@@ -90,7 +90,7 @@ class KomplainAModel extends CI_Model
             $komplainA->DESKRIPSI_MASALAH = $resultQuery->DESKRIPSI_MASALAH; 
 
 
-            $penerbit = $this->db->query('SELECT U.*, D.* 
+            $penerbit = $this->db->query('SELECT U.*, U.NAMA AS NAMAPENERBIT, D.* 
             FROM USERS U JOIN DIVISI D ON U.KODEDIV = D.KODEDIV 
             WHERE U.NOMOR_INDUK = ?', array($resultQuery->USER_PENERBIT))->result();
 
@@ -99,7 +99,17 @@ class KomplainAModel extends CI_Model
             $feedback = $this->db->query('SELECT *
             FROM KOMPLAINB WHERE NO_KOMPLAIN = ?', array($resultQuery->NO_KOMPLAIN))->result();
 
-            $komplainA->FEEDBACK = $feedback[0];
+            $komplainA->FEEDBACK = $feedback[0]; 
+            
+            if($resultQuery->USER_PENANGANAN!="" && $resultQuery->USER_PENANGANAN!=null){ 
+                $penanganan = $this->db->query('SELECT U.*, U.NAMA AS NAMAPENERBIT, D.* 
+                FROM USERS U JOIN DIVISI D ON U.KODEDIV = D.KODEDIV 
+                WHERE U.NOMOR_INDUK = ?', array($resultQuery->USER_PENANGANAN))->result();
+
+                $komplainA->PENANGANAN = $penanganan[0];
+            }else{
+                $komplainA->PENANGANAN = null;
+            }
 
             return $komplainA;
         }
