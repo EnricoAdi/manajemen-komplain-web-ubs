@@ -7,8 +7,7 @@
         }
         #accordionSidebar, #titlePage, #formPrompt, #scrollToTop{
             display: none;
-            background-color: white;
-            
+            background-color: white; 
         }
     }
 </style>

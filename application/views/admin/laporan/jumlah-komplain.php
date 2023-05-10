@@ -7,8 +7,10 @@
         }
         #accordionSidebar, #titlePage, #formPrompt, #scrollToTop{
             display: none;
-            background-color: white;
-            
+            background-color: white; 
+        }
+        .nextpage{
+            page-break-after: always;
         }
     }
 </style>
@@ -80,7 +82,7 @@
             </div>
 
         </div>
-        <div class="col">
+        <div class="col nextpage">
             <div class="card mb-4 mt-4">
                 <div class="card-header py-3" style="background-color: white;">
                     <h6 class="m-0 font-weight-bold text-primary">Grafik Kecepatan Penanganan Komplain</h6>

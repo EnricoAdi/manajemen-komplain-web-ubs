@@ -7,8 +7,10 @@
         }
         #accordionSidebar, #titlePage, #formPrompt, #scrollToTop{
             display: none;
-            background-color: white;
-            
+            background-color: white;  
+        }
+        .nextpage{
+            page-break-after: always;
         }
     }
 </style>
@@ -48,26 +50,9 @@
         <div class="col mt-2">
             <label for="topik" class="form-label">Periode Selesai :</label>
             <input type="date" name="periodeSelesai" class="form-control" value="<?= $dateEnd; ?>">
-            <!-- <label for="" class="form-label mt-4">Subtopik 1</label>
-            <input type="text" id="subtopik1" class="form-control" disabled>
-            </input> -->
+            
         </div>
-        <div class="col"> 
-            <!-- <label class="form-label" style="margin-top: 102px;">Subtopik 2</label> -->
-            <!-- <select class="form-control" id="subtopik2" required>
-                <?php
-                //    foreach ($subtopics as $subtopik) {
-                //     if ($subtopik->SUB_TOPIK2 == $subtopik2) {
-                //         echo "<option value='$subtopik->KODE_TOPIK&&$subtopik->TDESKRIPSI@@$subtopik->SUB_TOPIK1##$subtopik->S1DESKRIPSI^^$subtopik->SUB_TOPIK2$#$subtopik->S2DESKRIPSI#@$subtopik->NAMA_DIVISI' selected>
-                //         $subtopik->NAMA_DIVISI - $subtopik->TOPIK - $subtopik->S1DESKRIPSI - $subtopik->S2DESKRIPSI</option>";
-                //     } else {
-                //         echo "<option value='$subtopik->KODE_TOPIK&&$subtopik->TDESKRIPSI@@$subtopik->SUB_TOPIK1##$subtopik->S1DESKRIPSI^^$subtopik->SUB_TOPIK2$#$subtopik->S2DESKRIPSI#@$subtopik->NAMA_DIVISI'>
-                //         $subtopik->NAMA_DIVISI - $subtopik->TOPIK - $subtopik->S1DESKRIPSI - $subtopik->S2DESKRIPSI</option>";
-                //     }
-                // }
-                ?>
-            </select> -->
-        </div>
+        <div class="col">   </div>
     </div>
     <div class="row mt-4">
         <div class="col">
@@ -82,8 +67,7 @@
                 Cetak Laporan
             </div>
         </div>
-        <div class="col">
-
+        <div class="col"> 
         </div>
     </div>
     <div class="mt-4">Hasil Laporan :</div>
@@ -126,17 +110,22 @@
                                 <td rowspan='".(sizeof($allData)+1)."'>$selectedDivisi->NAMA_DIVISI</td>  
                             </tr>";
                             $topikNow = $allData[0]->KODE_TOPIK; 
+                        }else{
+                            echo "<tr><td colspan='6' class='text-center'>Tidak ada data</td></tr>";  
                         }
                      foreach ($allData as $key => $value) { 
-                            echo "
-                                <tr> 
+                            if($key % 17 == 0 && $key > 1){
+                                echo "<tr class='nextpage'>";
+                            }else{
+                                echo "<tr>";    
+                            }
+                            echo " 
                                     <td>$value->TDESKRIPSI</td>
                                     <td>$value->SUBTOPIK1</td>
                                     <td>$value->SUBTOPIK2</td>
                                     <td>$value->jumlah</td> 
-                                </tr>";
-                        
-                     }
+                                </tr>"; 
+                     } 
                      ?>
                  </tbody>
              </table>
@@ -144,61 +133,7 @@
      </div>
  </div>
 </div>
- <script> 
-    //init component
-    // const subTopik2Element = document.getElementById('subtopik2');
-    // const subTopik1Element = document.getElementById('subtopik1');
-    // const topikElement = document.getElementById('topik');
-    // const divisiElement = document.getElementById('divisi');
-    // const inputSubtopik2 = document.getElementById('inputSubtopik2');
-    // const inputSubtopik1 = document.getElementById('inputSubtopik1');
-    // const inputTopik = document.getElementById('inputTopik');
-    // const formProcess = document.getElementById("formProcess");
-    // const btnTransferProcess = document.getElementById("btnTransferProcess");
-    // const setChange = (originalValue) => {
-
-    //     let indexStartKodeTopik = 0;
-    //     let indexStartDeskripsiTopik = originalValue.indexOf("&&") + 2;
-
-    //     let indexStartKodeSubtopik1 = originalValue.indexOf("@@") + 2;
-    //     let indexStartDeskripsiSubtopik1 = originalValue.indexOf("##") + 2;
-
-    //     let indexStartKodeSubtopik2 = originalValue.indexOf("^^") + 2;
-    //     let indexStartDeskripsiSubtopik2 = originalValue.indexOf("$#") + 2;
-    //     let indexDivisi = originalValue.indexOf("#@") + 2;
-
-    //     let kodeTopik = originalValue.substring(indexStartKodeTopik, indexStartDeskripsiTopik - 2);
-    //     let descTopik = originalValue.substring(indexStartDeskripsiTopik, indexStartKodeSubtopik1 - 2);
-
-    //     let kodeSubTopik1 = originalValue.substring(indexStartKodeSubtopik1, indexStartDeskripsiSubtopik1 - 2);
-    //     let descSubTopik1 = originalValue.substring(indexStartDeskripsiSubtopik1, indexStartKodeSubtopik2 - 2);
-
-    //     let kodeSubTopik2 = originalValue.substring(indexStartKodeSubtopik2, indexStartDeskripsiSubtopik2 - 2);
-
-    //     // //set showed values 
-    //     let topikShowed = kodeTopik.substring(0, 3) + " - " + descTopik;
-    //     topikElement.value = topikShowed;
-
-    //     let subTopik1 = kodeSubTopik1 + " - " + descSubTopik1;
-    //     subTopik1Element.value = subTopik1;
-
-    //     let divisi = originalValue.substring(indexDivisi);
-    //     divisiElement.value = divisi;
-    //     //  set hidden values
-    //     inputTopik.value = kodeTopik;
-    //     inputSubtopik1.value = kodeSubTopik1;
-    //     inputSubtopik2.value = kodeSubTopik2;
-    // }
-    // window.onload = function() {
-    //     let originalValue = subTopik2Element.value;
-    //     setChange(originalValue)
-
-    //     subTopik2Element.addEventListener('change', function() {
-    //         let originalValue = subTopik2Element.value;
-    //         setChange(originalValue)
-    //     }); 
-    // }
-    
+ <script>  
     function cetak(){ 
         window.print()
     } 
