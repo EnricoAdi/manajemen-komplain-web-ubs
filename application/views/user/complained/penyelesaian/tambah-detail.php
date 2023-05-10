@@ -4,7 +4,7 @@
          <li class="breadcrumb-item">...</li>
      </ol>
  </nav>
-<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Input Penyelesaian Komplain</h1>
+<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Tambah Penyelesaian Komplain</h1>
  
 <a href="<?= base_url() ?>User/Complained/Penyelesaian/detail/<?= $komplain->NO_KOMPLAIN; ?>">
 

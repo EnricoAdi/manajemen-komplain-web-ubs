@@ -230,10 +230,12 @@ class Penyelesaian extends CI_Controller
                 $subtopik1 = $komplain->SUB_TOPIK1;
                 $subtopik2 = $komplain->SUB_TOPIK2;
                 $header = "Sukses menambahkan penyelesaian komplain";
-                $template = $this->templateEmailSuccessFeedback(
+                $s2message = $this->SubTopik2Model->get($topik, $subtopik1, $subtopik2)->DESKRIPSI;
+                $body = "Sistem mencatat anda berhasil menambahkan penyelesaian komplain untuk subtopik $s2message. Terima kasih atas kerja sama anda.";
+                $template =templateEmail(
                     $header,
                     $this->UsersModel->getLogin()->NAMA,
-                    $this->SubTopik2Model->get($topik, $subtopik1, $subtopik2)->DESKRIPSI
+                    $body
                 );
 
                 $resultmail = send_mail(
@@ -301,77 +303,7 @@ class Penyelesaian extends CI_Controller
         $this->session->set_flashdata('header', 'Pesan');
         $this->session->set_flashdata('message', 'Lampiran berhasil dihapus');
         redirect('User/Complained/Penyelesaian/editPage/' . $nomor_komplain);
-    }
-    public function templateEmailSuccessFeedback($header, $nama, $subtopik2)
-    {
-        return "<!DOCTYPE html>
-        <html>
-          <head>
-            <meta charset='utf-8'>
-            <title>$header</title>
-            <style> 
-              * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-              }
-               
-              body {
-                font-family: Arial, sans-serif;
-                color: #333;
-              } 
-              header {
-                background-color: #f5f5f5;
-                padding: 20px;
-                text-align: center;
-              }
-              
-              header h1 {
-                font-size: 32px;
-                margin-bottom: 20px;
-              }
-               
-              .content {
-                padding: 20px;
-              }
-               
-              .cta-button {
-                display: inline-block;
-                background-color: #337ab7;
-                color: #fff;
-                border-radius: 4px;
-                padding: 10px 20px;
-                text-decoration: none;
-                margin-top: 20px;
-              }
-              
-              .cta-button:hover {
-                background-color: #23527c;
-              }
-               
-              footer {
-                background-color: #f5f5f5;
-                padding: 20px;
-                text-align: center;
-                font-size: 14px;
-              }
-            </style>
-          </head>
-          <body>
-            <header>
-              <h1>$header</h1>
-            </header>
-            <div class='content'>
-              <p>Halo, $nama!</p>
-              <br>
-              <p>Sistem mencatat anda berhasil menambahkan penyelesaian komplain untuk subtopik $subtopik2. Terima kasih atas kerja sama anda.</p> 
-            </div>
-            <footer>
-              <p>&copy; PT UBS - SIB ISTTS</p>
-            </footer>
-          </body>
-        </html>";
-    }
+    } 
 
     public function editPenyelesaianProcess($nomor_komplain)
     {
@@ -479,9 +411,7 @@ class Penyelesaian extends CI_Controller
                 $this->session->set_flashdata('message', 'Berhasil mengubah penyelesaian komplain, namun gagal mengirim email');
                 redirect('User/Complained/Penyelesaian');
             }
-        }
-
-
+        } 
 
         $this->session->set_flashdata('header', 'Pesan');
         $this->session->set_flashdata('message', 'Berhasil mengubah penyelesaian komplain');
