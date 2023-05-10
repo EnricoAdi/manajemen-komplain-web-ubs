@@ -35,18 +35,13 @@ class SendComplain extends REST_Controller
         $subtopik2 = $this->SubTopik2Model->get($topikParam,$subTopik1Param,$subTopik2Param);
         
         
-        $deskripsi = $this->post('deskripsi');
-        $this->response([  
-            'message' => $this->post() ,
-            'message2' => $_POST ,
-            'status'=>true
-        ], REST_Controller::HTTP_OK);
-        return;
-        $lampirans = $_FILES['lampiran']; 
+        $deskripsi = $this->post('deskripsi'); 
+ 
         if($deskripsi==""){ 
             $this->response([  
                 'message' => "Input harus lengkap" ,
-                'status'=>false
+                'data' => $this->post(),
+                'status'=>400
             ], REST_Controller::HTTP_BAD_REQUEST);
             return;
         }
@@ -94,52 +89,55 @@ class SendComplain extends REST_Controller
         $newkomplainb->insert();
 
         $isError = false;
-        if($lampirans['name'][0]!=""){ 
-            if (!file_exists('./uploads/')) {
-                mkdir('./uploads/', 0777, true);
-            } 
-            for($i=0;$i < count($lampirans['name']);$i++){
-                $getNewFileName = 'K_MOB'. generateUID(19).  substr($newkode,-3,3);
-                
-                if($i < count($lampirans)){ 
-                    $_FILES['lampiran']['name'] = $lampirans['name'][$i];
-                    $_FILES['lampiran']['type'] = $lampirans['type'][$i];
-                    $_FILES['lampiran']['tmp_name'] = $lampirans['tmp_name'][$i];
-                    $_FILES['lampiran']['error'] = $lampirans['error'][$i];
-                    $_FILES['lampiran']['size'] = $lampirans['size'][$i];
+        if($_FILES!=null){ 
+            $lampirans = $_FILES['lampiran']; 
+            if($lampirans['name'][0]!=""){ 
+                if (!file_exists('./uploads/')) {
+                    mkdir('./uploads/', 0777, true);
+                } 
+                for($i=0;$i < count($lampirans['name']);$i++){
+                    $getNewFileName = 'K_MOB'. generateUID(19).  substr($newkode,-3,3);
+                    
+                    if($i < count($lampirans)){ 
+                        $_FILES['lampiran']['name'] = $lampirans['name'][$i];
+                        $_FILES['lampiran']['type'] = $lampirans['type'][$i];
+                        $_FILES['lampiran']['tmp_name'] = $lampirans['tmp_name'][$i];
+                        $_FILES['lampiran']['error'] = $lampirans['error'][$i];
+                        $_FILES['lampiran']['size'] = $lampirans['size'][$i];
 
-                    $ext = pathinfo($lampirans['name'][$i], PATHINFO_EXTENSION);
+                        $ext = pathinfo($lampirans['name'][$i], PATHINFO_EXTENSION);
 
-                    $config['upload_path'] = './uploads/';
-                    $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg|txt|docx|xlsx|csv';
-                    $config['max_size'] = 5000; // in Kilobytes
-                    $config['file_name'] = $getNewFileName;
+                        $config['upload_path'] = './uploads/';
+                        $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg|txt|docx|xlsx|csv';
+                        $config['max_size'] = 5000; // in Kilobytes
+                        $config['file_name'] = $getNewFileName;
 
-                    $this->load->library('upload', $config);
-                    $this->upload->initialize($config);
+                        $this->load->library('upload', $config);
+                        $this->upload->initialize($config);
 
-                    if (!$this->upload->do_upload('lampiran')) {
-                        // Handle upload error
-                        $error = $this->upload->display_errors(); 
-                        $isError = true;
-                    } else {
-                        // Upload success
-                        $upload_data = $this->upload->data();
-                        $file_name = $upload_data['file_name']; 
-                        $newLampiran = new LampiranModel();
-                        $newLampiran->KODE_LAMPIRAN = $getNewFileName.".".$ext;
-                        $newLampiran->NO_KOMPLAIN = $newkode;
-                        $newLampiran->TANGGAL = $today;
-                        $newLampiran->TIPE = 0; //komplain
-                        // $newLampiran->insert();
+                        if (!$this->upload->do_upload('lampiran')) {
+                            // Handle upload error
+                            $error = $this->upload->display_errors(); 
+                            $isError = true;
+                        } else {
+                            // Upload success
+                            $upload_data = $this->upload->data();
+                            $file_name = $upload_data['file_name']; 
+                            $newLampiran = new LampiranModel();
+                            $newLampiran->KODE_LAMPIRAN = $getNewFileName.".".$ext;
+                            $newLampiran->NO_KOMPLAIN = $newkode;
+                            $newLampiran->TANGGAL = $today;
+                            $newLampiran->TIPE = 0; //komplain
+                            $newLampiran->insert();
+                        }
                     }
-                }
+                } 
             } 
-        } 
+        }
         if($isError){  
             $this->response([  
                 'message' => "Terdapat error dalam upload lampiran" ,
-                'status'=>false
+                'status'=>400
             ], REST_Controller::HTTP_BAD_REQUEST);
         }else{ 
             $topikDes = $topik->DESKRIPSI;
@@ -155,14 +153,14 @@ class SendComplain extends REST_Controller
             if($resultmail){   
                 $this->response([  
                     'data' => $newkode,
-                    'message' => 'Berhasil menambahkan komplain baru, silahkan cek email anda',   
-                    'status'=>true
+                    'message' => "Berhasil menambahkan komplain baru dengan nomor $newkode , silahkan cek email anda",   
+                    'status'=>201
                 ], REST_Controller::HTTP_CREATED);
             }else{  
                 $this->response([  
                     'data' => $newkode,  
-                    'message' => 'Berhasil menambahkan komplain baru, namun gagal mengirim email',  
-                    'status'=>true
+                    'message' => "Berhasil menambahkan komplain baru dengan nomor $newkode, namun gagal mengirim email",  
+                    'status'=>200
                 ], REST_Controller::HTTP_OK);
             }
 

@@ -36,7 +36,7 @@ class PilihLampiran extends REST_Controller
             'topik'=>$topik,
             'subtopik1'=>$subtopik1,
             'subtopik2'=>$subtopik2,
-            'status'=>true
+            'status'=>200
         ], REST_Controller::HTTP_OK);
 
     }

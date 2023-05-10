@@ -115,6 +115,7 @@
                         }
                      foreach ($allData as $key => $value) { 
                             if($key % 17 == 0 && $key > 1){
+                                //dipecah untuk 17 data per halaman
                                 echo "<tr class='nextpage'>";
                             }else{
                                 echo "<tr>";    

@@ -87,7 +87,7 @@ class KomplainAModel extends CI_Model
             $komplainA->TDESKRIPSI = $resultQuery->TDESKRIPSI;
             $komplainA->KODEDIV = $resultQuery->KODEDIV;
             $komplainA->NAMA_DIVISI = $resultQuery->NAMA_DIVISI;
-            $komplainA->DESKRIPSI_MASALAH = $resultQuery->DESKRIPSI_MASALAH;
+            $komplainA->DESKRIPSI_MASALAH = $resultQuery->DESKRIPSI_MASALAH; 
 
 
             $penerbit = $this->db->query('SELECT U.*, D.* 
