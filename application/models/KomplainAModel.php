@@ -161,7 +161,7 @@ class KomplainAModel extends CI_Model
             JOIN SUB_TOPIK1 S1 S1.SUB_TOPIK1 = KA.SUB_TOPIK1 and S1.KODE_TOPIK = KA.TOPIK
             JOIN SUB_TOPIK2 S2 ON S2.SUB_TOPIK2 = KA.SUB_TOPIK2 and 
             S2.SUB_TOPIK1 = KA.SUB_TOPIK1 and S2.KODE_TOPIK = KA.TOPIK
-            WHERE T.DIV_TUJUAN = '$KODEDIV'")->result();
+            WHERE T.DIV_TUJUAN = '$KODEDIV' ORDER BY KA.NO_KOMPLAIN DESC")->result();
         } else {
             return $this->db->query("SELECT KA.*, KB.*,D.*, D.KODEDIV AS KODE_DIVISI,
             DU.NAMA AS DIVISI_PENGIRIM, T.DESKRIPSI AS TDESKRIPSI,
@@ -176,7 +176,7 @@ class KomplainAModel extends CI_Model
             JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1 = KA.SUB_TOPIK1 and S1.KODE_TOPIK = KA.TOPIK
             JOIN SUB_TOPIK2 S2 ON S2.SUB_TOPIK2 = KA.SUB_TOPIK2 and 
             S2.SUB_TOPIK1 = KA.SUB_TOPIK1 and S2.KODE_TOPIK = KA.TOPIK
-            WHERE T.DIV_TUJUAN = '$KODEDIV' AND KA.STATUS = '$status'")->result();
+            WHERE T.DIV_TUJUAN = '$KODEDIV' AND KA.STATUS = '$status' ORDER BY KA.NO_KOMPLAIN DESC")->result();
         }
     }
 
@@ -195,7 +195,7 @@ class KomplainAModel extends CI_Model
         JOIN SUB_TOPIK1 S1 ON S1.SUB_TOPIK1 = KA.SUB_TOPIK1 and S1.KODE_TOPIK = KA.TOPIK
         JOIN SUB_TOPIK2 S2 ON S2.SUB_TOPIK2 = KA.SUB_TOPIK2 and 
             S2.SUB_TOPIK1 = KA.SUB_TOPIK1 and S2.KODE_TOPIK = KA.TOPIK
-        WHERE KA.PENUGASAN = '$nomor_induk'")->result();
+        WHERE KA.PENUGASAN = '$nomor_induk' ORDER BY KA.NO_KOMPLAIN DESC")->result();
     }
     public function fetchComplainSudahDiisi($KODEDIV)
     {
