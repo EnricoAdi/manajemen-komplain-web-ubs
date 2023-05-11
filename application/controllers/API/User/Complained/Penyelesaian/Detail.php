@@ -39,7 +39,7 @@ class Detail extends REST_Controller
             'data'=>$komplain,
             'penugasan'=> $penugasan, 
             'url'=> base_url(),
-            'status'=>true
+            'status'=>200
         ], REST_Controller::HTTP_OK);
     }
 }
