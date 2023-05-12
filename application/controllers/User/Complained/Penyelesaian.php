@@ -294,7 +294,7 @@ class Penyelesaian extends CI_Controller
         }
         if ($lampiran->TIPE == 0) {
             $this->session->set_flashdata('header', 'Pesan');
-            $this->session->set_flashdata('message', 'Lampiran Kompalain tidak dapat dihapus');
+            $this->session->set_flashdata('message', 'Lampiran Komplain tidak dapat dihapus');
             redirect("User/Complained/Penyelesaian/editPage/$nomor_komplain");
         }
         $lampiran->KODE_LAMPIRAN = $kode_lampiran;
