@@ -66,7 +66,7 @@
         <div class="col"></div>
         <div class="col"></div>
     </div>
-    <div class="row mt-4">
+    <div class="row mt-4 mb-4">
         <div class="col">   
             <?= primary_submit_button("Berikutnya","","btnNext") ?>
         </div>
