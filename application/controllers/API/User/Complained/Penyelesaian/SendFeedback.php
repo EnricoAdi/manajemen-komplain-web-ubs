@@ -65,10 +65,10 @@ class SendFeedback extends REST_Controller
 
             //insert lampiran
 
-            $lampirans = $_FILES["lampiran"];
             $isError = false;
 
             if($_FILES !=null){ 
+                $lampirans = $_FILES["lampiran"];
                 if ($lampirans['name'][0] != "") {
                     if (!file_exists('./uploads/')) {
                         mkdir('./uploads/', 0777, true);

@@ -32,17 +32,7 @@
 
              <label for="subtopik2" class="form-label mt-4">Subtopik 2</label>
              <input type="text" id="subtopik2" class="form-control" value="<?= $komplain->SUB_TOPIK2; ?> - <?= $komplain->S2DESKRIPSI; ?>" disabled/>
-                 <?php
-                    // foreach ($subtopics as $subtopik) { 
-                    //     if($subtopik->SUB_TOPIK2==$komplain->SUB_TOPIK2){ 
-                    //         echo "<option value='$subtopik->KODE_TOPIK&&$subtopik->TDESKRIPSI@@$subtopik->SUB_TOPIK1##$subtopik->S1DESKRIPSI^^$subtopik->SUB_TOPIK2$#$subtopik->S2DESKRIPSI' selected>
-                    //         $subtopik->SUB_TOPIK2 - $subtopik->S2DESKRIPSI</option>";
-                    //     }else{
-                    //         echo "<option value='$subtopik->KODE_TOPIK&&$subtopik->TDESKRIPSI@@$subtopik->SUB_TOPIK1##$subtopik->S1DESKRIPSI^^$subtopik->SUB_TOPIK2$#$subtopik->S2DESKRIPSI'>
-                    //         $subtopik->SUB_TOPIK2 - $subtopik->S2DESKRIPSI</option>"; 
-                    //     }
-                    // }
-                    ?>
+                 
 
              <!-- </input> -->
          </div>

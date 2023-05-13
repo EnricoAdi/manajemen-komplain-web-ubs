@@ -31,7 +31,8 @@ class Delete extends REST_Controller
         if($komplain==null){ 
             $this->response([
                 'message'=>'Komplain tidak ditemukan',
-                'data'=>'-1'  
+                'data'=>'-1',
+                'status'=>404  
             ], REST_Controller::HTTP_NOT_FOUND); 
             return;
         }

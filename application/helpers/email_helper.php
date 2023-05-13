@@ -2,18 +2,23 @@
 //email
 function send_mail($recipientEmail, $subject, $message)
 {
-  $ci = &get_instance();
-  $ci->email->from('trialmkomplainubs@gmail.com', 'UBS');
-  $ci->email->to($recipientEmail);
-  $ci->email->subject($subject);
-  $ci->email->message($message);
-  $ci->load->library('email');
+  try { 
+    $ci = &get_instance();
+    $ci->email->from('trialmkomplainubs@gmail.com', 'UBS');
+    $ci->email->to($recipientEmail);
+    $ci->email->subject($subject);
+    $ci->email->message($message);
+    $ci->load->library('email');
 
-  if ($ci->email->send()) {
-    return true;
-  } else {
+    
+    if ($ci->email->send()) {
+      return true;
+    } else {
+      return false;
+      // return $this->email->print_debugger();
+    }
+  } catch (Throwable $th) { 
     return false;
-    // return $this->email->print_debugger();
   }
 }
 function templateEmail($header, $nama, $message)
