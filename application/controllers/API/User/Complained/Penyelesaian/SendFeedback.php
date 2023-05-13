@@ -36,8 +36,7 @@ class SendFeedback extends REST_Controller
         $akar = $this->post('akar');
         $preventif  = $this->post('preventif');
         $korektif = $this->post('korektif');
-        $tanggalDeadline = $this->post('deadline');
-
+        $tanggalDeadline = $this->post('deadline'); 
 
         $today = date('Y-m-d');
 
@@ -66,54 +65,62 @@ class SendFeedback extends REST_Controller
             //insert lampiran
 
             $isError = false;
+  
 
             if($_FILES !=null){ 
                 $lampirans = $_FILES["lampiran"];
                 if ($lampirans['name'][0] != "") {
-                    if (!file_exists('./uploads/')) {
-                        mkdir('./uploads/', 0777, true);
-                    }
-                    for ($i = 0; $i < count($lampirans['name']); $i++) {
-                        $getNewFileName = 'F_MOB' . generateUID(19).substr($nomor_komplain,-3,3);
+                    try { 
+                        if (!file_exists('./uploads/')) {
+                            mkdir('./uploads/', 0777, true);
+                        }
+                        for ($i = 0; $i < count($lampirans['name']); $i++) {
+                            $getNewFileName = 'F_MOB' . generateUID(19).substr($nomor_komplain,-3,3);
 
-                        if ($i < count($lampirans)) {
-                            $_FILES['lampiran']['name'] = $lampirans['name'][$i];
-                            $_FILES['lampiran']['type'] = $lampirans['type'][$i];
-                            $_FILES['lampiran']['tmp_name'] = $lampirans['tmp_name'][$i];
-                            $_FILES['lampiran']['error'] = $lampirans['error'][$i];
-                            $_FILES['lampiran']['size'] = $lampirans['size'][$i];
+                            if ($i < count($lampirans)) {
+                                $_FILES['lampiran']['name'] = $lampirans['name'][$i];
+                                $_FILES['lampiran']['type'] = $lampirans['type'][$i];
+                                $_FILES['lampiran']['tmp_name'] = $lampirans['tmp_name'][$i];
+                                $_FILES['lampiran']['error'] = $lampirans['error'][$i];
+                                $_FILES['lampiran']['size'] = $lampirans['size'][$i];
 
-                            $ext = pathinfo($lampirans['name'][$i], PATHINFO_EXTENSION);
+                                $ext = pathinfo($lampirans['name'][$i], PATHINFO_EXTENSION);
 
-                            $config['upload_path'] = './uploads/';
-                            $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg|txt|xlsx|docx|csv';
-                            $config['max_size'] = 5000; // in Kilobytes
-                            $config['file_name'] = $getNewFileName;
+                                $config['upload_path'] = './uploads/';
+                                $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg|txt|xlsx|docx|csv';
+                                $config['max_size'] = 5000; // in Kilobytes
+                                $config['file_name'] = $getNewFileName;
 
-                            $this->load->library('upload', $config);
-                            $this->upload->initialize($config);
+                                $this->load->library('upload', $config);
+                                $this->upload->initialize($config);
 
-                            if (!$this->upload->do_upload('lampiran')) {
-                                // Handle upload error
-                                $error = $this->upload->display_errors();
-                                // echo $error;
-                                // echo FCPATH.'uploads/';
-                                $isError = true;
-                            } else {
-                                // Upload success
-                                $upload_data = $this->upload->data();
-                                $file_name = $upload_data['file_name'];
-                                $newLampiran = new LampiranModel();
-                                $newLampiran->KODE_LAMPIRAN = $getNewFileName . "." . $ext;
-                                $newLampiran->NO_KOMPLAIN = $nomor_komplain;
-                                $newLampiran->TANGGAL = $today;
-                                $newLampiran->TIPE = 1; //feedback
-                                $newLampiran->insert();
+                                if (!$this->upload->do_upload('lampiran')) {
+                                    // Handle upload error
+                                    // $error = $this->upload->display_errors(); 
+                                    $isError = true;
+                                } else {
+                                    // Upload success
+                                    $upload_data = $this->upload->data();
+                                    $file_name = $upload_data['file_name'];
+                                    $newLampiran = new LampiranModel();
+                                    $newLampiran->KODE_LAMPIRAN = $getNewFileName . "." . $ext;
+                                    $newLampiran->NO_KOMPLAIN = $nomor_komplain;
+                                    $newLampiran->TANGGAL = $today;
+                                    $newLampiran->TIPE = 1; //feedback
+                                    $newLampiran->insert();
+                                }
                             }
                         }
+                    } catch (Exception $e) {
+                        
+                        $this->response([
+                            'message'=>'Terdapat error dalam upload lampiran '.$e->getMessage(), 
+                            'status'=>400
+                        ], REST_Controller::HTTP_BAD_REQUEST);
+                        return;
                     }
                 }
-            }
+            } 
             if ($isError) { 
                 $this->response([
                     'message'=>'Terdapat error dalam upload lampiran, pastikan ukuran tidak melebihi 5 MB', 
@@ -129,7 +136,7 @@ class SendFeedback extends REST_Controller
                 $body = "Sistem mencatat anda berhasil menambahkan penyelesaian komplain untuk subtopik $s2message. Terima kasih atas kerja sama anda.";
                 $template =templateEmail(
                     $header,
-                    $this->UsersModel->getLogin()->NAMA,
+                    $user->NAMA,
                     $body
                 );
 
