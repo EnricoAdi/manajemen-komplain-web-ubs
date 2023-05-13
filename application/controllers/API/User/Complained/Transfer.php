@@ -21,7 +21,7 @@ class Transfer extends REST_Controller
         //untuk dapat data
         $authHeader = $this->input->request_headers()['Authorization'];
         $pass = verifyJWT($authHeader);
-        if ($pass->code != 200) {
+        if ($pass->code > 299) {
             $this->response($pass, REST_Controller::HTTP_UNAUTHORIZED); 
             return;
         }  

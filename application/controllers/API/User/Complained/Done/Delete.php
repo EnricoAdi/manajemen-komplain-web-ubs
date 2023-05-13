@@ -19,7 +19,7 @@ class Delete extends REST_Controller
     {
         $authHeader = $this->input->request_headers()['Authorization'];
         $pass = verifyJWT($authHeader);
-        if ($pass->code != 200) {
+        if ($pass->code > 299) {
             $this->response($pass, REST_Controller::HTTP_UNAUTHORIZED); 
             return;
         }  

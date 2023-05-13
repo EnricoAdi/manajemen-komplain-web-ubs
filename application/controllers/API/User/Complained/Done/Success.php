@@ -36,32 +36,46 @@ class Success extends REST_Controller
         $komplain->USER_DONE = $user->NOMOR_INDUK;
         $komplain->TGL_DONE =  date('Y-m-d');
         $komplain->donePenyelesaianKomplain();
+         
 
         $topik = $komplain->TOPIK;
         $subtopik1 = $komplain->SUB_TOPIK1;
         $subtopik2 = $komplain->SUB_TOPIK2;
         $header = "Berhasil done penyelesaian komplain";
         $s2des = $this->SubTopik2Model->get($topik, $subtopik1, $subtopik2)->DESKRIPSI;
+        
         $template = templateEmail(
             $header,
             $user->NAMA,
             "Sistem mencatat anda menyelesaikan pemberian feedback terhadap komplain untuk subtopik $s2des . Terima kasih atas kerja sama anda"
-        );
-        $resultmail = send_mail(
-            $user->EMAIL,
-            $header,
-            $template
         ); 
-        if ($resultmail) {  
-            $this->response([
-                'message'=>'Berhasil done penyelesaian komplain, silahkan cek email anda',
-                'status'=>200
-            ], REST_Controller::HTTP_OK);
-        } else { 
+
+        try { 
+            $resultmail = send_mail(
+                $user->EMAIL,
+                $header,
+                $template
+            ); 
+            
+            if ($resultmail) {  
+                $this->response([
+                    'message'=>'Berhasil done penyelesaian komplain, silahkan cek email anda',
+                    'status'=>200
+                ], REST_Controller::HTTP_OK);
+                return;
+            } else { 
+                $this->response([
+                    'message'=>'Berhasil done penyelesaian komplain, namun gagal mengirim email',
+                    'status'=>202
+                ], REST_Controller::HTTP_ACCEPTED); 
+                return;
+            }
+        } catch (Throwable $e) { 
             $this->response([
                 'message'=>'Berhasil done penyelesaian komplain, namun gagal mengirim email',
                 'status'=>202
             ], REST_Controller::HTTP_ACCEPTED); 
+            return;
         }
          
     }

@@ -21,7 +21,7 @@ class Delete extends REST_Controller
         //untuk dapat list divisi
         $authHeader = $this->input->request_headers()['Authorization'];
         $pass = verifyJWT($authHeader);
-        if ($pass->code != 200) {
+        if ($pass->code > 299) {
             $this->response($pass, REST_Controller::HTTP_UNAUTHORIZED); 
             return;
         }  
@@ -31,7 +31,8 @@ class Delete extends REST_Controller
         if($komplain==null){ 
             $this->response([
                 'message'=>'Komplain tidak ditemukan',
-                'data'=>'-1'  
+                'data'=>'-1',
+                'status'=>404  
             ], REST_Controller::HTTP_NOT_FOUND); 
             return;
         }

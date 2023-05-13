@@ -24,7 +24,7 @@ class TesVerification extends REST_Controller
             return;
         }  
         $this->response([
-            'status'=>true
+            'status'=>200
         ], REST_Controller::HTTP_OK);
          
     }

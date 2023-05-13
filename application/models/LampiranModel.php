@@ -15,6 +15,9 @@ class LampiranModel extends CI_Model
     public function fetch(){
        return $this->db->get('LAMPIRAN')->result();
     }
+    public function fetchByKomplain($no_komplain){
+        return $this->db->query("SELECT * FROM LAMPIRAN WHERE NO_KOMPLAIN = '$no_komplain'")->result();
+    }
     public function get($kode_lampiran){
         $this->db->select('*');
         $this->db->from('LAMPIRAN');
@@ -22,7 +25,12 @@ class LampiranModel extends CI_Model
         $query = $this->db->get() 
             ->result();
         if(sizeof($query)>0){
-            return $query[0];
+            $lampiran = new LampiranModel();
+            $lampiran->KODE_LAMPIRAN = $query[0]->KODE_LAMPIRAN;
+            $lampiran->NO_KOMPLAIN = $query[0]->NO_KOMPLAIN;
+            $lampiran->TANGGAL = $query[0]->TANGGAL;
+            $lampiran->TIPE = $query[0]->TIPE;
+            return $lampiran; 
         }
         return null;
     } 

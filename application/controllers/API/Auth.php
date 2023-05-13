@@ -19,7 +19,7 @@ class Auth extends REST_Controller
     public function index_get()
     {
         $this->response([
-            'status' => true,
+            'status' => 200,
             'message' => 'Unauthorized',
             'data' =>  'hello'
         ], REST_Controller::HTTP_OK);
@@ -34,7 +34,7 @@ class Auth extends REST_Controller
         $userFound = cekLogin($nomor_induk, $password);
         if ($userFound->code == 404) { 
             $this->response([
-                'status' => false,
+                'status' => 404,
                 'message' => 'Nomor Induk tidak ditemukan'
             ], REST_Controller::HTTP_NOT_FOUND);
         } else { 
@@ -60,7 +60,7 @@ class Auth extends REST_Controller
                 );
 
                 $this->response([
-                    'status' => true,
+                    'status' => 200,
                     'message' => 'Login Berhasil',
                     'hak_akses'=> $userFound->data->KODE_HAK_AKSES,
                     'divisi'=> $userFound->data->NAMA_DIVISI,
@@ -71,7 +71,7 @@ class Auth extends REST_Controller
                 ], 200);
             } else {
                 $this->response([
-                    'status' => false,
+                    'status' => 401,
                     'message' => $userFound->message
                 ], REST_Controller::HTTP_UNAUTHORIZED);
             }

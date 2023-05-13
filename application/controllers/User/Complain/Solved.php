@@ -56,6 +56,7 @@
                 redirectWith('User/Complain/Solved/detail'.$nomor_komplain,'Permintaan banding harus diisi'); 
             }
             $komplainB = new KomplainBModel();
+            $komplainB->NO_KOMPLAIN = $nomor_komplain;
             $komplainB->KEBERATAN = $permintaanBanding;
             $komplainB->updateBandingKomplain();
 
@@ -76,10 +77,10 @@
             $headerRecipient = "Sukses melakukan banding penyelesaian komplain";
             $messageRecipient = "Sistem telah mencatat anda mendapatkan banding atas komplain $nomor_komplain, dengan keluhan $permintaanBanding. Mohon menindaklanjuti permintaan divisi bersangkutan. Terima kasih.";
 
-            $templateRecipient =  templateEmail($headerRecipient, $komplain->PENERBIT->NAMA,
+            $templateRecipient =  templateEmail($headerRecipient, $komplain->PENANGANAN->NAMAPENERBIT,
             $messageRecipient);
 
-            $resultmailRecepient = send_mail($komplain->PENERBIT->EMAIL, 
+            $resultmailRecepient = send_mail($komplain->PENANGANAN->EMAIL, 
             $headerRecipient, $templateRecipient); 
 
         }else if($keputusan=='cancel'){
@@ -101,10 +102,10 @@
             $headerRecipient = "Pembatalan penyelesaian komplain";
             $messageRecipient = "Sistem telah mencatat terdapat pembatalan penyelesaian komplain atas komplain dengan nomor $nomor_komplain.";
 
-            $templateRecipient =  templateEmail($headerRecipient, $komplain->PENERBIT->NAMA,
+            $templateRecipient =  templateEmail($headerRecipient, $komplain->PENANGANAN->NAMAPENERBIT,
             $messageRecipient);
 
-            $resultmailRecepient = send_mail($komplain->PENERBIT->EMAIL, 
+            $resultmailRecepient = send_mail($komplain->PENANGANAN->EMAIL, 
             $headerRecipient, $templateRecipient); 
 
         }else{
@@ -126,10 +127,10 @@
             $headerRecipient = "Validasi penyelesaian komplain";
             $messageRecipient = "Sistem telah mencatat terdapat validasi penyelesaian komplain atas komplain dengan nomor $nomor_komplain.";
 
-            $templateRecipient =  templateEmail($headerRecipient, $komplain->PENERBIT->NAMA,
+            $templateRecipient =  templateEmail($headerRecipient, $komplain->PENANGANAN->NAMAPENERBIT,
             $messageRecipient);
 
-            $resultmailRecepient = send_mail($komplain->PENERBIT->EMAIL, 
+            $resultmailRecepient = send_mail($komplain->PENANGANAN->EMAIL, 
             $headerRecipient, $templateRecipient); 
         }
         if($resultmail==true && $resultmailRecepient==true){ 
