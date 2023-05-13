@@ -45,10 +45,10 @@ class Verifikasi extends REST_Controller
 
         $message = "Sistem mencatat anda telah memverifikasi komplain dari divisi $divisi terkait $komplain->DESKRIPSI_MASALAH. Silahkan melengkapi penugasan untuk penyelesaian komplain ini";
 
-        $template = templateEmail("Notifikasi Berhasil Verifikasi Komplain", $this->UsersModel->getLogin()->NAMA, $message);
+        $template = templateEmail("Notifikasi Berhasil Verifikasi Komplain", $user->NAMA, $message);
 
         $resultmail = send_mail(
-        $this->UsersModel->getLogin()->EMAIL,
+        $user->EMAIL,
         'Notifikasi Berhasil Verifikasi Komplain',
         $template
         );
