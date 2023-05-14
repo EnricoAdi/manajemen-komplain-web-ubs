@@ -457,6 +457,38 @@ class KomplainAModel extends CI_Model
         return $query;
     }
 
+    public function loadGManagerKomplainUrgent()
+    {
+        $query = $this->db->query("SELECT k.NO_KOMPLAIN as NOMORKOMPLAIN, CASE 
+        WHEN STATUS = 'PEND' THEN 'PENDING'
+        WHEN STATUS = 'OPEN' THEN 'BELUM DI VERIFIKASI'
+        WHEN STATUS = 'DONE' THEN 'KASUS SUDAH SELESAI' END AS STATUS, t.TOPIK AS JUDUL, k.TGL_DEADLINE AS DEADLINE,  
+        CASE 
+        WHEN SUBSTR(TO_CHAR(K.TGL_DEADLINE - CURRENT_DATE),0,3) LIKE '-%' THEN 'terlambat ' || SUBSTR(TO_CHAR(K.TGL_DEADLINE - CURRENT_DATE)*-1,0,2) || ' hari'   
+        ELSE 'tersisa ' || SUBSTR(TO_CHAR(K.TGL_DEADLINE - CURRENT_DATE),0,3) || ' hari lagi'
+        END AS SISAWAKTU, d.NAMA AS DIVISITUJUAN 
+        FROM KOMPLAINA k, TOPIK t,DIVISI d WHERE k.TOPIK = t.KODE_TOPIK AND TO_CHAR(k.TGL_DEADLINE - 3) = TO_CHAR(CURRENT_DATE-20) AND t.DIV_TUJUAN = d.KODEDIV")->result();
+        return $query;
+    }
+
+    public function loadGManagerKomplainTerkirim()
+    {
+        $query = $this->db->query("SELECT d.NAMA AS DIVISI,COUNT(k.NO_KOMPLAIN) AS JUMLAH
+        FROM USERS u JOIN KOMPLAINA k ON u.NOMOR_INDUK = k.USER_PENERBIT and (k.TGL_TERBIT >= TO_CHAR(CURRENT_DATE - 90))
+        JOIN DIVISI d ON d.KODEDIV = u.KODEDIV
+        GROUP BY d.NAMA")->result();
+        return $query;
+    }
+
+    public function loadGManagerKomplainDiterima()
+    {
+        $query = $this->db->query("SELECT d.NAMA AS DIVISI ,COUNT(k.NO_KOMPLAIN) AS JUMLAH
+        FROM KOMPLAINA k JOIN TOPIK t ON k.TOPIK = t.KODE_TOPIK and (k.TGL_TERBIT >= TO_CHAR(CURRENT_DATE - 90))
+        JOIN DIVISI d ON t.DIV_TUJUAN = d.KODEDIV
+        GROUP BY d.NAMA")->result();
+        return $query;
+    }
+
     public function customFetch($query)
     {
         return $this->db->query($query)->result();
