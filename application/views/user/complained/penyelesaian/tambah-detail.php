@@ -4,7 +4,7 @@
          <li class="breadcrumb-item">...</li>
      </ol>
  </nav>
-<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Input Penyelesaian Komplain</h1>
+<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Tambah Penyelesaian Komplain</h1>
  
 <a href="<?= base_url() ?>User/Complained/Penyelesaian/detail/<?= $komplain->NO_KOMPLAIN; ?>">
 
@@ -23,22 +23,37 @@
     <input type="hidden" id="minDate" value="<?= $minDate; ?>">
     <div class="row">
         <div class="col"> 
+            <label class="form-label mt-2">Nomor Komplain : <?= $komplain->NO_KOMPLAIN;?></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col"> 
+            <label class="form-label mt-2">Topik : <?= $komplain->TDESKRIPSI;?> - <?= $komplain->S1DESKRIPSI;?> - <?= $komplain->S2DESKRIPSI;?></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">  
+            <label class="form-label mt-2">Pemberi komplain :  <?= $komplain->PENERBIT->NOMOR_INDUK;?> - <?= ucfirst($komplain->PENERBIT->NAMAPENERBIT);?></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col"> 
             <label class="form-label mt-2">Masalah Komplain</label>
-            <textarea class="form-control" disabled><?= $komplain->DESKRIPSI_MASALAH; ?></textarea>
+            <textarea class="form-control" rows="3" disabled><?= $komplain->DESKRIPSI_MASALAH; ?></textarea>
         </div>
     </div>
     <div class="row mt-4">
         <div class="col">
             <label for="user" class="form-label">Akar Masalah</label> 
-            <textarea class="form-control" name="akar-masalah" required><?= $akar; ?></textarea>
+            <textarea class="form-control" rows="10" name="akar-masalah" required><?= $akar; ?></textarea>
         </div> 
         <div class="col">
             <label for="user" class="form-label">Tindakan Preventif</label> 
-            <textarea class="form-control" name="preventif" required><?= $preventif; ?></textarea>
+            <textarea class="form-control" rows="10" name="preventif" required><?= $preventif; ?></textarea>
         </div> 
         <div class="col">
             <label for="user" class="form-label">Tindakan Korektif</label> 
-            <textarea class="form-control" name="korektif" required><?= $korektif; ?></textarea>
+            <textarea class="form-control" rows="10" name="korektif" required><?= $korektif; ?></textarea>
         </div> 
     </div>
 
@@ -51,7 +66,7 @@
         <div class="col"></div>
         <div class="col"></div>
     </div>
-    <div class="row mt-4">
+    <div class="row mt-4 mb-4">
         <div class="col">   
             <?= primary_submit_button("Berikutnya","","btnNext") ?>
         </div>

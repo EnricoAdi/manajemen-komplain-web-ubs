@@ -30,7 +30,7 @@ class Fetch extends REST_Controller
          
         $this->response([
             'data'=>$complains,
-            'status'=>true
+            'status'=>200
         ], REST_Controller::HTTP_OK);
     }
 }

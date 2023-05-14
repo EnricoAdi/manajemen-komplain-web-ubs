@@ -50,6 +50,39 @@ class Helper extends CI_Controller
         }
     }
 
+    public function exportKomplainWithFaker(){
+        $this->load->model('KomplainAModel');
+        $this->load->model('KomplainBModel');
+        $komplainAs = $this->KomplainAModel->fetch();
+        $komplainBs = $this->KomplainBModel->fetch();  
+        
+        $randomWord = [ "oleh", "sebab", "itu", "maka", "penyelesaian", "laptop", "ruangan", "siapa", "tidak", "ada", "berapa", "dimana", "merupakan", "buktinya", "betul", "sehingga", "penyerahan", "katanya", "persiapan", "kebersihan", "kualitas", "koneksi", "laporan", "persentase", "susut", "dikurangi", "pembaharuan", "menurutnya", "benar", "sampai", "lengkap", "optimal", "tugas", "menjadi", "berlian", "perhiasan", "emas", "belum", "tetapi", "cocok", "terbentuk", "terbakar", "bagi", "kolega", "animasi", "reduksi", "konektor", "panas", "dingin", "kering", "basah","insiden","kecelakaan","kemacetan","kemalangan", "siap", "kesiapan", "lapangan", "minum", "monitor", "monitoring", "instalasi", "peraturan", "aturan", "atur", "administrasi", "advokat", "pengacara", "konsultan", "konsultasi", "konsultasikan","aduan","keluhan","komplain","pengaduan","keluh"];
+ 
+
+        foreach ($komplainAs as $key => $komplainA) {  
+            echo "INSERT INTO KOMPLAINA VALUES('$komplainA->NO_KOMPLAIN','$komplainA->TOPIK','$komplainA->SUB_TOPIK1','$komplainA->SUB_TOPIK2','$komplainA->TGL_KEJADIAN','$komplainA->TGL_TERBIT','$komplainA->TGL_VERIFIKASI','$komplainA->USER_VERIFIKASI','$komplainA->TGL_CANCEL','$komplainA->USER_CANCEL','$komplainA->TGL_BANDING','$komplainA->USER_BANDING','$komplainA->TGL_VALIDASI','$komplainA->USER_VALIDASI','$komplainA->PENUGASAN','$komplainA->STATUS','$komplainA->TGL_PENANGANAN','$komplainA->USER_PENANGANAN','$komplainA->TGL_DEADLINE','$komplainA->TGL_DONE','$komplainA->USER_DONE','$komplainA->USER_PENERBIT');";
+            echo "<br>";
+        }
+        echo "<br><br>";
+        foreach ($komplainBs as $key => $komplainB) {
+            $kalimat1 = $randomWord[rand(0, count($randomWord)-1)];
+            $kalimat2 = $randomWord[rand(0, count($randomWord)-1)];
+            $kalimat3 = $randomWord[rand(0, count($randomWord)-1)];
+            $kalimat4 = $randomWord[rand(0, count($randomWord)-1)];
+            $kalimat1 = ucfirst($kalimat1)." ";
+            $kalimat2 = ucfirst($kalimat2)." ";
+            $kalimat3 = ucfirst($kalimat3)." ";
+            $kalimat4 = ucfirst($kalimat4)." ";
+            for($i=0;$i < 20;$i++){ 
+                $kalimat1 .= $randomWord[rand(0, count($randomWord)-1)]." ";
+                $kalimat2 .= $randomWord[rand(0, count($randomWord)-1)]." ";
+                $kalimat3 .= $randomWord[rand(0, count($randomWord)-1)]." ";
+                $kalimat4 .= $randomWord[rand(0, count($randomWord)-1)]." ";
+            } 
+            echo "INSERT INTO KOMPLAINB VALUES('$komplainB->NO_KOMPLAIN','$kalimat1','$kalimat2','$kalimat3','$kalimat4','$komplainB->KEBERATAN');";
+            echo "<br>";
+        }
+    }
     public function fakerKomplain($qty){
         $this->load->model('KomplainAModel');
         $this->load->model('KomplainBModel');
@@ -86,7 +119,16 @@ class Helper extends CI_Controller
         }
          
     }
+    public function exportFakerSentence(){
+        $randomWord = [ "oleh", "sebab", "itu", "maka", "penyelesaian", "laptop", "ruangan", "siapa", "tidak", "ada", "berapa", "dimana", "merupakan", "buktinya", "betul", "sehingga", "penyerahan", "katanya", "persiapan", "kebersihan", "kualitas", "koneksi", "laporan", "persentase", "susut", "dikurangi", "pembaharuan", "menurutnya", "benar", "sampai", "lengkap", "optimal", "tugas", "menjadi", "berlian", "perhiasan", "emas", "belum", "tetapi", "cocok", "terbentuk", "terbakar", "bagi", "kolega", "animasi", "reduksi", "konektor", "panas", "dingin", "kering", "basah","insiden","kecelakaan","kemacetan","kemalangan", "siap", "kesiapan", "lapangan", "minum", "monitor", "monitoring", "instalasi", "peraturan", "aturan", "atur", "administrasi", "advokat", "pengacara", "konsultan", "konsultasi", "konsultasikan","aduan","keluhan","komplain","pengaduan","keluh"];
 
+        $kalimat = $randomWord[rand(0, count($randomWord)-1)];
+        $kalimat = ucfirst($kalimat)." ";
+        for($i=0;$i < 20;$i++){ 
+            $kalimat .= $randomWord[rand(0, count($randomWord)-1)]." ";
+        } 
+        echo $kalimat;
+    }
     public function exportFakerUser()
     {
         $this->load->model('UsersModel');

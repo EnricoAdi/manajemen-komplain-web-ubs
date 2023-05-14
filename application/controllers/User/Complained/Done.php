@@ -75,8 +75,7 @@ class Done extends CI_Controller
         }
     }
     public function deleteProcess($nomor_komplain)
-    {
-
+    { 
         $komplain = $this->KomplainAModel->get($nomor_komplain);
         middleware_komplainA($nomor_komplain, 'User/Complained/Done',false,true,true);
  

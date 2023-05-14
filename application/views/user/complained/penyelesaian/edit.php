@@ -14,24 +14,40 @@
 <form action="<?= base_url() ?>User/Complained/Penyelesaian/editPenyelesaianProcess/<?= $komplain->NO_KOMPLAIN; ?>" method="post" class="mt-4" style="color:black;" enctype="multipart/form-data">
 
     <input type="hidden" id="minDate" value="<?= $minDate; ?>">
+    
+    <div class="row">
+        <div class="col"> 
+            <label class="form-label mt-2">Nomor Komplain : <?= $komplain->NO_KOMPLAIN;?></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col"> 
+            <label class="form-label mt-2">Topik : <?= $komplain->TDESKRIPSI;?> - <?= $komplain->S1DESKRIPSI;?> - <?= $komplain->S2DESKRIPSI;?></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">  
+            <label class="form-label mt-2">Pemberi komplain :  <?= $komplain->PENERBIT->NOMOR_INDUK;?> - <?= ucfirst($komplain->PENERBIT->NAMAPENERBIT);?></label>
+        </div>
+    </div>
     <div class="row">
         <div class="col">
             <label class="form-label mt-2">Masalah Komplain</label>
-            <textarea class="form-control" disabled><?= $komplain->DESKRIPSI_MASALAH; ?></textarea>
+            <textarea class="form-control"  rows="3" disabled><?= $komplain->DESKRIPSI_MASALAH; ?></textarea>
         </div>
     </div>
     <div class="row mt-4">
         <div class="col">
             <label for="user" class="form-label">Akar Masalah</label>
-            <textarea class="form-control" name="akar" required><?= $komplain->FEEDBACK->AKAR_MASALAH; ?></textarea>
+            <textarea class="form-control"  rows="10" name="akar" required><?= $komplain->FEEDBACK->AKAR_MASALAH; ?></textarea>
         </div>
         <div class="col">
             <label for="user" class="form-label">Tindakan Preventif</label>
-            <textarea class="form-control" name="preventif" required><?= $komplain->FEEDBACK->T_PREVENTIF; ?></textarea>
+            <textarea class="form-control"  rows="10" name="preventif" required><?= $komplain->FEEDBACK->T_PREVENTIF; ?></textarea>
         </div>
         <div class="col">
             <label for="user" class="form-label">Tindakan Korektif</label>
-            <textarea class="form-control" name="korektif" required><?= $komplain->FEEDBACK->T_KOREKTIF; ?></textarea>
+            <textarea class="form-control"  rows="10" name="korektif" required><?= $komplain->FEEDBACK->T_KOREKTIF; ?></textarea>
         </div>
     </div>
 

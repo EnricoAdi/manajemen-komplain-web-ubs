@@ -35,7 +35,7 @@
              <input type="text" name="subtopik1" class="form-control mb-3" value="<?= $subtopik1->SUB_TOPIK1; ?> - <?= $subtopik1->DESKRIPSI; ?> " disabled>
 
              <label for="tanggal" class="form-label" >Tanggal</label>
-             <input type="date" name="tanggal" id="tanggal" class="form-control mb-3">
+             <input type="date" name="tanggal" value="<?=$dateNow?>" id="tanggal" class="form-control mb-3">
          </div>
          <div class="col"> 
              <label for="subtopik2" class="form-label" >Subtopik 2</label>

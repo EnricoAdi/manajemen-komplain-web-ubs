@@ -187,8 +187,13 @@ $routes = [
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Komplain Ditugaskan</span></a>
             </li>
+            <li className="nav-item active">
+                <a href="#" data-toggle="modal" data-target="#logoutModal" class="nav-link btn-danger mt-4 mb-4 text-center">     
+                    LOGOUT 
+                </a>
+            </li>
             <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+            <!-- <hr class="sidebar-divider d-none d-md-block"> -->
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">

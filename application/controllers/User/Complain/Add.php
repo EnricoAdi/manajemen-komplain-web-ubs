@@ -71,7 +71,10 @@
           $data = $this->data;
           $data['page_title'] = "Tambah Komplain Baru";
           
- 
+  
+            
+          $data['dateNow'] =  date("Y-m-d");
+          
           $data['minDate'] = date('Y-m-d', strtotime('-14 days'));   
           if($kode_divisi==null || $kode_topik==null ||$kode_subtopik1==null){
             $this->session->set_flashdata('message', 'Silahkan memilih divisi untuk dikomplain terlebih dahulu');

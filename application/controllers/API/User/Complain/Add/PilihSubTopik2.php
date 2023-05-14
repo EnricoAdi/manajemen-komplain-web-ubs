@@ -21,7 +21,7 @@ class PilihSubTopik2 extends REST_Controller
         //untuk dapat list divisi
         $authHeader = $this->input->request_headers()['Authorization'];
         $pass = verifyJWT($authHeader);
-        if ($pass->code != 200) {
+        if ($pass->code > 299) {
             $this->response($pass, REST_Controller::HTTP_UNAUTHORIZED); 
             return;
         }    
@@ -35,7 +35,7 @@ class PilihSubTopik2 extends REST_Controller
             'divisi'=>$divisi,
             'topik'=>$topik,
             'subtopik1'=>$subtopik1,
-            'status'=>true
+            'status'=>200
         ], REST_Controller::HTTP_OK);
 
     }
