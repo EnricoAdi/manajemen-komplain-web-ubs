@@ -116,7 +116,7 @@
                                         <td>PIC</td>
                                         <td>SubDepartemen</td>
                                         <td>PIC Perbaikan</td>
-                                        <td>Tindakan Perbaikan</td>
+                                        <td>$value->T_KOREKTIF</td>
                                     </tr>"; 
                             } 
                         }else{
