@@ -95,6 +95,33 @@
                  </thead>
                  <tbody>
                      <?php 
+                        if(sizeof($allData) > 0){ 
+                            foreach ($allData as $key => $value) { 
+                                
+                                if($key % 17 == 0 && $key > 1){
+                                    //dipecah untuk 17 data per halaman
+                                    echo "<tr class='nextpage'>";
+                                }else{
+                                    echo "<tr>";    
+                                }
+                                echo " 
+                                        <td>$value->TANGGAL</td>
+                                        <td>$value->PENGIRIM</td>
+                                        <td>$value->ASPEK</td>
+                                        <td>$value->TOPIK</td> 
+                                        <td>$value->SUBTOPIK</td>
+                                        <td>$value->MASALAH</td>
+                                        <td>$value->DESKRIPSI</td>
+                                        <td>$value->AKAR</td> 
+                                        <td>PIC</td>
+                                        <td>SubDepartemen</td>
+                                        <td>PIC Perbaikan</td>
+                                        <td>Tindakan Perbaikan</td>
+                                    </tr>"; 
+                            } 
+                        }else{
+                            echo "<tr><td colspan='12' class='text-center'>Tidak ada data</td></tr>";  
+                        }
                      ?>
                  </tbody>
              </table>
