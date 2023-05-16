@@ -12,6 +12,9 @@ require APPPATH . '/libraries/JWK.php';
 class SendComplain extends REST_Controller
 {
 
+    /**
+     * Alamat endpoint yang digunakan untuk menambah komplain baru adalah api/user/complain/add/SendComplain/index_post. Endpoint ini memiliki metode request POST. Endpoint ini digunakan untuk memproses penambahan komplain yang dikirim oleh user. Untuk endpoint ini sendiri memiliki beberapa parameter yang dibutuhkan, yaitu parameter kode topik, parameter kode subtopik 1, parameter kode subtopik 2, deskripsi masalah, serta daftar lampiran berupa file. Autentikasi juga dibutuhkan dengan mengirimkan parameter token autentikasi di bagian header request. 
+     */
     public function __construct()
     {
         parent::__construct();  

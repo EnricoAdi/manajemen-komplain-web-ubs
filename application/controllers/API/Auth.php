@@ -21,9 +21,12 @@ class Auth extends REST_Controller
         $this->response([
             'status' => 200,
             'message' => 'Unauthorized',
-            'data' =>  'hello'
+            'data' =>  'tes'
         ], REST_Controller::HTTP_OK);
     }
+    /**
+     * Alamat endpoint yang digunakan pada login adalah api/auth/index_post. Endpoint ini memiliki metode request POST. Endpoint login digunakan untuk mendapatkan token akses yang digunakan sebagai autentikasi ke dalam sistem, dengan mengirimkan parameter nomor induk dan password dari user. Nantinya token akses akan dibuat dan diverifikasi menggunakan JWT. 
+     */
     public function index_post()
     {
         $nomor_induk = $this->post('nomor_induk');

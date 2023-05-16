@@ -33,6 +33,9 @@ class Solved extends REST_Controller
             'status'=>200
         ], REST_Controller::HTTP_OK);
     }
+    /**
+     * Alamat endpoint untuk memberikan keputusan pada penyelesaian untuk sebuah komplain adalah api/user/complain/solved/index_post/:nomor_komplain. Endpoint ini memiliki metode request POST. Endpoint ini digunakan untuk memberikan keputusan pada sebuah penyelesaian komplain yang telah diberikan oleh divisi bersangkutan berdasarkan parameter nomor komplain yang dikirim oleh user. Aksi ini dilakukan jika user yang memberikan komplain sudah menerima penyelesaian komplain dari divisi terkait. Untuk request ini membutuhkan dua parameter, yaitu keputusan dan permintaan banding. Untuk keputusan sendiri terdapat 3 jenis, yaitu banding, validasi, dan cancel. Autentikasi juga dibutuhkan dengan mengirimkan parameter token autentikasi di bagian header request. 
+     */
     public function index_post($ipost,$nomor_komplain){
         //SOLVE PROCESS
         $authHeader = $this->input->request_headers()['Authorization'];

@@ -16,6 +16,9 @@ class Delete extends REST_Controller
         parent::__construct();  
     }
 
+    /**
+     * Alamat endpoint yang digunakan untuk melakukan hapus komplain adalah api/user/complain/detail/delete/index_get/:nomor_komplain. Endpoint ini memiliki metode request GET. Endpoint ini digunakan untuk menghapus data komplain berdasarkan parameter nomor komplain yang dikirim oleh user. Autentikasi juga dibutuhkan dengan mengirimkan parameter token autentikasi di bagian header request. 
+     */
     public function index_get($iget,$nomor_komplain)
     {
         //untuk dapat list divisi
@@ -66,12 +69,14 @@ class Delete extends REST_Controller
 
             $this->response([
                 'message'=>'Komplain berhasil dihapus, silahkan cek email anda',
-                'data'=>'1' 
+                'data'=>'1', 
+                'status'=> 200, 
             ], REST_Controller::HTTP_OK); 
         }else{  
             $this->response([
                 'message'=>'Komplain berhasil dihapus, namun email tidak terkirim',
-                'data'=>'0' 
+                'data'=>'0', 
+                'status'=> 202
             ], REST_Controller::HTTP_ACCEPTED);  
         }
     }

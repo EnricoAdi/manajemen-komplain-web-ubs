@@ -16,6 +16,9 @@ class Index extends REST_Controller
         parent::__construct();  
     }
 
+    /**
+     * Alamat endpoint yang digunakan untuk mendapatkan detail komplain adalah api/user/complain/detail/index/index_get/:nomor_komplain. Endpoint ini memiliki metode request GET. Endpoint ini digunakan untuk mendapatkan data komplain secara detail berdasarkan parameter nomor komplain yang dikirim oleh user. Untuk endpoint ini sendiri memiliki parameter berupa nomor komplain yang dituju. Autentikasi juga dibutuhkan dengan mengirimkan parameter token autentikasi di bagian header request. 
+     */
     public function index_get($iget,$nomor_komplain)
     { 
         $authHeader = $this->input->request_headers()['Authorization'];
@@ -46,6 +49,10 @@ class Index extends REST_Controller
             'status'=>200
         ], REST_Controller::HTTP_OK);
     }
+
+    /**
+     * Alamat endpoint yang digunakan untuk melakukan update pada komplain adalah api/user/complain/detail/index/index_post/:nomor_komplain. Endpoint ini memiliki metode request POST. Endpoint ini digunakan untuk melakukan perubahan pada data komplain berdasarkan parameter nomor komplain yang dikirim oleh user. Untuk endpoint ini sendiri memiliki parameter form data berupa tanggal, deskripsi, dan lampiran dari komplain. Autentikasi juga dibutuhkan dengan mengirimkan parameter token autentikasi di bagian header request. 
+     */
     public function index_post($ipost,$nomor_komplain){
         //update komplain
         $authHeader = $this->input->request_headers()['Authorization'];

@@ -16,6 +16,9 @@ class Dashboard extends REST_Controller
         parent::__construct();  
     }
 
+    /**
+     * Alamat endpoint yang digunakan pada data dashboard user adalah api/user/dashboard/index_get. Endpoint ini memiliki metode request GET. Endpoint ini digunakan untuk mendapatkan semua data yang akan ditampilkan pada dashboard end user, yaitu antara lain jumlah komplain terkirim oleh user, jumlah komplain diterima oleh user, jumlah komplain dikerjakan oleh user, daftar komplain dikirim oleh user bulan ini, serta daftar komplain sedang diselesaikan oleh user, dengan mengirimkan parameter token autentikasi di bagian header request saja
+     */
     public function index_get()
     {
         $authHeader = $this->input->request_headers()['Authorization'];
