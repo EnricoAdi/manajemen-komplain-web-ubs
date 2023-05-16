@@ -48,6 +48,8 @@ function middleware_topik($kode_topik,$urlIfError){
 
 /**
  * ini adalah middleware untuk komplain A, 
+ * Function middleware komplain adalah sebuah function yang digunakan untuk melakukan pengecekkan apakah sebuah user boleh mengakses data komplain yang ingin dituju, dengan pengecekkan dikombinasikan dengan policy sesuai kebutuhan hak akses pada sebuah halaman. Terdapat 5 parameter yang dibutuhkan oleh function ini, yaitu nomor komplain, url yang akan dituju jika pengecekkan gagal, variabel boolean yang memberitahu apakah sebuah halaman menggunakan policy pembuat komplain, atau policy divisi yang dikomplain, atau policy user yang menyelesaikan komplain.
+ * 
  * Ada beberapa pengecekkan yang bisa dilakukan, strict mode creator digunakan untuk memberi pengecekkan jika user yang login adalah creator komplain, 
  * strict mode divisi complained digunakan untuk memberi pengecekkan jika user yang login adalah divisi yang di complain / divisi yang memberi komplain, strict mode solver complain digunakan untuk memberi pengecekkan jika user yang login adalah yang menangani komplain
  * 
