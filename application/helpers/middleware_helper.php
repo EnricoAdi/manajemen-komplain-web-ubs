@@ -1,7 +1,6 @@
 <?php
 /**
- * Middleware ini digunakan untuk mengecek hak akses user
- * apabila user tidak memiliki hak akses, maka akan diredirect sesuai dengan hak aksesnya
+ * Middleware authentication adalah function yang digunakan untuk melakukan pengecekkan apakah user yang akan mengakses sebuah halaman memiliki otorisasi dan autentikasi ke dalam sistem. Function ini dipasangkan di semua controller kecuali controller login. Terdapat dua buah pengecekkan di middleware ini, yaitu jika user belum login mencoba untuk mengakses halaman, maka user akan dikembalikan ke halaman login, dan jika user sudah login namun hak akses yang dimiliki tidak sesuai dengan hak akses halaman yang dicoba untuk dituju, maka user akan diarahkan ke halaman sesuai hak aksesnya.
  */
 function middleware_auth($hak_akses_target){
     $ci = &get_instance();  
@@ -25,7 +24,7 @@ function middleware_auth($hak_akses_target){
             redirect('Manager/Dashboard'); //manager
         }
         if ($hak_akses == '3') { 
-            redirect('GM/Dashboard'); //manager
+            redirect('GM/Dashboard'); //GM
         }
         else { 
             redirect('Admin'); //admin
@@ -111,6 +110,9 @@ function middleware_lampiran_komplain($nomor_komplain,$kode_lampiran,$urlIfError
     }   
 }
 
+/**
+ * Function policy unauthorized akses komplain berdasarkan divisi adalah sebuah function yang digunakan untuk melakukan pengecekkan apakah sebuah user boleh mengakses data komplain yang ingin dituju berdasarkan divisi user tersebut. Secara umum, sebuah komplain hanya boleh diakses dua divisi saja, yaitu divisi user yang memberikan komplain, dan divisi yang menerima komplain.
+ */
 function policy_unauthorized_komplain_byDivisi($komplain){
     $ci = &get_instance();  
  
@@ -128,14 +130,20 @@ function policy_unauthorized_komplain_byDivisi($komplain){
     if($kode_divisi_user == $divisi_user_penerbit || $kode_divisi_user == $divisi_user_penerima){
         return true;
     }
-    return false; 
-    
+    return false;  
 }
+
+/**
+ * Function policy pembuat komplain adalah sebuah function yang digunakan untuk melakukan pengecekkan apakah sebuah user boleh mengakses data komplain yang ingin dituju, dengan pengecekkan apakah user tersebut merupakan user yang membuat komplain tersebut atau tidak. 
+ */
 function middleware_author_komplain_strict($komplain){
     $ci = &get_instance();  
     $nomor_induk = $ci->UsersModel->getLogin()->NOMOR_INDUK;  
     return ($komplain->USER_PENERBIT == $nomor_induk ); 
 }
+
+/**
+ * Function policy divisi penerima komplain adalah sebuah function yang digunakan untuk melakukan pengecekkan apakah sebuah user boleh mengakses data komplain yang ingin dituju, dengan pengecekkan apakah user tersebut termasuk divisi yang dikomplain atau tidak.  */
 function policy_divisi_solver_komplain_strict($komplain){  
     $ci = &get_instance();  
     $kode_divisi_user = $ci->UsersModel->getLogin()->KODEDIV; 
@@ -145,7 +153,7 @@ function policy_divisi_solver_komplain_strict($komplain){
 }
 
 /**
- * Middleware ini digunakan untuk diberikan pada hak akses penyelesaian komplain dari user yang diberi akses penugasan
+ * Function policy user penugasan komplain adalah sebuah function yang digunakan untuk melakukan pengecekkan apakah sebuah user boleh mengakses data komplain yang ingin dituju, dengan pengecekkan apakah user tersebut merupakan user yang ditugaskan untuk menyelesaikan komplain atau bukan (berdasarkan akses penugasan dari sebuah komplain). 
  */
 function policy_solver_komplain_strict($komplain){  
     $ci = &get_instance();  
