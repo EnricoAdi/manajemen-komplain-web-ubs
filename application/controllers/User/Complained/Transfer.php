@@ -32,6 +32,9 @@
             
             loadView_User("user/complained/transfer", $data); 
         }
+        /**
+         * Transfer komplain adalah fitur yang digunakan untuk mengganti data topik, subtopik 1, dan subtopik 2 dari sebuah komplain yang diterima oleh sebuah divisi, secara khusus yang statusnya open. Function ini dapat dijalankan di controller ListComplained pada direktori Complained.  
+         */
         public function processTransfer($nomor_komplain){ 
             $komplain = $this->KomplainAModel->get($nomor_komplain); 
 

@@ -138,6 +138,9 @@ class Penyelesaian extends CI_Controller
             redirect('User/Complained/Penyelesaian/lampiranPage/' . $nomor_komplain);
         }
     }
+    /**
+     * Tambah penyelesaian komplain adalah fitur yang digunakan untuk memberikan data penyelesaian pada sebuah komplain, yang dilakukan oleh user yang ditugaskan untuk melakukan penyelesaian komplain. Function ini dapat dijalankan di controller Penyelesaian pada direktori Complained.
+     */
     public function addProcess($nomor_komplain)
     {
         $komplain = $this->KomplainAModel->get($nomor_komplain);
