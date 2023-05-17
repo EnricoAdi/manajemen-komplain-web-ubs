@@ -308,6 +308,9 @@ class Penyelesaian extends CI_Controller
         redirect('User/Complained/Penyelesaian/editPage/' . $nomor_komplain);
     } 
 
+    /**
+     * Ubah penyelesaian komplain adalah fitur yang digunakan untuk mengubah data penyelesaian pada sebuah komplain, yang dilakukan oleh user yang ditugaskan untuk melakukan penyelesaian komplain. Function ini dapat dijalankan di controller Penyelesaian pada direktori Complained.
+     */
     public function editPenyelesaianProcess($nomor_komplain)
     {
         $komplainA = $this->KomplainAModel->get($nomor_komplain);
