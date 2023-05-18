@@ -51,6 +51,9 @@ class Transfer extends REST_Controller
         return;
     }
     
+    /**
+     * Alamat endpoint yang digunakan untuk melakukan transfer pada komplain adalah api/user/complained/transfer/index_post/:nomor_komplain. Endpoint ini memiliki metode request POST. Endpoint ini digunakan untuk melakukan transfer komplain berdasarkan parameter nomor komplain yang dikirim oleh user. Karena tujuan dari transfer adalah mengalihkan komplain ke data topik lain, sehingga dibutuhkan parameter topik, subtopik 1, dan subtopik 2. Autentikasi juga dibutuhkan dengan mengirimkan parameter token autentikasi di bagian header request. 
+     */
     public function index_post($ipost,$nomor_komplain)
     {
         //untuk transfer komplain

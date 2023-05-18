@@ -44,7 +44,9 @@ class Add extends REST_Controller
             'status'=>200
         ], REST_Controller::HTTP_OK);
     }
-    
+    /**
+     * Alamat endpoint untuk menambah penugasan pada komplain adalah api/user/complained/penugasan/add/index_post/:nomor_komplain. Endpoint ini memiliki metode request POST. Endpoint ini digunakan untuk mengisi data user yang ditugaskan untuk menangani komplain berdasarkan parameter nomor komplain yang dikirim oleh user. Karena tujuan dari penugasan adalah menyimpan data user yang bertanggung jawab, sehingga dibutuhkan parameter nomor induk user dalam request body. Autentikasi juga dibutuhkan dengan mengirimkan parameter token autentikasi di bagian header request
+     */
     public function index_post($ipost,$nomor_komplain)
     {
         $authHeader = $this->input->request_headers()['Authorization'];

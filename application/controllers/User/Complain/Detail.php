@@ -16,6 +16,7 @@ class Detail extends CI_Controller
 
         
     }
+    /**Lihat detail komplain adalah fitur yang digunakan untuk membuka sebuah halaman untuk melihat data komplain berdasarkan nomor komplain. Function ini akan digunakan untuk mengambil data komplain terlebih dahulu, lalu disimpan di dalam variabel data yang akan diberikan kedalam view untuk ditampilkan ke user. */
     public function index($nomor_komplain){
         
         $data = $this->data;
@@ -52,6 +53,9 @@ class Detail extends CI_Controller
         loadView_User("user/complain/detail/edit-topic",$data); 
         
     }
+    /**
+     * Ubah komplain adalah fitur yang digunakan untuk mengubah data komplain berdasarkan nomor komplain. Function ini akan digunakan untuk mengambil data komplain terlebih dahulu, lalu mengganti data dari sebuah komplain yang diberikan oleh user dalam form.
+     */
     public function EditKomplain($nomor_komplain){  
          
         $komplain = $this->KomplainAModel->get($nomor_komplain);  
@@ -141,6 +145,9 @@ class Detail extends CI_Controller
             redirectWith('User/Complain/ListComplain','Berhasil mengubah data komplain'); 
         }
     }
+    /**
+     * Hapus lampiran adalah fitur yang digunakan untuk menghapus data sebuah lampiran komplain berdasarkan nomor komplain dan kode lampiran. Function ini akan digunakan untuk mengambil data komplain terlebih dahulu, lalu menghapus data lampiran komplain apabila user ingin menghapus lampiran terkait.
+     */
     public function DeleteLampiran($kode_lampiran, $nomor_komplain){ 
         $komplain = $this->KomplainAModel->get($nomor_komplain);  
         

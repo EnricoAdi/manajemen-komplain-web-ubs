@@ -16,6 +16,9 @@ class DeleteLampiran extends REST_Controller
         parent::__construct();
     }
 
+    /**
+     * Alamat endpoint untuk menghapus sebuah data lampiran pada komplain adalah api/user/complained/penyelesaian/deleteLampiran/index_get/:nomor_komplain. Endpoint ini memiliki metode request GET. Endpoint ini digunakan untuk menghapus data lampiran pada sebuah komplain berdasarkan parameter nomor komplain dan kode lampiran yang dikirim oleh user. Autentikasi juga dibutuhkan dengan mengirimkan parameter token autentikasi di bagian header request. 
+     */
     public function index_get($iget, $nomor_komplain, $kode_lampiran)
     {
         //untuk delete

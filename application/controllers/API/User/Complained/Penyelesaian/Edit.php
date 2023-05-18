@@ -16,6 +16,11 @@ class Edit extends REST_Controller
         parent::__construct();
     }
 
+    /**
+     * Alamat endpoint untuk menghapus data penyelesaian pada komplain adalah api/user/complained/penyelesaian/edit/index_get/:nomor_komplain. Endpoint ini memiliki metode request GET. Endpoint ini digunakan untuk menghapus data penyelesaian komplain (feedback terhadap komplain) berdasarkan parameter nomor komplain yang dikirim oleh user. Autentikasi juga dibutuhkan dengan mengirimkan parameter token autentikasi di bagian header request
+     * 
+     * Endpoint ini akan memberikan kode 404 apabila komplain yang dituju tidak ditemukan, dan kode 202 bila berhasil menghapus data penyelesaian komplain.
+     */
     public function index_get($iget, $nomor_komplain)
     {
         //untuk delete
@@ -46,6 +51,12 @@ class Edit extends REST_Controller
             'status' => 202
         ], REST_Controller::HTTP_ACCEPTED);
     }
+
+    /**
+     * Alamat endpoint untuk mengubah data penyelesaian pada komplain adalah api/user/complained/penyelesaian/edit/index_post/:nomor_komplain. Endpoint ini memiliki metode request POST. Endpoint ini digunakan untuk mengubah data penyelesaian komplain (feedback terhadap komplain) berdasarkan parameter nomor komplain yang dikirim oleh user. Request ini membutuhkan beberapa parameter, yaitu data akar masalah, tindakan preventif, tindakan korektif, dan tanggal deadline bagi sebuah komplain untuk diselesaikan. Lalu untuk pengubahan data penyelesaian komplain juga bisa digunakan untuk menambah lampiran apabila user terkait ingin memberikan lampiran dalam bentuk file. Autentikasi juga dibutuhkan dengan mengirimkan parameter token autentikasi di bagian header request. 
+     * 
+     * Endpoint ini akan memberikan kode 404 apabila komplain tidak ditemukan, kode 400 apabila terdapat pelanggaran dalam validasi input user, dan kode 200 bila gagal mengirimkan email.
+     */
     public function index_post($ipost, $nomor_komplain)
     {
         //untuk update

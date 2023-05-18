@@ -14,7 +14,9 @@ class SendFeedback extends REST_Controller
     {
         parent::__construct();  
     }
-
+    /**
+     * Alamat endpoint untuk menambah data penyelesaian pada komplain adalah api/user/complained/penyelesaian/sendFeedback/index_post/:nomor_komplain. Endpoint ini memiliki metode request POST. Endpoint ini digunakan untuk menambah penyelesaian komplain (feedback terhadap komplain) berdasarkan parameter nomor komplain yang dikirim oleh user. Request ini membutuhkan beberapa parameter, yaitu data akar masalah, tindakan preventif, tindakan korektif, dan tanggal deadline bagi sebuah komplain untuk diselesaikan. Lalu untuk penyelesaian komplain juga bisa digunakan untuk menambah lampiran apabila user terkait ingin memberikan lampiran. Autentikasi juga dibutuhkan dengan mengirimkan parameter token autentikasi di bagian header request. 
+     */
     public function index_post($ipost,$nomor_komplain)
     { 
         $authHeader = $this->input->request_headers()['Authorization'];

@@ -16,6 +16,9 @@ class Verifikasi extends REST_Controller
         parent::__construct();  
     }
 
+    /**
+     * Alamat endpoint yang digunakan untuk melakukan verifikasi pada komplain adalah api/user/complained/verifikasi/index_get/:nomor_komplain. Endpoint ini memiliki metode request GET. Endpoint ini digunakan untuk melakukan verifikasi pada komplain berdasarkan parameter nomor komplain yang dikirim oleh user. Endpoint ini ditujukan bagi divisi yang diberikan komplain. Autentikasi juga dibutuhkan dengan mengirimkan parameter token autentikasi di bagian header request. 
+     */
     public function index_get($iget,$nomor_komplain)
     {
         //untuk dapat list divisi

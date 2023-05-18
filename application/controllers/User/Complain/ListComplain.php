@@ -24,6 +24,9 @@
             loadView_User("user/complain/index",$data); 
  
         }
+        /**
+         * Hapus komplain adalah fitur yang digunakan untuk menghapus data komplain berdasarkan nomor komplain. Function ini akan digunakan untuk mengambil data komplain terlebih dahulu, lalu menghapus data komplain apabila user ingin menghapus komplain yang ia kirim.
+         */
         public function DeleteComplain($no_komplain){
             
             $complainA = new KomplainAModel();

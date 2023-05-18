@@ -1,9 +1,10 @@
 <style>
     @media print{
-    
+    @page {size: landscape}
         #areaprint{
             visibility: visible;
             background-color: white;
+            font-size: x-small;
         }
         #accordionSidebar, #titlePage, #formPrompt, #scrollToTop{
             display: none;

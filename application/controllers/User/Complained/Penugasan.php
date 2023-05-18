@@ -42,6 +42,9 @@
        
     }
 
+    /**
+     * Isi penugasan komplain adalah fitur yang digunakan untuk menugaskan user dalam sebuah divisi untuk menangani penyelesaian komplain yang sudah diverifikasi. Function ini dapat dijalankan di controller Penugasan pada direktori Complained.
+     */
     public function addPenugasan($nomor_komplain){
         $komplain = $this->KomplainAModel->get($nomor_komplain); 
 
@@ -58,6 +61,9 @@
         redirectWith("User/Complained/Penugasan/addPage/$nomor_komplain",'Berhasil Menyimpan Penugasan');
     
     }
+    /**
+     * Hapus penugasan pada sebuah komplain adalah fitur yang digunakan untuk menghapus data user dalam sebuah divisi yang bertugas menangani penyelesaian komplain yang sudah diverifikasi. Function ini dapat dijalankan di controller Penugasan pada direktori Complained.
+     */
     public function hapusPenugasan($nomor_komplain){
         $komplain = $this->KomplainAModel->get($nomor_komplain);
 

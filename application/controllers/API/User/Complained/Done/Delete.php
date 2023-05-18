@@ -65,13 +65,13 @@ class Delete extends REST_Controller
         if ($resultmail) { 
             $this->response([
                 'message'=>'Berhasil delete penyelesaian komplain, silahkan cek email anda',
-                'status'=>200
-            ], REST_Controller::HTTP_OK); 
+                'status'=>202
+            ], REST_Controller::HTTP_ACCEPTED); 
         } else {
             $this->response([
                 'message'=>'Berhasil delete penyelesaian komplain, namun gagal mengirim email',
-                'status'=>202
-            ], REST_Controller::HTTP_ACCEPTED);  
+                'status'=>200
+            ], REST_Controller::HTTP_OK);  
             
         }
          

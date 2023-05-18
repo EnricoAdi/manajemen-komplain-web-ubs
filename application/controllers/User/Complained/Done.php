@@ -41,6 +41,9 @@ class Done extends CI_Controller
 
         loadView_User("user/complained/done/detail", $data); 
     }
+    /**
+     * Sukses penyelesaian komplain adalah fitur yang digunakan untuk mengisi kolom user_done dan tgl_done pada sebuah komplain berdasarkan parameter nomor komplain yang dikirim oleh user. Aksi ini dilakukan jika user sudah yakin bahwa sebuah penyelesaian komplain sudah selesai sepenuhnya, dan penyelesaian komplain akan diberikan kembali pada user yang memberikan komplain. Function ini dapat dijalankan di controller Done pada direktori Complained.
+     */
     public function successProcess($nomor_komplain)
     { 
         $komplain = $this->KomplainAModel->get($nomor_komplain);
@@ -65,8 +68,7 @@ class Done extends CI_Controller
             $this->UsersModel->getLogin()->EMAIL,
             $header,
             $template
-        );
-        // $resultmail = true;
+        ); 
 
         if ($resultmail) { 
             redirectWith('User/Complained/Done', 'Berhasil done penyelesaian komplain, silahkan cek email anda');

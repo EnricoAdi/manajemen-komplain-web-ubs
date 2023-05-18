@@ -37,6 +37,11 @@
         
         loadView_User("user/complain/solved/detail",$data); 
     }
+    /**
+     * Pemberian keputusan pada sebuah komplain digunakan untuk memberikan keputusan pada sebuah penyelesaian komplain yang telah diberikan oleh divisi bersangkutan berdasarkan parameter nomor komplain yang dikirim oleh user. Aksi ini dilakukan jika user yang memberikan komplain sudah menerima penyelesaian komplain dari divisi terkait. 
+     * 
+     * Untuk request ini membutuhkan dua parameter, yaitu keputusan dan permintaan banding. Untuk keputusan sendiri terdapat 3 jenis, yaitu banding, validasi, dan cancel. Function ini dapat dijalankan di controller Solved pada direktori Complain.
+     */
     public function solveProcess($nomor_komplain){
         middleware_komplainA($nomor_komplain,'User/Complain/Solved',true);
         

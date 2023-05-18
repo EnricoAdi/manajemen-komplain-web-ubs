@@ -16,6 +16,9 @@ class Delete extends REST_Controller
         parent::__construct();  
     }
 
+    /**
+     * Alamat endpoint untuk menghapus data penugasan pada komplain adalah api/user/complained/penugasan/delete/index_get/:nomor_komplain. Endpoint ini memiliki metode request GET. Endpoint ini digunakan untuk menghapus data user yang ditugaskan untuk menangani komplain berdasarkan parameter nomor komplain yang dikirim oleh user. Autentikasi juga dibutuhkan dengan mengirimkan parameter token autentikasi di bagian header request.
+     */
     public function index_get($iget,$nomor_komplain)
     {
         $authHeader = $this->input->request_headers()['Authorization'];

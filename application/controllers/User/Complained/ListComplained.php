@@ -14,6 +14,8 @@ class ListComplained extends CI_Controller
     $this->load->library("form_validation");
     $this->load->library('session');
   }
+
+  /**Daftar komplain diterima adalah fitur yang digunakan untuk mendapatkan semua komplain yang diterima oleh sebuah divisi, yang statusnya open. Function ini dapat dijalankan di controller ListComplained pada direktori Complained. */
   public function index()
   {
     $data = $this->data;
@@ -27,6 +29,8 @@ class ListComplained extends CI_Controller
 
     loadView_User("user/complained/index", $data);
   }
+  
+  /**Verifikasi komplain diterima adalah fitur yang digunakan untuk memverifikasi sebuah komplain yang diterima oleh sebuah divisi, secara khusus yang statusnya open. Function ini dapat dijalankan di controller ListComplained pada direktori Complained. Setelah komplain di verifikasi, sebuah divisi dapat menentukan user yang bertugas untuk memberikan penyelesaian komplain. */
   public function VerifikasiComplain($nomor_komplain)
   {
 
