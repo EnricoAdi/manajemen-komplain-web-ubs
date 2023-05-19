@@ -15,7 +15,7 @@
         }
     
         public function index(){
-             //halaman ini digunakan untuk menampilkan daftar user yang ada
+             //halaman ini digunakan untuk menampilkan daftar user yang ada dalam halaman master
              $data = $this->data;
              $data['page_title'] = "Master User";
      
