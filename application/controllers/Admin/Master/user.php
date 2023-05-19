@@ -15,7 +15,7 @@
         }
     
         public function index(){
-             //halaman ini digunakan untuk menampilkan daftar user yang ada dalam halaman master
+             //halaman ini digunakan untuk menampilkan daftar user yang ada
              $data = $this->data;
              $data['page_title'] = "Master User";
      
@@ -87,7 +87,7 @@
                 $user->NAMA = $nama;
                 $user->KODEDIV = $divisi;
                 $user->KODE_HAK_AKSES = $hak_akses; 
-                $user->updateMasterUser();
+                $user->update();
                 redirectWith("Admin/Master/User","Berhasil mengubah user");
             }catch(Exception $e){
                 redirectWith("Admin/Master/User/detail/$nomor_induk","Gagal mengubah user");
