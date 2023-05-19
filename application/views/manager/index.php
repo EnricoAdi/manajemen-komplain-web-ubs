@@ -9,27 +9,61 @@
     <input type="hidden" name="inputTopik" id="inputTopik" value="">
     <div class="row">
         <div class="col"> 
-            <label for="user" class="form-label">Nomor Komplain : <?=$komplainUrgent->NO_KOMPLAIN;?></label> <br>            
+            <label for="user" class="form-label">Nomor Komplain : <?=$komplain->NO_KOMPLAIN;?></label> <br>            
         </div>
      </div>     
-    <div class="row mt-2">
+     <div class="row mt-2">
         <div class="col">
-            <label for="" class="form-label">Status : <?= $komplainUrgent->STATUS; ?></label> 
+            <label for="" class="form-label">Status : <?= $komplain->STATUS; ?></label> 
+        </div>
+        <div class="col">
+            <label for="" class="form-label">Deadline : <?= $komplain->TGL_DEADLINE; ?></label> 
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <label for="user" class="form-label">Topik</label>
+            <label for="user" class="form-label">Tanggal Kejadian</label>
 
-            <input type="text" name="tanggal" id="tanggal" class="form-control" value="<?= $komplainUrgent->JUDUL; ?>" disabled>
+            <input type="text" name="tanggal" id="tanggal" class="form-control" value="<?= $komplain->TGL_KEJADIAN; ?>" disabled>
 
-            <label for="subtopik2" class="form-label mt-4">Deadline</label>
-            <input type="text" id="subtopik2" class="form-control" value="<?= $komplainUrgent->DEADLINE; ?>" disabled>
+            <label for="subtopik2" class="form-label mt-4">Subtopik 2</label>
+            <input type="text" id="subtopik2" class="form-control" value="<?= $komplain->SUB_TOPIK2; ?> - <?= $komplain->S2DESKRIPSI; ?>" disabled>
 
         </div>
         <div class="col">
-            <label for="" class="form-label">Sisa Waktu</label>
-            <input type="text" class="form-control" id="topik" value="<?= $komplainUrgent->SISAWAKTU; ?>" disabled>
+            <label for="" class="form-label">Topik</label>
+            <input type="text" class="form-control" id="topik" value="<?= $komplain->TOPIK; ?> - <?= $komplain->TDESKRIPSI; ?>" disabled>
+
+            <label for="" class="form-label mt-4">Subtopik 1</label>
+            <input type="text" class="form-control" id="subtopik1" value="<?= $komplain->SUB_TOPIK1; ?> - <?= $komplain->S1DESKRIPSI; ?>" disabled>
         </div>
     </div>
+    <div class="row">
+        <div class="col">
+            <label for="" class="form-label mt-4">Deskripsi</label>
+            <textarea type="text" class="form-control" disabled><?= $komplain->DESKRIPSI_MASALAH; ?></textarea>
+        </div>
+    </div>
+    <?php 
+        if ($komplain->STATUS == "CLOSE" || $komplain->STATUS == "CANCEL") {
+            echo "<div class='row'>
+                    <div class='col'>
+                        <label for='' class='form-label mt-4'>AKAR MASALAH</label>
+                        <textarea type='text' class='form-control' disabled><?= $komplain->AKAR_MASALAH; ?></textarea>
+                    </div>
+                </div>";
+            echo "<div class='row'>
+                <div class='col'>
+                    <label for='' class='form-label mt-4'>TINDAKAN KOREKTIF</label>
+                    <textarea type='text' class='form-control' disabled><?= $komplain->T_KOREKTIF; ?></textarea>
+                </div>
+            </div>";
+            echo "<div class='row'>
+                <div class='col'>
+                    <label for='' class='form-label mt-4'>TINDAKAN PREVENTIF</label>
+                    <textarea type='text' class='form-control' disabled><?= $komplain->T_PREVENTIF; ?></textarea>
+                </div>
+            </div>";
+        }
+    ?>
 </div>

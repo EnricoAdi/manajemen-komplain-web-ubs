@@ -12,9 +12,9 @@
                 if ($komplainUrgent != null && $komplainUrgent != "Belum ada") {
                     foreach ($komplainUrgent as $komplainUrgent) {
                         $ctr+=1;
-                        $url = base_url()."manager/index/$komplainUrgent->NO_KOMPLAIN";
+                        $url = base_url()."manager/detail/index/$komplainUrgent->NO_KOMPLAIN";
                         echo "<a href='$url'><div class='col' style='width:200px'>";
-                            echo "<div class='card shadow mb-4 mt-4'>";
+                            echo "<div class='card mb-4 mt-4'>";
                                 echo "<div class='card-header py-3'>";
                                     echo "<h6 class='m-0 font-weight-bold text-primary'>No. Komplain : ".$komplainUrgent->NOMORKOMPLAIN."</h6>";
                                 echo "</div>";
