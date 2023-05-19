@@ -41,7 +41,7 @@
     <div class="row">
         <div class="col">
             <label for="" class="form-label mt-4">Deskripsi</label>
-            <textarea type="text" class="form-control" disabled><?= $komplain->DESKRIPSI_MASALAH; ?></textarea>
+            <textarea type="text" rows="5" class="form-control" disabled><?= $komplain->DESKRIPSI_MASALAH; ?></textarea>
         </div>
     </div>
     <?php 
@@ -49,19 +49,19 @@
             echo "<div class='row'>
                     <div class='col'>
                         <label for='' class='form-label mt-4'>AKAR MASALAH</label>
-                        <textarea type='text' class='form-control' disabled><?= $komplain->AKAR_MASALAH; ?></textarea>
+                        <textarea type='text' rows='5' class='form-control' disabled><?= $komplain->AKAR_MASALAH; ?></textarea>
                     </div>
                 </div>";
             echo "<div class='row'>
                 <div class='col'>
                     <label for='' class='form-label mt-4'>TINDAKAN KOREKTIF</label>
-                    <textarea type='text' class='form-control' disabled><?= $komplain->T_KOREKTIF; ?></textarea>
+                    <textarea type='text' rows='5' class='form-control' disabled><?= $komplain->T_KOREKTIF; ?></textarea>
                 </div>
             </div>";
             echo "<div class='row'>
                 <div class='col'>
                     <label for='' class='form-label mt-4'>TINDAKAN PREVENTIF</label>
-                    <textarea type='text' class='form-control' disabled><?= $komplain->T_PREVENTIF; ?></textarea>
+                    <textarea type='text' rows='5' class='form-control' disabled><?= $komplain->T_PREVENTIF; ?></textarea>
                 </div>
             </div>";
         }

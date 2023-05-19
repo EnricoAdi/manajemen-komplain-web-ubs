@@ -91,7 +91,16 @@ class UsersModel extends CI_Model
     public function update()
     {
         $this->db->where('NOMOR_INDUK', $this->NOMOR_INDUK);
-        $this->db->update('USERS', $this);
+        $this->db->update('USERS', $this); 
+    } 
+    public function updateMasterUser()
+    {  
+        $this->db->query("UPDATE USERS set NAMA = ?, KODEDIV = ?, KODE_HAK_AKSES = ? WHERE NOMOR_INDUK = ?",[
+            $this->NAMA,
+            $this->KODEDIV,
+            $this->KODE_HAK_AKSES,
+            $this->NOMOR_INDUK
+        ]); 
     } 
 
     public function delete(){

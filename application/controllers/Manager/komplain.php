@@ -1,12 +1,12 @@
 <?php
 //Manager dashboard
-class komplain extends CI_Controller
+class Komplain extends CI_Controller
 {
     public function __construct()
     {
         parent::__construct();
         $this->data['page_title'] = "Manager Page";
-        $this->data['navigation'] = "Dashboard";
+        $this->data['navigation'] = "Komplain";
 
         $this->load->library("form_validation"); 
 

@@ -87,7 +87,7 @@
                 $user->NAMA = $nama;
                 $user->KODEDIV = $divisi;
                 $user->KODE_HAK_AKSES = $hak_akses; 
-                $user->update();
+                $user->updateMasterUser();
                 redirectWith("Admin/Master/User","Berhasil mengubah user");
             }catch(Exception $e){
                 redirectWith("Admin/Master/User/detail/$nomor_induk","Gagal mengubah user");
