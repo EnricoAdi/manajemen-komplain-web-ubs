@@ -463,6 +463,20 @@ class KomplainAModel extends CI_Model
         return $query;
     }
 
+    public function loadGManagerKomplain()
+    {
+        $query = $this->db->query("SELECT k.NO_KOMPLAIN as NOMORKOMPLAIN, CASE 
+        WHEN STATUS = 'PEND' THEN 'PENDING'
+        WHEN STATUS = 'OPEN' THEN 'BELUM DI VERIFIKASI'
+        WHEN STATUS = 'DONE' THEN 'KASUS SUDAH SELESAI' END AS STATUS, t.TOPIK AS JUDUL, k.TGL_DEADLINE AS DEADLINE,  
+        CASE 
+        WHEN SUBSTR(TO_CHAR(K.TGL_DEADLINE - CURRENT_DATE),0,3) LIKE '-%' THEN 'terlambat ' || SUBSTR(TO_CHAR(K.TGL_DEADLINE - CURRENT_DATE)*-1,0,2) || ' hari'   
+        ELSE 'tersisa ' || SUBSTR(TO_CHAR(K.TGL_DEADLINE - CURRENT_DATE),0,3) || ' hari lagi'
+        END AS SISAWAKTU, d.NAMA AS DIVISITUJUAN, k.NO_KOMPLAIN as NO_KOMPLAIN
+        FROM KOMPLAINA k, TOPIK t,DIVISI d WHERE k.TOPIK = t.KODE_TOPIK AND t.DIV_TUJUAN = d.KODEDIV")->result();
+        return $query;
+    }
+
     public function loadManagerKomplainTerkirim($divisi)
     {
         $query = $this->db->query("SELECT d.NAMA AS DIVISI,COUNT(k.NO_KOMPLAIN) AS JUMLAH
