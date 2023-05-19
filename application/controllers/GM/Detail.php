@@ -10,7 +10,7 @@ class Detail extends CI_Controller
 
         $this->load->library("form_validation"); 
 
-        middleware_auth(2); //hak akses manager
+        middleware_auth(3); //hak akses GM
         $this->data['login'] = $this->UsersModel->getLogin();
     }
     public function index($nomor_komplain){ 

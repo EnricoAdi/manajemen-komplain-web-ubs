@@ -1,8 +1,8 @@
-<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold" id="titlePage">List Komplain Semua Divisi></h1>
+<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold" id="titlePage">List Komplain Semua Divisi</h1>
 <div class=" mb-4 mt-4" style="background-color: white;" id="areaprint">
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered"  width="100%" cellspacing="0">
+            <table class="table table-bordered" id="dataTable"  width="100%" cellspacing="0">
                 <thead> 
                     <tr>
                         <th>Nomor Komplain</th>
