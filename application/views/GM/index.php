@@ -3,7 +3,7 @@
     <?= error_button("Kembali","fas fa-fw fa-step-backward")?>  
 </a>
 
-<div class="mt-4" style="color:black;">
+<div class="mt-4 mb-4" style="color:black;">
     <input type="hidden" name="inputSubtopik2" id="inputSubtopik2" value="">
     <input type="hidden" name="inputSubtopik1" id="inputSubtopik1" value="">
     <input type="hidden" name="inputTopik" id="inputTopik" value="">
