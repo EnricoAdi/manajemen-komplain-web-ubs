@@ -1,5 +1,5 @@
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Detail Komplain</h1>
-<a href="<?= base_url() ?>manager/dashboard"> 
+<a href="<?= base_url() ?>gm/komplain"> 
     <?= error_button("Kembali","fas fa-fw fa-step-backward")?>  
 </a>
 
@@ -49,19 +49,19 @@
             echo "<div class='row'>
                     <div class='col'>
                         <label for='' class='form-label mt-4'>AKAR MASALAH</label>
-                        <textarea type='text' class='form-control' disabled><?= $komplain->AKAR_MASALAH; ?></textarea>
+                        <textarea type='text' class='form-control' disabled>".$komplain->FEEDBACK->AKAR_MASALAH."</textarea>
                     </div>
                 </div>";
             echo "<div class='row'>
                 <div class='col'>
                     <label for='' class='form-label mt-4'>TINDAKAN KOREKTIF</label>
-                    <textarea type='text' class='form-control' disabled><?= $komplain->T_KOREKTIF; ?></textarea>
+                    <textarea type='text' class='form-control' disabled>".$komplain->FEEDBACK->T_KOREKTIF."</textarea>
                 </div>
             </div>";
             echo "<div class='row'>
                 <div class='col'>
                     <label for='' class='form-label mt-4'>TINDAKAN PREVENTIF</label>
-                    <textarea type='text' class='form-control' disabled><?= $komplain->T_PREVENTIF; ?></textarea>
+                    <textarea type='text' class='form-control' disabled>".$komplain->FEEDBACK->T_PREVENTIF."</textarea>
                 </div>
             </div>";
         }

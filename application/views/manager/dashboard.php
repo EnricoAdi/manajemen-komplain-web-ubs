@@ -62,10 +62,10 @@
 
 <div class="row mt-2">
     <div class="col mt-2" style="height:100px;">
-        <?= card_type_1("Daftar Komplain Terkirim dari divisi ".$komplainDiterima[0]->DIVISI." selamat 90 hari terakhir", $jumlahKomplainTerkirim, "fa-paper-plane", "primary") ?>
+        <?= card_type_1("Daftar Komplain Terkirim dari divisi ".$komplainDiterima[0]->DIVISI." selama 90 hari terakhir", $jumlahKomplainTerkirim, "fa-paper-plane", "primary") ?>
     </div>
     <div class="col mt-2" style="height:100px;">
-        <?= card_type_1("Daftar Komplain Diterima untuk divisi ". $komplainDiterima[0]->DIVISI." selamat 90 hari terakhir", $komplainDiterima2, "fa-check", "primary") ?>
+        <?= card_type_1("Daftar Komplain Diterima untuk divisi ". $komplainDiterima[0]->DIVISI." selama 90 hari terakhir", $komplainDiterima2, "fa-check", "primary") ?>
     </div>
 </div>
 

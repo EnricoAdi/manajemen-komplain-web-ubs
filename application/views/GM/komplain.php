@@ -41,10 +41,4 @@
             </table>
         </div>
     </div>
-</div>
-<script>
-    
-    function cetak(){ 
-        window.print()
-    } 
-</script>
+</div> 

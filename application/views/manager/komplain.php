@@ -1,4 +1,4 @@
-<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold" id="titlePage">List Komplain Divisi <?php echo " ". $divisi ?></h1>
+<h1 class="h3 mb-4 text-gray-800" style="font-weight:bold" id="titlePage">Daftar Komplain Divisi <?php echo " ". $divisi ?></h1>
 <div class=" mb-4 mt-4" style="background-color: white;" id="areaprint">
     <div class="card-body">
         <div class="table-responsive">
@@ -41,10 +41,4 @@
             </table>
         </div>
     </div>
-</div>
-<script>
-    
-    function cetak(){ 
-        window.print()
-    } 
-</script>
+</div> 
