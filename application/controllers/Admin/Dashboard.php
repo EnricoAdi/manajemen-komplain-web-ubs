@@ -45,16 +45,10 @@
             $data['totalKomplainBulanIni'] = $totalKomplainBulanIni;
             $data['divisiTerbanyak'] = $divisiTerbanyak;
             $data['randomColors'] = $randomColors; 
+            $data['jumlahKomplainDivisiByMonth'] = json_encode(getjumlahKomplainDivisiByMonth($bulanDalamAngka, $tahunDalamAngka)); 
+            $data['jumlahKomplainMasukByYear'] = json_encode(getjumlahKomplainMasukByYear($tahunDalamAngka)); 
             loadView_Admin("admin/dashboard", $data);  
-        }
-        public function jumlahKomplainDivisiByMonth($bulanDalamAngka, $tahunDalamAngka){
-            $res = getjumlahKomplainDivisiByMonth($bulanDalamAngka, $tahunDalamAngka);
-            echo json_encode($res);
-        }
-        public function jumlahKomplainMasukByYear($tahunDalamAngka){
-            $res = getjumlahKomplainMasukByYear($tahunDalamAngka);
-            echo json_encode($res);
-        } 
+        }  
     }
 ?>
 

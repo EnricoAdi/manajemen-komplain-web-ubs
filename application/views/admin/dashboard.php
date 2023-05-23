@@ -1,6 +1,6 @@
 <!-- Page Heading -->
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Dashboard Admin</h1>
-<div style="display:flex"> 
+<div style="display:flex;"> 
   <div class="dropdown mb-4 mr-2"> 
       <button class="btn btn-primary dropdown-toggle" type="button"
           id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
@@ -18,21 +18,20 @@
       <button class="btn btn-primary dropdown-toggle" type="button"
           id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false" style=" padding-left: 30px; padding-right: 30px;padding-top:10px;padding-bottom:10px; background-color: <?=primary_color()?>;">
-          Master Topik
+          Master
       </button>
       <div class="mt-2 dropdown-menu animated--fade-in"
           aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="<?=base_url()?>Admin/Master/User">Master User</a> 
+          <a class="dropdown-item" href="<?=base_url()?>Admin/Master/Email">Master Email</a> 
           <a class="dropdown-item" href="<?=base_url()?>Admin/Master/Topik">Master Topik</a>
           <a class="dropdown-item" href="<?=base_url()?>Admin/Master/Subtopik1">Master Subtopik1</a>
           <a class="dropdown-item" href="<?=base_url()?>Admin/Master/Subtopik2">Master Subtopik2</a> 
       </div>
   </div> 
-  <?= primary_button("Master User", "", "", "mr-2 mb-2", "Admin/Master/User") ?>
-  <?= primary_button("Master Email", "", "", "mr-2 mb-2 ", "Admin/Master/Email") ?>
+</div> 
 
-</div>
-<div class="row">
-
+<div class="row"> 
   <div class="col">
 
     <div class="card shadow mb-4 mt-4">
@@ -68,35 +67,37 @@
 <input type="hidden" id="url" value="<?= base_url() ?>">
 <input type="hidden" id="bulanDalamAngka" value="<?= $bulanDalamAngka ?>">
 <input type="hidden" id="tahunDalamAngka" value="<?= $tahunDalamAngka ?>">
+<div class="row mb-4"> 
+  <div class="col">
+      
+      <?= card_type_1("Total Komplain Bulan $bulanIni $tahunDalamAngka", $totalKomplainBulanIni, "fa-book", "primary") ?>
+    
+  </div>
+</div>
 <div class="row mb-4">
   <div class="col">
-    <?= card_type_1("Total Komplain Bulan $bulanIni $tahunDalamAngka", $totalKomplainBulanIni, "fa-book", "primary") ?>
-
-  </div>
-  <div class="col">
-    <?= card_type_1("Divisi Terkomplain Terbanyak", $divisiTerbanyak, "fa-user", "primary") ?>
-  </div>
+      
+      <?= card_type_1("Divisi Terkomplain Terbanyak", $divisiTerbanyak, "fa-user", "primary") ?>
+    
+  </div>  
 </div>
 
 <script>
   window.onload = () => {
 
-    const chartDivisi = document.getElementById("chartDivisi");
-    const baseUrl = document.getElementById("url").value;
+    const chartDivisi = document.getElementById("chartDivisi"); 
     const bulanDalamAngka = document.getElementById("bulanDalamAngka").value;
-    const tahunDalamAngka = document.getElementById("tahunDalamAngka").value;
-
-    let urlDoughnut = `${baseUrl}Admin/Dashboard/jumlahKomplainDivisiByMonth/${bulanDalamAngka}/${tahunDalamAngka}`;
+    const tahunDalamAngka = document.getElementById("tahunDalamAngka").value;  
     let backgroundColor = ['#4e73df', '#1cc88a', '#36b9cc', '#a629cc', '#baa1a4', '#a229a7'];
     
-    fetch(urlDoughnut).then(res => res.json())
-      .then(res => {
         let labels = [];
-        let data = []; 
-        res.forEach(d => {
+        let data = [];  
+        let jumlahKomplainDivisiByMonth = <?= $jumlahKomplainDivisiByMonth ?>; 
+        jumlahKomplainDivisiByMonth.forEach(d => {
           labels.push(d.NAMA)
           data.push(d.TOTAL)
-        });
+        }); 
+      
         //random 200 more
         for (let i = 0; i < data.length - 6 ; i++) {
           backgroundColor.push(`#${Math.floor(Math.random()*16777215).toString(16)}`);
@@ -131,7 +132,7 @@
             cutoutPercentage: 80,
           },
         });
-      })
+      }
     
      
     Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
@@ -162,21 +163,23 @@
       return s.join(dec);
     }
 
-    // Bar Chart   
-    let urlBar= `${baseUrl}Admin/Dashboard/jumlahKomplainMasukByYear/${tahunDalamAngka}`;
+    // Bar Chart    
     const chartKomplainMasuk = document.getElementById("chartKomplainMasuk"); 
-    fetch(urlBar).then(res => res.json())
-    .then(res=> { 
+
+    const jumlahKomplainMasukByYear = <?= $jumlahKomplainMasukByYear; ?>
+    
       let labels = [];
       let data = [];
       let maks = 20;
-      res.forEach(d => {
+
+      jumlahKomplainMasukByYear.forEach(d => {
         labels.push(d.BULAN)
         data.push(parseInt(d.TOTAL))
         if(d.TOTAL > maks){
           maks = parseInt(d.TOTAL);
         }
       }); 
+
       maks = Math.ceil(maks/10)*10;
       maks+=10;
       var myBarChartKomplainMasuk = new Chart(chartKomplainMasuk, {
@@ -258,7 +261,5 @@
             }
           },
         }
-      });
-    });
-  }
+      }); 
 </script>
