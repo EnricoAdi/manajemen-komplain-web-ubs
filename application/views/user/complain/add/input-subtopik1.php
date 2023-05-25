@@ -37,8 +37,16 @@
                     }
                 ?>
              </select> 
+             
+             <label for="tanggal" class="form-label mt-4" >Tanggal</label>
+             <input type="text" name="tanggal" disabled class="form-control mb-3">
         </div>
-        <div class="col"></div>
+        <div class="col">
+            
+        <label for="subtopik2" class="form-label" >Subtopik 2</label>
+             <select class="form-control mb-2" name="subtopik2" disabled> 
+             </select> 
+        </div>
      </div>
      <div class="row mt-4">
          <div class="col">
