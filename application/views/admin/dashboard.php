@@ -1,4 +1,4 @@
-<!-- Page Heading -->
+ <!-- Page Heading -->
 <h1 class="h3 mb-4 text-gray-800" style="font-weight:bold">Dashboard Admin</h1>
 <div style="display:flex;"> 
   <div class="dropdown mb-4 mr-2"> 
@@ -32,8 +32,7 @@
 </div> 
 
 <div class="row"> 
-  <div class="col">
-
+  <div class="col"> 
     <div class="card shadow mb-4 mt-4">
       <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Komplain Masuk Tahun <?= $tahunIni; ?></h6>
@@ -115,6 +114,7 @@
           },
 
           options: {
+            responsive:true,
             maintainAspectRatio: false,
             tooltips: {
               backgroundColor: "rgb(255,255,255)",
@@ -195,6 +195,7 @@
           }],
         },
         options: {
+          responsive:true,
           maintainAspectRatio: false,
           layout: {
             padding: {
@@ -244,7 +245,7 @@
           tooltips: {
             titleMarginBottom: 10,
             titleFontColor: '#6e707e',
-            titleFontSize: 14,
+            titleFontSize: 10,
             backgroundColor: "rgb(255,255,255)",
             bodyFontColor: "#858796",
             borderColor: '#dddfeb',
