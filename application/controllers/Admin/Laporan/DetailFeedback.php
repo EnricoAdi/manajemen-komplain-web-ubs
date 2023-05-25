@@ -61,7 +61,7 @@
             // FROM KOMPLAINA k ,KOMPLAINB k2, USERS u, TOPIK t,SUB_TOPIK1 st ,SUB_TOPIK2 st2 
             // WHERE k.NO_KOMPLAIN =k2.NO_KOMPLAIN AND u.NOMOR_INDUK =k.USER_PENERBIT AND k.TOPIK =t.KODE_TOPIK AND ST.KODE_TOPIK = t.KODE_TOPIK AND ST.KODE_TOPIK = k.TOPIK AND ST2.KODE_TOPIK = t.KODE_TOPIK AND ST2.KODE_TOPIK = k.TOPIK AND ST.SUB_TOPIK1 = ST2.SUB_TOPIK1 
             // AND st.KODE_TOPIK = ST2.KODE_TOPIK and T.DIV_TUJUAN='$selectedDivisi->KODE_DIVISI' and k.TGL_TERBIT<=TO_DATE('$data[dateEnd]', 'YYYY-MM-DD') and TGL_TERBIT>=TO_DATE('$data[dateStart]', 'YYYY-MM-DD')"); 
-            $allData = $this->KomplainAModel->customFetch("SELECT k.TGL_TERBIT AS tanggal, u.KODEDIV AS pengirim, t.TOPIK as aspek,t.DESKRIPSI as topik, st.DESKRIPSI AS subtopik,st2.DESKRIPSI AS masalah, k2.DESKRIPSI_MASALAH AS deskripsi, k2.AKAR_MASALAH AS akar, k2.T_KOREKTIF
+            $allData = $this->KomplainAModel->customFetch("SELECT k.TGL_TERBIT AS tanggal, k.USER_PENERBIT AS pengirim, t.TOPIK as aspek,t.DESKRIPSI as topik, st.DESKRIPSI AS subtopik,st2.DESKRIPSI AS masalah, k2.DESKRIPSI_MASALAH AS deskripsi, k2.AKAR_MASALAH AS akar,k.USER_VERIFIKASI as verif, k.penugasan as penugasan, k2.T_KOREKTIF
             FROM KOMPLAINA k ,KOMPLAINB k2, USERS u, TOPIK t,SUB_TOPIK1 st ,SUB_TOPIK2 st2 
             WHERE k.NO_KOMPLAIN =k2.NO_KOMPLAIN AND u.NOMOR_INDUK =k.USER_PENERBIT AND 
             k.TOPIK = t.KODE_TOPIK AND 

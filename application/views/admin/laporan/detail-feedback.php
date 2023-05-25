@@ -114,9 +114,9 @@
                                         <td>$value->MASALAH</td>
                                         <td>$value->DESKRIPSI</td>
                                         <td>$value->AKAR</td> 
-                                        <td>PIC</td>
+                                        <td>$value->VERIF</td>
                                         <td>SubDepartemen</td>
-                                        <td>PIC Perbaikan</td>
+                                        <td>$value->PENUGASAN</td>
                                         <td>$value->T_KOREKTIF</td>
                                     </tr>"; 
                             } 
