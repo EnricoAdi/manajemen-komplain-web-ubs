@@ -10,8 +10,8 @@
                     $ctr = 0;
                     if ($komplainUrgent != null && $komplainUrgent != "Belum ada") {
                         foreach ($komplainUrgent as $komplainUrgent) {
-                            $ctr+=1;
-                            $url = base_url()."GM/detail/index/$komplainUrgent->NO_KOMPLAIN";
+                            $ctr+=1; 
+                            $url = base_url()."GM/detail/index/$komplainUrgent->NOMORKOMPLAIN";
                             echo "<a href='$url'><div class='col' style='width:200px'>";
                                 echo "<div class='card mb-4 mt-4'>";
                                     echo "<div class='card-header py-3'>";
@@ -60,10 +60,10 @@
 ?>
 
 <div class="row mt-2">
-    <div class="col mt-2" style="height:100px;">
+    <div class="col mt-2">
         <?= card_type_1("Daftar Komplain Terkirim dari semua divisi selama 90 hari terakhir", $jumlahKomplainTerkirim, "fa-paper-plane", "primary") ?>
     </div>
-    <div class="col mt-2" style="height:100px;">
+    <div class="col mt-2">
         <?= card_type_1("Daftar Komplain Diterima untuk semua divisi selama 90 hari terakhir", $komplainDiterima2, "fa-check", "primary") ?>
     </div>
 </div>
