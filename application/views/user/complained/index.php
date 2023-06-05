@@ -37,13 +37,13 @@
                             echo "<td>$complain->DIVISI_PENGIRIM</td>";
                             echo "<td>".$complain->SUB_TOPIK2."</td>"; 
                             echo "<td>   
-                                    <button class='btn btn-success btnVerifikasi' id='$complain->NO_KOMPLAIN' style='color:black'>
+                                    <button class='btn btn-success btnVerifikasi' id='$complain->NO_KOMPLAIN' style='color:white;background-color:#199606'>
                                     <i class='fas fa-fw fa-check'></i> 
                                         Verifikasi
                                     </button> 
 
                                     <a href='$urlTranfer'>
-                                        <button class='btn btn-danger' id='$complain->NO_KOMPLAIN' style='color:black'>
+                                        <button class='btn btn-danger' id='$complain->NO_KOMPLAIN' style='color:white;background-color:#A3180D'>
                                         <i class='fas fa-fw fa-stop'></i> 
                                             Transfer
                                         </button>   
