@@ -56,6 +56,7 @@ class Transfer extends REST_Controller
      */
     public function index_post($ipost,$nomor_komplain)
     {
+        try { 
         //untuk transfer komplain
         $authHeader = $this->input->request_headers()['Authorization'];
         $pass = verifyJWT($authHeader);
@@ -83,6 +84,19 @@ class Transfer extends REST_Controller
           $komplain->SUB_TOPIK2 = $subTopik2;
           $komplain->updateTransferKomplain(); 
           
+            //langsung auto verifikasi
+            //dapatkan divisi tujuan
+            $kodeDivisi = $this->TopikModel->get($topik)->DIV_TUJUAN;
+            
+            //dapatkan random
+            $users = $this->UsersModel->fetchUsersByDivisi($kodeDivisi,'1');
+
+            $userRandom = $users[rand(0, count($users)-1)]; 
+            
+            $komplain->USER_VERIFIKASI = $userRandom->NOMOR_INDUK; 
+            $komplain->TGL_VERIFIKASI = date('Y-m-d');
+            $komplain->updateVerifikasi();
+
           $header = "Sukses melakukan transfer komplain";
           $message = "Sistem telah mencatat anda melakukan transfer atas komplain $nomor_komplain, terima kasih.";
 
@@ -102,7 +116,13 @@ class Transfer extends REST_Controller
                   'message'=>'Berhasil transfer komplain, silahkan cek email', 
                   'status'=> 201
               ], REST_Controller::HTTP_CREATED); 
-          }
+          } 
+        } catch (Exception) { 
+            $this->response([
+                'message'=>'Terdapat kesalahan', 
+                'status'=> 500
+            ], REST_Controller::HTTP_INTERNAL_SERVER_ERROR); 
+        }
 
     }
 }
