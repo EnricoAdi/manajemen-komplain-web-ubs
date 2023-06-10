@@ -117,6 +117,28 @@
             $this->session->unset_userdata('confirmation');
          ?>
     <?php endif; ?>
+    
+    <?php if (env_mode()=="production")   : ?>
+        <script> 
+            console.clear()
+            console.warn = function () {  }
+            console.assert = function () {  }
+            console.error = function () {  }
+            console.info = function () {  }
+            console.debug = function () {  }
+            console.log = function () {  }
+            console.dir = function () {  }
+            console.dirxml = function () {  } 
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'F12') {
+                    event.preventDefault();
+                }
+                if (event.ctrlKey && event.key === 'u') {
+                    event.preventDefault();
+                }
+            });
+        </script>
+    <?php endif; ?>
 </body>
 
 </html>

@@ -1,6 +1,13 @@
 <?php
 class Helper extends CI_Controller
 {
+    public function __construct(){
+        parent::__construct();
+        $this->data['page_title'] = "Helper Page"; 
+        if(env_mode()=="production"){ 
+            redirect('Auth'); 
+        } 
+    }
     public function encrypt_web($word)
     {
         echo encrypt($word);

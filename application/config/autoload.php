@@ -87,7 +87,7 @@ $autoload['drivers'] = array();
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url', 'utility', 'file', 'email','components','middleware_helper','middleware_api_helper','action_auth','action_dashboard_admin_helper','action_complain_helper');
+$autoload['helper'] = array('url', 'utility', 'file', 'email','components','middleware_helper','middleware_api_helper','action_auth','action_dashboard_admin_helper','action_complain_helper', 'env');
 
 
 /*
