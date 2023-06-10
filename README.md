@@ -1,8 +1,7 @@
 # Website Manajemen Komplain PT UBS
 Note for production :
 
-Sejauh yang saya tahu, codeigniter 3 tidak menyediakan file .env secara default (harus install package), sehingga saya menggunakan helper untuk menjadi alternatif.
-Letak env ada di application > helpers > env_helper.php
+Letak file env ada di application > helpers > env_helper.php (untuk disable akses inspect element lewat f12 dan clear console)
 
 Untuk progress bar komplain sedang diselesaikan dijabarkan sebagai berikut
 - Apabila belum ada penyelesaian namun sudah ditugaskan, maka progress = 20
